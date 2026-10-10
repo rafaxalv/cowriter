@@ -7,9 +7,9 @@ This repo was copied from the Google Drive folder *Projeto Livro* on 10 Oct 2026
 ## How the files fit together
 
 ```
-outline/concept.md  →  outline/chapters.md  →  outline/scenes.md  →  book/manuscript.md
-   key ideas              every event,            each chapter            the text,
-   and rules              chapter by chapter      broken into scenes      EN | PT-BR
+outline/concept.md  →  outline/chapters.md  →  outline/scenes.md  →  book/manuscript.en.md
+   key ideas              every event,            each chapter            book/manuscript.pt-br.md
+   and rules              chapter by chapter      broken into scenes      the text
 ```
 
 Changes flow down (concept → chapters → scenes → text); deliberate changes in the text flow back up. Used at every level: the Character Bible, the research and the voices.
@@ -18,7 +18,7 @@ Changes flow down (concept → chapters → scenes → text); deliberate changes
 
 | Folder | What's in it | Drive original |
 | --- | --- | --- |
-| `book/manuscript.md` | The book text, one table per chapter, English and Portuguese columns, one paragraph per row | Book |
+| `book/manuscript.en.md`, `book/manuscript.pt-br.md` | The book text, one file per language. Matching paragraphs share an ID (chapter.row; prologue 00, interlude INT, epilogue 99) in a hidden comment, so the two versions stay in step | Book |
 | `outline/concept.md` | Key ideas, standing rules, the story in six movements | 00 Book Concept |
 | `outline/concept-archive.md` | The long earlier version of the concept (Oct 7, 2026) | Configuration / Book Concept — archive |
 | `outline/chapters.md` | The plan of record: every event per chapter, with sources | Chapters |
