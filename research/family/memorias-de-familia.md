@@ -1,0 +1,7 @@
+# Memorias de Familia
+
+Ele sentiu a terra sob seus pés, fechou os olhos enquanto cenas vinham a sua mente. O som da antiga vida na Bahia ainda estava presente, talvez um pouco abafado pelos gritos de batalha. Passou-lhe o sentimento estranho de sentir falta da vida de escravo enquanto lutava na guerra. O som dos canhões, dos tiros, companheiros tombando. Tudo se misturava com aquela sensação nova e desconhecida. Como uma criança que corre pela primeira vez percebendo o domínio sobre suas pernas e o êxtase da autonomia, ele se deleitou naquele momento breve e único até então. A libertação era algo desejado que parecia tão distante quanto a terra dos seus ancestrais. Estas duas circunstâncias inéditas se somavam: a liberdade e a propriedade. Sim, ele era livre agora e sim, aquele chão sob seus pés lhe pertencia. 
+
+Era um homem forjado no trabalho duro, conhecia o manejo com a terra, sabia como erguer uma casa de troncos, plantar uma roça de sobrevivência, mas ainda precisava aprender a ser livre. Como a vida não espera, ele sabia que havia muito trabalho a ser feito, desta vez não estava só. Vários libertos, que deram baixa do exército, assim como ele, se juntaram e adquiriram terras na região do Jacadigo, município de Corumbá, na fronteira com a Bolívia. Unidos nessa empreitada pela nova vida não se acovardaram diante dos muitos desafios que se apresentavam. 
+
+O caminho até aquele momento impensável começara em terras baianas. 

@@ -1,0 +1,4 @@
+ID,Name,Type,Whose voice,When used,Based on,Version,Status,Notes
+NARR-MAIN,Main narrator,Narrator,Main narration,The story itself,,0.1,draft,"Voice file NARR-MAIN Main narrator (2026-10-10). Blend: Vieira Junior 45%, García Márquez 30%, Tarantino 25%. Raw, sensory, short sentences; sexual violence offstage, heard from outside; Tarantino catharsis only at points marked in Chapters."
+NARR-GRANDMA,Grandma's telling,Narrator,Grandma,"Prologue, epilogue and frame passages",,0,to be defined,Candidate references: García Márquez or Alexievich (not decided)
+BASE-LETTERS-DESPERATE,Letters from women in desperate conditions,Base voice,Female letter writers in desperate conditions,Not used directly; each such character gets her own letter voice derived from it,,0.1,draft,Reference: Svetlana Alexievich (decided). Adjust per character literacy.
