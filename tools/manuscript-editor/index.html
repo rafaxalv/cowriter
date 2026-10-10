@@ -113,6 +113,13 @@ select { max-width: 260px; }
 .legend-mini { display: flex; gap: 10px; font-size: 11px; color: var(--ink-3); margin-top: 8px; flex-wrap: wrap; }
 .legend-mini i { display: inline-block; width: 14px; height: 6px; border-radius: 2px; vertical-align: middle; margin-right: 4px; }
 .sents { margin-top: 8px; display: grid; gap: 6px; }
+.p-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.apply-box { margin-top: 10px; padding: 10px; border: 1px solid var(--rule); border-radius: var(--radius); background: var(--bg); font-size: 12.5px; display: grid; gap: 6px; justify-items: start; }
+.apply-box h4 { margin: 0; font: 600 11px var(--font-ui); text-transform: uppercase; letter-spacing: .06em; color: var(--ink-3); }
+.apply-box p { margin: 0; }
+.apply-box .muted { color: var(--ink-2); }
+.apply-box .warnlabel { color: var(--warn); font-weight: 600; }
+.apply-box .issues { margin: 0; padding-left: 18px; color: var(--ink-2); }
 .sent { font-size: 12px; border-left: 4px solid var(--h1); padding-left: 8px; }
 .sent .sc { font: 11px var(--font-mono); color: var(--ink-3); }
 
@@ -545,9 +552,16 @@ select { max-width: 260px; }
       body.append(el("p", "p-empty", p.voice ? "This voice has no target profile yet, so there is nothing to tune. Build it with the voice skills first." : "Choose the voice this paragraph is written in to tune its parameters."));
     } else {
       const t = p.tuning || {};
-      const reset = el("button", "btn", "Reset to voice base"); reset.style.marginTop = "10px"; reset.disabled = !Object.keys(t).length;
+      const acts = el("div", "p-actions");
+      const same = JSON.stringify(sortObj(t)) === JSON.stringify(sortObj(p.appliedTuning || {}));
+      const apply = el("button", "btn primary", "Apply to text"); apply.id = "p-apply";
+      apply.disabled = !S.sample || !!S.applying || same || !(p.text && Object.values(p.text).some((x) => x.trim()));
+      apply.title = same ? "The text already matches these settings" : "Rewrite this paragraph in every language to match these settings";
+      apply.onclick = () => applyTuning(p.pid);
+      const reset = el("button", "btn", "Reset to voice base"); reset.disabled = !Object.keys(t).length;
       reset.onclick = () => save(p.pid, { tuning: {} });
-      body.append(reset);
+      acts.append(apply, reset); body.append(acts);
+      body.append(applyBox(p));
       const groups = {};
       for (const d of S.book.dims) (groups[d.group] ||= { name: d.groupName, dims: [] }).dims.push(d);
       for (const [g, gr] of Object.entries(groups)) {
@@ -667,6 +681,123 @@ select { max-width: 260px; }
       await S.db.doc(`books/${S.slug}/paragraphs/${pid}`).set(doc);
       S.selected = pid; setTimeout(() => { const t = document.querySelector(`.cell[data-pid="${CSS.escape(pid)}"] textarea`); t?.focus(); }, 60);
     } catch (e) { toast("Could not add a paragraph (" + e.code + ")."); }
+  }
+
+  // ---------- apply tuning to the text (paragraph-review, hand-tuning) ----------
+  function sortObj(o) { return Object.fromEntries(Object.entries(o).filter(([, v]) => v).sort(([a], [b]) => Number(a) - Number(b))); }
+  const ctxCache = new Map();
+  async function ctxDoc(path) {
+    if (ctxCache.has(path)) return ctxCache.get(path);
+    const snap = await S.db.doc(path).get(); const d = snap.exists ? snap.data() : null; ctxCache.set(path, d); return d;
+  }
+  function applyBox(p) {
+    const box = el("div", "apply-box");
+    if (S.applying?.pid === p.pid) {
+      box.append(el("p", null, S.applying.msg));
+      const stop = el("button", "btn", "Stop"); stop.onclick = () => S.applying?.ctl.abort(); box.append(stop);
+      return box;
+    }
+    const last = p.lastApply; if (!last) { box.hidden = true; return box; }
+    box.append(el("h4", null, "Last rewrite · " + new Date(last.at).toLocaleString([], { dateStyle: "medium", timeStyle: "short" })));
+    if (last.summary) box.append(el("p", null, last.summary));
+    for (const [k, v] of Object.entries(last.perLanguage || {})) if (v) box.append(el("p", "muted", `${langName(k)}: ${v}`));
+    if (last.issues?.length) { const ul = el("ul", "issues"); last.issues.forEach((x) => ul.append(el("li", null, x))); box.append(el("p", "warnlabel", "Check before keeping:"), ul); }
+    if (last.previous) {
+      const undo = el("button", "btn", "Undo rewrite");
+      undo.onclick = () => save(p.pid, { text: last.previous, appliedTuning: last.previousTuning || {}, lastApply: null });
+      box.append(undo);
+    }
+    return box;
+  }
+
+  async function applyTuning(pid) {
+    if (!S.sample || S.applying) return;
+    await flush(pid);
+    const p = S.paras.get(pid); const v = voiceOf(p); if (!p || !v) return;
+    const ctl = new AbortController();
+    S.applying = { pid, ctl, msg: "Reading the chapter plan, scene map, Character Bible and voice…" }; renderPanel();
+    try {
+      const [book, ch, skill] = await Promise.all([ctxDoc(`books/${S.slug}/context/book`), ctxDoc(`books/${S.slug}/context/ch-${p.chapter}`), ctxDoc("skills/paragraph-review")]);
+      if (!book || !skill) throw { code: "no_context" };
+      const ps = chapterParas(p.chapter).filter((x) => !x.removed); const i = ps.findIndex((x) => x.pid === pid);
+      const around = (x) => x ? langs().map((l) => `[${x.pid} ${l.code}] ${x.text?.[l.key] || ""}`).join("\n") : "(none)";
+      const targets = S.book.dims.map((d) => {
+        const vd = v.dims?.[d.n]; if (!vd) return null;
+        const tn = (p.tuning || {})[d.n] || 0, val = Math.max(1, Math.min(5, vd.base + tn));
+        return `${d.n}. ${d.name} (1 ${d.low} / 5 ${d.high}): base ${vd.base}, allowed ${vd.min}-${vd.max}, target ${val}${tn ? ` (tuning ${tn > 0 ? "+" : ""}${tn}${val < vd.min || val > vd.max ? ", OUTSIDE the voice's range" : ""})` : ""}`;
+      }).filter(Boolean).join("\n");
+      const heat = langs().map((l) => { const ph = paraHeat(p, l.key); return ph ? `${l.code}: engagement avg ${ph.avg.toFixed(1)}, peak ${ph.peak}; ${ph.ss.map((s) => `#${s.i + 1} E${s.e} T${s.t} M${s.m} P${s.p}`).join(", ")}` : null; }).filter(Boolean).join("\n") || "not scored";
+      const prompt = `You are carrying out the paragraph-review skill below, in hand-tuning mode (its section 3), for ONE paragraph of a book. You have no access to files: everything the skill would read is included below. Follow the skill exactly.
+
+TASK
+Rewrite paragraph ${pid} in every language of the book (${langs().map((l) => l.code).join(", ")}) so that it hits the target values below, which are the voice's base values plus the author's tuning for this paragraph. Change only what the new targets require; keep the writer's words, facts, events, names and meaning wherever possible. Keep the paragraph consistent with the chapter plan, the scene map (its beats and Reader feeling), the Character Bible and its Continuity section, the neighbouring paragraphs and the book's rules. Never add events, named characters or facts. Each language is written natively, not translated from the other. Follow the book profile on whose wording is the source in each language: where a co-author's text is the source, change it only as far as the tuning requires and say so.
+Reason the author gave for this tuning: ${p.reason || "(none given)"}
+
+TARGET PROFILE (voice ${v.id} v${v.version})
+${targets}
+
+THE PARAGRAPH NOW
+${around(p)}
+
+PREVIOUS PARAGRAPH
+${around(ps[i - 1])}
+
+NEXT PARAGRAPH
+${around(ps[i + 1])}
+
+ENGAGEMENT SCORES OF THIS PARAGRAPH
+${heat}
+
+=== SKILL: paragraph-review ===
+${skill.text}
+
+=== VOICE FILE ${v.id} ===
+${v.text || "(not available)"}
+
+=== BOOK PROFILE (BOOK.md) ===
+${book.profile}
+
+=== CONCEPT ===
+${book.concept}
+
+=== SHARED RULES ===
+${book.sharedRules}
+
+=== BILINGUAL LEXICON ===
+${book.lexicon || "(none yet)"}
+
+=== CHAPTER PLAN (Chapters entry) ===
+${ch?.plan || "(none)"}
+
+=== SCENE MAP ===
+${ch?.scenes || "(no scene map yet)"}
+
+=== CHARACTER BIBLE (with the Continuity section at the end) ===
+${book.characterBible}
+
+OUTPUT
+Reply with only this JSON:
+{"text":{${langs().map((l) => `"${l.key}":"the rewritten paragraph in ${l.code}"`).join(",")}},"summary":"one or two sentences: what changed and which targets drove it","perLanguage":{${langs().map((l) => `"${l.key}":"short note on this language's changes"`).join(",")}},"issues":["anything the author should check: rules at risk, a target outside the range, a conflict with the plan, Continuity or neighbours, any word or detail you had to add; [] if none"]}`;
+      S.applying.msg = `Rewriting ${pid} in ${langs().map((l) => l.code).join(" and ")}… this can take a minute.`; renderPanel();
+      const res = await S.sample.json(prompt, { signal: ctl.signal, modelTier: "default", cache: false, onText: () => { if (S.applying) { S.applying.msg = `Writing the new version of ${pid}…`; } } });
+      const nt = {}; let ok = true;
+      for (const l of langs()) { const x = res?.text?.[l.key]; if (typeof x !== "string" || !x.trim()) ok = false; else nt[l.key] = x.trim(); }
+      if (!ok) throw { code: "invalid_json" };
+      const cur = S.paras.get(pid);
+      save(pid, {
+        text: nt, appliedTuning: sortObj(cur.tuning || {}),
+        lastApply: { at: Date.now(), summary: String(res.summary || ""), perLanguage: res.perLanguage || {}, issues: (res.issues || []).map(String), previous: { ...cur.text }, previousTuning: cur.appliedTuning || {} },
+      });
+      toast(`Paragraph ${pid} rewritten. Undo is in the panel.`);
+    } catch (e) {
+      const msg = { cancelled: "Rewrite stopped.", not_granted: "Rewriting needs your permission to use Claude.", rate_limited: "Claude is busy or your usage limit is reached. Try again later.", invalid_json: "Claude's answer could not be read. Try again.", no_context: "The book's context is not loaded in the editor yet. Ask Claude to load it.", prompt_too_large: "Too much context for one request." }[e?.code] || "The rewrite failed. Try again in a moment.";
+      toast(msg);
+    } finally {
+      S.applying = null;
+      const ta = document.querySelector(`.cell[data-pid="${CSS.escape(pid)}"]`); const cur = S.paras.get(pid);
+      if (cur && ta) { for (const col of ta.querySelectorAll(".lang-col")) { const x = col.querySelector("textarea"); if (x && document.activeElement !== x) { x.value = cur.text?.[col.dataset.lang] || ""; autosize(x); paintHighlight(cur, col); } } }
+      renderPanel();
+    }
   }
 
   // ---------- curve ----------

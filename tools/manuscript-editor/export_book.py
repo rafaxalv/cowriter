@@ -160,11 +160,51 @@ def main(book_dir, out):
             "reason": p.get("Reason for tuning", ""), "status": p.get("Review status", "") or "draft",
             "notes": p.get("Open issues", ""), "updatedAt": None,
         })
+    # Context for paragraph tuning in the editor: the same files the paragraph-review skill reads.
+    def read(rel):
+        f = os.path.join(book_dir, rel)
+        return open(f, encoding="utf-8").read() if os.path.exists(f) else ""
+    write(out, f"books/{slug}/context/book.json", {
+        "profile": profile,
+        "concept": read("outline/concept.md"),
+        "sharedRules": read("voices/00-shared-rules.md"),
+        "lexicon": read("voices/00-bilingual-lexicon.md"),
+        "characterBible": read("characters/character-bible.md"),
+    })
+    plan, scenes = section_by_chapter(read("outline/chapters.md"), r"^#{2,3} "), {}
+    for head, body in re.findall(r"^## (Chapter[^\n]*)\n(.*?)(?=^## |\Z)", read("outline/scenes.md"), re.M | re.S):
+        m = re.match(r"Chapter (\d+|[A-Za-z]+)", head)
+        cid = chap_id(m.group(1) + ".") if m and m.group(1).isdigit() else chap_id(head)
+        if cid:
+            scenes[cid] = "## " + head + "\n" + body.strip()
+    for cid in order_ch:
+        write(out, f"books/{slug}/context/ch-{cid}.json", {"chapter": cid, "plan": plan.get(cid, ""), "scenes": scenes.get(cid, "")})
+    skill = os.path.join(os.path.dirname(os.path.abspath(__file__)), "../../.claude/skills/paragraph-review/SKILL.md")
+    if os.path.exists(skill):
+        write(out, "skills/paragraph-review.json", {"text": open(skill, encoding="utf-8").read()})
     vdir = os.path.join(book_dir, "voices")
     for f in sorted(os.listdir(vdir)):
         if f.endswith(".md") and not f.startswith("00-") and re.match(r"[A-Z]", f):
             vid, v = voice_profile(os.path.join(vdir, f))
+            v["text"] = open(os.path.join(vdir, f), encoding="utf-8").read()
             write(out, f"books/{slug}/voices/{vid}.json", v)
+
+
+def section_by_chapter(text, head_re):
+    """Split a plan file into {chapter id: section text} by its chapter headings."""
+    out, cur, buf = {}, None, []
+    for line in text.split("\n"):
+        if re.match(head_re, line):
+            if cur:
+                out[cur] = "\n".join(buf).strip()
+            cur = chap_id(line.lstrip("#").strip().replace("\\", ""))
+            buf = [line] if cur else []
+            continue
+        if cur:
+            buf.append(line)
+    if cur:
+        out[cur] = "\n".join(buf).strip()
+    return out
 
 
 def write(out, rel, obj):
