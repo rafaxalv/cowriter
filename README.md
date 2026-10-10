@@ -29,21 +29,17 @@ Changes flow down (concept → chapters → scenes → text); deliberate changes
 | `research/paraguayan-war/` | War research notes, Paraguayan perspective, slavery timeline and compilation | Registros historicos |
 | `research/timelines/` | Paraguayan War timeline (1811–1892) and the timeline recipe | Registros historicos / Timelines |
 | `research/places/` | Jacadigo (location note and the Região search) | Claude project note; Região |
-| `research/family/` | Maternal family tree research, family memories and stories, MyHeritage screenshot | Registros historicos |
+| `research/family/` | Maternal family tree research, family memories and stories, MyHeritage chart and screenshot | Registros historicos |
 | `research/freed-slave-rights-1865-1888.md` | What a freed slave could and couldn't do | Registros historicos |
 | `research/sources/dados-gerais.md` | Source doc on the Zuavos baianos and Dom Obá (Bento, Kraay, COPIR) | Dados gerais |
 
 Portuguese documents stay in Portuguese, so nothing is lost in translation.
 
-## Still only in Drive
+## Images and PDFs
 
-These binary files were not copied; they are still in *Projeto Livro*:
-
-- `Imagens/`: nine photos (including `candido_fonseca.jpeg`)
-- `Registros historicos/garajo,+8.+Borba.pdf`
-- `Registros historicos/MyHeritage Family chart.png`
-
-Upload them here (or ask Claude to) if you want them versioned too.
+- `research/images/`: the photos from the Drive folder *Imagens* (including `candido_fonseca.jpeg`). One photo was in Drive twice; only one copy is kept.
+- `research/family/images/`: the MyHeritage family chart from Drive and a screenshot of the MyHeritage tree (2 Oct 2026).
+- `research/sources/borba-garajo-8.pdf`: the Borba article from *Registros historicos* (Drive name `garajo,+8.+Borba.pdf`).
 
 ## Rules that apply everywhere
 
