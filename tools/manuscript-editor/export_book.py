@@ -160,34 +160,70 @@ def main(book_dir, out):
             "reason": p.get("Reason for tuning", ""), "status": p.get("Review status", "") or "draft",
             "notes": p.get("Open issues", ""), "updatedAt": None,
         })
-    # Context for paragraph tuning in the editor: the same files the paragraph-review skill reads.
+    # Context for one-shot rewrites in the editor, kept small: the chapter text itself is the heavy
+    # context (the page has it); these are the short briefs the paragraph-review skill asks for.
     def read(rel):
         f = os.path.join(book_dir, rel)
         return open(f, encoding="utf-8").read() if os.path.exists(f) else ""
-    write(out, f"books/{slug}/context/book.json", {
-        "profile": profile,
-        "concept": read("outline/concept.md"),
-        "sharedRules": read("voices/00-shared-rules.md"),
-        "lexicon": read("voices/00-bilingual-lexicon.md"),
-        "characterBible": read("characters/character-bible.md"),
-    })
+    book_brief = "\n\n".join(filter(None, [
+        md_section(profile, r"People and roles"),
+        md_section(profile, r"Standing rules"),
+        md_section(read("outline/concept.md"), r"Handle with care"),
+        read("voices/00-shared-rules.md").split("## Change log")[0].strip(),
+        read("voices/00-bilingual-lexicon.md").strip(),
+    ]))
+    bible = read("characters/character-bible.md")
+    continuity = bible[bible.index("# Continuity"):].strip() if "# Continuity" in bible else ""
+    write(out, f"books/{slug}/context/book.json", {"brief": book_brief, "continuity": continuity})
     plan, scenes = section_by_chapter(read("outline/chapters.md"), r"^#{2,3} "), {}
     for head, body in re.findall(r"^## (Chapter[^\n]*)\n(.*?)(?=^## |\Z)", read("outline/scenes.md"), re.M | re.S):
-        m = re.match(r"Chapter (\d+|[A-Za-z]+)", head)
-        cid = chap_id(m.group(1) + ".") if m and m.group(1).isdigit() else chap_id(head)
+        m = re.match(r"Chapter (\d+)", head)
+        cid = chap_id(m.group(1) + ".") if m else chap_id(head)
         if cid:
-            scenes[cid] = "## " + head + "\n" + body.strip()
+            scenes[cid] = scene_brief(head, body)
     for cid in order_ch:
-        write(out, f"books/{slug}/context/ch-{cid}.json", {"chapter": cid, "plan": plan.get(cid, ""), "scenes": scenes.get(cid, "")})
+        brief = scenes.get(cid) or (("(No scene map yet. Start of the chapter's plan:)\n" + plan[cid][:1500]) if plan.get(cid) else "")
+        write(out, f"books/{slug}/context/ch-{cid}.json", {"chapter": cid, "brief": brief})
     skill = os.path.join(os.path.dirname(os.path.abspath(__file__)), "../../.claude/skills/paragraph-review/SKILL.md")
     if os.path.exists(skill):
-        write(out, "skills/paragraph-review.json", {"text": open(skill, encoding="utf-8").read()})
+        st = open(skill, encoding="utf-8").read()
+        m = re.search(r"^### Rewrite brief[^\n]*\n(.*?)(?=^\*\*From the Manuscript Desk|^#)", st, re.M | re.S)
+        write(out, "skills/paragraph-review.json", {"brief": m.group(1).strip() if m else ""})
     vdir = os.path.join(book_dir, "voices")
     for f in sorted(os.listdir(vdir)):
         if f.endswith(".md") and not f.startswith("00-") and re.match(r"[A-Z]", f):
             vid, v = voice_profile(os.path.join(vdir, f))
-            v["text"] = open(os.path.join(vdir, f), encoding="utf-8").read()
+            v["brief"] = voice_brief(open(os.path.join(vdir, f), encoding="utf-8").read())
             write(out, f"books/{slug}/voices/{vid}.json", v)
+
+
+def md_section(text, title_re):
+    """The body of the first ## section whose title matches, heading included."""
+    m = re.search(r"^## (" + title_re + r"[^\n]*)\n(.*?)(?=^## |\Z)", text, re.M | re.S)
+    return ("## " + m.group(1) + "\n" + m.group(2).strip()) if m else ""
+
+
+def voice_brief(text):
+    """Voice rules, Conveying feeling and the working parts of each language layer; no scores or samples."""
+    parts = [md_section(text, r"Voice rules"), md_section(text, r"Conveying feeling")]
+    for head, body in re.findall(r"^## (Language layer[^\n]*)\n(.*?)(?=^## |\Z)", text, re.M | re.S):
+        body = re.split(r"^\s*- \*\*Reference paragraph", body, flags=re.M)[0]
+        body = re.sub(r"^\s*- \*\*References\*\*.*$\n?", "", body, flags=re.M)
+        parts.append("## " + head + "\n" + body.strip())
+    return "\n\n".join(p for p in parts if p).strip()
+
+
+def scene_brief(head, body):
+    """Per scene: when, where, point of view, beats and Reader feeling; plus the map's header line."""
+    keep = ["## " + head]
+    intro = body.strip().split("\n\n")[0]
+    if not intro.startswith("###"):
+        keep.append(intro)
+    for line in body.split("\n"):
+        s = line.strip()
+        if s.startswith("### ") or re.match(r"- (When|Where|POV|Beats|Reader feeling):", s) or (s.startswith("- Scene ") ):
+            keep.append(line.rstrip())
+    return "\n".join(keep)
 
 
 def section_by_chapter(text, head_re):

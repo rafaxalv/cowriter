@@ -715,69 +715,47 @@ select { max-width: 260px; }
     await flush(pid);
     const p = S.paras.get(pid); const v = voiceOf(p); if (!p || !v) return;
     const ctl = new AbortController();
-    S.applying = { pid, ctl, msg: "Reading the chapter plan, scene map, Character Bible and voice…" }; renderPanel();
+    S.applying = { pid, ctl, msg: "Reading the chapter and the voice…" }; renderPanel();
     try {
       const [book, ch, skill] = await Promise.all([ctxDoc(`books/${S.slug}/context/book`), ctxDoc(`books/${S.slug}/context/ch-${p.chapter}`), ctxDoc("skills/paragraph-review")]);
-      if (!book || !skill) throw { code: "no_context" };
+      if (!book || !skill?.brief) throw { code: "no_context" };
       const ps = chapterParas(p.chapter).filter((x) => !x.removed); const i = ps.findIndex((x) => x.pid === pid);
-      const around = (x) => x ? langs().map((l) => `[${x.pid} ${l.code}] ${x.text?.[l.key] || ""}`).join("\n") : "(none)";
+      const mark = (x) => x.pid === pid ? "  <<< REWRITE THIS ONE" : (x === ps[i - 1] ? "  <<< previous" : (x === ps[i + 1] ? "  <<< next" : ""));
+      const chapterText = langs().map((l) => `--- ${l.code} ---\n` + ps.map((x) => `[${x.pid}]${mark(x)}\n${x.text?.[l.key] || "(empty)"}`).join("\n\n")).join("\n\n");
       const targets = S.book.dims.map((d) => {
         const vd = v.dims?.[d.n]; if (!vd) return null;
         const tn = (p.tuning || {})[d.n] || 0, val = Math.max(1, Math.min(5, vd.base + tn));
         return `${d.n}. ${d.name} (1 ${d.low} / 5 ${d.high}): base ${vd.base}, allowed ${vd.min}-${vd.max}, target ${val}${tn ? ` (tuning ${tn > 0 ? "+" : ""}${tn}${val < vd.min || val > vd.max ? ", OUTSIDE the voice's range" : ""})` : ""}`;
       }).filter(Boolean).join("\n");
-      const heat = langs().map((l) => { const ph = paraHeat(p, l.key); return ph ? `${l.code}: engagement avg ${ph.avg.toFixed(1)}, peak ${ph.peak}; ${ph.ss.map((s) => `#${s.i + 1} E${s.e} T${s.t} M${s.m} P${s.p}`).join(", ")}` : null; }).filter(Boolean).join("\n") || "not scored";
-      const prompt = `You are carrying out the paragraph-review skill below, in hand-tuning mode (its section 3), for ONE paragraph of a book. You have no access to files: everything the skill would read is included below. Follow the skill exactly.
+      const c = chapterInfo(p.chapter);
+      const prompt = `You rewrite ONE paragraph of a novel to new voice settings (the paragraph-review skill's hand-tuning). You have no files; everything you need is below.
 
-TASK
-Rewrite paragraph ${pid} in every language of the book (${langs().map((l) => l.code).join(", ")}) so that it hits the target values below, which are the voice's base values plus the author's tuning for this paragraph. Change only what the new targets require; keep the writer's words, facts, events, names and meaning wherever possible. Keep the paragraph consistent with the chapter plan, the scene map (its beats and Reader feeling), the Character Bible and its Continuity section, the neighbouring paragraphs and the book's rules. Never add events, named characters or facts. Each language is written natively, not translated from the other. Follow the book profile on whose wording is the source in each language: where a co-author's text is the source, change it only as far as the tuning requires and say so.
+HOW TO REWRITE
+${skill.brief}
+
+PARAGRAPH: ${pid} in chapter "${titleOf(c, langs()[0].key)}". Languages: ${langs().map((l) => l.code).join(", ")}.
 Reason the author gave for this tuning: ${p.reason || "(none given)"}
 
-TARGET PROFILE (voice ${v.id} v${v.version})
+TARGET PROFILE (voice ${v.id} v${v.version}; base + tuning)
 ${targets}
 
-THE PARAGRAPH NOW
-${around(p)}
+THE CHAPTER (the paragraph to rewrite and its neighbours are marked)
+${chapterText}
 
-PREVIOUS PARAGRAPH
-${around(ps[i - 1])}
+VOICE BRIEF (${v.id})
+${v.brief || "(this voice has no written rules yet; follow the target profile only)"}
 
-NEXT PARAGRAPH
-${around(ps[i + 1])}
+SCENE BRIEF
+${ch?.brief || "(no scene map yet)"}
 
-ENGAGEMENT SCORES OF THIS PARAGRAPH
-${heat}
+BOOK BRIEF
+${book.brief}
 
-=== SKILL: paragraph-review ===
-${skill.text}
+CONTINUITY FACTS
+${book.continuity || "(none recorded yet)"}
 
-=== VOICE FILE ${v.id} ===
-${v.text || "(not available)"}
-
-=== BOOK PROFILE (BOOK.md) ===
-${book.profile}
-
-=== CONCEPT ===
-${book.concept}
-
-=== SHARED RULES ===
-${book.sharedRules}
-
-=== BILINGUAL LEXICON ===
-${book.lexicon || "(none yet)"}
-
-=== CHAPTER PLAN (Chapters entry) ===
-${ch?.plan || "(none)"}
-
-=== SCENE MAP ===
-${ch?.scenes || "(no scene map yet)"}
-
-=== CHARACTER BIBLE (with the Continuity section at the end) ===
-${book.characterBible}
-
-OUTPUT
 Reply with only this JSON:
-{"text":{${langs().map((l) => `"${l.key}":"the rewritten paragraph in ${l.code}"`).join(",")}},"summary":"one or two sentences: what changed and which targets drove it","perLanguage":{${langs().map((l) => `"${l.key}":"short note on this language's changes"`).join(",")}},"issues":["anything the author should check: rules at risk, a target outside the range, a conflict with the plan, Continuity or neighbours, any word or detail you had to add; [] if none"]}`;
+{"text":{${langs().map((l) => `"${l.key}":"the rewritten paragraph in ${l.code}"`).join(",")}},"summary":"what changed and which targets drove it","perLanguage":{${langs().map((l) => `"${l.key}":"short note"`).join(",")}},"issues":["what the author should check; [] if none"]}`;
       S.applying.msg = `Rewriting ${pid} in ${langs().map((l) => l.code).join(" and ")}… this can take a minute.`; renderPanel();
       const res = await S.sample.json(prompt, { signal: ctl.signal, modelTier: "default", cache: false, onText: () => { if (S.applying) { S.applying.msg = `Writing the new version of ${pid}…`; } } });
       const nt = {}; let ok = true;
