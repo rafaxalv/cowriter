@@ -121,11 +121,12 @@ select { max-width: 260px; }
 .chap h1 { font: 600 26px/1.2 var(--font-text); margin: 4px 0 2px; text-wrap: balance; }
 .chap .part { font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--ink-3); }
 .chap .meta { color: var(--ink-3); font-size: 12.5px; display: flex; flex-wrap: wrap; gap: 4px 14px; margin-top: 4px; }
-.curve { margin-top: 14px; background: var(--paper); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 12px; }
+.curve { flex-basis: 100%; min-width: 0; background: var(--bg); border: 1px solid var(--rule); border-radius: var(--radius); padding: 8px 12px; }
+.curve .meta { color: var(--ink-3); font-size: 12px; display: flex; flex-wrap: wrap; gap: 2px 14px; margin-top: 4px; }
 .curve .row { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; flex-wrap: wrap; }
 .curve h2 { margin: 0; font: 600 12px var(--font-ui); text-transform: uppercase; letter-spacing: .07em; color: var(--ink-3); }
-.curve .summary { font: 400 14px/1.5 var(--font-text); color: var(--ink-2); margin: 6px 0 0; max-width: 70ch; }
-.curve svg { display: block; width: 100%; height: 96px; margin-top: 8px; }
+.curve .summary { font: 400 13.5px/1.45 var(--font-text); color: var(--ink-2); margin: 4px 0 0; max-width: 90ch; }
+.curve svg { display: block; width: 100%; height: 64px; margin-top: 6px; }
 .curve svg text { fill: var(--ink-3); font: 10px var(--font-mono); }
 .legend { display: flex; gap: 2px; align-items: center; font-size: 11px; color: var(--ink-3); }
 .legend span { display: inline-grid; place-items: center; width: 22px; height: 16px; font: 10px var(--font-mono); }
@@ -160,10 +161,9 @@ select { max-width: 260px; }
 .c-body textarea::placeholder { color: var(--ink-3); font-style: italic; }
 .hl { position: absolute; inset: 0; color: transparent; pointer-events: none; overflow: hidden; }
 .hl .s { border-radius: 3px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
-.hl .s.l1 { background: var(--h1); } .hl .s.l2 { background: var(--h2); } .hl .s.l3 { background: var(--h3); }
-.hl .s.l4 { background: var(--h4); } .hl .s.l5 { background: var(--h5); }
+.hl .s.l1 { background: color-mix(in srgb, var(--h1) 50%, transparent); } .hl .s.l2 { background: color-mix(in srgb, var(--h2) 50%, transparent); } .hl .s.l3 { background: color-mix(in srgb, var(--h3) 50%, transparent); }
+.hl .s.l4 { background: color-mix(in srgb, var(--h4) 50%, transparent); } .hl .s.l5 { background: color-mix(in srgb, var(--h5) 50%, transparent); }
 .hl .s.u { text-decoration: underline dotted var(--ink-3); text-underline-offset: 4px; }
-.hl mark { background: transparent; color: transparent; box-shadow: 0 0 0 1.5px var(--ink); border-radius: 2px; }
 .score { display: inline-flex; align-items: baseline; gap: 4px; padding: 1px 8px; border-radius: 4px; font: 600 13px/1.4 var(--font-mono); font-variant-numeric: tabular-nums; }
 .score small { font: 500 10px var(--font-mono); opacity: .8; }
 .l1b { background: var(--h1); } .l2b { background: var(--h2); } .l3b { background: var(--h3); } .l4b { background: var(--h4); } .l5b { background: var(--h5); color: var(--h-ink-5); }
@@ -195,7 +195,9 @@ select { max-width: 260px; }
         <button data-v="pace" aria-pressed="false">Pace</button>
       </div>
       <button class="btn primary" id="runHeat">Run heatmap</button>
+      <button class="btn" id="chartToggle" aria-expanded="true" aria-controls="curve">Hide chart</button>
     </div>
+    <section class="curve" id="curve" aria-label="Engagement curve" hidden></section>
   </header>
 
   <div class="desk" id="desk">
@@ -384,7 +386,6 @@ select { max-width: 260px; }
     const meta = el("div", "meta");
     meta.append(el("span", null, `${ps.filter((p) => !p.removed).length} paragraphs`), el("span", null, `${words.toLocaleString()} words (${langName(lk)})`));
     wrap.append(meta);
-    const curve = el("section", "curve"); curve.id = "curve"; wrap.append(curve);
     const cells = el("div", "cells"); cells.id = "cells";
     if (!ps.length) {
       const b = el("div", "blank"); b.append(el("div", null, "This chapter is not written yet."));
@@ -491,7 +492,7 @@ select { max-width: 260px; }
       if (s.start > pos) back.append(document.createTextNode(text.slice(pos, s.start)));
       const val = s[METRIC[metric]];
       const span = el("span", "s" + (val ? " l" + val : "") + (s.u ? " u" : ""));
-      appendWithHot(span, text.slice(s.start, s.end), s.hot || []);
+      span.textContent = text.slice(s.start, s.end);
       back.append(span); pos = s.end;
     }
     if (pos < text.length) back.append(document.createTextNode(text.slice(pos)));
@@ -671,6 +672,12 @@ select { max-width: 260px; }
   // ---------- curve ----------
   function renderCurve() {
     const box = $("curve"); if (!box) return; box.replaceChildren();
+    const tg = $("chartToggle"); tg.textContent = S.chartOpen ? "Hide chart" : "Show chart"; tg.setAttribute("aria-expanded", String(S.chartOpen));
+    box.hidden = !S.book || (!S.chartOpen && !S.running);
+    if (!S.chartOpen) {
+      if (S.running) { const pr = el("div", "progress"); pr.append(el("span", null, S.running.msg)); const stop = el("button", "btn", "Stop"); stop.onclick = () => S.running?.ctl.abort(); pr.append(stop); box.append(pr); }
+      return;
+    }
     const lk = S.lang === "both" ? langs()[0].key : S.lang;
     const h = heatFor(S.chapter, lk);
     const row = el("div", "row"); const left = el("div");
@@ -689,7 +696,7 @@ select { max-width: 260px; }
     }
     const ps = chapterParas(S.chapter).filter((p) => !p.removed);
     const pts = ps.map((p) => ({ p, h: paraHeat(p, lk) }));
-    const W = 600, H = 96, L = 18, R = 6, T = 8, B = 14;
+    const W = 900, H = 64, L = 14, R = 4, T = 5, B = 5;
     const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
     svg.setAttribute("viewBox", `0 0 ${W} ${H}`); svg.setAttribute("preserveAspectRatio", "none");
     svg.setAttribute("role", "img"); svg.setAttribute("aria-label", "Engagement per paragraph, average as bars, peak as dots");
@@ -800,6 +807,8 @@ Reply with only this JSON, one entry per sentence id above, in order:
   function step(d) { const cs = S.book?.chapters || []; const i = cs.findIndex((c) => c.id === S.chapter); const n = cs[i + d]; if (n) goChapter(n.id); }
   function goChapter(id) { for (const pid of [...S.pending.keys()]) flush(pid); S.chapter = id; S.selected = null; pref.set("chap:" + S.slug, id); $("chapSel").value = id; renderMain(); window.scrollTo({ top: 0 }); }
   $("runHeat").onclick = runHeatmap;
+  S.chartOpen = pref.get("chart") !== "closed";
+  $("chartToggle").onclick = () => { S.chartOpen = !S.chartOpen; pref.set("chart", S.chartOpen ? "open" : "closed"); renderCurve(); };
   const m0 = pref.get("metric"); if (m0) setMetric(m0);
 
   if (window.claude?.use) boot(); else { showState("Open this page in Claude", "The manuscript and its settings are stored with this page and load only inside Claude."); $("syncLine").textContent = "Store unavailable"; }
