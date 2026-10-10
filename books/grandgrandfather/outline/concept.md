@@ -6,7 +6,7 @@ A short introduction to the project for the author, a co-writer or an AI. It hol
 
   - **Book**: working title "Book: Grandgrand father story" (to decide). Author: Rafael; his mom writes or revises parts in Portuguese. English and Brazilian Portuguese side by side. Target about 300 pages (80,000–85,000 words); 350 is a hard limit.
   - **Working names, for planning only**: Joaquim (him) and Carmen (the woman from Spain). Never in the book text.
-  - **Standing rules from Rafael**: every story line he gives goes into Chapters, with all his details; no new characters, or expanded ones, without his approval; he writes the funny childhood stories himself; show changes before writing to Drive and never overwrite his or his mom's text without approval (her Portuguese is the source when she wrote it); brainstorm before cutting arcs.
+  - **Standing rules from Rafael**: every story line he gives goes into Chapters, with all his details; no new characters, or expanded ones, without his approval; he writes the funny childhood stories himself; show changes before writing them and never overwrite his or his mom's text without approval (her Portuguese is the source when she wrote it); brainstorm before cutting arcs.
   - **How the files fit together**:
     1.  **00 Book Concept** (this file): the key ideas. Least detail.
     2.  **Chapters**: the skeleton. Every event per chapter, in order, with sources for real events that must be accurate.
@@ -14,9 +14,9 @@ A short introduction to the project for the author, a co-writer or an AI. It hol
     4.  **Book**: the final text, written from the scenes in the planned voices. Full detail.
       - Branching from the Concept, used at every level: the Character Bible (who people are, plus a Continuity section with what the text has established), the historical research (Registros historicos) and the Voices.
       - Changes flow down (concept → chapters → scenes → text); deliberate changes in the text flow back up.
-  - **Files (Drive IDs)**: Projeto Livro folder 1C7YhM6J1grSaYlVgElY3ikeomTmzPXsF · Book 174OFNyVe95-6wNnMELPwd5Q4BuhtD\_eVygErDVYcGyQ · Chapters 1abg0055EVPTi3xFetWwbsdGL7OoQ6lbm7-hiVVPIueQ · Scenes 1Drt8hAFrG0aO8PS3BwASIh29uEkb-qNDUnTttMHnsL0 (official scene maps; chapter 1 in progress) · Character Bible 1RtZ-XY2fM\_n6TynDPww-q2u9l2Cqm4r0W-FCX2LIAcc (its Continuity section replaces the old Continuity Log) · Configuration folder 1tt7FuK8x-Ze4KNbzYHMCtUrJqIYfdcuO · Paragraph Parameters 18F3PWWCeC\_NqVW5pES50-LI4ixbGaUpYAFs4Wt70FiY · Voices folder 10v0\_gpo0OvYGOFcp5bA7AHfwjUH4Lu9s (Voice Index 1RfpUht8X\_bskJ9UII25epgtoufdGW1z7aTp3Lejbcf4; AUTHOR-MAIN 1yJ9uhR1zrpsL\_P3Wz0ncpAdd1HZwZMnWTADB4iHQM9c) · Registros historicos (research) · Claude project note places-jacadigo.
-  - **Book doc format**: one table per chapter, English and Portuguese columns, one paragraph per row; Paragraph ID chapter.row (prologue 00, epilogue 99).
-  - **Editing notes**: the Drive connector cannot edit doc text; edits go through Google Docs Find and replace in the built-in browser (Portuguese UI) and are verified by exporting the doc as text.
+  - **Files**: listed in the book profile, `BOOK.md` (paths in this repo). The Character Bible's Continuity section replaces the old Continuity Log; the research is in `research/`.
+  - **Manuscript format**: one file per language (`book/manuscript.en.md`, `book/manuscript.pt-br.md`), one paragraph per block, each preceded by a hidden Paragraph ID (chapter.row; prologue 00, interlude INT, epilogue 99) that matches across the two files.
+  - **Editing notes**: changes are shown first, applied after approval, then committed and pushed to GitHub (see `BOOK.md`).
 
 ## The book in one paragraph
 

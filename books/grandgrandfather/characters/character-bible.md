@@ -287,9 +287,9 @@ Every historical anchor used above, which character carries it, and whether it i
 
 ### Sources
 
-  - [Dados gerais (Google Doc)](https://docs.google.com/document/d/1tRYX-bhSmNrz3jVWB8tvFh-QnjJvkwLepsPQNSXMRVM/edit): Bento, *O Exército e a Abolição*; Kraay, *Os companheiros de Dom Obá*.
+  - [Dados gerais](../research/sources/dados-gerais.md): Bento, *O Exército e a Abolição*; Kraay, *Os companheiros de Dom Obá*.
   - [Micheal Clodfelter, *Warfare and Armed Conflicts: A Statistical Encyclopedia of Casualty and Other Figures, 1492–2015*, 4th ed. (McFarland, 2017), p. 322](https://books.google.de/books?id=kNzCDgAAQBAJ&pg=PA322): Acosta Ñu boys disguised with false beards.
-  - Região doc (Drive): Jacadigo, Corumbá, near the Bolivian border; today's quilombola communities there formed in the 20th century.
+  - [Região](../research/places/regiao-jacadigo.md): Jacadigo, Corumbá, near the Bolivian border; today's quilombola communities there formed in the 20th century.
   - Corumbá after the war (river port boom, about 3,000 people in 1872, about 21% foreigners, mostly Paraguayans): <https://periodicos.ufpb.br/index.php/srh/article/download/16430/9418/28317> 
   - Decreto 3.371 (1865), promises to Voluntários da Pátria including a land plot of 22,500 square braças: <https://www2.camara.leg.br/legin/fed/decret/1824-1899/decreto-3371-7-janeiro-1865-554492-publicacaooriginal-73111-pe.html> 
 

@@ -1,15 +1,18 @@
 ---
 name: "engagement-heatmap"
-description: "Use when Rafael wants a chapter (or passage) of his book scored for reader engagement, pace and emotional impact, shown as a 5-level colored text heatmap with a chapter curve."
+description: "Use when the author wants a chapter (or passage) of a book in this repo scored for reader engagement, pace and emotional impact, shown as a 5-level colored text heatmap with a chapter curve."
 ---
 
 # Engagement heatmap
 
-Reads a chapter of Rafael's book and scores how engaging each part is for a reader, then shows it as a heatmap: every word colored by its score, plus a curve for the whole chapter. The goal is to see where the text grips, where it rests, and where readers might start skimming.
+Reads a chapter of a book and scores how engaging each part is for a reader, then shows it as a heatmap: every word colored by its score, plus a curve for the whole chapter. The goal is to see where the text grips, where it rests, and where readers might start skimming.
 
-## The book (short context)
+This skill is generic. Everything specific to one book lives in that book's folder.
 
-A novel about Rafael's great-great-grandfather, a Brazilian soldier in the Paraguayan War (1864-1870) who settled in Mato Grosso do Sul. Driven by luck and chance, no morals pushed, no pure heroes or villains. Themes: luck, freedom, violence, money. Framed as a story his grandma used to tell. English and Brazilian Portuguese side by side. Files live in the book's Google Drive folder (layout in the book-voices skill).
+## Find the book
+
+1. Books live in `books/<slug>/`, each with a `BOOK.md` (the book profile). If there is only one book, use it; otherwise use the one the author names, or ask.
+2. Read `BOOK.md`: file paths (manuscript, Chapters, Continuity record, Paragraph Parameters, Engagement scores, Engagement Anchors), languages, the Paragraph ID format, and its notes for the skills (for example voices that are deliberately quiet). Then read the Concept for the book's tone.
 
 ## Where this method comes from
 
@@ -24,7 +27,7 @@ A novel about Rafael's great-great-grandfather, a Brazilian soldier in the Parag
 
 ## The 5-level scale
 
-The main score is **engagement** (1-5). Each scored unit also gets three sub-scores on the same 1-5 scale, so Rafael can see *why*:
+The main score is **engagement** (1-5). Each scored unit also gets three sub-scores on the same 1-5 scale, so the author can see *why*:
 
 - **Tension**: is there an open question with stakes (danger, a secret, a choice, a threat of loss) that the reader wants answered? Does something unexpected happen?
 - **Emotional impact**: how intense the feeling is (arousal), regardless of whether it is happy or sad.
@@ -44,13 +47,13 @@ Low is not automatically bad. A good chapter breathes: 2s after a 5 are often ri
 
 ## Anchors (calibration)
 
-Keep an **Engagement Anchors** doc in the book's Drive folder: for each level, 2-3 short paragraphs from Rafael's own book that he agrees deserve that score. The first time, propose anchors from the chapter being scored and ask him to confirm or move them. Always score against these anchors so scores mean the same thing across chapters. Update anchors only with his OK.
+Keep the book's **Engagement Anchors** file: for each level, 2-3 short paragraphs from the book itself that the author agrees deserve that score. The first time, propose anchors from the chapter being scored and ask the author to confirm or move them. Always score against these anchors so scores mean the same thing across chapters. Update anchors only with the author's OK.
 
 ## Steps
 
 ### 1. Gather context
 
-Read the chapter from the Book doc; the chapter plan in the Chapters doc; a summary of the previous chapters (or the Continuity Log), because suspense depends on what the reader already knows and fears; the Engagement Anchors; and the voices used (from Paragraph Parameters), so a deliberately calm voice is judged fairly.
+Read the chapter from the manuscript (or the draft named); the chapter's plan in Chapters and its scene map in Scenes (the Reader feeling planned for each scene); a summary of the previous chapters (or the Continuity record), because suspense depends on what the reader already knows and fears; the Engagement Anchors; and the voices used (from Paragraph Parameters), so a deliberately calm voice is judged fairly.
 
 ### 2. Score
 
@@ -58,31 +61,31 @@ Read the chapter from the Book doc; the chapter plan in the Chapters doc; a summ
 - **Word-level heatmap**: every word takes the score of its sentence or clause. Then mark **hot words**: the specific words where a jolt lands (a reveal, a name, a threat, a sensory shock). Hot words get an outline in the heatmap, not a different score.
 - For each sentence record: engagement, tension, emotional impact, pace, and a one-line reason ("open question: will she get across?").
 - Score each sentence twice, independently, reading in order. Where the two passes differ by 2 or more levels, mark the sentence **uncertain** and use the lower score.
-- Also mark **turning points** (where the curve changes direction), since these are where AI scoring is least reliable; ask Rafael to check them.
+- Also mark **turning points** (where the curve changes direction), since these are where AI scoring is least reliable; ask the author to check them.
 
 ### 3. Chapter analysis
 
 - **Curve**: engagement per paragraph (average and peak) across the chapter, with tension, emotion and pace as thinner lines.
 - **Flat stretches**: 3 or more consecutive paragraphs averaging 2 or less, unless planned.
 - **Numb stretches**: long runs at 5 with no release.
-- **Shape**: compare with the chapter's purpose in the Chapters doc and with the narrative arc (staging early, rising tension, a peak, release). Note where the chapter ends: on an open question (pulls the reader into the next chapter) or fully resolved.
-- **Suggestions**: for each problem, the paragraph IDs and a concrete idea (cut, compress into summary, add an open question, move a reveal, switch to scene). These are suggestions, never automatic edits; chapter-review and paragraph-review apply changes.
+- **Shape**: compare with the chapter's purpose in Chapters, the Reader feeling planned per scene, and the narrative arc (staging early, rising tension, a peak, release). Note where the chapter ends: on an open question (pulls the reader into the next chapter) or fully resolved.
+- **Suggestions**: for each problem, the Paragraph IDs and a concrete idea (cut, compress into summary, add an open question, move a reveal, switch to scene). These are suggestions, never automatic edits; chapter-review and paragraph-review apply changes.
 
-### 4. Both languages
+### 4. Every language
 
-Score the English text. If the Portuguese version exists, score it too and flag paragraphs where the two differ by 2 or more levels: the translation may have lost or added tension.
+Score the language the profile marks as written first. If other language versions exist, score them too and flag paragraphs where the versions differ by 2 or more levels: the translation may have lost or added tension.
 
 ## Output
 
-1. **Heatmap page**: an HTML page published as an artifact named "Heatmap - Chapter N" (republish the same artifact on reruns). Each word colored by its level using a 5-step sequential color scale that works in light and dark mode and for color-blind readers (load the dataviz skill for the palette), hot words outlined, uncertain sentences underlined dotted, paragraph IDs in the margin, a legend, and on hover the sentence's sub-scores and reason. A toggle switches the coloring between engagement, tension, emotion and pace. The chapter curve sits at the top.
-2. **Report in chat**: the curve in a few words, the 3-5 most important problems with paragraph IDs, and the turning points to check.
-3. **Data**: save sentence scores in an **Engagement** sheet in the book's Drive folder (paragraph ID, sentence number, opening words, engagement, tension, emotion, pace, hot words, uncertain, reason, date), and add per-paragraph average and peak engagement to the Paragraph Parameters sheet (only those columns; never touch the others).
+1. **Heatmap page**: an HTML page published as an artifact named "Heatmap - <book> - Chapter N" (republish the same artifact on reruns). Each word colored by its level using a 5-step sequential color scale that works in light and dark mode and for color-blind readers (load the dataviz skill for the palette), hot words outlined, uncertain sentences underlined dotted, Paragraph IDs in the margin, a legend, and on hover the sentence's sub-scores and reason. A toggle switches the coloring between engagement, tension, emotion and pace. The chapter curve sits at the top.
+2. **Report in chat**: the curve in a few words, the 3-5 most important problems with Paragraph IDs, and the turning points to check.
+3. **Data**: save sentence scores in the book's **Engagement** scores file (columns as the profile lists them), and add per-paragraph average and peak engagement to Paragraph Parameters (only those columns; never touch the others). Save the changes the way the profile says (by default: commit and push).
 
 ## Notes
 
 - Scores are estimates of a typical reader, not truth. When beta readers mark where they got bored or could not stop, compare with the scores and adjust the anchors.
 - Never rewrite text in this skill.
-- Engagement is not the same as quality: a deliberately quiet passage in the grandma's voice can be exactly right at level 2.
+- Engagement is not the same as quality: a deliberately quiet passage (for example in a frame or author voice) can be exactly right at level 2.
 
 ## References
 

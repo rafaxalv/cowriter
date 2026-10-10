@@ -1,50 +1,39 @@
-# Cowriter: the great-great-grandfather book
+# Cowriter
 
-Working files for Rafael's book about his great-great-grandfather: born enslaved in Bahia, freed by the Paraguayan War, winner of a lottery, owner of a farm at Jacadigo, husband of a woman trafficked from Spain. Immersive historical fiction, written in English and Brazilian Portuguese side by side.
-
-This repo was copied from the Google Drive folder *Projeto Livro* on 10 Oct 2026. Drive was left untouched; from now on this repo is meant to be the master copy.
-
-## How the files fit together
-
-```
-outline/concept.md  →  outline/chapters.md  →  outline/scenes.md  →  book/manuscript.en.md
-   key ideas              every event,            each chapter            book/manuscript.pt-br.md
-   and rules              chapter by chapter      broken into scenes      the text
-```
-
-Changes flow down (concept → chapters → scenes → text); deliberate changes in the text flow back up. Used at every level: the Character Bible, the research and the voices.
+A workspace for writing books with Claude. The writing skills are shared and generic; each book keeps everything specific to it in its own folder.
 
 ## Layout
 
-| Folder | What's in it | Drive original |
-| --- | --- | --- |
-| `book/manuscript.en.md`, `book/manuscript.pt-br.md` | The book text, one file per language. Matching paragraphs share an ID (chapter.row; prologue 00, interlude INT, epilogue 99) in a hidden comment, so the two versions stay in step | Book |
-| `outline/concept.md` | Key ideas, standing rules, the story in six movements | 00 Book Concept |
-| `outline/concept-archive.md` | The long earlier version of the concept (Oct 7, 2026) | Configuration / Book Concept — archive |
-| `outline/chapters.md` | The plan of record: every event per chapter, with sources | Chapters |
-| `outline/scenes.md` | Scene maps (chapter 1 in progress) | Scenes |
-| `characters/character-bible.md` | Who everyone is, plus the Continuity section | Character Bible |
-| `voices/` | Narrative voices (NARR-MAIN, AUTHOR-MAIN, BASE-LETTERS-DESPERATE), shared rules, author library, voice index | Configuration / Voices |
-| `config/` | Engagement anchors, engagement and paragraph-parameter sheets (CSV) | Configuration |
-| `research/paraguayan-war/` | War research notes, Paraguayan perspective, slavery timeline and compilation | Registros historicos |
-| `research/timelines/` | Paraguayan War timeline (1811–1892) and the timeline recipe | Registros historicos / Timelines |
-| `research/places/` | Jacadigo (location note and the Região search) | Claude project note; Região |
-| `research/family/` | Maternal family tree research, family memories and stories, MyHeritage chart and screenshot | Registros historicos |
-| `research/freed-slave-rights-1865-1888.md` | What a freed slave could and couldn't do | Registros historicos |
-| `research/sources/dados-gerais.md` | Source doc on the Zuavos baianos and Dom Obá (Bento, Kraay, COPIR) | Dados gerais |
-| `.claude/skills/` | The book skills: co-writer, book-voices, voice-generator, scene-builder, chapter-review, paragraph-review, engagement-heatmap. Copied as they are; they still point to the Drive files | Rafael's claude.ai skills |
+```
+.claude/skills/        the book skills (generic, used by every book)
+books/
+  <slug>/
+    BOOK.md            the book profile: paths, people, languages, formats, rules
+    outline/           concept, chapters, scenes
+    book/              the manuscript, one file per language
+    characters/        Character Bible (with its Continuity section)
+    voices/            voice files, voice index, shared rules, author library
+    config/            paragraph parameters, engagement scores and anchors
+    research/          sources, notes, timelines, images
+    drafts/            chapters being written (created when needed)
+```
 
-Portuguese documents stay in Portuguese, so nothing is lost in translation.
+## Books
 
-## Images and PDFs
+| Folder | Book |
+| --- | --- |
+| [`books/grandgrandfather/`](books/grandgrandfather/) | Book: Grandgrand father story (working title), by Rafael. English and Brazilian Portuguese. |
 
-- `research/images/`: the photos from the Drive folder *Imagens* (including `candido_fonseca.jpeg`). One photo was in Drive twice; only one copy is kept.
-- `research/family/images/`: the MyHeritage family chart from Drive and a screenshot of the MyHeritage tree (2 Oct 2026).
-- `research/sources/borba-garajo-8.pdf`: the Borba article from *Registros historicos* (Drive name `garajo,+8.+Borba.pdf`).
+## Skills
 
-## Rules that apply everywhere
+| Skill | What it does |
+| --- | --- |
+| co-writer | The writing partner: sets up a new book, plans chapters, writes prose from scene maps, keeps every file in sync. Coordinates the others. |
+| scene-builder | Turns a chapter's events into an ordered scene map. |
+| book-voices | Owns the narrative voices: creates, lists, compares, adjusts and validates them. |
+| voice-generator | Builds or updates a voice from reference authors, with a fixed 18-dimension style framework. |
+| chapter-review | Reviews a whole chapter: scene map, voices, tuning, plot, continuity. |
+| paragraph-review | Checks and fine-tunes single paragraphs against a voice. |
+| engagement-heatmap | Scores a chapter for engagement, tension, emotion and pace, as a heatmap. |
 
-- Neither he nor the woman from Spain is ever named in the book text. Working names for planning only: Joaquim and Carmen.
-- Every story line Rafael gives goes into `outline/chapters.md`; the Character Bible holds personality, backstory and minor details.
-- No new characters, or expanded ones, without Rafael's approval. He writes the funny childhood episodes himself.
-- Never overwrite Rafael's or his mom's text without approval; when his mom wrote the Portuguese, it is the source and the English follows it.
+Every skill starts by finding the book's `BOOK.md` and reading it. To start a new book, ask the co-writer; it creates `books/<slug>/` from `.claude/skills/co-writer/templates/BOOK.md`.
