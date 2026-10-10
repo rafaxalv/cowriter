@@ -17,8 +17,8 @@
   --warn: #9a5b00;
   --warn-soft: #fbefdc;
   --ok: #2e6b4a;
-  --h1: #eceef3; --h2: #fde9c9; --h3: #f9c47c; --h4: #ee8a4c; --h5: #c4413a;
-  --h-ink: #1d2230; --h-ink-5: #ffffff;
+  --h1: #e9ebf1; --h2: #fde7c3; --h3: #fbc77e; --h4: #f59a5f; --h5: #ec6a5c;
+  --h-ink: #1d2230; --h-ink-5: #1d2230;
   --font-text: "Spectral", "Iowan Old Style", Georgia, serif;
   --font-ui: "Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
@@ -152,15 +152,20 @@ select { max-width: 260px; }
 @media (max-width: 700px) { .c-body { grid-template-columns: minmax(0, 1fr); } }
 .lang-col { min-width: 0; }
 .lang-tag { font: 500 10.5px var(--font-mono); color: var(--ink-3); letter-spacing: .05em; }
-.c-body textarea, .heat-view { width: 100%; font: 17px/1.62 var(--font-text); color: var(--ink); background: transparent; border: 0; padding: 4px 2px; margin: 0; resize: none; overflow: hidden; display: block; }
-.c-body textarea:focus { outline: none; background: color-mix(in srgb, var(--accent-soft) 35%, transparent); border-radius: 4px; }
+.hl-wrap { position: relative; }
+.c-body textarea, .hl { width: 100%; font: 17px/1.62 var(--font-text); padding: 4px 2px; margin: 0; border: 0; letter-spacing: normal; word-spacing: normal; white-space: pre-wrap; overflow-wrap: break-word; }
+.c-body textarea { position: relative; z-index: 1; color: var(--ink); background: transparent; resize: none; overflow: hidden; display: block; border-radius: 4px; }
+.c-body textarea:focus { outline: none; background: color-mix(in srgb, var(--accent-soft) 35%, transparent); }
+.lit textarea:focus { background: transparent; box-shadow: inset 0 -2px 0 var(--accent); }
 .c-body textarea::placeholder { color: var(--ink-3); font-style: italic; }
-.heat-view { cursor: text; white-space: pre-wrap; }
-.heat-view .s { border-radius: 3px; padding: 1px 0; box-decoration-break: clone; -webkit-box-decoration-break: clone; color: var(--h-ink); }
-.heat-view .s.l1 { background: var(--h1); } .heat-view .s.l2 { background: var(--h2); } .heat-view .s.l3 { background: var(--h3); }
-.heat-view .s.l4 { background: var(--h4); } .heat-view .s.l5 { background: var(--h5); color: var(--h-ink-5); }
-.heat-view .s.u { text-decoration: underline dotted; text-underline-offset: 3px; }
-.heat-view mark { background: transparent; color: inherit; outline: 1.5px solid currentColor; outline-offset: 0; border-radius: 2px; }
+.hl { position: absolute; inset: 0; color: transparent; pointer-events: none; overflow: hidden; }
+.hl .s { border-radius: 3px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.hl .s.l1 { background: var(--h1); } .hl .s.l2 { background: var(--h2); } .hl .s.l3 { background: var(--h3); }
+.hl .s.l4 { background: var(--h4); } .hl .s.l5 { background: var(--h5); }
+.hl .s.u { text-decoration: underline dotted var(--ink-3); text-underline-offset: 4px; }
+.hl mark { background: transparent; color: transparent; box-shadow: 0 0 0 1.5px var(--ink); border-radius: 2px; }
+.score { display: inline-flex; align-items: baseline; gap: 4px; padding: 1px 8px; border-radius: 4px; font: 600 13px/1.4 var(--font-mono); font-variant-numeric: tabular-nums; }
+.score small { font: 500 10px var(--font-mono); opacity: .8; }
 .l1b { background: var(--h1); } .l2b { background: var(--h2); } .l3b { background: var(--h3); } .l4b { background: var(--h4); } .l5b { background: var(--h5); color: var(--h-ink-5); }
 .blank { color: var(--ink-3); font: italic 16px var(--font-text); padding: 18px 4px; text-align: center; border: 1px dashed var(--rule-2); border-radius: var(--radius); background: var(--paper); }
 .state { max-width: 560px; margin: 60px auto; text-align: center; color: var(--ink-2); }
@@ -420,9 +425,11 @@ select { max-width: 260px; }
       const ph = paraHeat(p, lk);
       if (ph) {
         const lvl = Math.round(ph.avg);
-        const chip = el("span", "chip heat l" + lvl + "b", `${visibleLangs().length > 1 ? langName(lk) + " " : ""}${ph.avg.toFixed(1)} · peak ${ph.peak}`);
-        chip.title = "Average and peak engagement of this paragraph's sentences";
-        head.append(chip);
+        const badge = el("span", "score l" + lvl + "b");
+        if (visibleLangs().length > 1) badge.append(el("small", null, langName(lk)));
+        badge.append(el("b", null, ph.avg.toFixed(1)));
+        badge.title = `Engagement ${ph.avg.toFixed(1)} (${LEVELS[lvl]}), peak ${ph.peak}, over ${ph.ss.length} sentence${ph.ss.length > 1 ? "s" : ""}`;
+        head.insertBefore(badge, head.children[1]);
         if (ph.stale) head.append(el("span", "chip stale", "edited since scoring"));
       }
     }
@@ -445,41 +452,50 @@ select { max-width: 260px; }
   function renderLangCol(p, col) {
     const lk = col.dataset.lang;
     const text = p.text?.[lk] ?? "";
-    const editingHere = S.editing === p.pid + "|" + lk;
-    const metric = S.heatMetric;
-    const h = metric !== "off" && !editingHere ? heatFor(p.chapter, lk) : null;
-    const ta = col.querySelector("textarea");
-    if (ta && document.activeElement === ta) return; // never disturb typing
+    const ta0 = col.querySelector("textarea");
+    if (ta0 && document.activeElement === ta0) { paintHighlight(p, col); return; } // never disturb typing
     col.replaceChildren();
     if (visibleLangs().length > 1) col.append(el("div", "lang-tag", langName(lk)));
-    if (h && text.trim()) {
-      const view = el("div", "heat-view"); view.tabIndex = 0;
-      view.setAttribute("role", "button"); view.setAttribute("aria-label", "Edit paragraph " + p.pid);
-      const ss = h.sentences.filter((s) => s.pid === p.pid);
-      const stale = h.hashes?.[p.pid] !== hash(text);
-      const spans = stale ? splitSentences(text).map((r, i) => ({ ...r, ...(ss[i] || {}) })) : ss.map((s) => ({ ...s }));
-      let pos = 0;
-      for (const s of spans) {
-        if (s.start > pos) view.append(document.createTextNode(text.slice(pos, s.start)));
-        const val = s[METRIC[metric]];
-        const span = el("span", "s" + (val ? " l" + val : "") + (s.u ? " u" : ""));
-        const piece = text.slice(s.start, s.end);
-        appendWithHot(span, piece, s.hot || []);
-        if (val) span.title = `Engagement ${s.e} (${LEVELS[s.e]}) · tension ${s.t} · emotion ${s.m} · pace ${s.p}${s.u ? " · uncertain" : ""}\n${s.r || ""}`;
-        view.append(span); pos = s.end;
-      }
-      if (pos < text.length) view.append(document.createTextNode(text.slice(pos)));
-      const startEdit = () => { S.editing = p.pid + "|" + lk; select(p.pid); renderLangCol(S.paras.get(p.pid), col); col.querySelector("textarea")?.focus(); };
-      view.onclick = startEdit; view.onkeydown = (e) => { if (e.key === "Enter") { e.preventDefault(); startEdit(); } };
-      col.append(view);
-      return;
-    }
+    const wrap = el("div", "hl-wrap");
+    const back = el("div", "hl"); back.setAttribute("aria-hidden", "true");
     const t = el("textarea"); t.id = "ta-" + p.pid + "-" + lk; t.rows = 1; t.spellcheck = true;
     t.lang = lk.replace("_", "-"); t.value = text; t.placeholder = `Write paragraph ${p.pid} (${langName(lk)})…`;
     t.setAttribute("aria-label", `Paragraph ${p.pid}, ${langName(lk)}`);
-    t.addEventListener("input", () => { autosize(t); queueSave(p.pid, { text: { ...(S.paras.get(p.pid).text || {}), [lk]: t.value } }); });
-    t.addEventListener("blur", () => { flush(p.pid); if (S.editing === p.pid + "|" + lk) { S.editing = null; setTimeout(() => { const cur = S.paras.get(p.pid); if (cur && document.activeElement !== t) renderLangCol(cur, col); }, 0); } });
-    col.append(t); requestAnimationFrame(() => autosize(t));
+    t.addEventListener("input", () => {
+      autosize(t);
+      queueSave(p.pid, { text: { ...(S.paras.get(p.pid).text || {}), [lk]: t.value } });
+      paintHighlight(S.paras.get(p.pid), col);
+    });
+    t.addEventListener("blur", () => flush(p.pid));
+    wrap.append(back, t); col.append(wrap);
+    paintHighlight(p, col);
+    requestAnimationFrame(() => autosize(t));
+  }
+
+  // The heatmap is painted as highlighter colour behind the editable text:
+  // a mirror layer with the same font and wrapping, transparent text, coloured sentence backgrounds.
+  function paintHighlight(p, col) {
+    const lk = col.dataset.lang, back = col.querySelector(".hl"), ta = col.querySelector("textarea");
+    if (!back || !ta) return;
+    const text = ta.value;
+    const metric = S.heatMetric;
+    const h = metric !== "off" ? heatFor(p.chapter, lk) : null;
+    const ss = h ? h.sentences.filter((s) => s.pid === p.pid) : [];
+    col.classList.toggle("lit", !!ss.length);
+    back.replaceChildren();
+    if (!ss.length) return;
+    const stale = h.hashes?.[p.pid] !== hash(text);
+    const spans = stale ? splitSentences(text).map((r, i) => ({ ...(ss[i] || {}), start: r.start, end: r.end })) : ss;
+    let pos = 0;
+    for (const s of spans) {
+      if (s.start > pos) back.append(document.createTextNode(text.slice(pos, s.start)));
+      const val = s[METRIC[metric]];
+      const span = el("span", "s" + (val ? " l" + val : "") + (s.u ? " u" : ""));
+      appendWithHot(span, text.slice(s.start, s.end), s.hot || []);
+      back.append(span); pos = s.end;
+    }
+    if (pos < text.length) back.append(document.createTextNode(text.slice(pos)));
+    back.append(document.createTextNode("​"));
   }
   function appendWithHot(span, piece, hot) {
     const words = hot.filter((w) => w && piece.includes(w));
@@ -782,7 +798,7 @@ Reply with only this JSON, one entry per sentence id above, in order:
   $("bookSel").addEventListener("change", (e) => openBook(e.target.value));
   $("prevCh").onclick = () => step(-1); $("nextCh").onclick = () => step(1);
   function step(d) { const cs = S.book?.chapters || []; const i = cs.findIndex((c) => c.id === S.chapter); const n = cs[i + d]; if (n) goChapter(n.id); }
-  function goChapter(id) { for (const pid of [...S.pending.keys()]) flush(pid); S.chapter = id; S.selected = null; S.editing = null; pref.set("chap:" + S.slug, id); $("chapSel").value = id; renderMain(); window.scrollTo({ top: 0 }); }
+  function goChapter(id) { for (const pid of [...S.pending.keys()]) flush(pid); S.chapter = id; S.selected = null; pref.set("chap:" + S.slug, id); $("chapSel").value = id; renderMain(); window.scrollTo({ top: 0 }); }
   $("runHeat").onclick = runHeatmap;
   const m0 = pref.get("metric"); if (m0) setMetric(m0);
 
