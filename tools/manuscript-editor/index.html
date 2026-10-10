@@ -1,0 +1,791 @@
+<title>Manuscript Desk</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a writer's desk. Left: the settings of the paragraph in hand. Right: the chapter as a column of paragraph cells. */
+:root {
+  --bg: #f3f4f7;
+  --paper: #ffffff;
+  --ink: #1d2230;
+  --ink-2: #4b5266;
+  --ink-3: #7c8396;
+  --rule: #dde0e8;
+  --rule-2: #c9cdd8;
+  --accent: #2f45a8;
+  --accent-soft: #e6eafb;
+  --warn: #9a5b00;
+  --warn-soft: #fbefdc;
+  --ok: #2e6b4a;
+  --h1: #eceef3; --h2: #fde9c9; --h3: #f9c47c; --h4: #ee8a4c; --h5: #c4413a;
+  --h-ink: #1d2230; --h-ink-5: #ffffff;
+  --font-text: "Spectral", "Iowan Old Style", Georgia, serif;
+  --font-ui: "Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --radius: 6px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #12141b; --paper: #1a1d26; --ink: #e6e8ef; --ink-2: #b3b8c7; --ink-3: #868c9e;
+    --rule: #2a2e3b; --rule-2: #3a3f50; --accent: #9aabff; --accent-soft: #232a4a;
+    --warn: #f0b860; --warn-soft: #3a2c14; --ok: #7fcfa0;
+    --h1: #232631; --h2: #45391f; --h3: #6d4c1c; --h4: #96461f; --h5: #b93630;
+    --h-ink: #e6e8ef; --h-ink-5: #ffffff;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #12141b; --paper: #1a1d26; --ink: #e6e8ef; --ink-2: #b3b8c7; --ink-3: #868c9e;
+  --rule: #2a2e3b; --rule-2: #3a3f50; --accent: #9aabff; --accent-soft: #232a4a;
+  --warn: #f0b860; --warn-soft: #3a2c14; --ok: #7fcfa0;
+  --h1: #232631; --h2: #45391f; --h3: #6d4c1c; --h4: #96461f; --h5: #b93630;
+  --h-ink: #e6e8ef; --h-ink-5: #ffffff;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body { background: var(--bg); color: var(--ink); font: 14px/1.45 var(--font-ui); margin: 0; }
+button, select, input, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.app { display: grid; grid-template-rows: auto 1fr; min-height: 100%; }
+
+/* Top bar */
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--paper); border-bottom: 1px solid var(--rule); padding-block: 10px; padding-inline: 16px; display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; }
+.brand { display: flex; flex-direction: column; min-width: 0; margin-right: auto; }
+.brand .book { font: 600 17px/1.2 var(--font-text); text-wrap: balance; }
+.brand .sub { font-size: 12px; color: var(--ink-3); }
+.ctl { display: flex; align-items: center; gap: 6px; }
+.ctl label { font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-3); }
+select, .seg button, .btn { border: 1px solid var(--rule-2); background: var(--paper); border-radius: var(--radius); padding: 5px 9px; }
+select { max-width: 260px; }
+.seg { display: inline-flex; }
+.seg button { border-radius: 0; margin-left: -1px; }
+.seg button:first-child { border-radius: var(--radius) 0 0 var(--radius); margin-left: 0; }
+.seg button:last-child { border-radius: 0 var(--radius) var(--radius) 0; }
+.seg button[aria-pressed="true"] { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); position: relative; z-index: 1; }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--paper); font-weight: 600; }
+.btn:disabled { opacity: .5; cursor: default; }
+.iconbtn { border: 1px solid var(--rule-2); background: var(--paper); border-radius: var(--radius); width: 30px; height: 30px; display: inline-grid; place-items: center; }
+
+/* Body */
+.desk { display: grid; grid-template-columns: minmax(280px, 330px) minmax(0, 1fr); gap: 0; min-height: 0; }
+.panel { border-right: 1px solid var(--rule); background: var(--paper); padding-block: 16px; padding-inline: 16px; position: sticky; top: calc(var(--bar-h, 61px) + env(safe-area-inset-top, 0px)); align-self: start; max-height: calc(100vh - var(--bar-h, 61px)); overflow-y: auto; }
+.main { padding-block: 18px 80px; padding-inline: 24px; min-width: 0; }
+@media (max-width: 900px) {
+  .desk { grid-template-columns: minmax(0, 1fr); }
+  .panel { position: static; max-height: none; border-right: 0; border-bottom: 1px solid var(--rule); }
+  .main { padding-inline: 16px; }
+}
+
+/* Panel */
+.p-head { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
+.p-head h2 { margin: 0; font: 600 13px/1.2 var(--font-ui); text-transform: uppercase; letter-spacing: .07em; color: var(--ink-3); }
+.pid { font: 500 13px var(--font-mono); color: var(--accent); }
+.p-empty { color: var(--ink-3); font-size: 13px; padding-block: 8px; }
+.field { display: grid; gap: 4px; margin-top: 12px; }
+.field > span { font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-3); }
+.field select, .field input, .field textarea { width: 100%; max-width: none; border: 1px solid var(--rule-2); border-radius: var(--radius); background: var(--paper); padding: 6px 8px; }
+.field textarea { resize: vertical; min-height: 52px; }
+.vmeta { font-size: 12px; color: var(--ink-3); margin-top: 4px; }
+.group { margin-top: 16px; }
+.group h3 { margin: 0 0 6px; font: 600 12px var(--font-ui); color: var(--ink-2); display: flex; justify-content: space-between; }
+.dim { display: grid; grid-template-columns: 1fr auto; gap: 2px 8px; padding-block: 5px; border-top: 1px solid var(--rule); }
+.dim:first-of-type { border-top: 0; }
+.dim .name { font-size: 12.5px; }
+.dim .val { font: 500 12px var(--font-mono); color: var(--ink-2); text-align: right; font-variant-numeric: tabular-nums; }
+.dim .val.tuned { color: var(--accent); }
+.dim .val.out { color: var(--warn); }
+.dim .poles { grid-column: 1 / -1; display: flex; justify-content: space-between; font-size: 10.5px; color: var(--ink-3); }
+.slider { grid-column: 1 / -1; position: relative; height: 22px; }
+.slider .track { position: absolute; left: 7px; right: 7px; top: 9px; height: 4px; border-radius: 2px; background: var(--rule); }
+.slider .band { position: absolute; top: 0; height: 4px; border-radius: 2px; background: var(--accent-soft); outline: 1px solid var(--accent); outline-offset: -1px; opacity: .9; }
+.slider .base { position: absolute; top: -4px; width: 2px; height: 12px; background: var(--ink-3); transform: translateX(-1px); }
+.slider input { position: absolute; inset: 0; width: 100%; margin: 0; background: transparent; appearance: none; -webkit-appearance: none; }
+.slider input::-webkit-slider-runnable-track { background: transparent; height: 22px; }
+.slider input::-moz-range-track { background: transparent; }
+.slider input::-webkit-slider-thumb { -webkit-appearance: none; width: 14px; height: 14px; margin-top: 4px; border-radius: 50%; background: var(--accent); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--accent); }
+.slider input::-moz-range-thumb { width: 12px; height: 12px; border-radius: 50%; background: var(--accent); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--accent); }
+.slider input.out::-webkit-slider-thumb { background: var(--warn); box-shadow: 0 0 0 1px var(--warn); }
+.slider input.out::-moz-range-thumb { background: var(--warn); box-shadow: 0 0 0 1px var(--warn); }
+.dimnote { grid-column: 1 / -1; font-size: 11px; color: var(--ink-3); }
+.legend-mini { display: flex; gap: 10px; font-size: 11px; color: var(--ink-3); margin-top: 8px; flex-wrap: wrap; }
+.legend-mini i { display: inline-block; width: 14px; height: 6px; border-radius: 2px; vertical-align: middle; margin-right: 4px; }
+.sents { margin-top: 8px; display: grid; gap: 6px; }
+.sent { font-size: 12px; border-left: 4px solid var(--h1); padding-left: 8px; }
+.sent .sc { font: 11px var(--font-mono); color: var(--ink-3); }
+
+/* Chapter header + curve */
+.chap { max-width: 980px; margin: 0 auto; }
+.chap h1 { font: 600 26px/1.2 var(--font-text); margin: 4px 0 2px; text-wrap: balance; }
+.chap .part { font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--ink-3); }
+.chap .meta { color: var(--ink-3); font-size: 12.5px; display: flex; flex-wrap: wrap; gap: 4px 14px; margin-top: 4px; }
+.curve { margin-top: 14px; background: var(--paper); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 12px; }
+.curve .row { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.curve h2 { margin: 0; font: 600 12px var(--font-ui); text-transform: uppercase; letter-spacing: .07em; color: var(--ink-3); }
+.curve .summary { font: 400 14px/1.5 var(--font-text); color: var(--ink-2); margin: 6px 0 0; max-width: 70ch; }
+.curve svg { display: block; width: 100%; height: 96px; margin-top: 8px; }
+.curve svg text { fill: var(--ink-3); font: 10px var(--font-mono); }
+.legend { display: flex; gap: 2px; align-items: center; font-size: 11px; color: var(--ink-3); }
+.legend span { display: inline-grid; place-items: center; width: 22px; height: 16px; font: 10px var(--font-mono); }
+.progress { font-size: 12.5px; color: var(--ink-2); display: flex; gap: 10px; align-items: center; }
+.notice { margin-top: 10px; padding: 8px 10px; border-radius: var(--radius); background: var(--warn-soft); color: var(--warn); font-size: 12.5px; }
+
+/* Cells */
+.cells { margin-top: 16px; display: grid; gap: 10px; }
+.cell { background: var(--paper); border: 1px solid var(--rule); border-radius: var(--radius); padding: 8px 12px 12px; position: relative; }
+.cell.sel { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent-soft); }
+.cell.sel::before { content: ""; position: absolute; left: -1px; top: 10px; bottom: 10px; width: 3px; background: var(--accent); border-radius: 0 2px 2px 0; }
+.cell.removed { opacity: .55; }
+.c-head { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; min-height: 24px; }
+.c-head .pid { margin-right: 4px; }
+.chip { font-size: 11px; padding: 1px 7px; border-radius: 999px; border: 1px solid var(--rule-2); color: var(--ink-2); white-space: nowrap; }
+.chip.voice { border-color: var(--accent); color: var(--accent); }
+.chip.tune { background: var(--accent-soft); border-color: transparent; color: var(--accent); }
+.chip.stale, .chip.unsynced { background: var(--warn-soft); border-color: transparent; color: var(--warn); }
+.chip.heat { border-color: transparent; }
+.c-actions { margin-left: auto; display: flex; gap: 6px; }
+.c-actions button { border: 0; background: transparent; color: var(--ink-3); font-size: 12px; padding: 2px 4px; }
+.c-actions button:hover { color: var(--accent); }
+.c-body { display: grid; gap: 14px; margin-top: 6px; grid-template-columns: repeat(var(--cols, 1), minmax(0, 1fr)); }
+@media (max-width: 700px) { .c-body { grid-template-columns: minmax(0, 1fr); } }
+.lang-col { min-width: 0; }
+.lang-tag { font: 500 10.5px var(--font-mono); color: var(--ink-3); letter-spacing: .05em; }
+.c-body textarea, .heat-view { width: 100%; font: 17px/1.62 var(--font-text); color: var(--ink); background: transparent; border: 0; padding: 4px 2px; margin: 0; resize: none; overflow: hidden; display: block; }
+.c-body textarea:focus { outline: none; background: color-mix(in srgb, var(--accent-soft) 35%, transparent); border-radius: 4px; }
+.c-body textarea::placeholder { color: var(--ink-3); font-style: italic; }
+.heat-view { cursor: text; white-space: pre-wrap; }
+.heat-view .s { border-radius: 3px; padding: 1px 0; box-decoration-break: clone; -webkit-box-decoration-break: clone; color: var(--h-ink); }
+.heat-view .s.l1 { background: var(--h1); } .heat-view .s.l2 { background: var(--h2); } .heat-view .s.l3 { background: var(--h3); }
+.heat-view .s.l4 { background: var(--h4); } .heat-view .s.l5 { background: var(--h5); color: var(--h-ink-5); }
+.heat-view .s.u { text-decoration: underline dotted; text-underline-offset: 3px; }
+.heat-view mark { background: transparent; color: inherit; outline: 1.5px solid currentColor; outline-offset: 0; border-radius: 2px; }
+.l1b { background: var(--h1); } .l2b { background: var(--h2); } .l3b { background: var(--h3); } .l4b { background: var(--h4); } .l5b { background: var(--h5); color: var(--h-ink-5); }
+.blank { color: var(--ink-3); font: italic 16px var(--font-text); padding: 18px 4px; text-align: center; border: 1px dashed var(--rule-2); border-radius: var(--radius); background: var(--paper); }
+.state { max-width: 560px; margin: 60px auto; text-align: center; color: var(--ink-2); }
+.state h1 { font: 600 24px var(--font-text); color: var(--ink); }
+.toast { position: fixed; left: 50%; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); background: var(--ink); color: var(--paper); padding: 8px 14px; border-radius: var(--radius); font-size: 13px; z-index: 20; max-width: calc(100% - 32px); }
+.confirm { display: inline-flex; gap: 6px; align-items: center; font-size: 12px; color: var(--warn); }
+@media (prefers-reduced-motion: no-preference) { .cell { transition: border-color .15s, box-shadow .15s; } }
+</style>
+
+<div class="app">
+  <header class="bar">
+    <div class="brand"><span class="book" id="bookTitle">Manuscript Desk</span><span class="sub" id="syncLine">Loading the manuscript…</span></div>
+    <div class="ctl"><label for="bookSel" id="bookSelLabel" hidden>Book</label><select id="bookSel" hidden></select></div>
+    <div class="ctl">
+      <button class="iconbtn" id="prevCh" aria-label="Previous chapter">‹</button>
+      <select id="chapSel" aria-label="Chapter"></select>
+      <button class="iconbtn" id="nextCh" aria-label="Next chapter">›</button>
+    </div>
+    <div class="ctl"><label>Text</label><div class="seg" id="langSeg" role="group" aria-label="Language"></div></div>
+    <div class="ctl">
+      <label>Heatmap</label>
+      <div class="seg" id="heatSeg" role="group" aria-label="Heatmap view">
+        <button data-v="off" aria-pressed="true">Off</button>
+        <button data-v="engagement" aria-pressed="false">Engagement</button>
+        <button data-v="tension" aria-pressed="false">Tension</button>
+        <button data-v="emotion" aria-pressed="false">Emotion</button>
+        <button data-v="pace" aria-pressed="false">Pace</button>
+      </div>
+      <button class="btn primary" id="runHeat">Run heatmap</button>
+    </div>
+  </header>
+
+  <div class="desk" id="desk">
+    <aside class="panel" id="panel" aria-label="Paragraph settings">
+      <div class="p-head"><h2>Paragraph</h2><span class="pid" id="pPid"></span></div>
+      <div id="pBody"><p class="p-empty">Select a paragraph to see and tune its voice.</p></div>
+    </aside>
+    <main class="main" id="main">
+      <div class="state" id="state">
+        <h1>Opening the manuscript</h1>
+        <p>The chapters, paragraphs and voice settings load from this editor's store.</p>
+      </div>
+    </main>
+  </div>
+</div>
+<div class="toast" id="toast" hidden></div>
+
+<script>
+(() => {
+  // ---------- state ----------
+  const S = {
+    db: null, sample: null, slug: null, books: [], book: null,
+    paras: new Map(), voices: new Map(), heat: new Map(),
+    chapter: null, lang: null, heatMetric: "off", selected: null,
+    pending: new Map(), timers: new Map(), editing: null, running: null,
+    unsubs: [],
+  };
+  const $ = (id) => document.getElementById(id);
+  const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+  const pref = {
+    get(k) { try { return localStorage.getItem("md:" + k); } catch { return null; } },
+    set(k, v) { try { localStorage.setItem("md:" + k, v); } catch {} },
+  };
+  function toast(msg) { const t = $("toast"); t.textContent = msg; t.hidden = false; clearTimeout(toast._t); toast._t = setTimeout(() => (t.hidden = true), 2600); }
+  function hash(s) { let h = 2166136261; for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); } return (h >>> 0).toString(36); }
+
+  // ---------- text helpers ----------
+  function splitSentences(t) {
+    const out = []; let s = 0; const re = /[.!?…]+["”’»)\]]*(\s+|$)/g; let m;
+    while ((m = re.exec(t))) {
+      if (!m[0].length) { re.lastIndex++; continue; }
+      const end = m.index + m[0].length;
+      if (t.slice(s, end).trim()) out.push({ start: s, end });
+      s = end;
+      if (end >= t.length) break;
+    }
+    if (s < t.length && t.slice(s).trim()) out.push({ start: s, end: t.length });
+    return out;
+  }
+  const METRIC = { engagement: "e", tension: "t", emotion: "m", pace: "p" };
+  const LEVELS = ["", "Flat", "Calm", "Steady", "Engaging", "Gripping"];
+
+  // ---------- derived ----------
+  const langs = () => S.book?.languages || [];
+  const langName = (k) => langs().find((l) => l.key === k)?.code || k;
+  const visibleLangs = () => S.lang === "both" ? langs().map((l) => l.key) : [S.lang];
+  const chapterParas = (cid) => [...S.paras.values()].filter((p) => p.chapter === cid).sort((a, b) => a.order - b.order);
+  const chapterInfo = (cid) => S.book?.chapters.find((c) => c.id === cid);
+  const titleOf = (c, k) => c?.titles?.[k] || c?.titles?.[langs()[0]?.key] || c?.id;
+  const voiceOf = (p) => S.voices.get(p?.voice);
+  const synced = () => S.book?.syncedAt || 0;
+  const unsynced = (p) => p.updatedAt && p.updatedAt > synced();
+  function heatFor(cid, lk) { return S.heat.get(cid + "_" + lk); }
+  function paraHeat(p, lk) {
+    const h = heatFor(p.chapter, lk); if (!h) return null;
+    const ss = h.sentences.filter((s) => s.pid === p.pid); if (!ss.length) return null;
+    const avg = ss.reduce((a, s) => a + s.e, 0) / ss.length, peak = Math.max(...ss.map((s) => s.e));
+    const stale = h.hashes?.[p.pid] !== hash(p.text?.[lk] || "");
+    return { ss, avg, peak, stale };
+  }
+  function tuningSummary(p) {
+    const v = voiceOf(p); const t = p.tuning || {}; const parts = [];
+    for (const d of S.book?.dims || []) { const n = t[d.n]; if (n) parts.push(`${d.name.split(" ")[0]} ${n > 0 ? "+" : ""}${n}`); }
+    return parts.join("; ");
+  }
+
+  // ---------- boot ----------
+  async function boot() {
+    const [db, sample] = await Promise.all([claude.use("db"), claude.use("sample")]);
+    S.db = db; S.sample = sample;
+    $("runHeat").hidden = !sample;
+    if (!db) {
+      showState("Sign in to open the manuscript", "This editor keeps the book in its own store. Open it in Claude while signed in to read and edit the chapters.");
+      $("syncLine").textContent = "Store unavailable";
+      return;
+    }
+    S.unsubs.push(db.collection("books").onSnapshot((snap) => {
+      S.books = snap.docs.map((d) => ({ id: d.id, ...d.data() }));
+      if (!S.books.length) {
+        showState("No book loaded yet", "Ask Claude: “Load the book from the repo into the manuscript editor.” The chapters will appear here.");
+        $("syncLine").textContent = "Empty store";
+        return;
+      }
+      const want = pref.get("book");
+      const slug = S.books.find((b) => b.id === want)?.id || S.books[0].id;
+      const bs = $("bookSel"); bs.hidden = $("bookSelLabel").hidden = S.books.length < 2;
+      bs.replaceChildren(...S.books.map((b) => { const o = el("option", null, b.title || b.id); o.value = b.id; return o; }));
+      bs.value = slug;
+      if (slug !== S.slug) openBook(slug); else { S.book = S.books.find((b) => b.id === slug); renderHeader(); renderMain(); }
+    }, dbErr));
+  }
+  function dbErr(e) { toast("The store stopped responding (" + e.code + "). Reload the page."); }
+  function showState(h, p) { const m = $("main"); m.replaceChildren(); const s = el("div", "state"); s.append(el("h1", null, h), el("p", null, p)); m.append(s); }
+
+  function openBook(slug) {
+    S.unsubs.splice(1).forEach((u) => u());
+    S.slug = slug; pref.set("book", slug);
+    S.book = S.books.find((b) => b.id === slug);
+    S.paras.clear(); S.voices.clear(); S.heat.clear();
+    S.lang = pref.get("lang:" + slug) || langs()[0]?.key;
+    if (S.lang !== "both" && !langs().some((l) => l.key === S.lang)) S.lang = langs()[0]?.key;
+    S.chapter = pref.get("chap:" + slug) || null;
+    const base = "books/" + slug;
+    let first = true;
+    S.unsubs.push(S.db.collection(base + "/paragraphs").onSnapshot((snap) => {
+      const before = chapterParas(S.chapter).map((p) => p.pid).join();
+      for (const ch of snap.docChanges()) {
+        const d = ch.doc;
+        if (ch.type === "removed") { S.paras.delete(d.id); continue; }
+        const data = { ...d.data() };
+        const local = S.pending.get(d.id);
+        if (local) Object.assign(data, local);
+        S.paras.set(d.id, data);
+      }
+      if (first) { first = false; if (!S.chapter || !chapterInfo(S.chapter)) S.chapter = firstWrittenChapter(); renderHeader(); renderMain(); return; }
+      const after = chapterParas(S.chapter).map((p) => p.pid).join();
+      if (before !== after) renderMain(); else { chapterParas(S.chapter).forEach(updateCell); renderCurve(); }
+      if (S.selected && !panelBusy()) renderPanel();
+      renderSyncLine();
+    }, dbErr));
+    S.unsubs.push(S.db.collection(base + "/voices").onSnapshot((snap) => {
+      S.voices.clear(); snap.docs.forEach((d) => S.voices.set(d.id, d.data()));
+      if (!panelBusy()) renderPanel();
+      chapterParas(S.chapter).forEach(updateCell);
+    }, dbErr));
+    S.unsubs.push(S.db.collection(base + "/heatmaps").onSnapshot((snap) => {
+      S.heat.clear(); snap.docs.forEach((d) => S.heat.set(d.id, d.data()));
+      if (!S.chapter) return;
+      chapterParas(S.chapter).forEach(updateCell); renderCurve();
+      if (!panelBusy()) renderPanel();
+    }, dbErr));
+  }
+  function firstWrittenChapter() {
+    const withText = S.book.chapters.find((c) => chapterParas(c.id).length && c.id !== "00");
+    return (withText || S.book.chapters[0])?.id;
+  }
+
+  // ---------- header ----------
+  function renderHeader() {
+    const b = S.book; if (!b) return;
+    $("bookTitle").textContent = b.title || b.slug;
+    const sel = $("chapSel"); sel.replaceChildren();
+    let group = null, groupName;
+    const lk = S.lang === "both" ? langs()[0].key : S.lang;
+    for (const c of b.chapters) {
+      const part = c.part?.[lk] || null;
+      if (part !== groupName) { groupName = part; group = part ? el("optgroup") : null; if (group) { group.label = part; sel.append(group); } }
+      const n = chapterParas(c.id).length;
+      const o = el("option", null, titleOf(c, lk) + (n ? "" : "  (not written)"));
+      o.value = c.id; (group || sel).append(o);
+    }
+    sel.value = S.chapter;
+    const seg = $("langSeg"); seg.replaceChildren();
+    const opts = [...langs().map((l) => [l.key, l.code])]; if (langs().length > 1) opts.push(["both", "Side by side"]);
+    for (const [k, label] of opts) { const bt = el("button", null, label); bt.dataset.v = k; bt.setAttribute("aria-pressed", String(S.lang === k)); seg.append(bt); }
+    renderSyncLine();
+  }
+  function renderSyncLine() {
+    if (!S.book) return;
+    const n = [...S.paras.values()].filter(unsynced).length;
+    $("syncLine").textContent = n ? `${n} paragraph${n > 1 ? "s" : ""} edited here since the last sync to the repo` : (S.book.syncedAt ? "In sync with the repo" : "Loaded from the repo");
+  }
+
+  // ---------- main ----------
+  function renderMain() {
+    if (!S.book || !S.chapter) return;
+    const m = $("main"); m.replaceChildren();
+    const c = chapterInfo(S.chapter);
+    const wrap = el("div", "chap");
+    const lk = S.lang === "both" ? langs()[0].key : S.lang;
+    if (c?.part?.[lk]) wrap.append(el("div", "part", c.part[lk]));
+    wrap.append(el("h1", null, titleOf(c, lk)));
+    if (S.lang === "both" && langs()[1]) wrap.append(el("div", "meta", titleOf(c, langs()[1].key)));
+    const ps = chapterParas(S.chapter);
+    const words = ps.filter((p) => !p.removed).reduce((a, p) => a + (p.text?.[lk] || "").split(/\s+/).filter(Boolean).length, 0);
+    const meta = el("div", "meta");
+    meta.append(el("span", null, `${ps.filter((p) => !p.removed).length} paragraphs`), el("span", null, `${words.toLocaleString()} words (${langName(lk)})`));
+    wrap.append(meta);
+    const curve = el("section", "curve"); curve.id = "curve"; wrap.append(curve);
+    const cells = el("div", "cells"); cells.id = "cells";
+    if (!ps.length) {
+      const b = el("div", "blank"); b.append(el("div", null, "This chapter is not written yet."));
+      const add = el("button", "btn", "Add the first paragraph"); add.style.marginTop = "10px"; add.onclick = () => addParagraph(null); b.append(add);
+      cells.append(b);
+    }
+    for (const p of ps) cells.append(buildCell(p));
+    wrap.append(cells); m.append(wrap);
+    renderCurve();
+    if (S.selected && !S.paras.has(S.selected)) S.selected = null;
+    renderPanel();
+  }
+
+  function buildCell(p) {
+    const c = el("article", "cell"); c.dataset.pid = p.pid; c.tabIndex = -1;
+    c.addEventListener("pointerdown", () => select(p.pid));
+    c.addEventListener("focusin", () => select(p.pid));
+    const head = el("div", "c-head"); c.append(head);
+    const body = el("div", "c-body"); c.append(body);
+    updateCell(p, c);
+    return c;
+  }
+  function cellEl(pid) { return document.querySelector(`.cell[data-pid="${CSS.escape(pid)}"]`); }
+
+  function updateCell(p, c = cellEl(p.pid)) {
+    if (!c) return;
+    c.classList.toggle("sel", S.selected === p.pid);
+    c.classList.toggle("removed", !!p.removed);
+    const head = c.querySelector(".c-head"); head.replaceChildren();
+    head.append(el("span", "pid", p.pid));
+    const v = voiceOf(p);
+    head.append(el("span", "chip voice", p.voice ? (p.voice + (v?.version ? " v" + v.version : "")) : "No voice"));
+    const ts = tuningSummary(p); if (ts) head.append(el("span", "chip tune", ts));
+    if (p.status && p.status !== "draft") head.append(el("span", "chip", p.status));
+    if (p.removed) head.append(el("span", "chip stale", "removed"));
+    if (unsynced(p)) head.append(el("span", "chip unsynced", "not in repo yet"));
+    for (const lk of visibleLangs()) {
+      const ph = paraHeat(p, lk);
+      if (ph) {
+        const lvl = Math.round(ph.avg);
+        const chip = el("span", "chip heat l" + lvl + "b", `${visibleLangs().length > 1 ? langName(lk) + " " : ""}${ph.avg.toFixed(1)} · peak ${ph.peak}`);
+        chip.title = "Average and peak engagement of this paragraph's sentences";
+        head.append(chip);
+        if (ph.stale) head.append(el("span", "chip stale", "edited since scoring"));
+      }
+    }
+    const act = el("div", "c-actions");
+    const add = el("button", null, "Add below"); add.onclick = (e) => { e.stopPropagation(); addParagraph(p); };
+    const rm = el("button", null, p.removed ? "Restore" : "Remove");
+    rm.onclick = (e) => { e.stopPropagation(); if (p.removed) save(p.pid, { removed: false }); else confirmRemove(act, p); };
+    act.append(add, rm); head.append(act);
+
+    const body = c.querySelector(".c-body");
+    const vl = visibleLangs();
+    body.style.setProperty("--cols", vl.length);
+    const existing = [...body.children].map((x) => x.dataset.lang).join();
+    if (existing !== vl.join()) {
+      body.replaceChildren(...vl.map((lk) => { const col = el("div", "lang-col"); col.dataset.lang = lk; return col; }));
+    }
+    for (const col of body.children) renderLangCol(p, col);
+  }
+
+  function renderLangCol(p, col) {
+    const lk = col.dataset.lang;
+    const text = p.text?.[lk] ?? "";
+    const editingHere = S.editing === p.pid + "|" + lk;
+    const metric = S.heatMetric;
+    const h = metric !== "off" && !editingHere ? heatFor(p.chapter, lk) : null;
+    const ta = col.querySelector("textarea");
+    if (ta && document.activeElement === ta) return; // never disturb typing
+    col.replaceChildren();
+    if (visibleLangs().length > 1) col.append(el("div", "lang-tag", langName(lk)));
+    if (h && text.trim()) {
+      const view = el("div", "heat-view"); view.tabIndex = 0;
+      view.setAttribute("role", "button"); view.setAttribute("aria-label", "Edit paragraph " + p.pid);
+      const ss = h.sentences.filter((s) => s.pid === p.pid);
+      const stale = h.hashes?.[p.pid] !== hash(text);
+      const spans = stale ? splitSentences(text).map((r, i) => ({ ...r, ...(ss[i] || {}) })) : ss.map((s) => ({ ...s }));
+      let pos = 0;
+      for (const s of spans) {
+        if (s.start > pos) view.append(document.createTextNode(text.slice(pos, s.start)));
+        const val = s[METRIC[metric]];
+        const span = el("span", "s" + (val ? " l" + val : "") + (s.u ? " u" : ""));
+        const piece = text.slice(s.start, s.end);
+        appendWithHot(span, piece, s.hot || []);
+        if (val) span.title = `Engagement ${s.e} (${LEVELS[s.e]}) · tension ${s.t} · emotion ${s.m} · pace ${s.p}${s.u ? " · uncertain" : ""}\n${s.r || ""}`;
+        view.append(span); pos = s.end;
+      }
+      if (pos < text.length) view.append(document.createTextNode(text.slice(pos)));
+      const startEdit = () => { S.editing = p.pid + "|" + lk; select(p.pid); renderLangCol(S.paras.get(p.pid), col); col.querySelector("textarea")?.focus(); };
+      view.onclick = startEdit; view.onkeydown = (e) => { if (e.key === "Enter") { e.preventDefault(); startEdit(); } };
+      col.append(view);
+      return;
+    }
+    const t = el("textarea"); t.id = "ta-" + p.pid + "-" + lk; t.rows = 1; t.spellcheck = true;
+    t.lang = lk.replace("_", "-"); t.value = text; t.placeholder = `Write paragraph ${p.pid} (${langName(lk)})…`;
+    t.setAttribute("aria-label", `Paragraph ${p.pid}, ${langName(lk)}`);
+    t.addEventListener("input", () => { autosize(t); queueSave(p.pid, { text: { ...(S.paras.get(p.pid).text || {}), [lk]: t.value } }); });
+    t.addEventListener("blur", () => { flush(p.pid); if (S.editing === p.pid + "|" + lk) { S.editing = null; setTimeout(() => { const cur = S.paras.get(p.pid); if (cur && document.activeElement !== t) renderLangCol(cur, col); }, 0); } });
+    col.append(t); requestAnimationFrame(() => autosize(t));
+  }
+  function appendWithHot(span, piece, hot) {
+    const words = hot.filter((w) => w && piece.includes(w));
+    if (!words.length) { span.textContent = piece; return; }
+    const re = new RegExp("(" + words.map((w) => w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|") + ")", "g");
+    for (const part of piece.split(re)) { if (!part) continue; if (words.includes(part)) span.append(el("mark", null, part)); else span.append(document.createTextNode(part)); }
+  }
+  function autosize(t) { t.style.height = "auto"; t.style.height = t.scrollHeight + "px"; }
+  window.addEventListener("resize", () => document.querySelectorAll(".c-body textarea").forEach(autosize));
+  try { new ResizeObserver(([e]) => document.documentElement.style.setProperty("--bar-h", Math.ceil(e.target.getBoundingClientRect().height) + "px")).observe(document.querySelector(".bar")); } catch {}
+
+  function confirmRemove(act, p) {
+    act.replaceChildren();
+    const box = el("span", "confirm", "Remove this paragraph from the chapter?");
+    const yes = el("button", null, "Remove"), no = el("button", null, "Keep");
+    yes.onclick = (e) => { e.stopPropagation(); save(p.pid, { removed: true }); };
+    no.onclick = (e) => { e.stopPropagation(); updateCell(S.paras.get(p.pid)); };
+    box.append(yes, no); act.append(box);
+  }
+
+  // ---------- selection + panel ----------
+  function select(pid) {
+    if (S.selected === pid) return;
+    const prev = S.selected; S.selected = pid;
+    if (prev) cellEl(prev)?.classList.remove("sel");
+    cellEl(pid)?.classList.add("sel");
+    renderPanel();
+  }
+  function panelBusy() { return $("panel").contains(document.activeElement) && document.activeElement !== document.body; }
+
+  function renderPanel() {
+    const p = S.paras.get(S.selected); const body = $("pBody");
+    $("pPid").textContent = p ? p.pid : "";
+    if (!p || !S.book) { body.replaceChildren(el("p", "p-empty", "Select a paragraph to see and tune its voice.")); return; }
+    body.replaceChildren();
+    // voice
+    const f = el("label", "field"); f.append(el("span", null, "Voice"));
+    const vs = el("select"); vs.id = "p-voice";
+    vs.append(new Option("No voice yet", ""));
+    for (const v of [...S.voices.values()].sort((a, b) => a.id.localeCompare(b.id))) vs.append(new Option(`${v.id}${v.name ? " · " + v.name : ""}`, v.id));
+    vs.value = p.voice || ""; vs.onchange = () => save(p.pid, { voice: vs.value, tuning: {} });
+    f.append(vs); body.append(f);
+    const v = voiceOf(p);
+    if (v) body.append(el("div", "vmeta", `Version ${v.version || "–"}. Shaded band: the range this voice allows. Tick: its base value. Values show the core profile; language offsets live in the voice file.`));
+    if (!v || !Object.keys(v.dims || {}).length) {
+      body.append(el("p", "p-empty", p.voice ? "This voice has no target profile yet, so there is nothing to tune. Build it with the voice skills first." : "Choose the voice this paragraph is written in to tune its parameters."));
+    } else {
+      const t = p.tuning || {};
+      const reset = el("button", "btn", "Reset to voice base"); reset.style.marginTop = "10px"; reset.disabled = !Object.keys(t).length;
+      reset.onclick = () => save(p.pid, { tuning: {} });
+      body.append(reset);
+      const groups = {};
+      for (const d of S.book.dims) (groups[d.group] ||= { name: d.groupName, dims: [] }).dims.push(d);
+      for (const [g, gr] of Object.entries(groups)) {
+        const sec = el("section", "group"); const h = el("h3"); h.append(el("span", null, `${g}. ${gr.name}`)); sec.append(h);
+        for (const d of gr.dims) sec.append(dimRow(p, v, d));
+        body.append(sec);
+      }
+      const lg = el("div", "legend-mini"); const a = el("span"); a.append(el("i", "l1b")); a.append("allowed range");
+      lg.append(a, el("span", null, "| base value")); body.append(lg);
+    }
+    // reason, status, notes
+    const rf = el("label", "field"); rf.append(el("span", null, "Reason for tuning"));
+    const ri = el("input"); ri.id = "p-reason"; ri.value = p.reason || ""; ri.placeholder = "Why this paragraph departs from the voice";
+    ri.oninput = () => queueSave(p.pid, { reason: ri.value }); ri.onblur = () => flush(p.pid); rf.append(ri); body.append(rf);
+    const sf = el("label", "field"); sf.append(el("span", null, "Review status"));
+    const ss = el("select"); ss.id = "p-status";
+    for (const o of ["draft", "to review", "reviewed", "approved"]) ss.append(new Option(o, o));
+    ss.value = p.status || "draft"; ss.onchange = () => save(p.pid, { status: ss.value }); sf.append(ss); body.append(sf);
+    const nf = el("label", "field"); nf.append(el("span", null, "Open issues"));
+    const ni = el("textarea"); ni.id = "p-notes"; ni.value = p.notes || ""; ni.placeholder = "Anything to check or decide";
+    ni.oninput = () => queueSave(p.pid, { notes: ni.value }); ni.onblur = () => flush(p.pid); nf.append(ni); body.append(nf);
+    // heat details
+    for (const lk of visibleLangs()) {
+      const ph = paraHeat(p, lk); if (!ph) continue;
+      const sec = el("section", "group"); const h = el("h3");
+      h.append(el("span", null, `Engagement · ${langName(lk)}`), el("span", null, `avg ${ph.avg.toFixed(1)} · peak ${ph.peak}`));
+      sec.append(h);
+      if (ph.stale) sec.append(el("div", "notice", "This paragraph changed after scoring. Run the heatmap again to update it."));
+      const list = el("div", "sents");
+      ph.ss.forEach((s, i) => {
+        const row = el("div", "sent"); row.style.borderLeftColor = `var(--h${s.e})`;
+        row.append(el("div", "sc", `#${i + 1}  E${s.e} T${s.t} M${s.m} P${s.p}${s.u ? "  uncertain" : ""}`), el("div", null, s.r || ""));
+        list.append(row);
+      });
+      sec.append(list); body.append(sec);
+    }
+  }
+
+  function dimRow(p, v, d) {
+    const vd = v.dims[d.n]; const row = el("div", "dim");
+    const tune = (p.tuning || {})[d.n] || 0;
+    if (!vd) { row.append(el("span", "name", `${d.n}. ${d.name}`), el("span", "val", "–"), el("span", "dimnote", "Not set in this voice")); return row; }
+    const val = Math.max(1, Math.min(5, vd.base + tune));
+    const out = val < vd.min || val > vd.max;
+    const valEl = el("span", "val" + (tune ? " tuned" : "") + (out ? " out" : ""), `${val}${tune ? ` (${tune > 0 ? "+" : ""}${tune})` : ""}`);
+    row.append(el("span", "name", `${d.n}. ${d.name}`), valEl);
+    const sl = el("div", "slider"); const tr = el("div", "track"); sl.append(tr);
+    const pct = (x) => ((x - 1) / 4) * 100;
+    const band = el("div", "band"); band.style.left = pct(vd.min) + "%"; band.style.width = Math.max(pct(vd.max) - pct(vd.min), 1.5) + "%"; tr.append(band);
+    const base = el("div", "base"); base.style.left = pct(vd.base) + "%"; tr.append(base);
+    const inp = el("input"); inp.type = "range"; inp.min = 1; inp.max = 5; inp.step = 1; inp.value = val; inp.id = "dim-" + d.n;
+    inp.setAttribute("aria-label", `${d.name}: 1 ${d.low}, 5 ${d.high}`);
+    if (out) inp.classList.add("out");
+    inp.oninput = () => {
+      const nv = Number(inp.value), nt = nv - vd.base, o = nv < vd.min || nv > vd.max;
+      valEl.textContent = `${nv}${nt ? ` (${nt > 0 ? "+" : ""}${nt})` : ""}`;
+      valEl.className = "val" + (nt ? " tuned" : "") + (o ? " out" : ""); inp.classList.toggle("out", o);
+      noteEl.textContent = o ? `Outside this voice's range (${vd.min}–${vd.max}). Keep it as a deliberate exception and give a reason.` : (vd.note || "");
+    };
+    inp.onchange = () => {
+      const nt = Number(inp.value) - vd.base; const t = { ...(S.paras.get(p.pid).tuning || {}) };
+      if (nt) t[d.n] = nt; else delete t[d.n];
+      save(p.pid, { tuning: t }, { keepPanel: true });
+      const cur = S.paras.get(p.pid); if (cur) updateCell(cur);
+    };
+    sl.append(inp); row.append(sl);
+    const poles = el("div", "poles"); poles.append(el("span", null, d.low), el("span", null, d.high)); row.append(poles);
+    const noteEl = el("div", "dimnote", out ? `Outside this voice's range (${vd.min}–${vd.max}). Keep it as a deliberate exception and give a reason.` : (vd.note || ""));
+    row.append(noteEl);
+    return row;
+  }
+
+  // ---------- saving ----------
+  function queueSave(pid, patch) {
+    const cur = S.paras.get(pid); if (!cur) return;
+    const merged = { ...(S.pending.get(pid) || {}), ...patch };
+    S.pending.set(pid, merged); Object.assign(cur, patch);
+    clearTimeout(S.timers.get(pid)); S.timers.set(pid, setTimeout(() => flush(pid), 900));
+  }
+  async function flush(pid) {
+    clearTimeout(S.timers.get(pid)); S.timers.delete(pid);
+    const patch = S.pending.get(pid); if (!patch) return;
+    if (flush.busy?.[pid]) { S.timers.set(pid, setTimeout(() => flush(pid), 400)); return; }
+    (flush.busy ||= {})[pid] = true;
+    S.pending.delete(pid);
+    const now = Date.now(); patch.updatedAt = now;
+    const cur = S.paras.get(pid); if (cur) cur.updatedAt = now;
+    try { await S.db.doc(`books/${S.slug}/paragraphs/${pid}`).update(patch); }
+    catch (e) {
+      S.pending.set(pid, { ...patch, ...(S.pending.get(pid) || {}) });
+      toast(e.code === "invalid_argument" ? "You can view this book but not edit it." : "Could not save paragraph " + pid + ". It will retry when you edit again.");
+    } finally { flush.busy[pid] = false; renderSyncLine(); }
+  }
+  function save(pid, patch, opts = {}) {
+    queueSave(pid, patch); flush(pid);
+    const p = S.paras.get(pid); if (p) updateCell(p);
+    if (!opts.keepPanel && S.selected === pid) renderPanel();
+  }
+  window.addEventListener("beforeunload", () => { for (const pid of [...S.pending.keys()]) flush(pid); });
+
+  async function addParagraph(after) {
+    const cid = after ? after.chapter : S.chapter;
+    const ps = chapterParas(cid);
+    let pid, order;
+    if (!after || after === ps[ps.length - 1]) {
+      const max = Math.max(0, ...ps.map((p) => parseInt(p.pid.split(".")[1], 10) || 0));
+      pid = `${cid}.${String(max + 1).padStart(3, "0")}`; order = (ps.length ? ps[ps.length - 1].order : 0) + 1000;
+    } else {
+      const i = ps.indexOf(after); const nxt = ps[i + 1];
+      const root = after.pid.replace(/[a-z]$/, ""); let ch = "a";
+      while (S.paras.has(root + ch)) ch = String.fromCharCode(ch.charCodeAt(0) + 1);
+      pid = root + ch; order = (after.order + nxt.order) / 2;
+    }
+    const text = {}; langs().forEach((l) => (text[l.key] = ""));
+    const doc = { pid, chapter: cid, order, text, voice: after?.voice || "", tuning: {}, reason: "", status: "draft", notes: "", updatedAt: Date.now() };
+    try {
+      await S.db.doc(`books/${S.slug}/paragraphs/${pid}`).set(doc);
+      S.selected = pid; setTimeout(() => { const t = document.querySelector(`.cell[data-pid="${CSS.escape(pid)}"] textarea`); t?.focus(); }, 60);
+    } catch (e) { toast("Could not add a paragraph (" + e.code + ")."); }
+  }
+
+  // ---------- curve ----------
+  function renderCurve() {
+    const box = $("curve"); if (!box) return; box.replaceChildren();
+    const lk = S.lang === "both" ? langs()[0].key : S.lang;
+    const h = heatFor(S.chapter, lk);
+    const row = el("div", "row"); const left = el("div");
+    left.append(el("h2", null, `Engagement curve · ${langName(lk)}`));
+    row.append(left);
+    const lg = el("div", "legend"); lg.append("Flat");
+    for (let i = 1; i <= 5; i++) { const s = el("span", "l" + i + "b", String(i)); s.title = LEVELS[i]; lg.append(s); }
+    lg.append("Gripping"); row.append(lg); box.append(row);
+    if (S.running) {
+      const pr = el("div", "progress"); pr.append(el("span", null, S.running.msg));
+      const stop = el("button", "btn", "Stop"); stop.onclick = () => S.running?.ctl.abort(); pr.append(stop); box.append(pr);
+    }
+    if (!h) {
+      box.append(el("p", "summary", S.sample ? "Not scored yet. Run the heatmap to score every sentence of this chapter for engagement, tension, emotion and pace." : "Scoring needs Claude, which is not available in this view."));
+      return;
+    }
+    const ps = chapterParas(S.chapter).filter((p) => !p.removed);
+    const pts = ps.map((p) => ({ p, h: paraHeat(p, lk) }));
+    const W = 600, H = 96, L = 18, R = 6, T = 8, B = 14;
+    const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg.setAttribute("viewBox", `0 0 ${W} ${H}`); svg.setAttribute("preserveAspectRatio", "none");
+    svg.setAttribute("role", "img"); svg.setAttribute("aria-label", "Engagement per paragraph, average as bars, peak as dots");
+    const y = (v) => T + (H - T - B) * (1 - (v - 1) / 4);
+    const ns = (t, a) => { const e = document.createElementNS("http://www.w3.org/2000/svg", t); for (const k in a) e.setAttribute(k, a[k]); return e; };
+    for (let v = 1; v <= 5; v++) { svg.append(ns("line", { x1: L, x2: W - R, y1: y(v), y2: y(v), stroke: "var(--rule)", "stroke-width": 1, "vector-effect": "non-scaling-stroke" })); const tx = ns("text", { x: 2, y: y(v) + 3 }); tx.textContent = v; svg.append(tx); }
+    const bw = (W - L - R) / Math.max(pts.length, 1);
+    pts.forEach(({ p, h: ph }, i) => {
+      if (!ph) return;
+      const x = L + i * bw;
+      const r = ns("rect", { x: x + bw * 0.15, width: bw * 0.7, y: y(ph.avg), height: y(1) - y(ph.avg) + 4, fill: `var(--h${Math.round(ph.avg)})`, stroke: S.selected === p.pid ? "var(--accent)" : "none", "stroke-width": 2, "vector-effect": "non-scaling-stroke", rx: 2 });
+      r.style.cursor = "pointer";
+      const tt = ns("title", {}); tt.textContent = `${p.pid}: average ${ph.avg.toFixed(1)}, peak ${ph.peak}${ph.stale ? " (edited since scoring)" : ""}`; r.append(tt);
+      r.addEventListener("click", () => { select(p.pid); cellEl(p.pid)?.scrollIntoView({ behavior: "smooth", block: "center" }); });
+      svg.append(r);
+      svg.append(ns("circle", { cx: x + bw / 2, cy: y(ph.peak), r: 2.4, fill: "var(--ink)" }));
+    });
+    box.append(svg);
+    const when = new Date(h.runAt).toLocaleString([], { dateStyle: "medium", timeStyle: "short" });
+    const stale = pts.filter((x) => x.h?.stale).length;
+    box.append(el("p", "summary", h.summary || ""));
+    const meta = el("div", "meta"); meta.append(el("span", null, `Scored ${when}`), el("span", null, `${h.sentences.length} sentences`));
+    if (h.turning?.length) meta.append(el("span", null, `Turning points to check: ${h.turning.map((x) => x.split("#")[0]).filter((v, i, a) => a.indexOf(v) === i).join(", ")}`));
+    if (stale) meta.append(el("span", null, `${stale} paragraph${stale > 1 ? "s" : ""} edited since`));
+    box.append(meta);
+  }
+
+  // ---------- heatmap run ----------
+  async function runHeatmap() {
+    if (!S.sample || S.running) return;
+    for (const pid of [...S.pending.keys()]) await flush(pid);
+    const lks = visibleLangs();
+    const ctl = new AbortController();
+    S.running = { ctl, msg: "Waiting for Claude…" }; $("runHeat").disabled = true; renderCurve();
+    try {
+      for (const lk of lks) {
+        const ps = chapterParas(S.chapter).filter((p) => !p.removed && (p.text?.[lk] || "").trim());
+        if (!ps.length) continue;
+        const units = [];
+        for (const p of ps) splitSentences(p.text[lk]).forEach((r, i) => units.push({ id: `${p.pid}#${i}`, pid: p.pid, i, ...r, text: p.text[lk].slice(r.start, r.end).trim(), voice: p.voice }));
+        const c = chapterInfo(S.chapter);
+        const prev = S.book.chapters.slice(0, S.book.chapters.findIndex((x) => x.id === S.chapter)).map((x) => titleOf(x, lk)).join("; ");
+        const prompt = buildPrompt(c, lk, units, prev);
+        S.running.msg = `Scoring ${units.length} sentences (${langName(lk)})… Claude reads the whole chapter first, which can take a minute.`; renderCurve();
+        const res = await S.sample.json(prompt, {
+          signal: ctl.signal, modelTier: "default", cache: false,
+          onText: ({ text }) => { const n = (text.match(/"id"\s*:/g) || []).length; S.running.msg = `Scored ${n} of ${units.length} sentences (${langName(lk)})…`; renderCurve(); },
+        });
+        const byId = new Map((res?.sentences || []).map((s) => [String(s.id), s]));
+        const clamp = (v) => Math.max(1, Math.min(5, Math.round(Number(v) || 0))) || null;
+        const sentences = units.map((u) => {
+          const s = byId.get(u.id) || {};
+          const ev = Array.isArray(s.e) ? s.e.map(clamp).filter(Boolean) : [clamp(s.e)].filter(Boolean);
+          const u2 = ev.length > 1 && Math.abs(ev[0] - ev[1]) >= 2;
+          return { pid: u.pid, i: u.i, start: u.start, end: u.end, e: ev.length ? Math.min(...ev) : 1, e2: ev[1] ?? null, t: clamp(s.t) || 1, m: clamp(s.m) || 1, p: clamp(s.p) || 1, hot: (s.hot || []).map(String).slice(0, 4), r: String(s.r || "").slice(0, 240), u: u2 || !byId.has(u.id) };
+        });
+        const hashes = {}; ps.forEach((p) => (hashes[p.pid] = hash(p.text[lk])));
+        await S.db.doc(`books/${S.slug}/heatmaps/${S.chapter}_${lk}`).set({ chapter: S.chapter, lang: lk, runAt: Date.now(), sentences, hashes, summary: String(res?.summary || ""), turning: (res?.turning || []).map(String) });
+      }
+      if (S.heatMetric === "off") setMetric("engagement");
+      toast("Heatmap ready");
+    } catch (e) {
+      const msg = { cancelled: "Scoring stopped.", not_granted: "Scoring needs your permission to use Claude.", rate_limited: "Claude is busy or your usage limit is reached. Try again later.", invalid_json: "Claude's answer could not be read. Run it again.", prompt_too_large: "This chapter is too long to score in one go." }[e?.code] || "Scoring failed. Run it again in a moment.";
+      toast(msg);
+    } finally { S.running = null; $("runHeat").disabled = false; renderCurve(); }
+  }
+
+  function buildPrompt(c, lk, units, prev) {
+    const voices = [...new Set(units.map((u) => u.voice).filter(Boolean))].map((id) => { const v = S.voices.get(id); return `${id}${v?.name ? " (" + v.name + ")" : ""}`; }).join(", ") || "not set";
+    const anchors = S.book.anchors ? `\nCalibration anchors agreed by the author (score against these):\n${S.book.anchors}\n` : "";
+    return `You score a chapter of a novel for reader engagement, sentence by sentence, the way a typical attentive reader would experience it on first reading.
+
+Book: ${S.book.title}. ${S.book.context || ""}
+Chapter: ${titleOf(c, lk)} (language: ${langName(lk)}). Chapters before it: ${prev || "none"}.
+Voices used here: ${voices}. A deliberately quiet voice can be exactly right at a low score; judge what the reader feels, not quality.
+${anchors}
+Scale for every score (1-5):
+- e (engagement): 5 Gripping = stakes in play now, outcome uncertain, the reader cannot stop; 4 Engaging = clear tension or emotional charge, the story moves; 3 Steady = purposeful, mild tension, new information at a good rate; 2 Calm = description, reflection, background, slow time; 1 Flat = nothing open to wonder about, repeats what the reader knows, or confusing.
+- t (tension): an open question with stakes the reader wants answered, or a surprise.
+- m (emotional impact): intensity of feeling, whatever its kind.
+- p (pace): 1 lingering description or reflection, 5 rapid events.
+Engagement is a judgment informed by t, m and p, not their average; suspense depends on what the reader already knows and fears from earlier sentences. Score each sentence relative to this chapter and read in order.
+For e give TWO independent readings as an array [first, second], as if two readers scored it without seeing each other's score.
+hot: up to 3 exact words or short phrases copied from the sentence where a jolt lands (a reveal, a name, a threat, a sensory shock); [] if none.
+r: one short reason (under 15 words), e.g. "open question: will she be sold?".
+
+Sentences (id<TAB>text):
+${units.map((u) => u.id + "\t" + u.text).join("\n")}
+
+Reply with only this JSON, one entry per sentence id above, in order:
+{"sentences":[{"id":"01.001#0","e":[3,3],"t":2,"m":3,"p":2,"hot":["vinegar"],"r":"short reason"}],"turning":["ids where the curve changes direction"],"summary":"two sentences on the chapter's engagement shape and its weakest stretch"}`;
+  }
+
+  // ---------- controls ----------
+  function setMetric(v) {
+    S.heatMetric = v; pref.set("metric", v);
+    for (const b of $("heatSeg").children) b.setAttribute("aria-pressed", String(b.dataset.v === v));
+    chapterParas(S.chapter).forEach(updateCell);
+  }
+  $("heatSeg").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) setMetric(b.dataset.v); });
+  $("langSeg").addEventListener("click", (e) => {
+    const b = e.target.closest("button"); if (!b) return;
+    S.lang = b.dataset.v; pref.set("lang:" + S.slug, S.lang); renderHeader(); renderMain();
+  });
+  $("chapSel").addEventListener("change", (e) => goChapter(e.target.value));
+  $("bookSel").addEventListener("change", (e) => openBook(e.target.value));
+  $("prevCh").onclick = () => step(-1); $("nextCh").onclick = () => step(1);
+  function step(d) { const cs = S.book?.chapters || []; const i = cs.findIndex((c) => c.id === S.chapter); const n = cs[i + d]; if (n) goChapter(n.id); }
+  function goChapter(id) { for (const pid of [...S.pending.keys()]) flush(pid); S.chapter = id; S.selected = null; S.editing = null; pref.set("chap:" + S.slug, id); $("chapSel").value = id; renderMain(); window.scrollTo({ top: 0 }); }
+  $("runHeat").onclick = runHeatmap;
+  const m0 = pref.get("metric"); if (m0) setMetric(m0);
+
+  if (window.claude?.use) boot(); else { showState("Open this page in Claude", "The manuscript and its settings are stored with this page and load only inside Claude."); $("syncLine").textContent = "Store unavailable"; }
+})();
+</script>

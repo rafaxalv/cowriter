@@ -16,6 +16,8 @@ books/
     config/            paragraph parameters, engagement scores and anchors
     research/          sources, notes, timelines, images
     drafts/            chapters being written (created when needed)
+tools/
+  manuscript-editor/   Manuscript Desk: paragraph-cell editor with voice tuning and an engagement heatmap
 ```
 
 ## Books
@@ -37,3 +39,7 @@ books/
 | engagement-heatmap | Scores a chapter for engagement, tension, emotion and pace, as a heatmap. |
 
 Every skill starts by finding the book's `BOOK.md` and reading it. To start a new book, ask the co-writer; it creates `books/<slug>/` from `.claude/skills/co-writer/templates/BOOK.md`.
+
+## Tools
+
+- **Manuscript Desk** (`tools/manuscript-editor/`): edit a book paragraph by paragraph, tune each paragraph's voice parameters, and run an engagement heatmap over a chapter. It keeps its own copy of the book; Claude loads books into it and syncs edits back (see its README).
