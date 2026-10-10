@@ -32,6 +32,7 @@ Changes flow down (concept → chapters → scenes → text); deliberate changes
 | `research/family/` | Maternal family tree research, family memories and stories, MyHeritage chart and screenshot | Registros historicos |
 | `research/freed-slave-rights-1865-1888.md` | What a freed slave could and couldn't do | Registros historicos |
 | `research/sources/dados-gerais.md` | Source doc on the Zuavos baianos and Dom Obá (Bento, Kraay, COPIR) | Dados gerais |
+| `.claude/skills/` | The book skills: co-writer, book-voices, voice-generator, scene-builder, chapter-review, paragraph-review, engagement-heatmap. Copied as they are; they still point to the Drive files | Rafael's claude.ai skills |
 
 Portuguese documents stay in Portuguese, so nothing is lost in translation.
 
