@@ -54,6 +54,9 @@ button { cursor: pointer; }
 /* Top bar */
 .bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--paper); border-bottom: 1px solid var(--rule); padding-block: 10px; padding-inline: 16px; display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; }
 .brand { display: flex; flex-direction: column; min-width: 0; margin-right: auto; }
+.tabs { display: flex; gap: 2px; padding: 2px; background: var(--bg); border: 1px solid var(--rule); border-radius: calc(var(--radius) + 2px); }
+.tabs button { border: 0; background: transparent; padding: 5px 14px; border-radius: var(--radius); font-weight: 600; color: var(--ink-2); }
+.tabs button[aria-selected="true"] { background: var(--paper); color: var(--accent); box-shadow: 0 0 0 1px var(--rule-2); }
 .brand .book { font: 600 17px/1.2 var(--font-text); text-wrap: balance; }
 .brand .sub { font-size: 12px; color: var(--ink-3); }
 .ctl { display: flex; align-items: center; gap: 6px; }
@@ -113,6 +116,30 @@ select { max-width: 260px; }
 .legend-mini { display: flex; gap: 10px; font-size: 11px; color: var(--ink-3); margin-top: 8px; flex-wrap: wrap; }
 .legend-mini i { display: inline-block; width: 14px; height: 6px; border-radius: 2px; vertical-align: middle; margin-right: 4px; }
 .sents { margin-top: 8px; display: grid; gap: 6px; }
+.chap.plan .field.when { margin-top: 12px; max-width: 760px; }
+.chap.plan .meta .warn { color: var(--warn); }
+.plan-sec { margin-top: 26px; }
+.plan-sec h2 { margin: 0; font: 600 18px/1.3 var(--font-text); display: flex; align-items: baseline; gap: 8px; }
+.plan-sec h2 .count { font: 500 12px var(--font-mono); color: var(--ink-3); }
+.plan-sec .hint { margin: 2px 0 0; color: var(--ink-3); font-size: 12.5px; }
+.plan-sec .cells { margin-top: 10px; }
+.plan-sec .add { margin-top: 10px; }
+.plan-cell .c-body textarea { font-size: 15.5px; line-height: 1.55; }
+.plan-sec[data-kind="fact"] .plan-cell { border-left: 3px solid var(--rule-2); }
+.plan-sec[data-kind="source"] .plan-cell .c-body textarea { font: 13.5px/1.5 var(--font-ui); color: var(--ink-2); }
+.chip.label { background: var(--accent-soft); border-color: transparent; color: var(--accent); letter-spacing: .03em; }
+.chip.src { background: var(--paper); border-color: var(--accent); color: var(--accent); font: 500 11px var(--font-mono); cursor: pointer; }
+.chip.file { border-style: dashed; }
+.links { display: flex; flex-wrap: wrap; gap: 4px 12px; margin-top: 4px; font-size: 12px; }
+.links a { color: var(--accent); }
+.check { display: flex; gap: 8px; align-items: center; margin-top: 12px; font-size: 13px; }
+.srcpick { display: grid; grid-template-columns: auto auto 1fr; gap: 6px; align-items: start; padding-block: 5px; border-top: 1px solid var(--rule); font-size: 12.5px; }
+.srcpick b { font: 500 12px var(--font-mono); color: var(--accent); }
+.linkrow { display: grid; gap: 2px; width: 100%; text-align: left; border: 0; border-top: 1px solid var(--rule); background: transparent; padding: 6px 0; font-size: 12.5px; color: var(--ink-2); }
+.linkrow b { color: var(--warn); font-weight: 600; }
+.linkrow:hover { color: var(--accent); }
+.librow { display: grid; gap: 1px; padding-block: 5px; border-top: 1px solid var(--rule); font-size: 12.5px; }
+.librow small { color: var(--ink-3); }
 .p-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
 .apply-box { margin-top: 10px; padding: 10px; border: 1px solid var(--rule); border-radius: var(--radius); background: var(--bg); font-size: 12.5px; display: grid; gap: 6px; justify-items: start; }
 .apply-box h4 { margin: 0; font: 600 11px var(--font-ui); text-transform: uppercase; letter-spacing: .06em; color: var(--ink-3); }
@@ -185,14 +212,18 @@ select { max-width: 260px; }
 <div class="app">
   <header class="bar">
     <div class="brand"><span class="book" id="bookTitle">Manuscript Desk</span><span class="sub" id="syncLine">Loading the manuscript…</span></div>
+    <nav class="tabs" id="tabs" role="tablist" aria-label="File">
+      <button role="tab" data-tab="plan" aria-selected="false">Chapters</button>
+      <button role="tab" data-tab="book" aria-selected="false">Book</button>
+    </nav>
     <div class="ctl"><label for="bookSel" id="bookSelLabel" hidden>Book</label><select id="bookSel" hidden></select></div>
     <div class="ctl">
       <button class="iconbtn" id="prevCh" aria-label="Previous chapter">‹</button>
       <select id="chapSel" aria-label="Chapter"></select>
       <button class="iconbtn" id="nextCh" aria-label="Next chapter">›</button>
     </div>
-    <div class="ctl"><label>Text</label><div class="seg" id="langSeg" role="group" aria-label="Language"></div></div>
-    <div class="ctl">
+    <div class="ctl book-only"><label>Text</label><div class="seg" id="langSeg" role="group" aria-label="Language"></div></div>
+    <div class="ctl book-only">
       <label>Heatmap</label>
       <div class="seg" id="heatSeg" role="group" aria-label="Heatmap view">
         <button data-v="off" aria-pressed="true">Off</button>
@@ -209,7 +240,7 @@ select { max-width: 260px; }
 
   <div class="desk" id="desk">
     <aside class="panel" id="panel" aria-label="Paragraph settings">
-      <div class="p-head"><h2>Paragraph</h2><span class="pid" id="pPid"></span></div>
+      <div class="p-head"><h2 id="pTitle">Paragraph</h2><span class="pid" id="pPid"></span></div>
       <div id="pBody"><p class="p-empty">Select a paragraph to see and tune its voice.</p></div>
     </aside>
     <main class="main" id="main">
@@ -230,7 +261,7 @@ select { max-width: 260px; }
     paras: new Map(), voices: new Map(), heat: new Map(),
     chapter: null, lang: null, heatMetric: "off", selected: null,
     pending: new Map(), timers: new Map(), editing: null, running: null,
-    unsubs: [],
+    unsubs: [], plan: new Map(), planCh: new Map(), tab: "plan",
   };
   const $ = (id) => document.getElementById(id);
   const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
@@ -313,7 +344,7 @@ select { max-width: 260px; }
     S.unsubs.splice(1).forEach((u) => u());
     S.slug = slug; pref.set("book", slug);
     S.book = S.books.find((b) => b.id === slug);
-    S.paras.clear(); S.voices.clear(); S.heat.clear();
+    S.paras.clear(); S.voices.clear(); S.heat.clear(); S.plan.clear(); S.planCh.clear();
     S.lang = pref.get("lang:" + slug) || langs()[0]?.key;
     if (S.lang !== "both" && !langs().some((l) => l.key === S.lang)) S.lang = langs()[0]?.key;
     S.chapter = pref.get("chap:" + slug) || null;
@@ -330,22 +361,25 @@ select { max-width: 260px; }
         S.paras.set(d.id, data);
       }
       if (first) { first = false; if (!S.chapter || !chapterInfo(S.chapter)) S.chapter = firstWrittenChapter(); renderHeader(); renderMain(); return; }
+      renderSyncLine();
+      if (S.tab !== "book") return;
       const after = chapterParas(S.chapter).map((p) => p.pid).join();
       if (before !== after) renderMain(); else { chapterParas(S.chapter).forEach(updateCell); renderCurve(); }
       if (S.selected && !panelBusy()) renderPanel();
-      renderSyncLine();
     }, dbErr));
     S.unsubs.push(S.db.collection(base + "/voices").onSnapshot((snap) => {
       S.voices.clear(); snap.docs.forEach((d) => S.voices.set(d.id, d.data()));
+      if (S.tab !== "book") return;
       if (!panelBusy()) renderPanel();
       chapterParas(S.chapter).forEach(updateCell);
     }, dbErr));
     S.unsubs.push(S.db.collection(base + "/heatmaps").onSnapshot((snap) => {
       S.heat.clear(); snap.docs.forEach((d) => S.heat.set(d.id, d.data()));
-      if (!S.chapter) return;
+      if (!S.chapter || S.tab !== "book") return;
       chapterParas(S.chapter).forEach(updateCell); renderCurve();
       if (!panelBusy()) renderPanel();
     }, dbErr));
+    subscribePlan(base);
   }
   function firstWrittenChapter() {
     const withText = S.book.chapters.find((c) => chapterParas(c.id).length && c.id !== "00");
@@ -375,12 +409,17 @@ select { max-width: 260px; }
   function renderSyncLine() {
     if (!S.book) return;
     const n = [...S.paras.values()].filter(unsynced).length;
-    $("syncLine").textContent = n ? `${n} paragraph${n > 1 ? "s" : ""} edited here since the last sync to the repo` : (S.book.syncedAt ? "In sync with the repo" : "Loaded from the repo");
+    const k = [...S.plan.values()].filter(unsynced).length + [...S.planCh.values()].filter(unsynced).length;
+    const parts = [];
+    if (k) parts.push(`${k} Chapters item${k > 1 ? "s" : ""}`);
+    if (n) parts.push(`${n} paragraph${n > 1 ? "s" : ""}`);
+    $("syncLine").textContent = parts.length ? `${parts.join(" and ")} edited here since the last sync to the repo` : (S.book.syncedAt ? "In sync with the repo" : "Loaded from the repo");
   }
 
   // ---------- main ----------
   function renderMain() {
     if (!S.book || !S.chapter) return;
+    if (S.tab === "plan") return renderPlanMain();
     const m = $("main"); m.replaceChildren();
     const c = chapterInfo(S.chapter);
     const wrap = el("div", "chap");
@@ -535,6 +574,8 @@ select { max-width: 260px; }
   function panelBusy() { return $("panel").contains(document.activeElement) && document.activeElement !== document.body; }
 
   function renderPanel() {
+    if (S.tab === "plan") { if (S.book) renderPlanPanel(); return; }
+    $("pTitle").textContent = "Paragraph";
     const p = S.paras.get(S.selected); const body = $("pBody");
     $("pPid").textContent = p ? p.pid : "";
     if (!p || !S.book) { body.replaceChildren(el("p", "p-empty", "Select a paragraph to see and tune its voice.")); return; }
@@ -660,7 +701,7 @@ select { max-width: 260px; }
     const p = S.paras.get(pid); if (p) updateCell(p);
     if (!opts.keepPanel && S.selected === pid) renderPanel();
   }
-  window.addEventListener("beforeunload", () => { for (const pid of [...S.pending.keys()]) flush(pid); });
+  window.addEventListener("beforeunload", () => { for (const pid of [...S.pending.keys()]) flush(pid); planSaver.flushAll(); headSaver.flushAll(); });
 
   async function addParagraph(after) {
     const cid = after ? after.chapter : S.chapter;
@@ -781,6 +822,7 @@ Reply with only this JSON:
   // ---------- curve ----------
   function renderCurve() {
     const box = $("curve"); if (!box) return; box.replaceChildren();
+    if (S.tab !== "book") { box.hidden = true; return; }
     const tg = $("chartToggle"); tg.textContent = S.chartOpen ? "Hide chart" : "Show chart"; tg.setAttribute("aria-expanded", String(S.chartOpen));
     box.hidden = !S.book || (!S.chartOpen && !S.running);
     if (!S.chartOpen) {
@@ -899,6 +941,307 @@ Reply with only this JSON, one entry per sentence id above, in order:
 {"sentences":[{"id":"01.001#0","e":[3,3],"t":2,"m":3,"p":2,"hot":["vinegar"],"r":"short reason"}],"turning":["ids where the curve changes direction"],"summary":"two sentences on the chapter's engagement shape and its weakest stretch"}`;
   }
 
+  // ---------- Chapters tab: the plan of record, organized as stories, facts, sources and notes ----------
+  const KINDS = [
+    ["event", "Stories", "What happens in the chapter, in order.", "Add a story event"],
+    ["fact", "Facts", "Historical facts the chapter relies on, each with a truth label and the sources that back it.", "Add a fact"],
+    ["source", "Sources", "Where the facts come from: articles, books, links and the book's research files.", "Add a source"],
+    ["note", "Notes", "Open questions and options still to decide.", "Add a note"],
+  ];
+  const KIND_NAME = { event: "Story event", fact: "Fact", source: "Source", note: "Note" };
+  const planItems = (cid) => [...S.plan.values()].filter((x) => x.chapter === cid).sort((a, b) => a.order - b.order);
+  const planLive = (cid) => planItems(cid).filter((x) => !x.removed);
+  const planSources = (cid) => planLive(cid).filter((x) => x.kind === "source");
+  const srcNum = (cid) => { const m = new Map(); planSources(cid).forEach((s, i) => m.set(s.id, i + 1)); return m; };
+  const cleanTitle = (t) => (t || "").replace(/\\/g, "").trim();
+  const bareTitle = (t) => cleanTitle(t).replace(/\s*\([^)]*\)\s*/g, " ").replace(/\s+/g, " ").trim().toLowerCase();
+  const research = () => S.book?.research || [];
+  const researchTitle = (path) => research().find((r) => r.path === path)?.title || path;
+  const urlsIn = (t) => [...new Set((t || "").match(/https?:\/\/[^\s<>)\]"]+/g) || [])].map((u) => u.replace(/[.,;:]+$/, ""));
+
+  function makeSaver(pathOf, local, write = "update") {
+    const pending = new Map(), timers = new Map(), busy = {};
+    async function flush(id) {
+      clearTimeout(timers.get(id)); timers.delete(id);
+      const patch = pending.get(id); if (!patch) return;
+      if (busy[id]) { timers.set(id, setTimeout(() => flush(id), 400)); return; }
+      busy[id] = true; pending.delete(id);
+      const now = Date.now(); patch.updatedAt = now;
+      const cur = local(id); if (cur) cur.updatedAt = now;
+      try {
+        if (write === "set") await S.db.doc(pathOf(id)).set({ ...(local(id) || {}), ...patch });
+        else await S.db.doc(pathOf(id)).update(patch);
+      } catch (e) {
+        pending.set(id, { ...patch, ...(pending.get(id) || {}) });
+        toast(e.code === "invalid_argument" ? "You can view this book but not edit it." : "Could not save. It will retry when you edit again.");
+      } finally { busy[id] = false; renderSyncLine(); }
+    }
+    function queue(id, patch, delay = 900) {
+      const cur = local(id); if (cur) Object.assign(cur, patch);
+      pending.set(id, { ...(pending.get(id) || {}), ...patch });
+      clearTimeout(timers.get(id)); timers.set(id, setTimeout(() => flush(id), delay));
+    }
+    return { queue, flush, pending, now(id, patch) { queue(id, patch, 0); return flush(id); }, flushAll() { return Promise.all([...pending.keys()].map(flush)); } };
+  }
+  const planSaver = makeSaver((id) => `books/${S.slug}/plan/${id}`, (id) => S.plan.get(id));
+  const headSaver = makeSaver((cid) => `books/${S.slug}/planChapters/${cid}`, (cid) => S.planCh.get(cid), "set");
+
+  function subscribePlan(base) {
+    let first = true;
+    S.unsubs.push(S.db.collection(base + "/plan").onSnapshot((snap) => {
+      const before = planShape();
+      for (const ch of snap.docChanges()) {
+        const d = ch.doc;
+        if (ch.type === "removed") { S.plan.delete(d.id); continue; }
+        const data = { ...d.data() }; const local = planSaver.pending.get(d.id); if (local) Object.assign(data, local);
+        S.plan.set(d.id, data);
+      }
+      renderSyncLine();
+      if (S.tab !== "plan") return;
+      if (first || before !== planShape()) { first = false; renderMain(); return; }
+      planLive(S.chapter).forEach((x) => planUpdateCell(x));
+      if (!panelBusy()) renderPanel();
+    }, dbErr));
+    S.unsubs.push(S.db.collection(base + "/planChapters").onSnapshot((snap) => {
+      for (const d of snap.docs) { const data = { ...d.data() }; const local = headSaver.pending.get(d.id); if (local) Object.assign(data, local); S.planCh.set(d.id, data); }
+      renderSyncLine();
+      if (S.tab === "plan") { const w = $("planWhen"); if (w && document.activeElement !== w) w.value = S.planCh.get(S.chapter)?.when || ""; }
+    }, dbErr));
+  }
+  function planShape() { return planItems(S.chapter).map((x) => `${x.id}:${x.kind}:${x.order}:${x.removed ? 1 : 0}`).join(); }
+
+  function renderPlanMain() {
+    const m = $("main"); m.replaceChildren();
+    const cid = S.chapter, info = chapterInfo(cid), head = S.planCh.get(cid);
+    const wrap = el("div", "chap plan");
+    const lk = langs()[0]?.key;
+    if (info?.part?.[lk]) wrap.append(el("div", "part", info.part[lk]));
+    wrap.append(el("h1", null, cleanTitle(head?.title) || titleOf(info, lk)));
+    if (head?.title && bareTitle(head.title) !== bareTitle(titleOf(info, lk))) {
+      wrap.append(el("div", "notice", `The Book file calls this chapter “${titleOf(info, lk)}”. Decide which title is right and change the other.`));
+    }
+    const wf = el("label", "field when"); wf.append(el("span", null, "When / where"));
+    const wi = el("input"); wi.id = "planWhen"; wi.value = head?.when || ""; wi.placeholder = "Dates, ages and places of this chapter";
+    wi.oninput = () => { if (!S.planCh.has(cid)) S.planCh.set(cid, { chapter: cid, title: titleOf(info, lk), when: "" }); headSaver.queue(cid, { when: wi.value }); };
+    wi.onblur = () => headSaver.flush(cid);
+    wf.append(wi); wrap.append(wf);
+    const items = planLive(cid);
+    const facts = items.filter((x) => x.kind === "fact");
+    const meta = el("div", "meta");
+    for (const [k, name] of KINDS) { const n = items.filter((x) => x.kind === k).length; meta.append(el("span", null, `${n} ${name.toLowerCase()}`)); }
+    const unsrc = facts.filter((x) => !(x.sources || []).some((s) => S.plan.get(s) && !S.plan.get(s).removed)).length;
+    const unlab = facts.filter((x) => !x.label).length, ver = facts.filter((x) => x.verify).length;
+    if (unsrc) meta.append(el("span", "warn", `${unsrc} fact${unsrc > 1 ? "s" : ""} without a source`));
+    if (unlab) meta.append(el("span", "warn", `${unlab} without a truth label`));
+    if (ver) meta.append(el("span", "warn", `${ver} to verify`));
+    wrap.append(meta);
+    for (const [kind, name, hint, addLabel] of KINDS) {
+      const sec = el("section", "plan-sec"); sec.dataset.kind = kind;
+      const h = el("h2"); h.append(name, el("span", "count", String(items.filter((x) => x.kind === kind).length))); sec.append(h, el("p", "hint", hint));
+      const list = el("div", "cells");
+      for (const x of planItems(cid).filter((x) => x.kind === kind)) list.append(planBuildCell(x));
+      sec.append(list);
+      const add = el("button", "btn add", addLabel); add.onclick = () => planAdd(kind); sec.append(add);
+      wrap.append(sec);
+    }
+    m.append(wrap);
+    if (S.selected && !S.plan.has(S.selected)) S.selected = null;
+    renderPanel();
+  }
+
+  function planBuildCell(x) {
+    const c = el("article", "cell plan-cell"); c.dataset.pid = x.id; c.tabIndex = -1;
+    c.addEventListener("pointerdown", () => select(x.id)); c.addEventListener("focusin", () => select(x.id));
+    c.append(el("div", "c-head"));
+    const t = el("textarea"); t.id = "plan-" + x.id; t.rows = 1; t.value = x.text || "";
+    t.placeholder = { event: "What happens…", fact: "The fact, as precisely as the sources allow…", source: "Author, title, publication, link…", note: "The open question or option…" }[x.kind];
+    t.setAttribute("aria-label", `${KIND_NAME[x.kind]} in chapter ${x.chapter}`);
+    t.oninput = () => { autosize(t); planSaver.queue(x.id, { text: t.value }); planUpdateCell(S.plan.get(x.id), c, true); };
+    t.onblur = () => planSaver.flush(x.id);
+    const body = el("div", "c-body"); body.append(t); c.append(body);
+    c.append(el("div", "links"));
+    planUpdateCell(x, c);
+    requestAnimationFrame(() => autosize(t));
+    return c;
+  }
+
+  function planUpdateCell(x, c = cellEl(x.id), typing = false) {
+    if (!c || !x) return;
+    c.classList.toggle("sel", S.selected === x.id); c.classList.toggle("removed", !!x.removed);
+    const head = c.querySelector(".c-head"); head.replaceChildren();
+    const nums = srcNum(x.chapter);
+    if (x.kind === "source") head.append(el("span", "pid", "S" + (nums.get(x.id) || "–")));
+    if (x.kind === "fact") head.append(el("span", x.label ? "chip label" : "chip stale", x.label || "No truth label"));
+    if (x.kind === "fact" || x.kind === "event") {
+      const refs = (x.sources || []).filter((s) => nums.has(s));
+      for (const s of refs) { const ch = el("button", "chip src", "S" + nums.get(s)); ch.title = (S.plan.get(s)?.text || "").slice(0, 160); ch.onclick = (e) => { e.stopPropagation(); select(s); cellEl(s)?.scrollIntoView({ behavior: "smooth", block: "center" }); }; head.append(ch); }
+      if (x.kind === "fact" && !refs.length) head.append(el("span", "chip stale", "No source"));
+    }
+    if (x.verify) head.append(el("span", "chip stale", "To verify"));
+    if (x.kind === "source") {
+      if (x.file) head.append(el("span", "chip file", researchTitle(x.file)));
+      const cited = planLive(x.chapter).filter((y) => (y.sources || []).includes(x.id)).length;
+      head.append(el("span", "chip", cited ? `cited by ${cited}` : "not cited yet"));
+    }
+    if (x.removed) head.append(el("span", "chip stale", "removed"));
+    if (x.updatedAt && x.updatedAt > synced()) head.append(el("span", "chip unsynced", "not in repo yet"));
+    const act = el("div", "c-actions");
+    if (!x.removed) {
+      const up = el("button", null, "Up"), down = el("button", null, "Down");
+      up.onclick = (e) => { e.stopPropagation(); planMove(x, -1); }; down.onclick = (e) => { e.stopPropagation(); planMove(x, 1); };
+      act.append(up, down);
+    }
+    const rm = el("button", null, x.removed ? "Restore" : "Remove");
+    rm.onclick = (e) => {
+      e.stopPropagation();
+      if (x.removed) { planSaver.now(x.id, { removed: false }); return; }
+      act.replaceChildren(); const box = el("span", "confirm", "Remove this item?"); const yes = el("button", null, "Remove"), no = el("button", null, "Keep");
+      yes.onclick = (ev) => { ev.stopPropagation(); planSaver.now(x.id, { removed: true }); };
+      no.onclick = (ev) => { ev.stopPropagation(); planUpdateCell(S.plan.get(x.id)); };
+      box.append(yes, no); act.append(box);
+    };
+    act.append(rm); head.append(act);
+    const links = c.querySelector(".links"); links.replaceChildren();
+    if (x.kind === "source") for (const u of urlsIn(x.text)) { const a = el("a", null, (() => { try { return new URL(u).hostname.replace(/^www\./, ""); } catch { return u; } })()); a.href = u; a.target = "_blank"; a.rel = "noopener"; links.append(a); }
+    links.hidden = !links.childElementCount;
+    const t = c.querySelector("textarea");
+    if (!typing && t && document.activeElement !== t && t.value !== (x.text || "")) { t.value = x.text || ""; autosize(t); }
+  }
+
+  async function planAdd(kind) {
+    const cid = S.chapter; const all = planItems(cid);
+    const id = `${cid}-${Date.now().toString(36)}`;
+    const doc = { id, chapter: cid, order: (all.length ? all[all.length - 1].order : 0) + 1000, kind, text: "", label: "", verify: false, file: "", sources: [], updatedAt: Date.now() };
+    try {
+      S.plan.set(id, doc); S.selected = id; renderMain();
+      cellEl(id)?.querySelector("textarea")?.focus();
+      await S.db.doc(`books/${S.slug}/plan/${id}`).set(doc);
+    } catch (e) { S.plan.delete(id); renderMain(); toast("Could not add the item (" + e.code + ")."); }
+  }
+  async function planMove(x, d) {
+    const same = planLive(x.chapter).filter((y) => y.kind === x.kind); const i = same.findIndex((y) => y.id === x.id); const o = same[i + d];
+    if (!o) return;
+    const a = x.order, b = o.order; S.plan.get(x.id).order = b; S.plan.get(o.id).order = a; renderMain(); select(x.id);
+    await planSaver.now(x.id, { order: b }); await planSaver.now(o.id, { order: a });
+  }
+  function unlinkSource(sid, cid) {
+    for (const y of planItems(cid)) if ((y.sources || []).includes(sid)) planSaver.now(y.id, { sources: y.sources.filter((s) => s !== sid) });
+  }
+  function planSetKind(x, kind) {
+    if (kind === x.kind) return;
+    const patch = { kind };
+    if (x.kind === "source") unlinkSource(x.id, x.chapter);
+    if (kind === "source" || kind === "note") patch.sources = [];
+    if (kind !== "fact") { patch.label = ""; }
+    if (kind !== "source") patch.file = "";
+    const max = Math.max(0, ...planItems(x.chapter).map((y) => y.order));
+    patch.order = max + 1000; // land at the end of its new section
+    planSaver.now(x.id, patch).then(() => { renderMain(); select(x.id); });
+  }
+  function planMoveChapter(x, cid) {
+    if (cid === x.chapter) return;
+    if (x.kind === "source") unlinkSource(x.id, x.chapter);
+    const max = Math.max(0, ...planItems(cid).map((y) => y.order));
+    planSaver.now(x.id, { chapter: cid, order: max + 1000, sources: [] }).then(() => { toast(`Moved to ${cleanTitle(S.planCh.get(cid)?.title) || cid}.`); renderMain(); });
+  }
+
+  function renderPlanPanel() {
+    const body = $("pBody"); body.replaceChildren();
+    const x = S.plan.get(S.selected);
+    $("pTitle").textContent = x ? KIND_NAME[x.kind] : "Chapter";
+    const nums = srcNum(S.chapter);
+    $("pPid").textContent = x?.kind === "source" ? "S" + (nums.get(x.id) || "") : "";
+    if (!x) return renderPlanOverview(body);
+    const field = (label, ctrl) => { const f = el("label", "field"); f.append(el("span", null, label), ctrl); body.append(f); return ctrl; };
+    const ks = el("select"); ks.id = "plan-kind";
+    for (const [k] of KINDS) ks.append(new Option(KIND_NAME[k], k));
+    ks.value = x.kind; ks.onchange = () => planSetKind(x, ks.value); field("Kind", ks);
+    if (x.kind === "fact") {
+      const ls = el("select"); ls.id = "plan-label"; ls.append(new Option("No truth label yet", ""));
+      for (const l of S.book.truthLabels || []) ls.append(new Option(l.charAt(0) + l.slice(1).toLowerCase(), l));
+      ls.value = x.label || ""; ls.onchange = () => planSaver.now(x.id, { label: ls.value }).then(() => planUpdateCell(S.plan.get(x.id)));
+      field("Truth label", ls);
+    }
+    if (x.kind === "fact" || x.kind === "event") {
+      const vf = el("label", "check"); const vc = el("input"); vc.type = "checkbox"; vc.id = "plan-verify"; vc.checked = !!x.verify;
+      vc.onchange = () => planSaver.now(x.id, { verify: vc.checked }).then(() => { planUpdateCell(S.plan.get(x.id)); renderPlanStats(); });
+      vf.append(vc, " To verify against a source"); body.append(vf);
+      const sec = el("section", "group"); sec.append(el("h3", null, x.kind === "fact" ? "Backed by" : "Sources for this event"));
+      const srcs = planSources(x.chapter);
+      if (!srcs.length) sec.append(el("p", "p-empty", "This chapter has no sources yet. Add one under Sources, then tick it here."));
+      for (const s of srcs) {
+        const row = el("label", "srcpick"); const cb = el("input"); cb.type = "checkbox"; cb.id = "pick-" + s.id; cb.checked = (x.sources || []).includes(s.id);
+        cb.onchange = () => { const cur = new Set(S.plan.get(x.id).sources || []); cb.checked ? cur.add(s.id) : cur.delete(s.id); planSaver.now(x.id, { sources: [...cur] }).then(() => { planUpdateCell(S.plan.get(x.id)); planUpdateCell(S.plan.get(s.id)); renderPlanStats(); }); };
+        row.append(cb, el("b", null, "S" + nums.get(s.id)), el("span", null, (s.text || "(empty)").slice(0, 120)));
+        sec.append(row);
+      }
+      body.append(sec);
+    }
+    if (x.kind === "source") {
+      const rs = el("select"); rs.id = "plan-file"; rs.append(new Option("Not one of the book's research files", ""));
+      let grp = null, last = null;
+      for (const r of research()) { const dir = r.path.split("/").slice(1, -1).join("/") || "research"; if (dir !== last) { last = dir; grp = el("optgroup"); grp.label = dir; rs.append(grp); } grp.append(new Option(r.title, r.path)); }
+      rs.value = x.file || ""; rs.onchange = () => planSaver.now(x.id, { file: rs.value }).then(() => planUpdateCell(S.plan.get(x.id)));
+      field("Research file in the repo", rs);
+      if (x.file) body.append(el("div", "vmeta", x.file));
+      const cites = planLive(x.chapter).filter((y) => (y.sources || []).includes(x.id));
+      const sec = el("section", "group"); sec.append(el("h3", null, "Cited by"));
+      if (!cites.length) sec.append(el("p", "p-empty", "No fact or event cites this source yet. Select a fact and tick this source."));
+      for (const y of cites) { const b = el("button", "linkrow", `${KIND_NAME[y.kind]}: ${(y.text || "").slice(0, 90)}`); b.onclick = () => { select(y.id); cellEl(y.id)?.scrollIntoView({ behavior: "smooth", block: "center" }); }; sec.append(b); }
+      body.append(sec);
+    }
+    const ms = el("select"); ms.id = "plan-move";
+    for (const c of S.book.chapters) ms.append(new Option(cleanTitle(S.planCh.get(c.id)?.title) || titleOf(c, langs()[0]?.key), c.id));
+    ms.value = x.chapter; ms.onchange = () => planMoveChapter(x, ms.value);
+    field("Chapter", ms);
+    body.append(el("div", "vmeta", "Moving an item to another chapter clears its source links, because sources are numbered per chapter."));
+  }
+
+  function renderPlanStats() { if (S.tab === "plan" && !S.plan.get(S.selected)) renderPanel(); }
+
+  function renderPlanOverview(body) {
+    const items = planLive(S.chapter); const nums = srcNum(S.chapter);
+    const todo = [];
+    for (const f of items.filter((x) => x.kind === "fact")) {
+      if (!(f.sources || []).some((s) => nums.has(s))) todo.push([f, "has no source"]);
+      if (!f.label) todo.push([f, "has no truth label"]);
+      if (f.verify) todo.push([f, "is marked to verify"]);
+    }
+    for (const e of items.filter((x) => x.kind === "event" && x.verify)) todo.push([e, "is marked to verify"]);
+    for (const s of items.filter((x) => x.kind === "source")) if (!items.some((y) => (y.sources || []).includes(s.id))) todo.push([s, "is not cited by any fact or event"]);
+    const sec = el("section", "group"); sec.append(el("h3", null, "To organize in this chapter"));
+    if (!todo.length) sec.append(el("p", "p-empty", items.length ? "Every fact has a source and a truth label, and every source is cited." : "This chapter has no items yet."));
+    for (const [x, why] of todo) {
+      const label = x.kind === "source" ? `S${nums.get(x.id)}` : KIND_NAME[x.kind];
+      const b = el("button", "linkrow"); b.append(el("b", null, `${label} ${why}`), el("span", null, (x.text || "(empty)").slice(0, 90)));
+      b.onclick = () => { select(x.id); cellEl(x.id)?.scrollIntoView({ behavior: "smooth", block: "center" }); }; sec.append(b);
+    }
+    body.append(sec);
+    const lib = el("section", "group"); lib.append(el("h3", null, "Research files"));
+    lib.append(el("p", "vmeta", "The book's research folder. Link a source to one of these from its settings."));
+    const used = {}; for (const x of S.plan.values()) if (!x.removed && x.kind === "source" && x.file) (used[x.file] ||= new Set()).add(x.chapter);
+    for (const r of research()) {
+      const row = el("div", "librow"); row.append(el("span", null, r.title));
+      const ch = used[r.path]; row.append(el("small", null, ch ? "cited in " + [...ch].sort().join(", ") : "not cited yet"));
+      lib.append(row);
+    }
+    body.append(lib);
+  }
+
+  function setTab(tab) {
+    S.tab = tab; pref.set("tab", tab);
+    for (const b of $("tabs").children) { const on = b.dataset.tab === tab; b.setAttribute("aria-selected", String(on)); b.tabIndex = on ? 0 : -1; }
+    document.querySelectorAll(".book-only").forEach((n) => (n.hidden = tab !== "book"));
+    S.selected = null;
+    renderMain(); renderCurve();
+  }
+  $("tabs").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) setTab(b.dataset.tab); });
+  $("tabs").addEventListener("keydown", (e) => {
+    if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+    const tabs = [...$("tabs").children]; const i = tabs.findIndex((b) => b.dataset.tab === S.tab);
+    const n = tabs[(i + (e.key === "ArrowRight" ? 1 : tabs.length - 1)) % tabs.length]; setTab(n.dataset.tab); n.focus();
+  });
+
   // ---------- controls ----------
   function setMetric(v) {
     S.heatMetric = v; pref.set("metric", v);
@@ -914,11 +1257,12 @@ Reply with only this JSON, one entry per sentence id above, in order:
   $("bookSel").addEventListener("change", (e) => openBook(e.target.value));
   $("prevCh").onclick = () => step(-1); $("nextCh").onclick = () => step(1);
   function step(d) { const cs = S.book?.chapters || []; const i = cs.findIndex((c) => c.id === S.chapter); const n = cs[i + d]; if (n) goChapter(n.id); }
-  function goChapter(id) { for (const pid of [...S.pending.keys()]) flush(pid); S.chapter = id; S.selected = null; pref.set("chap:" + S.slug, id); $("chapSel").value = id; renderMain(); window.scrollTo({ top: 0 }); }
+  function goChapter(id) { for (const pid of [...S.pending.keys()]) flush(pid); planSaver.flushAll(); headSaver.flushAll(); S.chapter = id; S.selected = null; pref.set("chap:" + S.slug, id); $("chapSel").value = id; renderMain(); window.scrollTo({ top: 0 }); }
   $("runHeat").onclick = runHeatmap;
   S.chartOpen = pref.get("chart") !== "closed";
   $("chartToggle").onclick = () => { S.chartOpen = !S.chartOpen; pref.set("chart", S.chartOpen ? "open" : "closed"); renderCurve(); };
   const m0 = pref.get("metric"); if (m0) setMetric(m0);
+  setTab(pref.get("tab") === "book" ? "book" : "plan");
 
   if (window.claude?.use) boot(); else { showState("Open this page in Claude", "The manuscript and its settings are stored with this page and load only inside Claude."); $("syncLine").textContent = "Store unavailable"; }
 })();

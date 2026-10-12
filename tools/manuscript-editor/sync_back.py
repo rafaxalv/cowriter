@@ -12,6 +12,9 @@ Updates, in the book folder:
     (removed paragraphs are dropped; chapters with none get the placeholder)
   - config/paragraph-parameters.csv: one row per paragraph
   - config/engagement.csv: the latest heatmap scores of the first language
+  - the Chapters file (outline/chapters.md), when the dump holds the Chapters tab's
+    documents (.../plan/*.json and .../planChapters/*.json): each chapter entry is
+    rewritten as When / where, Stories, Facts, Sources and Notes; removed items dropped
 Everything else in the files (title, intro, part headings) is kept.
 Prints a short summary; review with `git diff` before committing.
 """
@@ -19,6 +22,7 @@ import csv, datetime, glob, json, os, re, sys
 
 sys.path.insert(0, os.path.dirname(__file__))
 from export_book import DIMS, chap_id  # noqa: E402
+import plan_md  # noqa: E402
 
 PLACEHOLDER = {"en": "*(to be written)*", "pt_br": "*(a escrever)*"}
 
@@ -76,7 +80,10 @@ def rewrite_manuscript(path, lang_key, paras):
 def main(book_dir, dump):
     slug = os.path.basename(os.path.normpath(book_dir))
     base = os.path.join(dump, "books", slug)
+    sync_plan(book_dir, base)
     paras = list(load_docs(os.path.join(base, "paragraphs")).values())
+    if not paras:
+        return
     voices = load_docs(os.path.join(base, "voices"))
     heat = load_docs(os.path.join(base, "heatmaps"))
     profile = open(os.path.join(book_dir, "BOOK.md"), encoding="utf-8").read()
@@ -148,6 +155,26 @@ def main(book_dir, dump):
     with open(en_path, "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=eh); w.writeheader(); w.writerows(keep + new)
     print("updated config/engagement.csv:", len(new), "scored sentences from", sorted(scored_ch) or "no chapters")
+
+
+def sync_plan(book_dir, base):
+    items = [d for d in load_docs(os.path.join(base, "plan")).values() if not d.get("removed")]
+    heads = load_docs(os.path.join(base, "planChapters"))
+    if not items and not heads:
+        return
+    chapters = {}
+    for cid, h in heads.items():
+        chapters[h.get("chapter", cid)] = {"title": h.get("title", ""), "when": h.get("when", ""), "items": []}
+    for it in sorted(items, key=lambda d: (d["chapter"], d["order"])):
+        chapters.setdefault(it["chapter"], {"title": "", "when": "", "items": []})["items"].append(it)
+    path = os.path.join(book_dir, "outline/chapters.md")
+    text = open(path, encoding="utf-8").read()
+    _, present = plan_md.parse(text)
+    missing = set(chapters) - set(present)
+    if missing:
+        print(f"warning: outline/chapters.md has no heading for chapters {sorted(missing)}; their items were not written")
+    open(path, "w", encoding="utf-8").write(plan_md.rewrite(text, chapters))
+    print("updated outline/chapters.md:", len(items), "items in", len(chapters), "chapters")
 
 
 if __name__ == "__main__":

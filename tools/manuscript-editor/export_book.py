@@ -12,6 +12,8 @@ Upload them with the ArtifactData tool (batch, file_path).
 """
 import csv, json, os, re, sys, unicodedata
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
 DIMS = [
     ("A", 1, "Narrative distance", "far, panoramic", "inside a head"),
     ("A", 2, "Narrator presence", "invisible", "comments, judges"),
@@ -138,6 +140,7 @@ def main(book_dir, out):
         "dims": [{"n": n, "group": g, "groupName": GROUPS[g], "name": nm, "low": lo, "high": hi} for g, n, nm, lo, hi in DIMS],
         "syncedAt": None,
         "context": context, "anchors": anchors,
+        "truthLabels": truth_labels(profile), "research": research_files(book_dir),
     }
     write(out, f"books/{slug}.json", book)
     ch_pos = {c: i for i, c in enumerate(order_ch)}
@@ -189,12 +192,58 @@ def main(book_dir, out):
         st = open(skill, encoding="utf-8").read()
         m = re.search(r"^### Rewrite brief[^\n]*\n(.*?)(?=^\*\*From the Manuscript Desk|^#)", st, re.M | re.S)
         write(out, "skills/paragraph-review.json", {"brief": m.group(1).strip() if m else ""})
+    # The Chapters file, as items for the editor's Chapters tab.
+    export_plan(book_dir, slug, out)
     vdir = os.path.join(book_dir, "voices")
     for f in sorted(os.listdir(vdir)):
         if f.endswith(".md") and not f.startswith("00-") and re.match(r"[A-Z]", f):
             vid, v = voice_profile(os.path.join(vdir, f))
             v["brief"] = voice_brief(open(os.path.join(vdir, f), encoding="utf-8").read())
             write(out, f"books/{slug}/voices/{vid}.json", v)
+
+
+def truth_labels(profile):
+    m = re.search(r"\*\*Truth labels\*\*[^:]*:\s*([A-Z][A-Z ,]+[A-Z])", profile)
+    return [x.strip() for x in m.group(1).split(",")] if m else []
+
+
+def research_files(book_dir):
+    """Documents in research/ (not images) with their title, for linking sources to them."""
+    out = []
+    root = os.path.join(book_dir, "research")
+    for dirpath, _, files in os.walk(root):
+        for f in sorted(files):
+            if not f.lower().endswith((".md", ".pdf")):
+                continue
+            full = os.path.join(dirpath, f)
+            rel = os.path.relpath(full, book_dir)
+            title = os.path.splitext(f)[0].replace("-", " ")
+            if f.endswith(".md"):
+                for line in open(full, encoding="utf-8"):
+                    if line.startswith("# "):
+                        title = re.sub(r"[*_]", "", line[2:]).strip(); break
+            out.append({"path": rel, "title": title})
+    return sorted(out, key=lambda r: r["path"])
+
+
+def export_plan(book_dir, slug, out):
+    import plan_md
+    path = os.path.join(book_dir, "outline/chapters.md")
+    if not os.path.exists(path):
+        return
+    chapters, order = plan_md.parse(open(path, encoding="utf-8").read())
+    for cid in order:
+        ch = chapters[cid]
+        ids = {}
+        for i, it in enumerate(ch["items"]):
+            ids[id(it)] = f"{cid}-{i + 1:03d}"
+        for i, it in enumerate(ch["items"]):
+            write(out, f"books/{slug}/plan/{ids[id(it)]}.json", {
+                "id": ids[id(it)], "chapter": cid, "order": (i + 1) * 1000, "kind": it["kind"],
+                "text": it["text"], "label": it["label"], "verify": it["verify"], "file": it["file"],
+                "sources": [ids[id(s)] for s in it["sourceRefs"]], "updatedAt": None,
+            })
+        write(out, f"books/{slug}/planChapters/{cid}.json", {"chapter": cid, "title": ch["title"], "when": ch["when"], "updatedAt": None})
 
 
 def md_section(text, title_re):

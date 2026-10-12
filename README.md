@@ -17,7 +17,7 @@ books/
     research/          sources, notes, timelines, images
     drafts/            chapters being written (created when needed)
 tools/
-  manuscript-editor/   Manuscript Desk: paragraph-cell editor with voice tuning and an engagement heatmap
+  manuscript-editor/   Manuscript Desk: Chapters tab (events, facts, sources) and Book tab (paragraphs, voice tuning, heatmap)
 ```
 
 ## Books
@@ -42,4 +42,4 @@ Every skill starts by finding the book's `BOOK.md` and reading it. To start a ne
 
 ## Tools
 
-- **Manuscript Desk** (`tools/manuscript-editor/`): edit a book paragraph by paragraph, tune each paragraph's voice parameters, and run an engagement heatmap over a chapter. It keeps its own copy of the book; Claude loads books into it and syncs edits back (see its README).
+- **Manuscript Desk** (`tools/manuscript-editor/`): organize each chapter's events, facts and research sources (Chapters tab), and edit the book paragraph by paragraph, tuning each paragraph's voice parameters and running an engagement heatmap over a chapter (Book tab). It keeps its own copy of the book; Claude loads books into it and syncs edits back (see its README).
