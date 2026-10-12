@@ -1,1 +1,34 @@
 Paragraph ID,Chapter,Opening words (EN),Opening words (PT),Voice ID,Voice version,Tuning,Reason for tuning,Review status,Last reviewed,Open issues,Engagement avg,Engagement peak
+00.001,00,My grandmother died after years with …,Minha avó morreu depois de anos …,AUTHOR-MAIN,0.1,,,draft,,,,
+00.002,00,Her life was hard from the …,Sua vida foi difícil desde o …,AUTHOR-MAIN,0.1,,,draft,,,,
+00.003,00,"She became a nursing assistant, got …","Tornou-se auxiliar de enfermagem, casou-se e …",AUTHOR-MAIN,0.1,,,draft,,,,
+00.004,00,I saw some of it with …,Um pouco disso eu vi com …,AUTHOR-MAIN,0.1,,,draft,,,,
+00.005,00,The fear of being robbed was …,O medo de ser roubada era …,AUTHOR-MAIN,0.1,,,draft,,,,
+00.006,00,In her last years she hardly …,"Nos últimos tempos, ela quase não …",AUTHOR-MAIN,0.1,,,draft,,,,
+00.007,00,"As I write, my grandfather, her …","Enquanto escrevo, meu avô, ex-marido dela …",AUTHOR-MAIN,0.1,,,draft,,,,
+00.008,00,The fog around memory seems to …,A névoa em volta da memória …,AUTHOR-MAIN,0.1,,,draft,,,,
+00.009,00,"While she was still lucid, my …","Enquanto ainda estava lúcida, minha avó …",AUTHOR-MAIN,0.1,,,draft,,,,
+00.010,00,I'm here to change that.,Estou aqui para mudar isso.,AUTHOR-MAIN,0.1,,,draft,,,,
+01.001,01,"They landed at night, on a …","Desembarcaram de noite, numa praia, longe …",NARR-MAIN,0.1,,,draft,,,3.0,3
+01.002,01,Vinegar at dawn. They threw it …,Vinagre ao amanhecer. Jogaram de balde …,NARR-MAIN,0.1,,,draft,,,3.0,3
+01.003,01,The warehouse stank. Tar. Salt fish. …,O armazém fedia. Piche. Peixe salgado. …,NARR-MAIN,0.1,,,draft,,,2.0,2
+01.004,01,The buyers came in at noon. …,Os compradores chegaram ao meio-dia. Andavam …,NARR-MAIN,0.1,,,draft,,,3.0,3
+01.005,01,"The old man came last, and …","O velho veio por último, e …",NARR-MAIN,0.1,,,draft,,,3.3,4
+01.006,01,His thumb went in her mouth. …,O polegar entrou. Por cima dos …,NARR-MAIN,0.1,,,draft,,,4.0,4
+01.007,01,"""Good teeth,"" he said.",— Dente bom — disse ele.,NARR-MAIN,0.1,,,draft,,,4.0,4
+01.008,01,"""All of them,"" said the dealer. …",— Todos — disse o mercador. …,NARR-MAIN,0.1,Figurative density +1,,draft,,,3.0,3
+01.009,01,"""I'm counting.”",— Tô contando.,NARR-MAIN,0.1,,,draft,,,3.0,3
+01.010,01,He was done counting. The hand …,Já tinha acabado de contar. A …,NARR-MAIN,0.1,,,draft,,,4.0,4
+01.011,01,She did not understand the words. …,Ela não entendia as palavras. Entendia …,NARR-MAIN,0.1,,,draft,,,3.5,4
+01.012,01,The light came through a crack …,A luz entrava pela fresta entre …,NARR-MAIN,0.1,,,draft,,,2.9,3
+01.013,01,"""Fourteen,"" the old man said, pinching …","— Catorze — disse o velho, …",NARR-MAIN,0.1,,,draft,,,3.0,3
+01.014,01,"""Fourteen is good,"" said the dealer. …",— Catorze é bom — disse …,NARR-MAIN,0.1,,,draft,,,2.0,3
+01.015,01,"""Fourteen eats.”",— Catorze come.,NARR-MAIN,0.1,Orality +1; Sentence length +1; Scene vs summary -1; Violence rendering +1,,draft,,,3.0,3
+01.016,01,The dealer did not laugh. He …,O mercador não riu. Agora ele …,NARR-MAIN,0.1,,,draft,,,3.8,4
+01.017,01,"Behind the warehouse, in a yard …","Atrás do armazém, num quintal cheio …",NARR-MAIN,0.1,,,draft,,,3.4,4
+01.018,01,"When they brought her back, the …","Quando trouxeram ela de volta, o …",NARR-MAIN,0.1,,,draft,,,4.0,4
+01.019,01,Then a third man spoke from …,Aí um terceiro homem falou da …,NARR-MAIN,0.1,,,draft,,,4.0,4
+01.020,01,The dealer drew a line under …,O mercador passou um traço embaixo.,NARR-MAIN,0.1,,,draft,,,4.0,4
+01.021,01,That was all. After so many …,Foi só isso. Depois de tantos …,NARR-MAIN,0.1,,,draft,,,3.0,3
+01.022,01,She kept her face still. She …,Ela manteve a cara parada. Não …,NARR-MAIN,0.1,,,draft,,,3.2,4
+99.001,99,"Grandma died in 2023, after suffering …","A vovó morreu em 2023, depois …",AUTHOR-MAIN,0.1,,,draft,,,,

@@ -85,14 +85,14 @@ At home the master's family calls him "the boy". His mother has a secret Yoruba 
 
 ## Theme: luck, fortune and the gambling inheritance
 
-The family's relationship with luck runs through the whole book, from the protagonist's lottery ticket to the sons' card tables and the *jogo do bicho*, and on to grandma, who played the lottery all her life. Luck brings the family both its fortune and its ruin.
+The family's relationship with luck runs through the whole book, from the protagonist's lottery ticket to the sons' card tables, and on to grandma, who played the lottery all her life. Luck brings the family both its fortune and its ruin.
 
   - **Not a curse but a worldview.** Luck is a rational belief for people whose effort never paid off. And luck sees no race: the lottery wheel and the cholera do not check his colour. He learned it first from Luzia, who trusted the orixás and luck with everything she had; his decision to go to war is a bet on luck, and the lottery win is the fruit of that belief. He knows some luck brings more luck, but never takes it for granted. Luzia herself turns against luck after she is sold and makes her own destiny; her last letter tells him so, and it reaches him just after the lottery has proved his faith right. He expected a mother proud of his luck and finds a different woman: a kind of cultural shock. Its first effect is The Purchase: he decides instead of waiting for luck, and decides the colour of his family too. Slavery, unpaid army wages and a land claim left "under review" taught him that work changes nothing and luck sometimes does. The book never moralises against gambling; it shows why people kept believing in it.
   - **The win is the trap.** The lottery proves his faith in luck "right". From then on he trusts chance more than planning, and teaches his sons that money comes from the sky, not from keeping it.
   - **Each generation has its own relationship with luck.** **He** sees luck as justice, a judge above the masters. **The woman from Spain** trusts only what she can count and control: she has seen how a single sale can decide a whole life. Luck against accounts is one of the recurring arguments of their marriage. **The sons first gamble to cover the farm's losses: they never learned the land, and luck is the easy way out their father showed them. They keep gambling out of pride and the desire to be like the white elite: to sit as equals at the white men's table. They resent their father, but they do not want to be poor; they lose everything because they cannot bear to look small.** Gambling is the one place where their money buys them equality, for one night. **Grandma** plays small, regularly, as a ritual of hope. She is the bridge to the present in the epilogue.
-  - **Signs and dreams.** Luck is tied to faith: the Ogum *guia*, his mother's songs, and dreams turned into numbers (in the *jogo do bicho*, a dream points to an animal, and the animal to a bet).
+  - **Signs and dreams.** Luck is tied to faith: the Ogum *guia*, his mother's songs, and dreams turned into numbers (a dream points to a lottery number).
   - **Language:** characters say *vício do jogo* or *mania*, never "addiction".
-  - **Real aspects surfaced:** imperial and provincial lotteries; the 1874 military recruitment by lottery (*Lei do Sorteio*, to verify); the *jogo do bicho* (1892) and its survival today; the lottery as one of the few ways up for poor and Black Brazilians, then and now.
+  - **Real aspects surfaced:** imperial and provincial lotteries; the 1874 military recruitment by lottery (*Lei do Sorteio*, to verify); the lottery as one of the few ways up for poor and Black Brazilians, then and now.
 
 ## Inheritance: what passes down
 
@@ -273,7 +273,6 @@ Every historical anchor used above, which character carries it, and whether it i
 | 1870s | Galician *ganchos*; *polacas* traffic | Alvarado, Ruchla | To verify |
 | 1880s | Dom Obá II's columns in Rio; Luiz Gama's legal abolitionism | Dom Obá, Gama | Source doc + to verify |
 | 1888–89 | Abolition (*Lei Áurea*); the Republic | Protagonist, sons | To verify |
-| 1892 | *Jogo do bicho* invented in Rio | The sons | To verify |
 
 ### Open questions
 

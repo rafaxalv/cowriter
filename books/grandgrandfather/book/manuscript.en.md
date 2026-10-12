@@ -188,7 +188,7 @@ She kept her face still. She did not look back at the line. She was fourteen, an
 
 *(to be written)*
 
-### 20. The Debt
+### 20. The Purchase
 
 *(to be written)*
 
@@ -210,7 +210,7 @@ She kept her face still. She did not look back at the line. She was fourteen, an
 
 *(to be written)*
 
-### 25. The Animal Game
+### 25. The Table
 
 *(to be written)*
 

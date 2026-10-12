@@ -175,7 +175,7 @@ The Character Bible has him born about 1846 in the Recôncavo, sent south as a s
 | Aug 1869 | The memory he never tells | Piribebuy (12 Aug); Acosta Ñu (16 Aug) | The boy at Acosta Ñu | — |
 | Mar 1870 | The hunt for López ends | Cerro Corá (1 Mar) | Capt. Barbosa (real), Captain Albuquerque | Was he at Cerro Corá? |
 | 1870–1889 | Home free and unpaid; lottery; farms; the woman from Spain (c. 1876) | Unpaid veterans; Free Womb Law (1871); abolition (1888); Republic (1889) | Seu Bento, Dr. Teles, Luiz Gama, Dom Obá | Where did they live after the war? |
-| c. 1886–1892 | The São João night; the sons and gambling | Acosta Ñu trauma; *jogo do bicho* (1892) | The sons | Which child was grandma's parent? |
+| c. 1886–1892 | The São João night; the sons and gambling | Acosta Ñu trauma; card games | The sons | Which child was grandma's parent? |
 
 ## Sources and open questions
 

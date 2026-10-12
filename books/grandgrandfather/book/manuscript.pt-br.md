@@ -188,7 +188,7 @@ Ela manteve a cara parada. Não olhou pra trás, pra fila. Tinha catorze anos, e
 
 *(a escrever)*
 
-### 20. A Dívida
+### 20. A Compra
 
 *(a escrever)*
 
@@ -210,7 +210,7 @@ Ela manteve a cara parada. Não olhou pra trás, pra fila. Tinha catorze anos, e
 
 *(a escrever)*
 
-### 25. O Jogo do Bicho
+### 25. A Mesa
 
 *(a escrever)*
 
