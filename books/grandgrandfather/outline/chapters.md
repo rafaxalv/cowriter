@@ -2,7 +2,7 @@
 
 Oct 2, 2026 · Rafael
 
-Working list of chapters and the stories planned for each. Working names, for planning only and never in the book text: Joaquim (him) and Carmen (the woman from Spain). Built from the Character Bible arc. Style: immersive fiction, history blended into the scenes (no factual step-outs). Every chapter ends on a hook. Neither he nor the woman from Spain is ever named.
+Working list of chapters and the stories planned for each. Working names, for planning only and never in the book text: Benedito (him) and Carmen (the woman from Spain). Built from the Character Bible arc. Style: immersive fiction, history blended into the scenes (no factual step-outs). Every chapter ends on a hook. Neither he nor the woman from Spain is ever named.
 
 Structure note: Part IV (her story) does not run as a block. Her chapters alternate with his from Part III onwards, cutting away at high points, until the two lines meet in "The Purchase".
 

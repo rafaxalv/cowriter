@@ -6,7 +6,7 @@ Oct 1, 2026 · Rafael
 
 This is the master reference for every character in the book. The history is real; the lives are invented. Each character exists to carry one real piece of 19th-century Brazil (or Spain, or Paraguay) into the story.
 
-  - **Neither he nor the woman from Spain is ever named.** Everyone around him calls him something different: his master, his mother, the army, the newspapers. The reader never learns his "true" name, just as the family lost it. That gap is one of the book's themes. Working names, for planning only and never in the book text: Joaquim (him) and Carmen (the woman from Spain).
+  - **Neither he nor the woman from Spain is ever named.** Everyone around him calls him something different: his master, his mother, the army, the newspapers. The reader never learns his "true" name, just as the family lost it. That gap is one of the book's themes. Working names, for planning only and never in the book text: Benedito (him) and Carmen (the woman from Spain).
   - **Grandma's story is the spine:** born enslaved, freed by the war in Paraguay, wins the lottery, buys farms, "buys" a Spanish girl and marries her, dies, and the sons gamble it all away. Every invented detail has to fit around these beats.
   - **Real people appear as cameos only.** The invented characters do the plot work, and real figures (Rebouças, Dom Obá, Ana Néri, Caxias) pass through scenes. Each row says which real fact the character brings in. The tables are a menu, not a cast list: during writing we choose who appears, who is only mentioned and who is left out.
   - **Grounding:** the Zuavos baianos material comes from the *Dados gerais* source doc (Bento; Kraay). The other historical anchors come from general knowledge and are marked *to verify* in the fact map at the end.
@@ -296,7 +296,7 @@ Every historical anchor used above, which character carries it, and whether it i
 
 What the Book text has actually fixed (replaces the old Continuity Log, merged Oct 7, 2026). Add facts here only after a chapter of the Book is approved, with the paragraph ID (for example 01.003). When the text contradicts the planned part of this Bible, the text wins and the plan above is updated.
 
-  - Him (working name Joaquim): nothing yet.
+  - Him (working name Benedito): nothing yet.
   - The woman from Spain (working name Carmen): nothing yet.
   - Other characters: nothing yet.
   - The frame (grandma, the author): from the Prologue, once approved.

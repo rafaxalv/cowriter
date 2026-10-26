@@ -43,7 +43,7 @@ Portuguese documents stay in Portuguese, so nothing is lost in translation.
 
 ## Rules that apply everywhere
 
-- Neither he nor the woman from Spain is ever named in the book text. Working names for planning only: Joaquim and Carmen.
+- Neither he nor the woman from Spain is ever named in the book text. Working names for planning only: Benedito and Carmen.
 - Every story line Rafael gives goes into `outline/chapters.md`; the Character Bible holds personality, backstory and minor details.
 - No new characters, or expanded ones, without Rafael's approval. He writes the funny childhood episodes himself.
 - Never overwrite Rafael's or his mom's text without approval; when his mom wrote the Portuguese, it is the source and the English follows it.

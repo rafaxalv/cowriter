@@ -5,7 +5,7 @@ A short introduction to the project for the author, a co-writer or an AI. It hol
 ## Working context
 
   - **Book**: working title "Book: Grandgrand father story" (to decide). Author: Rafael; his mom writes or revises parts in Portuguese. English and Brazilian Portuguese side by side. Target about 300 pages (80,000–85,000 words); 350 is a hard limit.
-  - **Working names, for planning only**: Joaquim (him) and Carmen (the woman from Spain). Never in the book text.
+  - **Working names, for planning only**: Benedito (him) and Carmen (the woman from Spain). Never in the book text.
   - **Standing rules from Rafael**: every story line he gives goes into Chapters, with all his details; no new characters, or expanded ones, without his approval; he writes the funny childhood stories himself; show changes before writing them and never overwrite his or his mom's text without approval (her Portuguese is the source when she wrote it); brainstorm before cutting arcs.
   - **How the files fit together**:
     1.  **00 Book Concept** (this file): the key ideas. Least detail.

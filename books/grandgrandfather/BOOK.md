@@ -66,7 +66,7 @@ Every passage exists in both languages and says the same thing; neither is a wor
 3. He writes the funny childhood episodes himself (from his own and his cousins' childhood); never invent them.
 4. Show changes before writing them; never overwrite his or his mom's text without approval.
 5. Don't cut arcs yet: brainstorm first, then select against the page budget.
-6. Neither he (the great-great-grandfather) nor the woman from Spain is ever named in the book text. **Working names, for planning only**: Joaquim (him) and Carmen (the woman from Spain). Use them in chats, Chapters, Scenes and the Character Bible; never in the manuscript.
+6. Neither he (the great-great-grandfather) nor the woman from Spain is ever named in the book text. **Working names, for planning only**: Benedito (him) and Carmen (the woman from Spain). Use them in chats, Chapters, Scenes and the Character Bible; never in the manuscript.
 
 ## How changes are saved
 
