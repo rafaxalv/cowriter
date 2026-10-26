@@ -50,6 +50,6 @@ A family story told by the author's grandmother: her grandfather was born enslav
 
 ## Handle with care
 
-  - Scenes of slavery are told from inside the person being sold or used, never through the buyers' eyes; sexual violence is never shown directly. Exceptions chosen by Rafael: Ezequiel's two scenes in ch. 2 (the goiabeira night and his first whipping) are explicit; they are cathartic character set-ups.
+  - Scenes of slavery are told from inside the person being sold or used, never through the buyers' eyes; sexual violence is never shown directly. Exceptions chosen by Rafael: Ezequiel's goiabeira night (ch. 2) and first whipping (ch. 3) are explicit; they are cathartic character set-ups.
   - The hardships of freedom are his lived experience, never the narrator's verdict (the "better off enslaved" argument belonged to the planters).
   - Family traditions are never quietly turned into facts. Working notes use truth labels (DOCUMENTED, STRONGLY SUPPORTED, FAMILY TRADITION, PLAUSIBLE RECONSTRUCTION, FICTIONAL); the reader never sees them.
