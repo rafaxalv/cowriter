@@ -64,7 +64,7 @@ The author can tune one paragraph directly: "more explicit violence here", "slow
 
 ## 4. Output and recording
 
-For each paragraph, also produce its **parameter row**: Paragraph ID, voice ID and version, tuning, reason for tuning, review status, date, open issues. When called by chapter-review, return the results and rows to it; chapter-review applies them. When used on its own and the author approves a change, update the paragraph in every affected manuscript file and its row in **Paragraph Parameters** in the same pass (never change one without the other), then save the change the way the profile says (by default: commit and push).
+For each paragraph, also produce its **parameter row**: Paragraph ID, voice ID and version, tuning, reason for tuning, review status, date, open issues. When called by chapter-review, return the results and rows to it; chapter-review applies them. When used on its own and the author approves a change, update the paragraph in every affected manuscript file and its row in **Paragraph Parameters** in the same pass (never change one without the other), then hand the change to the **book-repo** skill, which saves it.
 
 ## Notes
 

@@ -89,7 +89,7 @@ When the chapter check finds a problem located in specific paragraphs (a contrad
 
 ### 7. Apply (only after the author approves)
 
-Apply the approved changes to the **manuscript** files and **Paragraph Parameters** in the same pass: every changed, added or removed paragraph gets its row created, updated or marked removed, with voice, version, tuning, reason, status and date. Never update one without the other. Then add the approved facts to the Continuity record. If approved changes alter what happens, update the scene map in Scenes and the Chapters entry too. Keep every language version aligned; if only one was changed, flag the others for update, following the profile on whose wording is the source in each language (when a co-author's text is the source, the other languages are updated to match it). Save the changes the way the profile says (by default: commit and push).
+Apply the approved changes to the **manuscript** files and **Paragraph Parameters** in the same pass: every changed, added or removed paragraph gets its row created, updated or marked removed, with voice, version, tuning, reason, status and date. Never update one without the other. Then add the approved facts to the Continuity record. If approved changes alter what happens, update the scene map in Scenes and the Chapters entry too. Keep every language version aligned; if only one was changed, flag the others for update, following the profile on whose wording is the source in each language (when a co-author's text is the source, the other languages are updated to match it). Hand the changes to the **book-repo** skill, which saves them.
 
 ## Notes
 

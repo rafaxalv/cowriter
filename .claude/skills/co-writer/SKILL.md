@@ -11,6 +11,7 @@ This skill is generic and works for any book in this repo. Everything specific t
 
 ## Find the book (start of every session)
 
+0. Connect the repo with the **book-repo** skill (every new chat has to connect again).
 1. Books live in `books/<slug>/`, each with a `BOOK.md`. If there is only one book, use it; if there are several, use the one the author names, or ask.
 2. Read `BOOK.md` in full. It maps every file role used below (Concept, Chapters, Scenes, Manuscript, Character Bible, Continuity record, Voices, Paragraph Parameters, Research, Drafts) to a path. File names in this skill are those roles.
 3. Read the **Concept** in full, then the parts of Chapters, Scenes and the Character Bible the session needs.
@@ -62,7 +63,7 @@ If the author starts a new book (or no `BOOK.md` exists for it):
    - *Key ideas*: motifs, themes or forces, central ironies, what passes between generations.
    - *How it is told*: style, point of view and voices, chapter shape, tone.
    - *Handle with care*: sensitive material, truth labels if the book mixes fact and invention.
-4. Show the author the profile and the Concept; commit after approval.
+4. Show the author the profile and the Concept; after approval, hand them to the **book-repo** skill to save.
 
 ## Where story decisions go
 
@@ -107,7 +108,7 @@ Run **scene-builder** on the chapter. It writes the scene map into Scenes and li
 
 ### 6. Snapshots
 
-The manuscript is always the current text. Before a major revision, save a snapshot the way the profile says (by default: tag the current commit `draft-N` and push the tag). Snapshots are never edited. To compare drafts, diff the snapshot against the current manuscript and list what changed.
+The manuscript is always the current text. Before a major revision, ask the **book-repo** skill for a snapshot (by default it tags the current commit `draft-N` and pushes the tag). Snapshots are never edited. To compare drafts, diff the snapshot against the current manuscript and list what changed.
 
 ## Syncing changes backwards and sideways
 
@@ -138,7 +139,7 @@ For a full check of a chapter, use chapter-review.
 ## How to work with the author
 
 - One step at a time. Show the change before writing it; never overwrite the author's or a co-author's text without approval.
-- Save approved changes the way the profile says (by default: commit with a clear message and push).
+- Save approved changes only through the **book-repo** skill, which commits and pushes them the way the profile says. No skill runs git commit, push or tag itself.
 - Every story line goes to Chapters (see "Where story decisions go").
 - Offer options with a recommendation when a creative choice is open, and record decisions in the right file.
 - Never reproduce text from published books; reference authors are imitated only through original writing.

@@ -79,7 +79,7 @@ Score the language the profile marks as written first. If other language version
 
 1. **Heatmap page**: an HTML page published as an artifact named "Heatmap - <book> - Chapter N" (republish the same artifact on reruns). Each word colored by its level using a 5-step sequential color scale that works in light and dark mode and for color-blind readers (load the dataviz skill for the palette), hot words outlined, uncertain sentences underlined dotted, Paragraph IDs in the margin, a legend, and on hover the sentence's sub-scores and reason. A toggle switches the coloring between engagement, tension, emotion and pace. The chapter curve sits at the top.
 2. **Report in chat**: the curve in a few words, the 3-5 most important problems with Paragraph IDs, and the turning points to check.
-3. **Data**: save sentence scores in the book's **Engagement** scores file (columns as the profile lists them), and add per-paragraph average and peak engagement to Paragraph Parameters (only those columns; never touch the others). Save the changes the way the profile says (by default: commit and push).
+3. **Data**: save sentence scores in the book's **Engagement** scores file (columns as the profile lists them), and add per-paragraph average and peak engagement to Paragraph Parameters (only those columns; never touch the others). Hand the changes to the **book-repo** skill, which saves them.
 
 ## Notes
 

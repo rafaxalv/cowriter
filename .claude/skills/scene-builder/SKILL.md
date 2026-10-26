@@ -77,7 +77,7 @@ Show the author a short summary (a table of scenes with their Reader feeling) an
 
 - Write every approved proposal and decision back into the chapter's entry in **Chapters** (bridges, choices between options, new details), so Chapters stays the record of events.
 - Update the scene map to remove the [proposal] marks for what was approved, and note the date.
-- Save the changes the way the profile says (by default: commit and push).
+- Hand the changes to the **book-repo** skill, which saves them.
 - Hand the map to the **co-writer** for the prose. The prose must aim at each scene's Reader feeling.
 
 ## Scenes header (first time only)

@@ -90,7 +90,7 @@ Every creation or update of a voice goes through this exchange, whether the auth
 - **Feeling**: the Conveying feeling rules are present and consistent with the voice's scores on dimensions 8, 17 and 18, and with the handle-with-care notes.
 - **Complete**: every core field and every field of each language layer is filled.
 
-If something fails, send it back to voice-generator with the problem described. When it passes, show the author the result (for an Update, the before/after and the affected chapters), and after their OK save the voice file, update the Voice Index, raise the version, add the change log line, and save the change the way the profile says (by default: commit and push). For an Update, list the chapters that use the voice so the author can decide whether to re-run chapter-review on them.
+If something fails, send it back to voice-generator with the problem described. When it passes, show the author the result (for an Update, the before/after and the affected chapters), and after their OK save the voice file, update the Voice Index, raise the version, add the change log line, and hand the change to the **book-repo** skill, which saves it. For an Update, list the chapters that use the voice so the author can decide whether to re-run chapter-review on them.
 
 ## What this skill does
 
