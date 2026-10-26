@@ -30,7 +30,7 @@ This skill is generic and works for any book in this repo. Everything specific t
 
 **Reference files**, used at every level:
 
-- **Character Bible**: who people are (personality, backstory, motives, relationships, minor details), plus the **Continuity record** with what the manuscript has established (per character, and places, objects, dates).
+- **Character Bible**: who people are, in short bullet points (personality, motives, relationships, key traits, a one-line pointer to each chapter where their events happen), plus the **Continuity record** with what the manuscript has established (per character, and places, objects, dates).
 - **Research**: sources, records and notes that Chapters cites.
 - **Voices** (owned by **book-voices**): the voice files, Voice Index, Shared Rules, Bilingual Lexicon and Author Library.
 
@@ -38,7 +38,7 @@ This skill is generic and works for any book in this repo. Everything specific t
 
 - **Down**: a Concept decision shapes Chapters; a Chapters event becomes one or more scenes; a scene becomes manuscript text. Never write a scene that is not in Chapters, or text that is not in a scene; add it to the level above first.
 - **Up**: decisions made while building scenes (bridges, choices between options) go back into Chapters. When the manuscript deliberately changes something, update Scenes and Chapters (after the author confirms). When a decision changes the premise or a key idea, update the Concept. Keep the Concept short: it gets the idea, Chapters gets the events, Scenes gets the staging.
-- **Sideways**: the Character Bible gets personality and backstory as decisions are made; its Continuity record is updated only from approved manuscript text. When the text contradicts the planned part of the Bible, the text wins and the plan is updated.
+- **Sideways**: the Character Bible gets short bullets on personality, motives and relationships as decisions are made, with pointers to the chapters; the events themselves go to Chapters; its Continuity record is updated only from approved manuscript text. When the text contradicts the planned part of the Bible, the text wins and the plan is updated.
 
 **Which file wins when they disagree:** for events, Chapters; for how a chapter is staged, Scenes; for what the text actually says, the manuscript and the Continuity record; for who people are, the Character Bible; for rules and key ideas, the profile and the Concept.
 
@@ -71,7 +71,8 @@ If the author starts a new book (or no `BOOK.md` exists for it):
 - If a story line spans several chapters, write the set-up and the payoff in their chapters, with cross-references ("see ch. 21", "pays off in ch. 25"). Update any brainstorm or arc lists in Chapters when they are affected.
 - Real events that must be accurate get their sources in the chapter where they appear; longer research goes in Research.
 - A chapter entry in Chapters has up to five parts, in this order: **When / where**; **Stories** (the events, in order); **Facts** (the real-world facts the chapter relies on, each prefixed with its truth label, e.g. `[DOCUMENTED]`, and followed by the sources that back it, e.g. `(Sources: S1, S2)`, plus `(to verify)` when unchecked); **Sources** (numbered per chapter, `[S1]`, `[S2]`…, with `(Research file: \`research/...\`)` when one of the book's research files holds it); **Notes** (open questions and options). A story line goes under Stories; the history behind it goes under Facts, linked to its Sources. Older entries that keep everything under Stories are reorganized this way the next time they are edited (the Manuscript Desk's Chapters tab does it).
-- The **Character Bible** then gets the personality, backstory, motives, traits, relationships and short pointers to the chapters. It does not carry the plot on its own.
+- **Choosing the chapter (confirm first)**: before writing any event into Chapters, propose where each one goes as a table: event → chapter → position in the chapter (which bullet, before or after what) → why (date, place, point of view, how it serves the chapter). When the chapter is unclear, list the options. Apply nothing until the author confirms the placement.
+- The **Character Bible** then gets short bullet points that help understand the character: who they are, personality, motives, traits, relationships, and a one-line pointer to each chapter where their events happen (e.g. "sold south, ch. 2"). No event narratives or scene details: those live in Chapters. When an entry grows into a story, move the events to Chapters (with the placement step above) and leave a pointer. The Bible does not carry the plot on its own.
 - The **Concept** changes only when a key idea changes; the **profile** only when a rule, file, format or role changes.
 - When applying a change, update Chapters first, then the Character Bible, then the Concept if needed, then any scene map already built for that chapter; verify each. In the summary, list what went into each file.
 - Before closing a topic, check that everything the author said in the conversation is in Chapters.
