@@ -112,47 +112,43 @@ She kept her face still. She did not look back at the line. She was fourteen, an
 
 *(to be written)*
 
-### 4. The Bargain
-
-*(to be written)*
-
 ## PART II — WAR (1865–1870)
 
-### 5. The Zouaves
+### 4. The Zouaves
 
 *(to be written)*
 
-### 6. Curuzu
+### 5. Curuzu
 
 *(to be written)*
 
-### 7. Cholera
+### 6. Cholera
 
 *(to be written)*
 
-### 8. Humaitá
+### 7. Humaitá
 
 *(to be written)*
 
-### 9. Asunción
+### 8. Asunción
 
 *(to be written)*
 
-### 10. Acosta Ñu
+### 9. Acosta Ñu
 
 *(to be written)*
 
 ## PART III — FREE, NOT EQUAL (1870–c. 1877)
 
-### 11. The River
+### 10. The River
 
 *(to be written)*
 
-### 12. The Paper
+### 11. The Paper
 
 *(to be written)*
 
-### 13. The Ticket
+### 12. The Ticket
 
 *(to be written)*
 
@@ -162,55 +158,55 @@ She kept her face still. She did not look back at the line. She was fourteen, an
 
 ## PART IV — THE WOMAN FROM SPAIN
 
-### 14. Galicia
+### 13. Galicia
 
 *(to be written)*
 
-### 15. The Crossing
+### 14. The Crossing
 
 *(to be written)*
 
-### 16. Buenos Aires
+### 15. Buenos Aires
 
 *(to be written)*
 
-### 17. Upriver
+### 16. Upriver
 
 *(to be written)*
 
 ## PART V — FORTUNE
 
-### 18. The Lottery
+### 17. The Lottery
 
 *(to be written)*
 
-### 19. Jacadigo
+### 18. Jacadigo
 
 *(to be written)*
 
-### 20. The Purchase
+### 19. The Purchase
 
 *(to be written)*
 
-### 21. The House
+### 20. The House
 
 *(to be written)*
 
-### 22. São João
+### 21. São João
 
 *(to be written)*
 
-### 23. The Gates
+### 22. The Gates
 
 *(to be written)*
 
 ## PART VI — THE FALL
 
-### 24. The Name
+### 23. The Name
 
 *(to be written)*
 
-### 25. The Table
+### 24. The Table
 
 *(to be written)*
 

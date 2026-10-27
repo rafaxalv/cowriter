@@ -18,26 +18,26 @@ Truth labels as in BOOK.md. Copyright: Ellis (1894) is public domain and can be 
   - **What it is.** A very old Yoruba folktale with a sung refrain, still known to Yoruba children. [DOCUMENTED as a traditional tale; versions vary]
   - **The story.** Women who wanted children (in many versions, traders at the weekly market) went to the spirit of the great iroko tree and promised it gifts in return: goats, sheep, yams, cloth from their stalls. Olúrónbí, the most desperate, promised her first child. Within the year they all had children and came back to pay. Olúrónbí offered everything else, not the child; the tree would not be paid in anything else, and took the child.
   - **The refrain.** It opens "Olúrónbí ò…" and repeats, as a chorus, what the other women gave and what Olúrónbí gave. **Exact Yoruba words: to collect** (versions differ; see below). Until then the book uses only "Olúrónbí ò…" and tells the story in prose.
-  - **Why it fits.** A market women's song (Luzia is a ganhadeira); a bet on fate whose price is a child. It mirrors her own sale (ch. 2), his body offered to the war for freedom (ch. 4), the Purchase (ch. 20) and the sons staking everything on one hand (ch. 25).
-  - **In the book.** ch. 1 (she sings it selling in the street); ch. 2 (lullaby to Benedito); ch. 4 (he hums it as he arranges to be the substitute); ch. 20 (the Purchase); ch. 25 (a son hums it at the card table, not knowing what it is). [FICTIONAL use of a real song]
+  - **Why it fits.** A market women's song (Luzia is a ganhadeira); a bet on fate whose price is a child. It mirrors her own sale (ch. 2), his body offered to the war for freedom (ch. 3), the Purchase (ch. 19) and the sons staking everything on one hand (ch. 24).
+  - **In the book.** ch. 1 (she sings it selling in the street); ch. 2 (lullaby to Benedito); ch. 3 (he hums it as he arranges to be the substitute); ch. 19 (the Purchase); ch. 24 (a son hums it at the card table, not knowing what it is). [FICTIONAL use of a real song]
 
 ## 2. "We look for our father, and cannot find him": the funeral chant
 
   - **What it is.** At Yoruba funerals the women of the house sang laments built on scenes of daily life without the dead (going to market, walking the street, not seeing him), each stanza ending in the cry that they are now alone and asking who will care for them. At midday the male relatives walked through the town chanting that they "look for our father, and cannot find him"; the bystanders answered that he has gone to his house. [DOCUMENTED] (Ellis 1894, ch. IX, "Ceremonies at Birth, Marriage, and Death")
   - **Full text:** in Ellis ch. IX (public domain), **to copy in full** from the book (link below).
-  - **In the book.** ch. 2 (Inácio's death: Luzia sings the lament; the boy, 9, gives the answer); ch. 10 (Acosta Ñu: a country of boys whose fathers are dead); ch. 24 (his death, with his sons). Unspoken echo: Ezequiel has no father to look for. [FICTIONAL use of a documented custom]
+  - **In the book.** ch. 2 (Inácio's death: Luzia sings the lament; the boy, 9, gives the answer); ch. 9 (Acosta Ñu: a country of boys whose fathers are dead); ch. 23 (his death, with his sons). Unspoken echo: Ezequiel has no father to look for. [FICTIONAL use of a documented custom]
 
 ## 3. "Orí ni baba, Orí ni ìyá": your head is your father, your head is your mother
 
   - **What it is.** A Yoruba saying about Orí, a person's own head and destiny. [To verify against a scholarly proverb collection; current source is a modern Yoruba religious site]
   - **Related Ifá verse.** "No God blesses a man / Without the consent of his Ori"; asked who can go with a person on the journey of death, Ifá answers that it is Ori, Ori alone. [DOCUMENTED] (W. Abimbola, *Sixteen Great Poems of Ifá*, UNESCO, 1975)
   - **Other Orí sayings** (same source, to verify): "Orí eni ni í gbe eni ga" (one's own Orí lifts one up); "Orí rere sàn ju òrìṣà lọ" (a good Orí is greater than the orixás).
-  - **In the book.** ch. 2 (Luzia says it to Benedito after Inácio dies); ch. 4 (when she is gone, and he chooses the war, it is all he has); Interlude (in Luzia's letter). The sharpest edge: it is what Ezequiel lacks. Fits the orí already in Luzia's entry and the luck theme.
+  - **In the book.** ch. 2 (Luzia says it to Benedito after Inácio dies); ch. 3 (when she is gone, and he chooses the war, it is all he has); Interlude (in Luzia's letter). The sharpest edge: it is what Ezequiel lacks. Fits the orí already in Luzia's entry and the luck theme.
 
 ## 4. "The stream may dry up, but the watercourse still keeps its name."
 
   - **What it is.** Yoruba proverb no. 77 in Ellis (1894). [DOCUMENTED] Public domain: usable word for word.
-  - **In the book.** The lost name in one sentence. Prologue (epigraph, or what grandma half-remembers); ch. 24 (he tells his wife his true name); Epilogue (turned around: the story survives, the name doesn't).
+  - **In the book.** The lost name in one sentence. Prologue (epigraph, or what grandma half-remembers); ch. 23 (he tells his wife his true name); Epilogue (turned around: the story survives, the name doesn't).
 
 ## 5. "Birth does not differ from birth; as the free man was born so was the slave."
 
@@ -46,8 +46,8 @@ Truth labels as in BOOK.md. Copyright: Ellis (1894) is public domain and can be 
 
 ## 6. Two greetings to the orixás
 
-  - **Ògún yè! ("Ogunhê")** Greeting to Ogum, god of iron, war and roads, who cleared the path for the other orixás (Ogun's epithet Osin Imole); in Bahia syncretised with Saint Anthony or Saint Sebastian. [DOCUMENTED for Ogum; the greeting is standard Candomblé usage] In the book: ch. 4 (Mãe Otília's guia for Ogum); ch. 6 (Tuiuti, Curuzu).
-  - **Atotô.** Greeting to Omolu / Obaluaiê, orixá of disease and epidemics; it asks for silence and respect. [Standard Candomblé usage; scholarly source to find] In the book: ch. 2 (Luzia whispers it in the cholera of 1855); ch. 7 (he whispers it in the cholera camps of 1867).
+  - **Ògún yè! ("Ogunhê")** Greeting to Ogum, god of iron, war and roads, who cleared the path for the other orixás (Ogun's epithet Osin Imole); in Bahia syncretised with Saint Anthony or Saint Sebastian. [DOCUMENTED for Ogum; the greeting is standard Candomblé usage] In the book: ch. 3 (Mãe Otília's guia for Ogum); ch. 5 (Tuiuti, Curuzu).
+  - **Atotô.** Greeting to Omolu / Obaluaiê, orixá of disease and epidemics; it asks for silence and respect. [Standard Candomblé usage; scholarly source to find] In the book: ch. 2 (Luzia whispers it in the cholera of 1855); ch. 6 (he whispers it in the cholera camps of 1867).
   - Also noted: **Odò ìyá / Odoyá**, "mother of the river", greeting to Iemanjá (possible use at the river in ch. 2).
 
 ## Other Yoruba proverbs from Ellis (1894), for later
@@ -80,7 +80,7 @@ The online reading tools used here would not copy song texts word for word, and 
 
 ## Open question
 
-  - Who tells him what the songs mean? Luzia's letter (ch. 18); an old Nagô man in Corumbá; or nobody, and only the reader ever knows.
+  - Who tells him what the songs mean? Luzia's letter (ch. 17); an old Nagô man in Corumbá; or nobody, and only the reader ever knows.
 
 ## Sources
 

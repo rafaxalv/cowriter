@@ -25,7 +25,7 @@ Source in Chapters: ch. 1 (revised Oct 10, 2026). Voice: NARR-MAIN (close third,
   - Reader feeling: disgust. The buyer is a dirty old man, and the sexual way he handles her is repellent; she does not yet understand it, the reader does. Everything stinks: the room of tar, salt fish, sweat and vinegar; the men are dirty, their breath stinks of tobacco and rum when they lean close. The reader should want to wash. Underneath, a held breath of fear.
   - History carried: by the law of 7 November 1831 she is free; she is sold anyway. Never stated: the night landing on a beach, the dealer's hurry, nothing written down (FICTIONAL details on a DOCUMENTED background; see Chapters ch. 1).
   - Forces: money (a price on a body), violence, luck (which buyer takes her).
-  - Function: the hook. Plants the look she will learn to recognise in men like Coronel Menezes (pays off in scene 6); the teeth check is echoed in ch. 5.
+  - Function: the hook. Plants the look she will learn to recognise in men like Coronel Menezes (pays off in scene 6); the teeth check is echoed in ch. 4.
   - Target: about 800 words.
 
 ### Scene 2 — The square (merges the trial's scenes 2 and 3)

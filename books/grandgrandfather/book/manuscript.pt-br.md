@@ -112,47 +112,43 @@ Ela manteve a cara parada. Não olhou pra trás, pra fila. Tinha catorze anos, e
 
 *(a escrever)*
 
-### 4. O Trato
-
-*(a escrever)*
-
 ## PARTE II — GUERRA (1865–1870)
 
-### 5. Os Zuavos
+### 4. Os Zuavos
 
 *(a escrever)*
 
-### 6. Curuzu
+### 5. Curuzu
 
 *(a escrever)*
 
-### 7. Cólera
+### 6. Cólera
 
 *(a escrever)*
 
-### 8. Humaitá
+### 7. Humaitá
 
 *(a escrever)*
 
-### 9. Assunção
+### 8. Assunção
 
 *(a escrever)*
 
-### 10. Acosta Ñu
+### 9. Acosta Ñu
 
 *(a escrever)*
 
 ## PARTE III — LIVRE, MAS NÃO IGUAL (1870–c. 1877)
 
-### 11. O Rio
+### 10. O Rio
 
 *(a escrever)*
 
-### 12. O Papel
+### 11. O Papel
 
 *(a escrever)*
 
-### 13. O Bilhete
+### 12. O Bilhete
 
 *(a escrever)*
 
@@ -162,55 +158,55 @@ Ela manteve a cara parada. Não olhou pra trás, pra fila. Tinha catorze anos, e
 
 ## PARTE IV — A MULHER DA ESPANHA
 
-### 14. Galiza
+### 13. Galiza
 
 *(a escrever)*
 
-### 15. A Travessia
+### 14. A Travessia
 
 *(a escrever)*
 
-### 16. Buenos Aires
+### 15. Buenos Aires
 
 *(a escrever)*
 
-### 17. Rio Acima
+### 16. Rio Acima
 
 *(a escrever)*
 
 ## PARTE V — FORTUNA
 
-### 18. A Loteria
+### 17. A Loteria
 
 *(a escrever)*
 
-### 19. Jacadigo
+### 18. Jacadigo
 
 *(a escrever)*
 
-### 20. A Compra
+### 19. A Compra
 
 *(a escrever)*
 
-### 21. A Casa
+### 20. A Casa
 
 *(a escrever)*
 
-### 22. São João
+### 21. São João
 
 *(a escrever)*
 
-### 23. As Porteiras
+### 22. As Porteiras
 
 *(a escrever)*
 
 ## PARTE VI — A QUEDA
 
-### 24. O Nome
+### 23. O Nome
 
 *(a escrever)*
 
-### 25. A Mesa
+### 24. A Mesa
 
 *(a escrever)*
 
