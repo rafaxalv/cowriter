@@ -124,7 +124,7 @@ Slavery from the inside: an ordinary sugar estate where cruelty is routine and k
       - Chapters: ch. 1 (Tonico's birth), ch. 2.
   - **Antônio (Tonico) de Menezes**, the master's son, his age; his milk brother.
       - Weak and charming. True friends as small boys; estranged after Luzia's sale: not enemies, not friends.
-      - Takes on the estate as he grows; Ezequiel defies him (ch. 3).
+      - Takes on the estate as he grows, working with his father, rarely around; Ezequiel defies him, and Benedito blames him for doing nothing (ch. 3).
       - Never a candidate for the war; watches his milk brother leave and stays. A loyal friend after all.
       - Real aspect: the exemption of the elite; the "milk brother" bond.
       - Chapters: ch. 1–2, 3; banishes Ezequiel, finds Luzia (Interlude); sends her letter (ch. 17).
@@ -132,15 +132,16 @@ Slavery from the inside: an ordinary sugar estate where cruelty is routine and k
       - Capoeirista, joker, storyteller.
       - Real aspect: capoeira as resistance; quilombos in the Recôncavo.
       - Chapters: ch. 3; refuses to go to the war and runs to a quilombo (ch. 3).
-  - **Rosária**, enslaved house servant; a friend from the terreiro, perhaps his first love (to develop).
+  - **Rosária**, enslaved house servant; a friend from the terreiro, then his first love.
       - Clever and religious. Her sale mirrors Luzia's.
       - Real aspect: family separation through sale; the Irmandade da Boa Morte in Cachoeira.
-      - They meet at Mãe Otília's terreiro when he joins her song; friends first (ch. 3).
+      - They meet at Mãe Otília's terreiro when he joins her song; friends first; the romance starts after the fight at the festa in Cachoeira (ch. 3).
       - Chapters: ch. 3; sold to Salvador (ch. 3). Option: he later thinks he sees her among the Boa Morte sisters (where: to decide, since he never returns to Bahia).
   - **Ezequiel**, overseer and capitão do mato; pardo; born enslaved c. 1834, freed c. 1858.
       - The master's unacknowledged son and Tonico's half-brother; nobody says it aloud.
       - Wants his father to see him as special; the master uses it to control him.
       - Enjoys cruelty and is feared for it: a man of colour who enforces slavery to stay above it.
+      - A bully with his own friends, never punished; humiliated by the capoeira boys at the festa in Cachoeira (ch. 3).
       - Taunts Benedito with his freedom; refuses Tonico's orders as Tonico takes on the estate (ch. 3).
       - Spared from the war because he is no longer enslaved (and protected by the master): the freedom Benedito must fight for keeps Ezequiel at home, part of their rivalry (ch. 3).
       - Real aspect: the colour hierarchy (free people of colour as overseers and capitães-do-mato).
