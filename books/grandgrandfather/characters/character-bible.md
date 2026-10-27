@@ -102,7 +102,7 @@ Shown through scenes and repeated lines, never explained. Some chains break or m
   - **Faith in luck.** "The orixás will open the way" (Luzia) → "Luck will open the way" (him) → "The cards will open the way" (a son, ch. 25) → "The ground will open the way" (Silvio, ch. 25) → grandma's lottery (Epilogue).
   - **Violence.** "Why does he have to be so angry?": the boy about the master (ch. 2), his son about him (ch. 22). Ezequiel shows the chain at its darkest (ch. 2). Grandma "could be really mean" (prologue).
   - **Fear of losing everything.** Luzia sold and scammed (ch. 2, Interlude); his distrust starts with the lottery (ch. 18), grows on the farm (ch. 21), peaks at the gates (ch. 23), blurs with his memory (ch. 24). Paranoid, but not always wrong (ch. 21, 25). Grandma fires a shotgun at a noise on the roof and accuses people of stealing her things (prologue).
-  - **Music.** Luzia's songs: in the market and over Inácio (ch. 2), in the war, on the farm; rejected by his family (ch. 21); one son hums one without knowing it (ch. 24). What reaches grandma: to decide.
+  - **Music.** Luzia's songs: in the market and over Inácio (ch. 2), in the war, on the farm; rejected by his family (ch. 21); one son hums one without knowing it (ch. 24, 25). The songs and lines (Olúrónbí, the funeral lament, Orí ni baba, Atotô, Ògún yè) are in research/music/luzia-songs.md. What reaches grandma: to decide.
   - **Broken, not inherited:** keeping his head down. He drops it in the war and never lowers it again (ch. 6); on the farm that pride becomes the senhor's anger.
 
 ## Before the war: Bahia, 1846–1865
