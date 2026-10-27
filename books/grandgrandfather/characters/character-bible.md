@@ -123,6 +123,7 @@ Slavery from the inside: an ordinary sugar estate where cruelty is routine and k
       - Chapters: ch. 1 (Tonico's birth), ch. 2.
   - **Antônio (Tonico) de Menezes**, the master's son, his age; his milk brother.
       - Weak and charming. True friends as small boys; estranged after Luzia's sale: not enemies, not friends.
+      - Takes on the estate as he grows; Ezequiel defies him (ch. 3).
       - Never a candidate for the war; watches his milk brother leave and stays. A loyal friend after all.
       - Real aspect: the exemption of the elite; the "milk brother" bond.
       - Chapters: ch. 1–2, 3; banishes Ezequiel, finds Luzia (Interlude); sends her letter (ch. 17).
@@ -138,6 +139,7 @@ Slavery from the inside: an ordinary sugar estate where cruelty is routine and k
       - The master's unacknowledged son and Tonico's half-brother; nobody says it aloud.
       - Wants his father to see him as special; the master uses it to control him.
       - Enjoys cruelty and is feared for it: a man of colour who enforces slavery to stay above it.
+      - Taunts Benedito with his freedom; refuses Tonico's orders as Tonico takes on the estate (ch. 3).
       - Spared from the war because he is no longer enslaved (and protected by the master): the freedom Benedito must fight for keeps Ezequiel at home, part of their rivalry (ch. 3).
       - Real aspect: the colour hierarchy (free people of colour as overseers and capitães-do-mato).
       - Chapters: his birth (ch. 1); the goiabeira night, the informer years, the pee prank (ch. 2); freed c. 1858, the first whipping, beaten by Benedito (ch. 3); banished by Tonico, the revenge of the man whose hand he took (Interlude).
