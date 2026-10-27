@@ -39,6 +39,7 @@ Who each character is, in short bullets: role, personality, motives, relationshi
   - Superstitious; trusts luck more than people, because hard work never made a difference.
   - Funny with a few close friends, cold with everyone else.
   - Vain about clothes, starting with the zouave uniform (ch. 4).
+  - After Tonico, his friends are the capoeira boys and the terreiro: the time he is closest to his African community (ch. 3).
   - A fighter, hungry for freedom after his father's death and his mother's sale; dreams of running away, held back by fear of being caught and killed (ch. 3).
   - A healer, like Luzia: he repeats her steps aloud and sings her songs as he works, a ritual begun at his father's sickbed (ch. 2). In the war it makes him one of the healers, respected, often spared from the front line (ch. 6).
   - A mark in one eye for life, from a childhood accident with Tonico (ch. 2).
@@ -131,9 +132,10 @@ Slavery from the inside: an ordinary sugar estate where cruelty is routine and k
       - Capoeirista, joker, storyteller.
       - Real aspect: capoeira as resistance; quilombos in the Recôncavo.
       - Chapters: ch. 3; refuses to go to the war and runs to a quilombo (ch. 3).
-  - **Rosária**, first love, enslaved house servant.
+  - **Rosária**, enslaved house servant; a friend from the terreiro, perhaps his first love (to develop).
       - Clever and religious. Her sale mirrors Luzia's.
       - Real aspect: family separation through sale; the Irmandade da Boa Morte in Cachoeira.
+      - They meet at Mãe Otília's terreiro when he joins her song; friends first (ch. 3).
       - Chapters: ch. 3; sold to Salvador (ch. 3). Option: he later thinks he sees her among the Boa Morte sisters (where: to decide, since he never returns to Bahia).
   - **Ezequiel**, overseer and capitão do mato; pardo; born enslaved c. 1834, freed c. 1858.
       - The master's unacknowledged son and Tonico's half-brother; nobody says it aloud.
@@ -144,6 +146,7 @@ Slavery from the inside: an ordinary sugar estate where cruelty is routine and k
       - Real aspect: the colour hierarchy (free people of colour as overseers and capitães-do-mato).
       - Chapters: his birth (ch. 1); the goiabeira night, the informer years, the pee prank (ch. 2); freed c. 1858, the first whipping, beaten by Benedito (ch. 3); banished by Tonico, the revenge of the man whose hand he took (Interlude).
   - **Mãe Otília**, a Candomblé priestess in Cachoeira.
+      - Priestess of the terreiro where he meets Rosária; comes to know him there (ch. 3).
       - Gives him a guia for Ogum; he wears it through the whole war.
       - Real aspect: Candomblé surviving under Catholicism; police repression.
       - Chapters: ch. 3.
