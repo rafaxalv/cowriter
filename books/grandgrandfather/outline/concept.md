@@ -24,7 +24,7 @@ A family story told by the author's grandmother: her grandfather was born enslav
 
 ## The story in six movements
 
-1.  **Bahia (1846–1865).** Born enslaved on a sugar estate, son of Luzia, a healer and singer who trusts luck and the orixás. A childhood with laughter as well as cruelty, a friendship with the master's son, and the sale of his mother. He bets on the war as his door to freedom.
+1.  **Bahia (1846–1865).** Born enslaved on a sugar estate, son of Luzia, a healer and singer who trusts luck and the orixás, in the same season as the master's heir and in the shadow of the master's unnamed pardo son: three boys, three colours. A childhood with laughter as well as cruelty, a friendship with the master's son, his father dying in his hands and the sale of his mother; a youth of capoeira and a sour rivalry he finally wins. He bets on the war as his door to freedom.
 2.  **War (1865–1870).** The Paraguayan War: comrades, cholera, atrocities on all sides, and a man who stops keeping his head down.
 3.  **Free, not equal (1870–c. 1877).** Freedom in Corumbá is poorer and harder than he dreamed. He keeps buying lottery tickets.
 4.  **Her road (c. 1858–1877).** A girl from Galicia is deceived and trafficked through Buenos Aires to Corumbá, kept untouched to be sold. The two lines alternate and meet.
@@ -36,8 +36,8 @@ A family story told by the author's grandmother: her grandfather was born enslav
   - **The missing names.** Neither he nor the woman from Spain is ever named; he whispers his true name to her on his deathbed and the reader never hears it. Everyone remembers what he did, nobody remembers who he was. What survives when the name doesn't?
   - **Four forces in every scene: luck, freedom, violence, money.** Luck sees no race, so he trusts it; freedom is not the happy ending; violence is the first language he learned and he passes it on; money is freedom, and is not.
   - **Liberdade, where nobody is free.** The farm that looks like the happy ending traps everyone in it, each in a different way.
-  - **Mirrors.** The enslaved man becomes a master; the free woman loses her freedom; the boyhood friendship across the colour line returns as the white "friends" who ruin his sons.
-  - **What passes down.** Faith in luck, violence, the fear of losing everything and music pass from Luzia to him, to his sons and on to the grandmother. Repeated lines show it ("Why does he have to be so angry?"); nobody explains it. Some chains break.
+  - **Mirrors.** The gossip says he is the master's son and it is false; Ezequiel is, and nobody says it. The enslaved man becomes a master; the free woman loses her freedom; the boyhood friendship across the colour line returns as the white "friends" who ruin his sons.
+  - **What passes down.** Faith in luck, violence, the fear of losing everything, music and healing (the one good inheritance) pass from Luzia to him, to his sons and on to the grandmother. Repeated lines show it ("Why does he have to be so angry?"); nobody explains it. Some chains break.
   - **Memory you cannot trust.** The grandmother's fog in the frame, his failing memory at the end: the reader is not always sure who is right.
 
 ## How it is told

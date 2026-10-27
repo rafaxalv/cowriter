@@ -29,7 +29,7 @@ Every passage exists in both languages and says the same thing; neither is a wor
 
 | Role (name used by the skills) | Path |
 | --- | --- |
-| Concept | `outline/concept.md` (earlier long version, archive only: `outline/concept-archive.md`) |
+| Concept | `outline/concept.md` (earlier versions: in the git history) |
 | Chapters (plan of record) | `outline/chapters.md` |
 | Scenes (scene maps) | `outline/scenes.md` |
 | Manuscript | `book/manuscript.en.md`, `book/manuscript.pt-br.md` |

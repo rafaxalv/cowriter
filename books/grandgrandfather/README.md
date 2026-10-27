@@ -20,7 +20,6 @@ Changes flow down (concept → chapters → scenes → text); deliberate changes
 | --- | --- | --- |
 | `book/manuscript.en.md`, `book/manuscript.pt-br.md` | The book text, one file per language. Matching paragraphs share an ID (chapter.row; prologue 00, interlude INT, epilogue 99) in a hidden comment, so the two versions stay in step | Book |
 | `outline/concept.md` | Key ideas, standing rules, the story in six movements | 00 Book Concept |
-| `outline/concept-archive.md` | The long earlier version of the concept (Oct 7, 2026) | Configuration / Book Concept — archive |
 | `outline/chapters.md` | The plan of record: every event per chapter, with sources | Chapters |
 | `outline/scenes.md` | Scene maps (chapter 1 in progress) | Scenes |
 | `characters/character-bible.md` | Who everyone is, plus the Continuity section | Character Bible |
