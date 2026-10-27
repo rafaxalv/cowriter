@@ -14,6 +14,7 @@ Open option: a short prologue and epilogue in the grandmother's voice, telling t
       
       - Only this: it is a story my grandma used to tell. No summary of what happens; the reader goes in knowing nothing.
       - Nobody remembers his name.
+      - She became a nursing assistant (00.003): the healer's hands of Luzia and Benedito reached her, and nobody told her where they came from. Not explained here; planted only (decided Oct 27, 2026). Her plea in 00.001, "Will you please take care of me?", is the woman who cared for others asking for care.
   - Notes:
       
       - Epigraph option: "The stream may dry up, but the watercourse still keeps its name." (Yoruba proverb, Ellis 1894; research/music/luzia-songs.md)
@@ -373,6 +374,7 @@ See the research doc "What a Freed Slave Could and Couldn't Do" for sources.
   - Stories:
       
       - Back to grandma, and now she says it plainly: "Your great-great-grandfather was a slave who went to war, won the lottery and bought a Spanish girl." After the whole book, the reader knows how much that one sentence leaves out. The story survives, the name doesn't: the proverb turned around ("the watercourse still keeps its name", see Prologue).
+      - Grandma's hands: a nursing assistant, like the boy who repeated his mother's steps aloud over his dying father (ch. 2) and the healer of the cholera camps (ch. 7). Of everything that came down to her, the gambling, the fear, the meanness, this is what she did for others (decided Oct 27, 2026).
       - Grandma plays the lottery all her life, small and regular, a ritual of hope: the bridge to the present.
       - Closing note on grandma's death (2023) and the questions we never asked: drafted in the Book doc.
 
