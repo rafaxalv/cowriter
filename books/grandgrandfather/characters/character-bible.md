@@ -39,6 +39,7 @@ Who each character is, in short bullets: role, personality, motives, relationshi
   - Superstitious; trusts luck more than people, because hard work never made a difference.
   - Funny with a few close friends, cold with everyone else.
   - Vain about clothes, starting with the zouave uniform (ch. 4).
+  - A fighter, hungry for freedom after his father's death and his mother's sale; dreams of running away, held back by fear of being caught and killed (ch. 3).
   - A healer, like Luzia: he repeats her steps aloud and sings her songs as he works, a ritual begun at his father's sickbed (ch. 2). In the war it makes him one of the healers, respected, often spared from the front line (ch. 6).
   - A mark in one eye for life, from a childhood accident with Tonico (ch. 2).
   - Loves music and dance (batuques, samba de roda): where he feels free. Athletic, a capoeirista; in the war capoeira becomes a weapon (ch. 3, 5).
@@ -52,7 +53,7 @@ Who each character is, in short bullets: role, personality, motives, relationshi
 ### What he wants
 
   - As a boy: to be free, as Luzia promises.
-  - 1865: to go to war, the first door to freedom he has seen (ch. 3).
+  - 1865: to go to war, the first door to freedom he has seen; he puts himself forward the moment the Coronel offers enslaved men (ch. 3).
   - During and after the war: to find his mother and buy her freedom (ch. 11, 17).
   - After the lottery: to be a senhor nobody gives orders to, and to save the woman from Spain as he could not save his mother; he gives her no choice (ch. 19).
 
@@ -63,7 +64,7 @@ Who each character is, in short bullets: role, personality, motives, relationshi
 | Childhood | 1846–1858 | 0–12 | Luck decides; never show what you think | 1–2 |
 | Loss | 1855–1858 | 9–12 | Love can be taken away by a signature | 2 |
 | Youth | 1858–1865 | 12–19 | Violence is a language; owners call cruelty "order" | 3 |
-| The bargain | 1865 | 19 | His freedom is a payment made for someone else, even though he chose it | 3 |
+| The bargain | 1865 | 19 | Offered by his master, he volunteers at once: his freedom is bought with his body | 3 |
 | War | 1865–1870 | 19–24 | Learns to read and to kill; stops keeping his head down; a Black officer can be respected, and it changes nothing back home | 4–9 |
 | Free, not equal | 1870–c. 1877 | 24–31 | Freedom without money, papers or respect is still a kind of slavery | 10–12 |
 | Luck | c. 1877 | 31 | Luck proved "right" feeds his worst instincts; the prize brings distrust | 17 |
@@ -75,7 +76,7 @@ Who each character is, in short bullets: role, personality, motives, relationshi
 
   - First wound: Inácio's death and Luzia's lament, the saddest song he has ever heard (ch. 2).
   - Second wound: losing his mother; he searches the lists of the freed until her letter comes (ch. 2, 11, 17).
-  - Going to war in a white boy's place, even by his own choice (ch. 3).
+  - Freedom bought with his body, offered by his master, even though he chose to go (ch. 3).
   - The cholera camps (ch. 6).
   - Acosta Ñu: the boy with the false beard; the memory he never tells (ch. 9), which returns at São João (ch. 21).
   - Accused of what he tried to stop (Joca's whipping, Damião's rampage): no trial, only the stain (ch. 5, 9). Echoes the family's oral tradition about Brazilian soldiers and Paraguayan women.
@@ -114,21 +115,21 @@ Slavery from the inside: an ordinary sugar estate where cruelty is routine and k
   - **Coronel Joaquim Araújo de Menezes**, the master, a *senhor de engenho* in the Recôncavo.
       - Pious, polite, in debt; thinks of himself as a "good master".
       - Forces himself on Luzia and other women; never recognises Ezequiel.
-      - Real aspect: the decline of Bahian sugar, the internal slave trade south; substitutes for National Guard families.
-      - Chapters: ch. 1–2 (sells Luzia), ch. 3 (sends him as Tonico's substitute), dies c. 1867–68 (Interlude).
+      - Real aspect: the decline of Bahian sugar, the internal slave trade south; owners donating enslaved men, freed to enlist, in the war.
+      - Chapters: ch. 1–2 (sells Luzia), ch. 3 (offers enslaved men to the army), dies c. 1867–68 (Interlude).
   - **Dona Mariana**, the master's wife, Tonico's mother.
       - Teaches him prayers and letters "as a game", then stops: a kindness he resents and treasures.
       - Real aspect: the "affectionate" household slavery behind the myth of mild Brazilian slavery.
       - Chapters: ch. 1 (Tonico's birth), ch. 2.
   - **Antônio (Tonico) de Menezes**, the master's son, his age; his milk brother.
       - Weak and charming. True friends as small boys; estranged after Luzia's sale: not enemies, not friends.
-      - Feels the guilt of the substitution; a loyal friend after all.
+      - Never a candidate for the war; watches his milk brother leave and stays. A loyal friend after all.
       - Real aspect: the exemption of the elite; the "milk brother" bond.
       - Chapters: ch. 1–2, 3; banishes Ezequiel, finds Luzia (Interlude); sends her letter (ch. 17).
   - **Bastião**, best friend, enslaved on the estate.
       - Capoeirista, joker, storyteller.
       - Real aspect: capoeira as resistance; quilombos in the Recôncavo.
-      - Chapters: ch. 3; refuses to be a substitute and runs to a quilombo (ch. 3).
+      - Chapters: ch. 3; refuses to go to the war and runs to a quilombo (ch. 3).
   - **Rosária**, first love, enslaved house servant.
       - Clever and religious. Her sale mirrors Luzia's.
       - Real aspect: family separation through sale; the Irmandade da Boa Morte in Cachoeira.
@@ -162,11 +163,11 @@ He goes south with the Zuavos baianos, the all-Black companies of Bahian volunte
 ### Comrades (invented)
 
   - **Gregório "Doutor"**: free-born Black tailor, volunteer; reads, argues politics, believes in citizenship. Writes Benedito's first letters (ch. 4); his death of cholera ends Benedito's faith in the nation (ch. 6). Real aspect: the Voluntários da Pátria.
-  - **Joca Cabinda**: enslaved substitute, older and bitter. Whips a Paraguayan officer to death (ch. 5); deserts and is flogged, and Benedito refuses to help him (ch. 6). Real aspect: freed slaves in the army; desertion.
+  - **Joca Cabinda**: enslaved, freed to serve, older and bitter. Whips a Paraguayan officer to death (ch. 5); deserts and is flogged, and Benedito refuses to help him (ch. 6). Real aspect: freed slaves in the army; desertion.
   - **Ramon Benites**: white gaucho cavalryman; charismatic, racist one minute, loyal the next; Benedito's moral rival inside his own army (ch. 7, 8). Real aspect: violence against Paraguayan civilians; tension among the allies.
   - **Padre Felício**: chaplain; keeps the only list with Benedito's real name, which is lost (ch. 6, 9).
   - **Constantino**: young cadet captured at Curupaiti (inspired by the real Bigode); back after two years at the Ybycuí foundry, he tells the Paraguayan side (ch. 7; his return date, 1869, may fit ch. 8 better).
-  - **Damião**: enslaved substitute like him, brave; in a taken village his freedom becomes the power to do to others what was done to him. Benedito's dark mirror: what he could become, and one answer to "what is freedom?" (ch. 9; options in its Notes).
+  - **Damião**: enslaved and freed to serve, like him, brave; in a taken village his freedom becomes the power to do to others what was done to him. Benedito's dark mirror: what he could become, and one answer to "what is freedom?" (ch. 9; options in its Notes).
 
 ### The other side
 
@@ -247,7 +248,7 @@ A free European woman could not legally be a slave in Brazil; trafficked women w
 | 1850 | End of the legal Atlantic slave trade (Eusébio de Queirós law); Land Law | Benedito's birth; Dr. Teles | To verify |
 | 1863 | Rosalía de Castro's *Cantares gallegos* | Rosa Lousada | To verify |
 | 1865 | Zuavos baianos founded by Quirino; ship *São Francisco* with Rebouças; d'Eu's praise | Quirino, Rebouças, comrades | Source doc (Bento; Kraay) |
-| 1865–66 | Enslaved men freed to serve as substitutes; 1866 decree freeing the state's slaves who served | Benedito, Joca Cabinda | To verify (decree number and date) |
+| 1865–66 | Enslaved men donated by owners, freed on condition of enlisting; 1866 decree freeing the state's slaves who served | Benedito, Joca Cabinda | To verify (decree number and date) |
 | 1866 | Tuiuti (24 May); Curuzu, where Marcolino planted the flag; Curupaiti | Marcolino, Mbareté, Constantino | Source doc + to verify |
 | 1867 | Cholera in the allied camps | Gregório, Ana Néri | Source doc (deaths by cholera) |
 | 1868 | Spain's Glorious Revolution; Ten Years' War in Cuba begins | The woman from Spain, Xosé | To verify |
