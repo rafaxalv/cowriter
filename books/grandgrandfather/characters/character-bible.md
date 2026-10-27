@@ -39,6 +39,7 @@ Who each character is, in short bullets: role, personality, motives, relationshi
   - Superstitious; trusts luck more than people, because hard work never made a difference.
   - Funny with a few close friends, cold with everyone else.
   - Vain about clothes, starting with the zouave uniform (ch. 5).
+  - A healer, like Luzia: he repeats her steps aloud and sings her songs as he works, a ritual begun at his father's sickbed (ch. 2). In the war it makes him one of the healers, respected, often spared from the front line (ch. 7).
   - A mark in one eye for life, from a childhood accident with Tonico (ch. 2).
   - Loves music and dance (batuques, samba de roda): where he feels free. Athletic, a capoeirista; in the war capoeira becomes a weapon (ch. 3, 6).
   - Violence is the first language he learned: not angry day to day, but explosive when disrespected ("moleque" is enough).
