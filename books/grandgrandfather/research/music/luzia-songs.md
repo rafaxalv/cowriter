@@ -63,9 +63,20 @@ Truth labels as in BOOK.md. Copyright: Ellis (1894) is public domain and can be 
 
 The online reading tools used here would not copy song texts word for word, and the shell cannot reach these sites, so the full texts are not in this file yet:
 
-  1. **Ellis 1894, ch. IX:** the mourners' dirge, the widows' laments and the men's chant, in full (public domain). Link below; copy by hand or paste into a chat.
-  2. **Olúrónbí:** the Yoruba refrain and an English translation; compare two or three versions (Nigerian school collections, Yoruba folktale books).
-  3. **A Candomblé song for Ogum and one for Omolu**, as sung in Bahian Ketu houses, with translation: e.g. from Altair Oliveira, *Cantando para os orixás* (2009, 376 songs glossed in França 2025), or Pierre Verger, *Notes sur le culte des Orisa et Vodun* (1957).
+  1. **Ellis 1894, ch. IX:** the mourners' dirge, the widows' laments and the men's chant, in full (public domain).
+      - Text: <https://neonvagabond.xyz/mirrors/sacred-texts/afr/yor/yor10.htm>
+      - Whole book (Nigerian National Library scan): <https://nigeriareposit.nln.gov.ng/items/1b174a78-342b-4579-9c83-83437626a16d/full>
+      - Catalogue record (HathiTrust): <https://catalog.hathitrust.org/Record/100328917>
+  2. **Olúrónbí:** the Yoruba refrain and an English translation; compare two or three versions.
+      - Staged version with the song: <https://www.oriire.com/article/oluronbi>
+      - The tale: <https://www.zikoko.com/life/nigerian-folktales/>
+      - Modern poem on the tale: <https://africanpoems.net/gods-ancestors/oluronbi/>
+  3. **A Candomblé song for Ogum and one for Omolu**, as sung in Bahian Ketu houses, with translation.
+      - França (UFMG, 2025), 376 Ketu songs glossed from Altair Oliveira, *Cantando para os orixás* (2009): <https://repositorio.ufmg.br/bitstreams/f461b538-8513-472c-992b-e86084cf8dab/download>
+      - Collection "Candomblé: cantigas e traduções" (Scribd): <https://www.scribd.com/document/161776778/candomble-cantigas-e-traducoes>
+      - Playlist of cantigas with Yoruba text and translation (YouTube): <https://www.youtube.com/playlist?list=PLOUQhQ2OHx9GoTaaHBZiF6Z9iO5-9I3C0>
+      - Pierre Verger, *Notes sur le culte des Orisa et Vodun* (1957), review and record: <https://www.persee.fr/doc/assr_0003-9659_1959_num_8_1_2066_t1_0196_0000_3>
+  4. **Abimbola's Ifá verse on Orí**, full English text: <https://africanpoems.net/gods-ancestors/the-importance-of-ori/>
 
 ## Open question
 
