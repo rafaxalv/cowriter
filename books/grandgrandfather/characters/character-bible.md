@@ -144,6 +144,7 @@ Slavery from the inside: an ordinary sugar estate where cruelty is routine and k
       - Funny, not solemn: jokes all the time, teases, makes hard things easy. The boys tell legends about him half as jokes (a capitão do mato killed with one kick, dogs that never find his trail, a prince in Africa, a ghost); he neither confirms nor denies, and laughs.
       - His clan's rule: only those who have proven themselves worthy belong, and no outsider may ever come to the hideout (ch. 3); Tonico is made a member in 1877 (Interlude).
       - Goes from place to place helping others train in secret; Bastião's master, then Benedito's. Teaches the ginga, the rhythm and the songs before the kicks: "Your body can't sing yet." Benedito's master.
+      - His jokes are weapons: the rumour about Ezequiel's first whipping is his, and it spreads through the Recôncavo (ch. 3).
       - Real aspect: capoeira as resistance; runaways living free in the margins.
       - Middle-aged and strong when he taught Ezequiel (c. 1845) and sent him away; old by Benedito's time, and Ezequiel's hunt grows harder to escape.
       - Chapters: ch. 2 (sends Ezequiel away), ch. 3 (option: disappears when the war comes, and Bastião follows him).
@@ -158,6 +159,7 @@ Slavery from the inside: an ordinary sugar estate where cruelty is routine and k
       - Enjoys cruelty and is feared for it: a man of colour who enforces slavery to stay above it.
       - A bully with his own friends, never punished; humiliated by the capoeira boys at the festa in Cachoeira (ch. 3).
       - Taught briefly by Velho Kalunga as a boy and sent away for his pride and violence (ch. 2); hunts him as capitão do mato (ch. 3).
+      - After his first whipping, Kalunga's joke about him follows him through the Recôncavo, to the festa and past his banishment (ch. 3, Interlude).
       - Taunts Benedito with his freedom; refuses Tonico's orders as Tonico takes on the estate (ch. 3).
       - Spared from the war because he is no longer enslaved (and protected by the master): the freedom Benedito must fight for keeps Ezequiel at home, part of their rivalry (ch. 3).
       - Real aspect: the colour hierarchy (free people of colour as overseers and capitães-do-mato).
