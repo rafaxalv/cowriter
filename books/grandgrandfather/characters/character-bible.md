@@ -43,6 +43,7 @@ Who each character is, in short bullets: role, personality, motives, relationshi
   - A fighter, hungry for freedom after his father's death and his mother's sale; dreams of running away, held back by fear of being caught and killed (ch. 3).
   - A healer, like Luzia: he repeats her steps aloud and sings her songs as he works, a ritual begun at his father's sickbed (ch. 2). In the war it makes him one of the healers, respected, often spared from the front line (ch. 6).
   - A mark in one eye for life, from a childhood accident with Tonico (ch. 2).
+  - While Tonico's friend he escaped work often; from 1858 the work is full, and his bonds with the other enslaved grow as he ages (ch. 2–3).
   - Sings well: he learned singing at work beside his family, every day, most of the day (ch. 1–2). Skeptical of Kalunga's ginga, then in love with it: once his body can sing he becomes a dangerous fighter; his move is the rabo de arraia (ch. 3).
   - Loves music and dance (batuques, samba de roda): where he feels free. Athletic, a capoeirista; in the war capoeira becomes a weapon (ch. 3, 5).
   - Violence is the first language he learned: not angry day to day, but explosive when disrespected ("moleque" is enough).
@@ -129,7 +130,9 @@ Slavery from the inside: an ordinary sugar estate where cruelty is routine and k
       - Never a candidate for the war; watches his milk brother leave and stays. A loyal friend after all.
       - Real aspect: the exemption of the elite; the "milk brother" bond.
       - Chapters: ch. 1–2, 3; banishes Ezequiel, finds Luzia (Interlude); sends her letter (ch. 17).
-  - **Bastião**, best friend, a young man enslaved on the estate; Velho Kalunga's student, who brings Benedito to him (ch. 3).
+  - **Bastião**, best friend, two or three years older, enslaved on the estate; Velho Kalunga's student.
+      - Knew Benedito as a boy but not closely; teased him, jokingly, as the master's son's pet (ch. 2).
+      - Sees his anger when Luzia is sold and reaches out; brings him into the senzala's secret world, the roda, the terreiro, Kalunga (ch. 3).
       - Capoeirista, joker, storyteller.
       - Real aspect: capoeira as resistance; quilombos in the Recôncavo.
       - Chapters: ch. 3; refuses to go to the war and runs to a quilombo (ch. 3).
@@ -137,7 +140,8 @@ Slavery from the inside: an ordinary sugar estate where cruelty is routine and k
       - Funny, not solemn: jokes all the time, teases, makes hard things easy. The boys tell legends about him half as jokes (a capitão do mato killed with one kick, dogs that never find his trail, a prince in Africa, a ghost); he neither confirms nor denies, and laughs.
       - Goes from place to place helping others train in secret; Bastião's master, then Benedito's. Teaches the ginga, the rhythm and the songs before the kicks: "Your body can't sing yet." Benedito's master.
       - Real aspect: capoeira as resistance; runaways living free in the margins.
-      - Chapters: ch. 3 (option: disappears when the war comes, and Bastião follows him).
+      - Middle-aged and strong when he taught Ezequiel (c. 1845) and sent him away; old by Benedito's time, and Ezequiel's hunt grows harder to escape.
+      - Chapters: ch. 2 (sends Ezequiel away), ch. 3 (option: disappears when the war comes, and Bastião follows him).
   - **Rosária**, enslaved house servant and apprentice of the Boa Morte sisterhood in Cachoeira (she helps and sings at its festa; the sisters are older freed women); a friend from the terreiro, then his first love.
       - Clever and religious. Her sale mirrors Luzia's.
       - Real aspect: family separation through sale; the Irmandade da Boa Morte in Cachoeira.
@@ -148,6 +152,7 @@ Slavery from the inside: an ordinary sugar estate where cruelty is routine and k
       - Wants his father to see him as special; the master uses it to control him.
       - Enjoys cruelty and is feared for it: a man of colour who enforces slavery to stay above it.
       - A bully with his own friends, never punished; humiliated by the capoeira boys at the festa in Cachoeira (ch. 3).
+      - Taught briefly by Velho Kalunga as a boy and sent away for his pride and violence (ch. 2); hunts him as capitão do mato (ch. 3).
       - Taunts Benedito with his freedom; refuses Tonico's orders as Tonico takes on the estate (ch. 3).
       - Spared from the war because he is no longer enslaved (and protected by the master): the freedom Benedito must fight for keeps Ezequiel at home, part of their rivalry (ch. 3).
       - Real aspect: the colour hierarchy (free people of colour as overseers and capitães-do-mato).
