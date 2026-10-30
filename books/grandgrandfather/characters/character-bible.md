@@ -132,7 +132,7 @@ Slavery from the inside: an ordinary sugar estate where cruelty is routine and k
       - Capoeirista, joker, storyteller.
       - Real aspect: capoeira as resistance; quilombos in the Recôncavo.
       - Chapters: ch. 3; refuses to go to the war and runs to a quilombo (ch. 3).
-  - **Rosária**, enslaved house servant; a friend from the terreiro, then his first love.
+  - **Rosária**, enslaved house servant and apprentice of the Boa Morte sisterhood in Cachoeira (she helps and sings at its festa; the sisters are older freed women); a friend from the terreiro, then his first love.
       - Clever and religious. Her sale mirrors Luzia's.
       - Real aspect: family separation through sale; the Irmandade da Boa Morte in Cachoeira.
       - They meet at Mãe Otília's terreiro when he joins her song; friends first; the romance starts after the fight at the festa in Cachoeira (ch. 3).
