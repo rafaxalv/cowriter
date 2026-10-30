@@ -133,6 +133,7 @@ Slavery from the inside: an ordinary sugar estate where cruelty is routine and k
   - **Bastião**, best friend, two or three years older, enslaved on the estate; Velho Kalunga's student.
       - Knew Benedito as a boy but not closely; teased him, jokingly, as the master's son's pet (ch. 2).
       - Sees his anger when Luzia is sold and reaches out; brings him into the senzala's secret world, the roda, the terreiro, Kalunga (ch. 3).
+      - At first teases him in the roda for not knowing its traditions; the teasing turns into friendship, and he stands by him against Ezequiel. With Kalunga, Benedito's first family after Luzia (ch. 3).
       - Capoeirista, joker, storyteller.
       - Real aspect: capoeira as resistance; quilombos in the Recôncavo.
       - Chapters: ch. 3; refuses to go to the war and runs to a quilombo (ch. 3).
