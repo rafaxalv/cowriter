@@ -43,7 +43,7 @@ Who each character is, in short bullets: role, personality, motives, relationshi
   - A fighter, hungry for freedom after his father's death and his mother's sale; dreams of running away, held back by fear of being caught and killed (ch. 3).
   - A healer, like Luzia: he repeats her steps aloud and sings her songs as he works, a ritual begun at his father's sickbed (ch. 2). In the war it makes him one of the healers, respected, often spared from the front line (ch. 6).
   - A mark in one eye for life, from a childhood accident with Tonico (ch. 2).
-  - Sings well: he learned singing at work beside his family, every day, most of the day (ch. 1–2).
+  - Sings well: he learned singing at work beside his family, every day, most of the day (ch. 1–2). Skeptical of Kalunga's ginga, then in love with it: once his body can sing he becomes a dangerous fighter; his move is the rabo de arraia (ch. 3).
   - Loves music and dance (batuques, samba de roda): where he feels free. Athletic, a capoeirista; in the war capoeira becomes a weapon (ch. 3, 5).
   - Violence is the first language he learned: not angry day to day, but explosive when disrespected ("moleque" is enough).
   - Free and rich, he is demanding: his wishes are orders. Jealous of his wife (ch. 20, 22).
@@ -129,10 +129,15 @@ Slavery from the inside: an ordinary sugar estate where cruelty is routine and k
       - Never a candidate for the war; watches his milk brother leave and stays. A loyal friend after all.
       - Real aspect: the exemption of the elite; the "milk brother" bond.
       - Chapters: ch. 1–2, 3; banishes Ezequiel, finds Luzia (Interlude); sends her letter (ch. 17).
-  - **Bastião**, best friend, enslaved on the estate.
+  - **Bastião**, best friend, a young man enslaved on the estate; Velho Kalunga's student, who brings Benedito to him (ch. 3).
       - Capoeirista, joker, storyteller.
       - Real aspect: capoeira as resistance; quilombos in the Recôncavo.
       - Chapters: ch. 3; refuses to go to the war and runs to a quilombo (ch. 3).
+  - **Velho Kalunga**, an old capoeirista, a Black man who escaped a farm long ago and lives free.
+      - Mysterious; legends follow him (a capitão do mato killed with one kick, dogs that never find his trail, a prince in Africa, a ghost); he neither confirms nor denies.
+      - Goes from place to place helping others train in secret; Bastião's master, then Benedito's. Teaches the ginga, the rhythm and the songs before the kicks. Benedito's Mr. Miyagi.
+      - Real aspect: capoeira as resistance; runaways living free in the margins.
+      - Chapters: ch. 3 (option: disappears when the war comes, and Bastião follows him).
   - **Rosária**, enslaved house servant and apprentice of the Boa Morte sisterhood in Cachoeira (she helps and sings at its festa; the sisters are older freed women); a friend from the terreiro, then his first love.
       - Clever and religious. Her sale mirrors Luzia's.
       - Real aspect: family separation through sale; the Irmandade da Boa Morte in Cachoeira.
@@ -241,7 +246,7 @@ A free European woman could not legally be a slave in Brazil; trafficked women w
 
 ## Who is around at each stage (a menu, not a cast list)
 
-  - **Bahia (1846–1865):** Luzia, Inácio, Coronel Menezes, Dona Mariana, Tonico, Bastião, Rosária, Ezequiel, Mãe Otília. Mentioned: the Malê rebels, the 1857 *ganhadores* strike.
+  - **Bahia (1846–1865):** Luzia, Inácio, Coronel Menezes, Dona Mariana, Tonico, Bastião, Velho Kalunga, Rosária, Ezequiel, Mãe Otília. Mentioned: the Malê rebels, the 1857 *ganhadores* strike.
   - **War (1865–1870):** Quirino, Marcolino, Dom Obá, Gregório, Joca Cabinda, Damião, Ramon Benites, Padre Felício, Constantino, Mbareté, Ceferina, the boy at Acosta Ñu, Captain Albuquerque. Passing through: Rebouças, Osório, Caxias, Ana Néri, the Count d'Eu, López.
   - **Free, not equal (1870–c. 1877):** Seu Bento, Paraguayan workers, the clerks and police of Corumbá; far away, Tonico and Luzia (Interlude).
   - **Her road (1858–1877):** Rosa, Manuel and Xosé Lousada, Don Faustino, Alvarado, Ruchla, Doña Engracia, Capitán Iriarte, Madame Angélique, Seu Albino, Lucília.
