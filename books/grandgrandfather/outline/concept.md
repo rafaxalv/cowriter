@@ -34,6 +34,7 @@ A family story told by the author's grandmother: her grandfather was born enslav
 ## Key ideas
 
   - **The missing names.** Neither he nor the woman from Spain is ever named; he whispers his true name to her on his deathbed and the reader never hears it. Everyone remembers what he did, nobody remembers who he was. What survives when the name doesn't?
+  - **Family and descent: who is a father, whose son?** The book is about family and descent, and slavery breaks both: mothers sold away from their sons, a master's son whom nobody names (Ezequiel), and a man used to father children for a fazenda, a father of too many to be father of any (Pata Seca, through the son Benedito meets in the war, ch. 5–7). Benedito searches for his mother; his own sons never know who he was; the author searches for a great-great-grandfather whose name is lost. The book itself is a descendant's search (decided Oct 30, 2026).
   - **Four forces in every scene: luck, freedom, violence, money.** Luck sees no race, so he trusts it; freedom is not the happy ending; violence is the first language he learned and he passes it on; money is freedom, and is not.
   - **Liberdade, where nobody is free.** The farm that looks like the happy ending traps everyone in it, each in a different way.
   - **Mirrors.** The gossip says he is the master's son and it is false; Ezequiel is, and nobody says it. The enslaved man becomes a master; the free woman loses her freedom; the boyhood friendship across the colour line returns as the white "friends" who ruin his sons.
