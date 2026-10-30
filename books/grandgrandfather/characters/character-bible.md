@@ -49,6 +49,7 @@ Who each character is, in short bullets: role, personality, motives, relationshi
   - Violence is the first language he learned: not angry day to day, but explosive when disrespected ("moleque" is enough).
   - Free and rich, he is demanding: his wishes are orders. Jealous of his wife (ch. 20, 22).
   - Good with the land and with men: works beside his workers, knows their language, finds smarter ways to run the farm (ch. 20).
+  - In the first years at Liberdade he works harder than anyone and no job is beneath him; he finds, almost by accident, what changes the farm: salt, counting and branding, cacimbas, hides, the sick horses, Descalvados, the fence (ch. 20). Inspired by Rafael's grandfather Rivaldo.
   - Sees through the Pires, though they can manipulate his wife and sons (ch. 20).
   - In old age his memory fails, never named as a disease (ch. 23).
   - The key to him: innocent of what he is accused of, guilty of what nobody knows (Acosta Ñu, refusing to help Joca; ch. 6, 9).
