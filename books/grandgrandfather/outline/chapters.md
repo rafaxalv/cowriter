@@ -157,6 +157,7 @@ Open option: a short prologue and epilogue in the grandmother's voice, telling t
   - Stories:
       
       - Tuiuti (24 May 1866). General Osório speaks to the men before the battle. Sargento Mbareté faces him for the first time; the Paraguayans call the Black troops macacos (as in the Cabichuí caricatures). \[Catharsis point: the zouaves hold in the mud with bayonets and capoeira until the line turns; the first time he fights back and it works. "Ògún yè!" under his breath. Cost: the same week, in camp, the field is not level.\]
+      - **Roque Júnior, "Sansão"** (decided Oct 30, 2026). Benedito first sees him from a distance: an enormous soldier from São Paulo with thin shins, enslaved and sent to the war, fighting like no one else. His countrymen say he has killed more than fifty men; nobody knows if it is true, and the number grows every night. \[FICTIONAL character; his story is told in ch. 6.\]
       - Marcolino climbs his back to plant the flag at Curuzu. History remembers Marcolino, not the man underneath. \[Catharsis point: the wall taken, the Paraguayan flag torn down; the cost is that history forgets him.\] After Curuzu, Joca Cabinda captures a light-skinned Paraguayan officer, ties him to a tree and whips him the way a master whips a slave, while a few Black comrades watch. The protagonist was not there: he arrives too late, and the man is already dead. He is accused with the rest, simply because he belongs to the Black troop; Joca's friends stay silent. The same week, white officers have Black soldiers flogged for small faults. In battle the field is level; in the camp it is not.
       - Dom Obá teaches him to read with old newspapers. In the war he stops keeping his head down, as Luzia taught him: he begins to stand up against what other soldiers do (Joca, Damião, the abuse of Paraguayan women).
 
@@ -166,6 +167,8 @@ Open option: a short prologue and epilogue in the grandmother's voice, telling t
   - Stories:
       
       - The Curupaiti disaster. After it, the zouave companies are disbanded and their men absorbed into line battalions (Oct 1866, Dados gerais).
+      - **Roque Júnior in the infirmary** (decided Oct 30, 2026). At Curupaiti (22 Sept 1866) Roque Júnior is gravely wounded. In the infirmary Benedito treats him with what Luzia taught him. He recovers too fast; Benedito, impressed by his strength, says he must be "a rare specimen" (*um espécime raro*). Roque Júnior laughs without humour: it is a word for animals. Then he tells his story. His mother says his father is Pata Seca, a tall enslaved man with thin shins on a fazenda in the interior of São Paulo, chosen for his body and brought to the women so the master would have more slaves; it was never confirmed, but she named her son after him. He has brothers and sisters he has never met, and he looks for them in the camps, among the tall paulistas with thin shins. A father of too many children to be a father to any (see Concept: family and descent). In 1866 he says "my father has many children", not the two hundred of the later legend. \[Pata Seca: FAMILY TRADITION / legend of a real man; Roque Júnior: FICTIONAL; see research/people/pata-seca.md.\]
+      - Writer's notes (not for the text) (decided Oct 30, 2026): the body valued like merchandise (Luzia's teeth, ch. 1; his own teeth at enlistment, ch. 4; Pata Seca's height and shins); a father of too many to be a father to any, against the three fathers of ch. 1; Roque Júnior searching the camps for brothers as Benedito searches the lists for Luzia. Pata Seca never appears on stage: he is only a story told, and he has living descendants; the weight stays on the son and the women, with no sexual detail.
       - Cholera camps; Gregório dies still believing in citizenship, and his death ends the protagonist's faith in the nation; Ana Néri. What he learned from Luzia (boiled water, keeping the sick drinking, cleaning wounds) keeps him alive and lets him save others. He works beside Ana Néri, who asks where he learned it. "From my mother." He does not get sick, says its luck on his side. In the camps he does what he did for his father (ch. 2): he repeats Luzia's instructions aloud, step by step, and sings her songs while he works, "Atotô" among them. He teaches it to his comrades, and they sing together over the sick. Many survive and are grateful to him; he becomes respected, one of the healers. Being a healer helps him survive: he is often spared from the front line, though not always (he is still at Curupaiti, Humaitá, Asunción and Acosta Ñu as planned). In the quiet hours of nursing he keeps learning to read with Dom Obá's old newspapers (begun in ch. 5), reading them aloud to the sick (decided Oct 27, 2026).
       - Padre Felício, the army chaplain, baptises the dying and buries the dead in mass graves. He keeps the only written list with the protagonist's real name (lost at the end of the war, ch. 9).
       - Joca Cabinda deserts and is flogged; he refused to help him. The whip Joca used at Curuzu comes back to him.
@@ -180,6 +183,7 @@ Open option: a short prologue and epilogue in the grandmother's voice, telling t
       - Ramon Benites, drunk after a card game, beats a Black comrade nearly to death; nobody punishes him.
       - Caxias's order that soldiers be treated more strictly (or the rumour of it) gives the men something to argue about at night.
       - Constantino, back from captivity, tells the Paraguayan side.
+      - **Roque Júnior repays the debt** (decided Oct 30, 2026). Recovered, Roque Júnior is back in the fighting. In one of the actions of the siege he saves Benedito's life: "Now we're even." The care in the infirmary is paid back. (Which action, and whether Sargento Mbareté is the man he saves him from: to decide.)
 
 ### 8\. Asunción
 
@@ -212,6 +216,7 @@ See the research doc "What a Freed Slave Could and Couldn't Do" for sources.
   - Stories:
       
       - Discharged without back pay. The boats go downriver to Bahia; he doesn't take one.
+      - **Roque Júnior goes home** (decided Oct 30, 2026). They part at the discharge: Roque Júnior goes back to São Paulo, to his mother and the brothers he has never met. Benedito never hears of him again.
       - Arrival in booming Corumbá.
 
 ### 11\. The Paper (Seven years of freedom and poverty)

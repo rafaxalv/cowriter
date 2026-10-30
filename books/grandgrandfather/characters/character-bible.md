@@ -191,6 +191,11 @@ He goes south with the Zuavos baianos, the all-Black companies of Bahian volunte
   - **Gregório "Doutor"**: free-born Black tailor, volunteer; reads, argues politics, believes in citizenship. Writes Benedito's first letters (ch. 4); his death of cholera ends Benedito's faith in the nation (ch. 6). Real aspect: the Voluntários da Pátria.
   - **Joca Cabinda**: enslaved, freed to serve, older and bitter. Whips a Paraguayan officer to death (ch. 5); deserts and is flogged, and Benedito refuses to help him (ch. 6). Real aspect: freed slaves in the army; desertion.
   - **Ramon Benites**: white gaucho cavalryman; charismatic, racist one minute, loyal the next; Benedito's moral rival inside his own army (ch. 7, 8). Real aspect: violence against Paraguayan civilians; tension among the allies.
+  - **Roque Júnior, "Sansão"**: enslaved paulista sent to the war; enormous, thin shins; his countrymen say he killed more than fifty men (ch. 5).
+      - His mother says his father is Pata Seca, the enslaved man used to father children on a São Paulo fazenda; never confirmed; she named him after him. Has brothers and sisters he never met and looks for them in the camps (ch. 6).
+      - Gravely wounded at Curupaiti; Benedito nurses him and calls him "a rare specimen"; he recovers fast (ch. 6). Saves Benedito's life at Humaitá: "Now we're even" (ch. 7).
+      - Goes back to São Paulo after the war; Benedito never hears of him again (ch. 10).
+      - Real aspect: the exploitation of enslaved people's reproduction after the end of the trade (1850); the legend of Pata Seca. \[Roque Júnior: FICTIONAL\]
   - **Padre Felício**: chaplain; keeps the only list with Benedito's real name, which is lost (ch. 6, 9).
   - **Constantino**: young cadet captured at Curupaiti (inspired by the real Bigode); back after two years at the Ybycuí foundry, he tells the Paraguayan side (ch. 7; his return date, 1869, may fit ch. 8 better).
   - **Damião**: enslaved and freed to serve, like him, brave; in a taken village his freedom becomes the power to do to others what was done to him. Benedito's dark mirror: what he could become, and one answer to "what is freedom?" (ch. 9; options in its Notes).
@@ -260,7 +265,7 @@ A free European woman could not legally be a slave in Brazil; trafficked women w
 ## Who is around at each stage (a menu, not a cast list)
 
   - **Bahia (1846–1865):** Luzia, Inácio, Coronel Menezes, Dona Mariana, Tonico, Bastião, Velho Kalunga, Rosária, Ezequiel, Mãe Otília. Mentioned: the Malê rebels, the 1857 *ganhadores* strike.
-  - **War (1865–1870):** Quirino, Marcolino, Dom Obá, Gregório, Joca Cabinda, Damião, Ramon Benites, Padre Felício, Constantino, Mbareté, Ceferina, the boy at Acosta Ñu, Captain Albuquerque. Passing through: Rebouças, Osório, Caxias, Ana Néri, the Count d'Eu, López.
+  - **War (1865–1870):** Quirino, Roque Júnior, Marcolino, Dom Obá, Gregório, Joca Cabinda, Damião, Ramon Benites, Padre Felício, Constantino, Mbareté, Ceferina, the boy at Acosta Ñu, Captain Albuquerque. Passing through: Rebouças, Osório, Caxias, Ana Néri, the Count d'Eu, López.
   - **Free, not equal (1870–c. 1877):** Seu Bento, Paraguayan workers, the clerks and police of Corumbá; far away, Tonico and Luzia (Interlude).
   - **Her road (1858–1877):** Rosa, Manuel and Xosé Lousada, Don Faustino, Alvarado, Ruchla, Doña Engracia, Capitán Iriarte, Madame Angélique, Seu Albino, Lucília.
   - **Fortune (c. 1877–1889):** Firmino and the other veterans at Liberdade, Bastião, the Pires sons and Otávio, Seu Bento, the lottery agent, Dr. Teles, the Pires family, Lucília, Dom Obá, Luiz Gama; the Emperor and Princess Isabel only as news.
