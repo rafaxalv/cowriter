@@ -137,7 +137,7 @@ Slavery from the inside: an ordinary sugar estate where cruelty is routine and k
       - Capoeirista, joker, storyteller.
       - Real aspect: capoeira as resistance; quilombos in the Recôncavo.
       - Smart, a very good fighter, taught by Kalunga; knows his way around.
-      - Chapters: ch. 2–3; refuses to go to the war and runs to a quilombo (ch. 3); cannot read: Tonico brings him the newspaper and a pass, and he crosses Brazil carrying Luzia's letter (ch. 17); one of the most trusted men at Liberdade (ch. 20); dies before him, and Benedito buries him (ch. 23).
+      - Chapters: ch. 2–3; refuses to go to the war and runs to a quilombo (ch. 3); cannot read: Tonico brings him the newspaper and a pass, and he crosses Brazil carrying Luzia's letter (ch. 17); stands with him when he challenges Albino for the woman from Spain (ch. 19); one of the most trusted men at Liberdade (ch. 20); dies before him, and Benedito buries him (ch. 23).
   - **Velho Kalunga**, an old capoeirista, a Black man who escaped a farm long ago and lives free.
       - Funny, not solemn: jokes all the time, teases, makes hard things easy. The boys tell legends about him half as jokes (a capitão do mato killed with one kick, dogs that never find his trail, a prince in Africa, a ghost); he neither confirms nor denies, and laughs.
       - Goes from place to place helping others train in secret; Bastião's master, then Benedito's. Teaches the ginga, the rhythm and the songs before the kicks: "Your body can't sing yet." Benedito's master.
