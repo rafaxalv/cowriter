@@ -129,7 +129,7 @@ Slavery from the inside: an ordinary sugar estate where cruelty is routine and k
       - Takes on the estate as he grows, working with his father, rarely around; Ezequiel defies him, and Benedito blames him for doing nothing (ch. 3).
       - Never a candidate for the war; watches his milk brother leave and stays. A loyal friend after all.
       - Real aspect: the exemption of the elite; the "milk brother" bond.
-      - Chapters: ch. 1–2, 3; banishes Ezequiel, finds Luzia, always knows where Kalunga and Bastião hide and never tells (Interlude); reads of the lottery, finds Bastião, writes him a pass as his owner and sends Luzia's letter with him (ch. 17).
+      - Chapters: ch. 1–2, 3; banishes Ezequiel, finds Luzia, always knows where Kalunga and Bastião hide and never tells (Interlude); reads of the lottery, finds Bastião, writes him a pass as his owner and sends Luzia's letter with him, and his own: an apology for never helping, he was a boy and afraid; he cannot leave the estate (ch. 17). Never goes to Liberdade. His end: to decide.
   - **Bastião**, best friend, two or three years older, enslaved on the estate; Velho Kalunga's student.
       - Knew Benedito as a boy but not closely; teased him, jokingly, as the master's son's pet (ch. 2).
       - Sees his anger when Luzia is sold and reaches out; brings him into the senzala's secret world, the roda, the terreiro, Kalunga (ch. 3).
