@@ -84,6 +84,7 @@ Who each character is, in short bullets: role, personality, motives, relationshi
   - Acosta Ñu: the boy with the false beard; the memory he never tells (ch. 9), which returns at São João (ch. 21).
   - Accused of what he tried to stop (Joca's whipping, Damião's rampage): no trial, only the stain (ch. 5, 9). Echoes the family's oral tradition about Brazilian soldiers and Paraguayan women.
   - His wife and sons reject his African culture (ch. 20).
+  - Dies alone: every trusted friend gone before him (Bastião, Firmino, the veterans; no news of Tonico), though his wife and children are with him (ch. 23).
 
 ### Names others give him
 
@@ -129,7 +130,7 @@ Slavery from the inside: an ordinary sugar estate where cruelty is routine and k
       - Takes on the estate as he grows, working with his father, rarely around; Ezequiel defies him, and Benedito blames him for doing nothing (ch. 3).
       - Never a candidate for the war; watches his milk brother leave and stays. A loyal friend after all.
       - Real aspect: the exemption of the elite; the "milk brother" bond.
-      - Chapters: ch. 1–2, 3; banishes Ezequiel, finds Luzia, always knows where Kalunga and Bastião hide and never tells (Interlude); reads of the lottery, finds Bastião, writes him a pass as his owner and sends Luzia's letter with him, and his own: an apology for never helping, he was a boy and afraid; he cannot leave the estate (ch. 17). Never goes to Liberdade. His end: to decide.
+      - Chapters: ch. 1–2, 3; banishes Ezequiel, finds Luzia, always knows where Kalunga and Bastião hide and never tells (Interlude); reads of the lottery, finds Bastião, writes him a pass as his owner and sends Luzia's letter with him, and his own: an apology for never helping, he was a boy and afraid; he cannot leave the estate (ch. 17). Never goes to Liberdade; after the letter there is no news of him again (decided Oct 30, 2026).
   - **Bastião**, best friend, two or three years older, enslaved on the estate; Velho Kalunga's student.
       - Knew Benedito as a boy but not closely; teased him, jokingly, as the master's son's pet (ch. 2).
       - Sees his anger when Luzia is sold and reaches out; brings him into the senzala's secret world, the roda, the terreiro, Kalunga (ch. 3).

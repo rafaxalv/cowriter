@@ -381,6 +381,7 @@ See the research doc "What a Freed Slave Could and Couldn't Do" for sources.
       - One of his sons hums one of Luzia's songs without knowing what it is.
       - **Bastião's death** (decided Oct 30, 2026). Bastião dies before him (when and how: to decide), and he buries him himself: a very sad moment, the loss of the oldest friend he has. (Possible echo: Luzia's lament over Inácio, ch. 2.)
       - All the loyal employees and ex war veterans are now dead. The new employees dont care as much, dont work hard as much. The practices that made the farm competitive get lost over time as the old employees die. The new ones are not interested in learning. Competition is stronger and the farm starts loosing money.
+      - **Alone** (decided Oct 30, 2026). By his last years every trusted friend is gone: Bastião, Firmino, the veterans of Liberdade; from Bahia, no news of Tonico ever again. He dies feeling alone, even with his wife and children around him: they are there, but none of them knew the boy, the soldier or the songs.
       - His death. He tells his wife his true name; the reader never hears it. She keeps it. Around him, the lament comes back, in the sons' mouths or only in his head: "We look for our father, and cannot find him." The watercourse keeps its name (see research/music/luzia-songs.md).
 
 ### 24\. The Table
