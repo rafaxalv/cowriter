@@ -46,6 +46,14 @@ Rótulos de verdade como no BOOK.md. Onde a fonte trata de outro lugar ou época
   - **Samba de roda e batuque** no Recôncavo: domingos, dias santos, fins de safra. [DOCUMENTED como prática; datas finas to verify]
   - **No engenho:** a **botada** (início da moagem, com bênção do padre e festa) e o fim da safra. [to verify: comum nas fontes sobre engenhos, sem fonte conferida aqui]
 
+## 5b. Cantar no trabalho
+
+  - **Em Salvador:** viajantes descrevem os carregadores africanos cantando "uma espécie de coro" enquanto levavam as cargas, o que também avisava os passantes para abrir caminho (Wetherell, vice-cônsul britânico, 1843–57); Avé-Lallemant (1859) diz que carregar era "quase uma dança", em ritmo de procissão; Querino descreve os carregadores marchando com uma cantilena em língua africana. As canções eram improvisadas e repetidas, sobre a vida diária, senhores e escravos, e lembranças da terra. [DOCUMENTED] (Redalyc, "Entre cantos e batuques", citando Verger, Reis, Querino)
+  - **Em Minas Gerais:** os **vissungos**, cantos de trabalho de mineradores afrodescendentes de São João da Chapada (Diamantina), em língua de base banto; Aires da Mata Machado Filho começou a registrá-los em 1928 e publicou 65 em *O negro e o garimpo em Minas Gerais* (1943). Alguns acompanhavam fases específicas do trabalho, e serviam também de fala cifrada que os brancos não entendiam. [DOCUMENTED] (Giovannini Junior 2014)
+  - **No canavial e no engenho do Recôncavo:** evidência direta mais escassa nas fontes vistas aqui. Que os escravizados cantassem no eito, na moenda e na casa das caldeiras, e que a família de Benedito cantasse quase o dia todo, é [PLAUSIBLE RECONSTRUCTION], apoiada pelos casos acima.
+  - **No livro:** cantar no trabalho é uma das principais distrações da família, todos os dias, e é por isso que Benedito canta tão bem (caps. 1–2).
+  - Correção: na conversa por voz eu disse que os vissungos eram cantados "o dia todo, desde antes do amanhecer"; a fonte conferida não diz isso.
+
 ## 6. A idade da festa da Boa Morte (verificação para o cap. 3, c. 1863)
 
   - A Irmandade de Nossa Senhora da Boa Morte foi fundada em Salvador, na **Barroquinha, por volta de 1820**, por mulheres negras ligadas ao candomblé; perseguida em Salvador, **algumas irmãs fundaram a irmandade em Cachoeira por volta de 1850**. Festa em agosto (Assunção de Maria). (Wikipedia, citando Castro 2005)
@@ -71,6 +79,9 @@ Rótulos de verdade como no BOOK.md. Onde a fonte trata de outro lugar ou época
   - João José Reis, "Batuque: African Drumming and Dance between Repression and Concession" (UFBA): <https://repositorio.ufba.br/bitstream/ri/15447/1/Jo%C3%A3o%20Jos%C3%A9%20Reis.pdf>
   - João José Reis, *A morte é uma festa* (1991); em inglês *Death Is a Festival*: <https://www.everand.com/book/322774599/Death-Is-a-Festival-Funeral-Rites-and-Rebellion-in-Nineteenth-Century-Brazil>
   - Cronologia da capoeira no Brasil: <https://pt.wikipedia.org/wiki/Cronologia_da_capoeira_no_Brasil>
+  - Oswaldo Giovannini Junior, "A mineiridade no modernismo: Aires da Mata Machado e o registro dos vissungos", *Vozes dos Vales* (UFVJM) 6, 2014: <https://revistas.ufvjm.edu.br/vozes/article/download/805/640/2481>
+  - Andréa Albuquerque Adour da Camara, *Vissungo: o cantar banto nas Américas* (tese, UFMG, 2013): <https://repositorio.ufmg.br/handle/1843/48814>
+  - "Entre cantos e batuques: territórios negro-africanos na cidade de Salvador no século XIX", Redalyc: <https://www.redalyc.org/journal/5769/576961002001/html/>
   - Mestre Yrapuru, "Os africanos e a capoeira no século XIX" (sobre Manoel Querino): <https://portalcapoeira.com/capoeira/curiosidades/os-africanos-e-a-capoeira-no-seculo-xix/>
   - IPHAN, Dossiê Festa do Bonfim: <http://portal.iphan.gov.br/uploads/ckfinder/arquivos/Dossie%20Festa%20do%20Bonfim.pdf>
   - Festa da Boa Morte: <https://pt.wikipedia.org/wiki/Festa_da_Boa_Morte>

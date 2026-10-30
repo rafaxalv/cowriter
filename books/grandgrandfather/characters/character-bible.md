@@ -43,6 +43,7 @@ Who each character is, in short bullets: role, personality, motives, relationshi
   - A fighter, hungry for freedom after his father's death and his mother's sale; dreams of running away, held back by fear of being caught and killed (ch. 3).
   - A healer, like Luzia: he repeats her steps aloud and sings her songs as he works, a ritual begun at his father's sickbed (ch. 2). In the war it makes him one of the healers, respected, often spared from the front line (ch. 6).
   - A mark in one eye for life, from a childhood accident with Tonico (ch. 2).
+  - Sings well: he learned singing at work beside his family, every day, most of the day (ch. 1–2).
   - Loves music and dance (batuques, samba de roda): where he feels free. Athletic, a capoeirista; in the war capoeira becomes a weapon (ch. 3, 5).
   - Violence is the first language he learned: not angry day to day, but explosive when disrespected ("moleque" is enough).
   - Free and rich, he is demanding: his wishes are orders. Jealous of his wife (ch. 20, 22).
