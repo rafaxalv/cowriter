@@ -134,8 +134,8 @@ Slavery from the inside: an ordinary sugar estate where cruelty is routine and k
       - Real aspect: capoeira as resistance; quilombos in the Recôncavo.
       - Chapters: ch. 3; refuses to go to the war and runs to a quilombo (ch. 3).
   - **Velho Kalunga**, an old capoeirista, a Black man who escaped a farm long ago and lives free.
-      - Mysterious; legends follow him (a capitão do mato killed with one kick, dogs that never find his trail, a prince in Africa, a ghost); he neither confirms nor denies.
-      - Goes from place to place helping others train in secret; Bastião's master, then Benedito's. Teaches the ginga, the rhythm and the songs before the kicks. Benedito's Mr. Miyagi.
+      - Funny, not solemn: jokes all the time, teases, makes hard things easy. The boys tell legends about him half as jokes (a capitão do mato killed with one kick, dogs that never find his trail, a prince in Africa, a ghost); he neither confirms nor denies, and laughs.
+      - Goes from place to place helping others train in secret; Bastião's master, then Benedito's. Teaches the ginga, the rhythm and the songs before the kicks: "Your body can't sing yet." Benedito's master.
       - Real aspect: capoeira as resistance; runaways living free in the margins.
       - Chapters: ch. 3 (option: disappears when the war comes, and Bastião follows him).
   - **Rosária**, enslaved house servant and apprentice of the Boa Morte sisterhood in Cachoeira (she helps and sings at its festa; the sisters are older freed women); a friend from the terreiro, then his first love.
