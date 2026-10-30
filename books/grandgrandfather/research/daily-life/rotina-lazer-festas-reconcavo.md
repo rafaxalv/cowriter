@@ -51,7 +51,13 @@ Rótulos de verdade como no BOOK.md. Onde a fonte trata de outro lugar ou época
   - A Irmandade de Nossa Senhora da Boa Morte foi fundada em Salvador, na **Barroquinha, por volta de 1820**, por mulheres negras ligadas ao candomblé; perseguida em Salvador, **algumas irmãs fundaram a irmandade em Cachoeira por volta de 1850**. Festa em agosto (Assunção de Maria). (Wikipedia, citando Castro 2005)
   - **Veredito:** uma festa da Boa Morte em Cachoeira em agosto de 1863 é **plausível**, mas as datas de fundação vêm sobretudo da tradição da própria irmandade; a documentação do século XIX é escassa. Rótulo para o cap. 3: [STRONGLY SUPPORTED como tradição; PLAUSIBLE para 1863]. Alternativa sem risco: uma festa de dia santo qualquer em Cachoeira (São João, Santo Antônio, padroeira).
 
-## O que muda nos capítulos (sugestões, nada aplicado)
+## Onde está nos capítulos (aplicado em 30 out. 2026)
+
+  - Cap. 1: a safra (horas, turnos, acidentes) no evento "the sugar chain"; fatos da safra e dos batuques.
+  - Cap. 2: domingos, dias santos e a roça de Inácio e Luzia; mercado aos sábados; fato das roças.
+  - Cap. 3: a capoeira treinada à noite, sem licença, e o risco de castigo; fatos da capoeira e do calendário festivo; a Boa Morte com Rosária como aprendiz.
+
+## Sugestões originais
 
   - Cap. 3, "A festa em Cachoeira": manter a Boa Morte com o rótulo acima, ou trocar por São João (junho), que é certo e combina com fogueiras e briga na multidão.
   - Cap. 3: a roda e o terreiro aos domingos e dias santos, com o risco real de castigo se descobertos à noite; a capoeira não era crime escrito na Bahia, mas era vista como desordem.
