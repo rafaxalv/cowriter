@@ -136,7 +136,8 @@ Slavery from the inside: an ordinary sugar estate where cruelty is routine and k
       - At first teases him in the roda for not knowing its traditions; the teasing turns into friendship, and he stands by him against Ezequiel. With Kalunga, Benedito's first family after Luzia (ch. 3).
       - Capoeirista, joker, storyteller.
       - Real aspect: capoeira as resistance; quilombos in the Recôncavo.
-      - Chapters: ch. 3; refuses to go to the war and runs to a quilombo (ch. 3).
+      - Smart, a very good fighter, taught by Kalunga; knows his way around.
+      - Chapters: ch. 2–3; refuses to go to the war and runs to a quilombo (ch. 3); hears of the lottery win in the papers and crosses Brazil to find him (ch. 17); one of the most trusted men at Liberdade (ch. 20); dies before him, and Benedito buries him (ch. 23).
   - **Velho Kalunga**, an old capoeirista, a Black man who escaped a farm long ago and lives free.
       - Funny, not solemn: jokes all the time, teases, makes hard things easy. The boys tell legends about him half as jokes (a capitão do mato killed with one kick, dogs that never find his trail, a prince in Africa, a ghost); he neither confirms nor denies, and laughs.
       - Goes from place to place helping others train in secret; Bastião's master, then Benedito's. Teaches the ginga, the rhythm and the songs before the kicks: "Your body can't sing yet." Benedito's master.
@@ -256,7 +257,7 @@ A free European woman could not legally be a slave in Brazil; trafficked women w
   - **War (1865–1870):** Quirino, Marcolino, Dom Obá, Gregório, Joca Cabinda, Damião, Ramon Benites, Padre Felício, Constantino, Mbareté, Ceferina, the boy at Acosta Ñu, Captain Albuquerque. Passing through: Rebouças, Osório, Caxias, Ana Néri, the Count d'Eu, López.
   - **Free, not equal (1870–c. 1877):** Seu Bento, Paraguayan workers, the clerks and police of Corumbá; far away, Tonico and Luzia (Interlude).
   - **Her road (1858–1877):** Rosa, Manuel and Xosé Lousada, Don Faustino, Alvarado, Ruchla, Doña Engracia, Capitán Iriarte, Madame Angélique, Seu Albino, Lucília.
-  - **Fortune (c. 1877–1889):** Firmino and the other veterans at Liberdade, the Pires sons and Otávio, Seu Bento, the lottery agent, Dr. Teles, the Pires family, Lucília, Dom Obá, Luiz Gama; the Emperor and Princess Isabel only as news.
+  - **Fortune (c. 1877–1889):** Firmino and the other veterans at Liberdade, Bastião, the Pires sons and Otávio, Seu Bento, the lottery agent, Dr. Teles, the Pires family, Lucília, Dom Obá, Luiz Gama; the Emperor and Princess Isabel only as news.
   - **The fall (1890s):** the sons, the Pires family, card tables and garimpos (Silvio); grandma's line.
 
 ## Fact map and open questions
