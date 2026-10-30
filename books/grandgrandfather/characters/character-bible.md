@@ -129,7 +129,7 @@ Slavery from the inside: an ordinary sugar estate where cruelty is routine and k
       - Takes on the estate as he grows, working with his father, rarely around; Ezequiel defies him, and Benedito blames him for doing nothing (ch. 3).
       - Never a candidate for the war; watches his milk brother leave and stays. A loyal friend after all.
       - Real aspect: the exemption of the elite; the "milk brother" bond.
-      - Chapters: ch. 1–2, 3; banishes Ezequiel, finds Luzia (Interlude); sends her letter (ch. 17).
+      - Chapters: ch. 1–2, 3; banishes Ezequiel, finds Luzia, always knows where Kalunga and Bastião hide and never tells (Interlude); reads of the lottery, finds Bastião, writes him a pass as his owner and sends Luzia's letter with him (ch. 17).
   - **Bastião**, best friend, two or three years older, enslaved on the estate; Velho Kalunga's student.
       - Knew Benedito as a boy but not closely; teased him, jokingly, as the master's son's pet (ch. 2).
       - Sees his anger when Luzia is sold and reaches out; brings him into the senzala's secret world, the roda, the terreiro, Kalunga (ch. 3).
@@ -137,7 +137,7 @@ Slavery from the inside: an ordinary sugar estate where cruelty is routine and k
       - Capoeirista, joker, storyteller.
       - Real aspect: capoeira as resistance; quilombos in the Recôncavo.
       - Smart, a very good fighter, taught by Kalunga; knows his way around.
-      - Chapters: ch. 2–3; refuses to go to the war and runs to a quilombo (ch. 3); hears of the lottery win in the papers and crosses Brazil to find him (ch. 17); one of the most trusted men at Liberdade (ch. 20); dies before him, and Benedito buries him (ch. 23).
+      - Chapters: ch. 2–3; refuses to go to the war and runs to a quilombo (ch. 3); cannot read: Tonico brings him the newspaper and a pass, and he crosses Brazil carrying Luzia's letter (ch. 17); one of the most trusted men at Liberdade (ch. 20); dies before him, and Benedito buries him (ch. 23).
   - **Velho Kalunga**, an old capoeirista, a Black man who escaped a farm long ago and lives free.
       - Funny, not solemn: jokes all the time, teases, makes hard things easy. The boys tell legends about him half as jokes (a capitão do mato killed with one kick, dogs that never find his trail, a prince in Africa, a ghost); he neither confirms nor denies, and laughs.
       - Goes from place to place helping others train in secret; Bastião's master, then Benedito's. Teaches the ginga, the rhythm and the songs before the kicks: "Your body can't sing yet." Benedito's master.
