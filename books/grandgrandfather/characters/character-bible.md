@@ -134,6 +134,7 @@ Slavery from the inside: an ordinary sugar estate where cruelty is routine and k
   - **Bastião**, best friend, two or three years older, enslaved on the estate; Velho Kalunga's student.
       - Knew Benedito as a boy but not closely; teased him, jokingly, as the master's son's pet (ch. 2).
       - Sees his anger when Luzia is sold and reaches out; brings him into the senzala's secret world, the roda, the terreiro, Kalunga (ch. 3).
+      - Calls him "the milk brother" as a tease (ch. 2); when Benedito joins the Kalunga clan: "Does this make us the coffee brothers?" (ch. 3); when Tonico joins too: "Your milk brother is a coffee brother now" (ch. 17).
       - At first teases him in the roda for not knowing its traditions; the teasing turns into friendship, and he stands by him against Ezequiel. With Kalunga, Benedito's first family after Luzia (ch. 3).
       - Capoeirista, joker, storyteller.
       - Real aspect: capoeira as resistance; quilombos in the Recôncavo.
