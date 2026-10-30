@@ -152,10 +152,6 @@ Ela manteve a cara parada. Não olhou pra trás, pra fila. Tinha catorze anos, e
 
 *(a escrever)*
 
-### Interlúdio — A Viagem de Tonico
-
-*(a escrever)*
-
 ## PARTE IV — A MULHER DA ESPANHA
 
 ### 13. Galiza
@@ -180,11 +176,15 @@ Ela manteve a cara parada. Não olhou pra trás, pra fila. Tinha catorze anos, e
 
 *(a escrever)*
 
-### 18. Jacadigo
+### Interlúdio — A Viagem de Tonico
 
 *(a escrever)*
 
-### 19. A Compra
+### 18. A Compra
+
+*(a escrever)*
+
+### 19. Jacadigo
 
 *(a escrever)*
 

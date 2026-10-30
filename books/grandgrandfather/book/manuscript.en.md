@@ -152,10 +152,6 @@ She kept her face still. She did not look back at the line. She was fourteen, an
 
 *(to be written)*
 
-### Interlude — Tonico's Journey
-
-*(to be written)*
-
 ## PART IV — THE WOMAN FROM SPAIN
 
 ### 13. Galicia
@@ -180,11 +176,15 @@ She kept her face still. She did not look back at the line. She was fourteen, an
 
 *(to be written)*
 
-### 18. Jacadigo
+### Interlude — Tonico's Journey
 
 *(to be written)*
 
-### 19. The Purchase
+### 18. The Purchase
+
+*(to be written)*
+
+### 19. Jacadigo
 
 *(to be written)*
 
