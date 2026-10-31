@@ -140,39 +140,35 @@ She kept her face still. She did not look back at the line. She was fourteen, an
 
 ## PART III — FREE, NOT EQUAL (1870–c. 1877)
 
-### 10. The River
+### 10. The Paper
 
 *(to be written)*
 
-### 11. The Paper
-
-*(to be written)*
-
-### 12. The Ticket
+### 11. The Ticket
 
 *(to be written)*
 
 ## PART IV — THE WOMAN FROM SPAIN
 
-### 13. Galicia
+### 12. Galicia
 
 *(to be written)*
 
-### 14. The Crossing
+### 13. The Crossing
 
 *(to be written)*
 
-### 15. Buenos Aires
+### 14. Buenos Aires
 
 *(to be written)*
 
-### 16. Upriver
+### 15. Upriver
 
 *(to be written)*
 
 ## PART V — FORTUNE
 
-### 17. The Lottery
+### 16. The Lottery
 
 *(to be written)*
 
@@ -180,33 +176,33 @@ She kept her face still. She did not look back at the line. She was fourteen, an
 
 *(to be written)*
 
-### 18. The Purchase
+### 17. The Purchase
 
 *(to be written)*
 
-### 19. Jacadigo
+### 18. Jacadigo
 
 *(to be written)*
 
-### 20. The House
+### 19. The House
 
 *(to be written)*
 
-### 21. São João
+### 20. São João
 
 *(to be written)*
 
-### 22. The Gates
+### 21. The Gates
 
 *(to be written)*
 
 ## PART VI — THE FALL
 
-### 23. The Name
+### 22. The Name
 
 *(to be written)*
 
-### 24. The Table
+### 23. The Table
 
 *(to be written)*
 

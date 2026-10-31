@@ -6,7 +6,7 @@ Working list of chapters and the stories planned for each. Working names, for pl
 
 Structure note: Part IV (her story) does not run as a block. Her chapters alternate with his from Part III onwards, cutting away at high points, until the two lines meet in "The Purchase".
 
-Open option: a short prologue and epilogue in the grandmother's voice, telling the story to a grandchild. Open option for Part II: tell much of the war through his letters to his mother (see chapter 4). Catharsis points (Oct 10, 2026; Tarantino-style release, rationed, see NARR-MAIN; to revisit): ch. 3 (he beats Ezequiel), Interlude (Tonico banishes Ezequiel), ch. 5 (Tuiuti; Curuzu), ch. 9 (he stops Damião), ch. 18 (Albino's house).
+Open option: a short prologue and epilogue in the grandmother's voice, telling the story to a grandchild. Open option for Part II: tell much of the war through his letters to his mother (see chapter 4). Catharsis points (Oct 10, 2026; Tarantino-style release, rationed, see NARR-MAIN; to revisit): ch. 3 (he beats Ezequiel), Interlude (Tonico banishes Ezequiel), ch. 5 (Tuiuti; Curuzu), ch. 9 (he stops Damião), ch. 17 (Albino's house).
 
 ## Prologue — The Fog
 
@@ -79,7 +79,7 @@ Open option: a short prologue and epilogue in the grandmother's voice, telling t
       - **c. 1852–55. Bastião** (decided Oct 30, 2026). Bastião, two or three years older, an enslaved boy on the estate: quick, funny, a born storyteller. They know each other but are not close. Benedito spends his days with Tonico, and to Bastião and the senzala children he is half the master's son's pet. Bastião teases him about it, but as a joke more than a grudge: he knows Benedito is only a small boy. His favourite name for him is "the milk brother" (*irmão de leite*), mocking the bond with Tonico (decided Oct 30, 2026; pays off in ch. 3).
       - **c. 1854. The pee prank.** Their favourite prank, pure mischief: they hide somewhere high and pee on whoever passes below, then roll about laughing. The grown-ups shout and shake their fists, but nobody can chase the master's son. Their best target is Ezequiel, the master's informer and the overseer's helper (not yet capitão do mato), the master's unrecognised son, hard on the enslaved and harder still on Tonico and the boy. One day they pee on him from above. Surprised and furious, he shouts up at them. Tonico shouts back: "Who are you going to complain to? Your dad?" Both boys howl with laughter. It hurts him more than the pee: he knows exactly who his father is, Tonico's own father, and he can never say it. The insult feeds his resentment, and his envy runs both ways. He envies Tonico, who has the father's name, the house and the privileges that should also be his. And he envies Benedito, who has less than anyone, but has a father: Inácio, who carries him on his shoulders at the mill and calls him son. (Irony only Ezequiel and the reader see: Tonico mocks his own brother about their shared father.) But that day some of it also lands in one of the troughs where the cane juice runs from the mill to the boiling house. The batch is spoiled, and the mill has to stop for hours while everything is cleaned. Tonico runs away, leaving the boy behind. The master punishes him severely, and the boy thinks: "Why does he have to be so angry?" (his own sons will think the same words about him).
       - **c. 1854–55. The sand prank.** Another day, with other children, they throw sand at people passing by. The angry passers-by go to a white woman who works as a servant on the estate (role to confirm: Tonico's nanny?) and ask: "Is this your boy?" She sees Tonico and says, proudly, that he is. Then they complain: she should bring up her children better, look what they have just done. She has to clean up after them (to confirm: wash the sandy passers-by, or bathe the boys?). Tonico gets away; when the story reaches the master, it is the boy who is punished.
-      - **1855. His father's death.** Inácio (working name), an enslaved boiling-house worker and Luzia's companion, the man he calls father, falls sick in the cholera epidemic of 1855, when the boy is 9 (about 10,000 dead in Salvador alone; the enslaved and freed died out of proportion). The Coronel keeps calling Luzia to the big house to look after his own family, so it is the boy who mostly takes care of his father; he comes to feel that the Coronel did not let his mother care for him properly. He listens carefully to her instructions and repeats every step aloud as he does it (boil the water, keep him drinking, clean him), singing her songs at the same time, "Atotô" to Omolu among them: a ritual, and a way to make sure he has done everything right (decided Oct 27, 2026). She could not have saved him in any way. Inácio dies in the boy's hands. Luzia comes after he is dead, cries, and sings the lament over him, "We look for our father, and cannot find him", the saddest song the boy has ever heard. Afterwards she tells him: "Orí ni baba, Orí ni ìyá": your head is your father, your head is your mother (see research/music/luzia-songs.md). He never forgets. His first wound. (Option: tell the cholera only as a memory, in a few lines, so it does not stretch the chapter.) The song and the ritual follow him for the rest of his life (the war, ch. 6; Acosta Ñu, ch. 9; his own death, ch. 23).
+      - **1855. His father's death.** Inácio (working name), an enslaved boiling-house worker and Luzia's companion, the man he calls father, falls sick in the cholera epidemic of 1855, when the boy is 9 (about 10,000 dead in Salvador alone; the enslaved and freed died out of proportion). The Coronel keeps calling Luzia to the big house to look after his own family, so it is the boy who mostly takes care of his father; he comes to feel that the Coronel did not let his mother care for him properly. He listens carefully to her instructions and repeats every step aloud as he does it (boil the water, keep him drinking, clean him), singing her songs at the same time, "Atotô" to Omolu among them: a ritual, and a way to make sure he has done everything right (decided Oct 27, 2026). She could not have saved him in any way. Inácio dies in the boy's hands. Luzia comes after he is dead, cries, and sings the lament over him, "We look for our father, and cannot find him", the saddest song the boy has ever heard. Afterwards she tells him: "Orí ni baba, Orí ni ìyá": your head is your father, your head is your mother (see research/music/luzia-songs.md). He never forgets. His first wound. (Option: tell the cholera only as a memory, in a few lines, so it does not stretch the chapter.) The song and the ritual follow him for the rest of his life (the war, ch. 6; Acosta Ñu, ch. 9; his own death, ch. 22).
       - **c. 1856. The mark in his eye:** once, when Tonico is helping him clear land, their play gets rough and Tonico hits him in the face with a piece of wood. An accident, not malice; a mark stays in the eye itself for life.
       - **1858. The master's debts.** When his debts come due, he sells Luzia, despite everything she knows. The estate loses its healer to pay a creditor. He begs Tonico to persuade his father. Tonico tries, or says he did; he is a boy and it changes nothing. He can't forgive either of them: he hates the master, and the friendship with Tonico goes cold. Estranged: not enemies, not friends.
       - Chapter ends: Luzia is sold south to pay the master's debts. He stays. His second wound.
@@ -122,7 +122,7 @@ Open option: a short prologue and epilogue in the grandmother's voice, telling t
       - **c. 1859–60. The doubt.** Benedito has heard the legends and expects a fighter. What he finds is an old man who jokes all the time and dances: he does not look like a master, or a fighter at all, and that is why Benedito does not believe in him at first. Kalunga teaches almost nothing but the ginga, the rhythm and the songs: to Benedito it feels like dancing lessons, too much ginga, too few kicks and punches. Among other things he would like to land the rabo de arraia (the spinning heel kick with the hands on the ground; see research/capoeira/moves.md); now and then he tries it and misses, and nobody makes a ritual of it. Kalunga, between jokes, says only: "Your body can't sing yet."
       - **c. 1860. The turn.** As his rhythm improves, his moves improve with it. He starts to respect the master, then to enjoy the music and the dance of capoeira. His familiarity with music, singing at work since childhood, makes it easier: he already sings in rhythm, and once his body can sing too he becomes a much more dangerous fighter.
       - **c. 1859–62. Three hearts change, slowly** (decided Oct 30, 2026). None of the three expects much of the others. Bastião sees a pampered boy from the big house; Kalunga, a boy who wants to hit things; Benedito, a joker who dances and a friend who mocks him. It changes by small steps, over the years, never in one scene: Bastião's teasing turns into a private joke between them, and the day Ezequiel singles Benedito out, Bastião stands beside him. Kalunga, who sent one angry boy away, recognises the anger in this one too, but also the voice, the songs his mother left him, and decides to keep him. Benedito, who mocked the dancing, starts to sing in the roda, and finds that Kalunga's jokes were lessons. By the end of the chapter the three are a kind of family: the first he has had since Luzia.
-      - **c. 1860–61. He joins the Kalunga clan** (decided Oct 30, 2026). He has earned his place: Velho Kalunga accepts him into the clan, in his own way, with a joke rather than a ceremony. Bastião, who has called him "the milk brother" since they were boys: "Does this make us the coffee brothers?" (*"Então agora a gente é irmão de café?"*). Everyone laughs, Kalunga too. Coffee for the senzala, milk for the big house: the old tease becomes their private joke. (In Portuguese it also plays on *café com leite*, the mixed-race colour; pays off in ch. 17.)
+      - **c. 1860–61. He joins the Kalunga clan** (decided Oct 30, 2026). He has earned his place: Velho Kalunga accepts him into the clan, in his own way, with a joke rather than a ceremony. Bastião, who has called him "the milk brother" since they were boys: "Does this make us the coffee brothers?" (*"Então agora a gente é irmão de café?"*). Everyone laughs, Kalunga too. Coffee for the senzala, milk for the big house: the old tease becomes their private joke. (In Portuguese it also plays on *café com leite*, the mixed-race colour; pays off in ch. 16.)
       - **c. 1860–62. The terreiro** (decided Oct 27, 2026). One night after a roda the capoeira boys invite him to a Candomblé ceremony in Cachoeira, at Mãe Otília's terreiro. Mãe Otília: the priestess of the terreiro; she comes to know him here, and that is why she gives him the guia at the end of the chapter. Rosária: an enslaved house servant from the estate and an apprentice of the Boa Morte sisterhood (its sisters are older freed Black women; she helps and sings); clever and religious. She is there, singing, and her voice catches him. He knows the songs: they are his mother's (he still does not know what they mean). He starts to sing too, and the two become friends, only friends until the festa (below); he will leave anyway.
       - **c. 1860–63. The rivalry grows up and turns sour** (decided Oct 27, 2026). He is no longer the boy who pees from a roof and runs. Ezequiel is free now and holds the whip, and he uses his freedom to provoke Benedito: he flaunts it, reminds him that he is still property, that he will die a slave, that freedom is something Benedito will never have. Benedito answers with silence, and with the roda. The hate is mutual and quiet.
       - **c. 1862–65. Tonico and Ezequiel** (decided Oct 27, 2026). As Tonico grows older he takes on more of the estate's business, and sometimes he has to give Ezequiel orders. Ezequiel refuses to listen to him, or obeys slowly and with contempt: he will not take orders from the boy who has everything that should also be his, his own half-brother, though only Ezequiel knows it. The master does not always back his son. Pays off in the Interlude: the first thing Tonico does as master is fire him.
@@ -221,29 +221,23 @@ How the war is told (decided Oct 30, 2026): lean chapters. Only a few events are
 
 See the research doc "What a Freed Slave Could and Couldn't Do" for sources.
 
-### 10\. The River
+### 10\. The Paper (Seven years of freedom and poverty)
 
-  - When / where: 1870, age 24 · discharge, the river to Corumbá
+  - When / where: 1870–1876, age 24–30 · the discharge, the river to Corumbá; Corumbá (The River and The Paper merged into one chapter, Oct 31, 2026)
   - Stories:
       
       - Discharged without back pay. The boats go downriver to Bahia; he doesn't take one.
       - **Roque Júnior goes home** (decided Oct 30, 2026). They part at the discharge: Roque Júnior goes back to São Paulo, to his mother and the brothers he has never met. Benedito never hears of him again.
       - Arrival in booming Corumbá.
-
-### 11\. The Paper (Seven years of freedom and poverty)
-
-  - When / where: 1870–1876, age 24–30 · Corumbá
-  - Stories:
-      
       - A night in jail without his carta de alforria; a clerk mentions an auction.
       - The land plot promised by the 1865 decree: a white comrade's claim goes through; his stays "under review". No one says why.
       - Working as a porter, ranch hand or arsenal labourer beside Paraguayan immigrants, the men he fought. Freedom is harder than he dreamed: now he must pay rent and buy food, with no guarantee of work or money. As a slave he always had a roof and a ration; free, he can go hungry. He never wishes to go back, but freedom is thinner than the war promised (his experience, never the narrator's verdict).
       - The old master's letter threatening revocation for "ingratitude", until the Free Womb Law (Sept 1871) ends it.
       - The vote that isn't his; the vagrancy threat.
-      - Whenever a list of the freed or a newspaper from the south reaches Corumbá, he searches it for Luzia's name (he stops only when her letter comes, ch. 18).
+      - Whenever a list of the freed or a newspaper from the south reaches Corumbá, he searches it for Luzia's name (he stops only when her letter comes, ch. 17).
       - He buys a lottery ticket for every lottery. for all those years. this is a minor detail, a small ritual of him believing his luck. We will make this a repetitive process in the chapter. He becomes friends with Seu Bento - the ticket seller - this way.
 
-### 12\. The Ticket
+### 11\. The Ticket
 
   - When / where: c. 1877, age \~31 · Corumbá
   - Stories:
@@ -257,7 +251,7 @@ See the research doc "What a Freed Slave Could and Couldn't Do" for sources.
 
 ## PART IV — THE WOMAN FROM SPAIN (c. 1858–1877, alternating)
 
-### 13\. Galicia
+### 12\. Galicia
 
   - When / where: 1858–1876 · fishing village near Vigo
   - Stories:
@@ -266,7 +260,7 @@ See the research doc "What a Freed Slave Could and Couldn't Do" for sources.
       - Xosé, the older brother, is conscripted to Cuba because they cannot pay the exemption; one letter, about fighting rebels and slaves, then yellow fever.
       - Don Faustino, the village priest, teaches her to read. He introduces the gancho Alvarado, out of naivety or for a fee (left open). Alvarado, well dressed and charming, carries letters "from girls who married well in Brazil" and promises a job as a housemaid in Buenos Aires.
 
-### 14\. The Crossing
+### 13\. The Crossing
 
   - When / where: c. 1876 · steamer Vigo → Buenos Aires
   - Stories:
@@ -275,7 +269,7 @@ See the research doc "What a Freed Slave Could and Couldn't Do" for sources.
       - Doña Engracia, an older Galician woman going to join her son, teaches her to hide money in her hem and to say "no" in Portuguese. She gets off in Buenos Aires and is never seen again.
       - Capitán Iriarte looks the other way for a fee; one night he shows a kindness that cannot be repaid.
 
-### 15\. Buenos Aires
+### 14\. Buenos Aires
 
   - When / where: c. 1876–77 · Buenos Aires
   - Stories:
@@ -284,17 +278,17 @@ See the research doc "What a Freed Slave Could and Couldn't Do" for sources.
       - Madame Angélique keeps her apart and untouched: a virgin sells for far more. Ruchla is sold; every day she sees what is waiting for her.
       - She is sold upriver.
 
-### 16\. Upriver
+### 15\. Upriver
 
   - When / where: c. 1877 · Asunción → Corumbá
   - Stories:
       
       - The river journey through the land of the war.
-      - Seu Albino's tavern. He keeps her untouched in the back of the house, working with Lucília, and guards her closely: her price depends on her staying a virgin. In public she is his niece; nobody in Corumbá knows she was trafficked. He does not pimp her, which would hurt his image as a respectable white man with some influence; he wants one big, quick, private sale to a rich man. Lucília becomes her first friend. She meets him there, before his lottery win, and tells him her story (see Chapter 12).
+      - Seu Albino's tavern. He keeps her untouched in the back of the house, working with Lucília, and guards her closely: her price depends on her staying a virgin. In public she is his niece; nobody in Corumbá knows she was trafficked. He does not pimp her, which would hurt his image as a respectable white man with some influence; he wants one big, quick, private sale to a rich man. Lucília becomes her first friend. She meets him there, before his lottery win, and tells him her story (see Chapter 11).
 
 ## PART V — FORTUNE (c. 1877–1888)
 
-### 17\. The Lottery
+### 16\. The Lottery
 
   - When / where: c. 1877 · Corumbá
   - Stories:
@@ -302,8 +296,8 @@ See the research doc "What a Freed Slave Could and Couldn't Do" for sources.
       - The win: 50 contos (which draw, to verify); what it means in years of a labourer's wages. Enough for land, cattle and a comfortable life. The win soon becomes a burden: everyone knows. People ask for loans and favours, try to cheat him, strangers claim to be cousins and old comrades. He loses his privacy and cannot tell friends from opportunists. His distrust and paranoia start here.
       - Collecting the prize: the ticket came from the Court lottery in Rio, sold in Corumbá through a Portuguese merchant who is the lottery agent (Seu Bento resells his tickets in the street, in fractions). The results come upriver weeks later, printed in Rio newspapers on the steamer. The agent pays small prizes from his till; a big one he must claim through his correspondent in Rio, for a commission, and it takes months. So the winner depends on one man. The agent looks at the ticket, then at him, and tells him he has misread it: the numbers don't match, and a preto like him can't read anyway. Perhaps he hints the ticket was stolen, or offers a small "consolation" for it. But he can read: Dom Obá taught him in the trenches with old newspapers. He reads the numbers aloud, slowly, off the printed list, in front of everyone. Seu Bento, who sold him the ticket and wrote it in his book, comes to vouch for him. Reading, the skill the war gave him, is what saves his fortune. Echo of the deeds Dr. Teles will write later: money doesn't stop the insults, it only changes their form.
       - How the town looks at "the lucky Black man".
-      - The win makes the newspapers and the news travels. The papers print his name and a description (a Black ex-zouave from Bahia); the reader never sees the name, only that it is printed there. That is how Tonico learns where he is (Interlude). It sets off two things: Luzia's letter starts its journey, and Albino raises the woman's price (ch. 18).
-      - **c. 1877. Bastião arrives in Corumbá with two letters** (decided Oct 30, 2026). The reunion first: the only man who knew him as a boy, with a story of the journey, told in his storyteller's way, not in detail, and the news that Tonico sent him. Bastião tells him Tonico was made a member of the Kalunga clan: "Your milk brother is a coffee brother now." Café com leite: the joke from ch. 3 closes twenty years later, and it is the first sign that Tonico finally took a side (decided Oct 30, 2026). Then Bastião puts two letters in his hands. Chapter ends (the Interlude follows; the letters are read in ch. 18).
+      - The win makes the newspapers and the news travels. The papers print his name and a description (a Black ex-zouave from Bahia); the reader never sees the name, only that it is printed there. That is how Tonico learns where he is (Interlude). It sets off two things: Luzia's letter starts its journey, and Albino raises the woman's price (ch. 17).
+      - **c. 1877. Bastião arrives in Corumbá with two letters** (decided Oct 30, 2026). The reunion first: the only man who knew him as a boy, with a story of the journey, told in his storyteller's way, not in detail, and the news that Tonico sent him. Bastião tells him Tonico was made a member of the Kalunga clan: "Your milk brother is a coffee brother now." Café com leite: the joke from ch. 3 closes twenty years later, and it is the first sign that Tonico finally took a side (decided Oct 30, 2026). Then Bastião puts two letters in his hands. Chapter ends (the Interlude follows; the letters are read in ch. 17).
       - Sources (how lotteries worked): Beatriz Ana Loner, "A Loteria do Ipiranga e os trabalhadores: um sonho de liberdade no final do século XIX", História (São Paulo) 33(1), 2014. Tickets sold by lottery houses, travelling agents and cambistas, also in halves and quarters; winning numbers printed in newspapers; treasurers paid prizes, with delays and commissions for intermediaries; procuradores needed to claim large sums from the capital; fraud and duplicate tickets; enslaved and freed winners who bought their freedom: <https://www.redalyc.org/pdf/2210/221031471011.pdf> 
       - To verify: which lottery Corumbá bought in the 1870s (the Court lottery in Rio or a provincial one) and how a frontier winner was paid. The agent-and-correspondent version above is a plausible reconstruction.
 
@@ -320,19 +314,19 @@ See the research doc "What a Freed Slave Could and Couldn't Do" for sources.
   - **c. 1877. Tonico, Bastião and the letter** (decided Oct 30, 2026). In Bahia Tonico reads the newspaper (Bastião cannot read). He has always known where Velho Kalunga and Bastião hide, and has never told anyone; now, for the first time, he goes there. The climate is very tense: an outsider, the master's son, at a hideout no outsider may ever see. Then he says why he has come, reads them the paper and tells them Benedito's story, and they agree to help. As he leaves, Velho Kalunga stops him with a word: no one outside the Kalunga clan can ever be at the hideout. So they make Tonico a member of the clan. Bastião is famous in the region, and a forged pass would not save him from the capitães do mato of the Recôncavo; so Tonico takes him down the river as if he had captured him, a runaway in his custody, until they reach a place where no one knows Bastião's face. There Tonico leaves him with a pass naming Tonico as his owner, sending him on business, and gives him Luzia's letter, kept for eight years, and his own, written on the way down the river. Tonico's first adventure as one of the Kalunga clan. From there Bastião goes on alone: a runaway crossing half of Brazil with letters he cannot read, a huge adventure, but smart, a very good fighter and taught by Kalunga, he knows his way around, and he gets there.
   - Sources (coffee world, Vassouras, the Paraíba Valley): Redalyc article on the coffee economy of the Paraíba Valley (big owners in Vassouras and Bananal held over 70% of the enslaved; gangs of 20–25; about 5,000 bushes per worker by the 1870s): <https://www.redalyc.org/pdf/273/27315299004.pdf> 
   - Sources (how Luzia was sold south): Richard Graham, "Another Middle Passage", on the internal slave trade from the Northeast and Bahia to the coffee Southeast after 1850: <https://macmillan.yale.edu/glc/another-middle-passage-brazil> 
-  - Structure (decided Oct 30, 2026): told here, between Bastião putting the letters in his hands (end of ch. 17) and his reading them (start of ch. 18), so the reader learns Tonico's side, Ezequiel's banishment and Luzia's death at the moment Benedito does.
+  - Structure (decided Oct 30, 2026): told here, between Bastião putting the letters in his hands (end of ch. 16) and his reading them (start of ch. 17), so the reader learns Tonico's side, Ezequiel's banishment and Luzia's death at the moment Benedito does.
 
-### 18\. The Purchase
+### 17\. The Purchase
 
   - When / where: c. 1877–78 · Corumbá
   - Stories:
       
       - **c. 1877. The letters** (decided Oct 30, 2026). He opens them with Bastião beside him. The first is Tonico's (decided Oct 30, 2026): he apologises for never helping him in the past (with Luzia's sale, with Ezequiel, all the times he did nothing), explains that he was a boy and too afraid of his father, and that he is still ashamed of it; he would like to have come himself, but he cannot leave the estate, its debts and its business are his now. He signs it as the milk brother, and asks nothing. The second is Luzia's. He did not know it existed. He reads her words himself (Dom Obá taught him). He expected a mother proud of his luck; he finds a woman who turned against the gods and luck and made her own destiny. A shock. Joy and grief arrive together, in his oldest friend's hands. She is dead; she lies in a marked grave he can visit. He finally stops searching the lists for her name. Its first effect: the Purchase, below.
       - Lucília teaches her Portuguese and tells her who the rich preto is.
-      - They met before the lottery (Chapters 12 and 16): she told him her story and her price, one conto de réis. Once he wins, the first thing he does, even before the money arrives, is go to Albino to buy her. Albino refuses to sell to a Black man. Then the newspapers make him "the lucky Black man", and Albino, knowing about the prize, raises the price every time he comes back (two contos, then five; to verify). When Luzia's letter arrives (ch. 17) and he learns she is dead, he snaps: his mother is gone, and he will not wait on luck any longer. This is not luck: he decides. He bursts into Albino's house with Bastião at his side (decided Oct 30, 2026): two capoeiristas from Kalunga's roda, and Albino's men can see it in how they stand. The threat is simple: he will tell everyone what the "niece" really is and go to the police, and the two of them are strong enough to make the visit unpleasant. \[Catharsis point.\] Selling a free woman is a crime (Criminal Code of 1830, art. 179, reducing a free person to slavery), but he has no proof, and a Black man's word counts for little. It does not matter: Albino does not want trouble or talk, and the man in front of him is ready to pay. Albino takes what he wanted in the first place: one conto. The prize is slow and complicated to collect; Albino, who now wants to be paid, uses his influence to ease it. He pays once the money arrives. He could not save his mother; he can save her. Echo, unspoken: Olúrónbí, the bargain that is paid with a person. And married to a white woman, his children will not be as Black, and as cursed, as he is (his view, shaped by the whitening ideology of the time, never the narrator's): the colour of his family will not be left to luck either. For her it is a relief: she is spared the brothel. In his mind he is saving her, as he could not save his mother. The family legend of "buying a Spanish girl".
+      - They met before the lottery (Chapters 11 and 15): she told him her story and her price, one conto de réis. Once he wins, the first thing he does, even before the money arrives, is go to Albino to buy her. Albino refuses to sell to a Black man. Then the newspapers make him "the lucky Black man", and Albino, knowing about the prize, raises the price every time he comes back (two contos, then five; to verify). When Luzia's letter arrives (ch. 16) and he learns she is dead, he snaps: his mother is gone, and he will not wait on luck any longer. This is not luck: he decides. He bursts into Albino's house with Bastião at his side (decided Oct 30, 2026): two capoeiristas from Kalunga's roda, and Albino's men can see it in how they stand. The threat is simple: he will tell everyone what the "niece" really is and go to the police, and the two of them are strong enough to make the visit unpleasant. \[Catharsis point.\] Selling a free woman is a crime (Criminal Code of 1830, art. 179, reducing a free person to slavery), but he has no proof, and a Black man's word counts for little. It does not matter: Albino does not want trouble or talk, and the man in front of him is ready to pay. Albino takes what he wanted in the first place: one conto. The prize is slow and complicated to collect; Albino, who now wants to be paid, uses his influence to ease it. He pays once the money arrives. He could not save his mother; he can save her. Echo, unspoken: Olúrónbí, the bargain that is paid with a person. And married to a white woman, his children will not be as Black, and as cursed, as he is (his view, shaped by the whitening ideology of the time, never the narrator's): the colour of his family will not be left to luck either. For her it is a relief: she is spared the brothel. In his mind he is saving her, as he could not save his mother. The family legend of "buying a Spanish girl".
       - Marriage without a choice. She is saved and bought at once: grateful to be spared the brothel, hoping he will not be too bad. She calls him "senhor". He gives her no choice, and so, without seeing it, he enslaves her: the seed of most of their conflicts.
 
-### 19\. Jacadigo
+### 18\. Jacadigo
 
   - When / where: late 1870s · Jacadigo, Bolivian border (a rural area about 20–30 km south and southwest of Corumbá: the iron-red Jacadigo hills behind, the plain and the Lagoa do Jacadigo in front, Bolivia over the hills; see project note places-jacadigo)
   - Stories:
@@ -342,7 +336,7 @@ See the research doc "What a Freed Slave Could and Couldn't Do" for sources.
       - Becoming "senhor": demanding, his wishes are orders.
       - He names the farm Liberdade. After slavery, the war, the poor years in Corumbá and the lottery, it reads like the happy ending of an epic: a beautiful farm whose name says everything he fought for. Write it so that the reader believes it too.
 
-### 20\. The House
+### 19\. The House
 
   - When / where: 1878–1886 · Jacadigo
   - Stories:
@@ -357,18 +351,18 @@ See the research doc "What a Freed Slave Could and Couldn't Do" for sources.
           - **c. 1880–81. The horses that drag their legs.** The mal de cadeiras. The peões talk of the evil eye (quebranto). He tries Luzia's herbs, and nothing works: the horse spits out the tea. But he notices that the horses kept on high ground, away from the swamp of the horseflies and the capybaras, do not fall ill. He isolates the sick ones and buys mules: a private war between Bastião and one stubborn mule. The healer of men learns to care for animals, and learns that not everything can be cured.
           - **c. 1881–83. "I want to speak to the owner."** The Descalvados agent comes on the steamer, buying cattle. He takes Benedito for the foreman and asks for the owner. "I am the owner." He goes up the river and sees the steam factory, the first machine he has seen since the war, and the agent pays for good cattle without asking anyone's colour. A big foreign buyer who only looks at the ox.
           - **c. 1884–86. The oxen that disappear.** Liberdade oxen turn up mixed into the Pires herd, and nobody can prove anything. On a steamer a Uruguayan merchant tells him Uruguay is all fenced with wire. He buys the rolls; the cows lean on the fence, one gets tangled in it, and the peões mock "the corral the size of the world". The Pires are furious. In 1887 only "one or two" ranchers in Mato Grosso have fences, and Liberdade is one of them.
-      - Firmino (new character). One of the veterans, a comrade from the war, freed by it like him, and his most loyal man at Liberdade: a great worker, paid wages like the others, the first in the corrals and the last to leave, who learns every improvement and teaches it to the others. His right hand, and one of the few people he trusts. Later Firmino dies (when and how: to decide, before ch. 23); his loss is one of the losses that leave the farm without its old hands (see ch. 23).
-      - **Bastião at Liberdade** (decided Oct 30, 2026). Bastião, who came with Luzia's letter (ch. 17–18), stays, and becomes, with Firmino, one of the most trusted men at Liberdade: Firmino the farm's best hand, Bastião the friend from before everything.
+      - Firmino (new character). One of the veterans, a comrade from the war, freed by it like him, and his most loyal man at Liberdade: a great worker, paid wages like the others, the first in the corrals and the last to leave, who learns every improvement and teaches it to the others. His right hand, and one of the few people he trusts. Later Firmino dies (when and how: to decide, before ch. 22); his loss is one of the losses that leave the farm without its old hands (see ch. 22).
+      - **Bastião at Liberdade** (decided Oct 30, 2026). Bastião, who came with Luzia's letter (ch. 16–17), stays, and becomes, with Firmino, one of the most trusted men at Liberdade: Firmino the farm's best hand, Bastião the friend from before everything.
       - The other landlords mock him at first, but grow wary of him as a competitor. He can produce, he has competitive prices, and he has fewer problems managing his workforce. His prices concern them most: they have slaves and pay no wages, yet they cannot produce significantly cheaper than Liberdade. The Pires family is one of these competitors.
       - Sources (cattle in the Pantanal and Corumbá, 1870–1914): Embrapa, "Pantanal: ciclos econômicos e berçário natural" (2022), the charque and hides cycle from c. 1870 and lean cattle sent to other provinces: https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1145409/1/Pantanalcicloseconomicos2022.pdf ; "Corumbá e seu papel como entreposto comercial de 1870 a 1914 na economia matogrossense": https://www.academia.edu/87261148/ ; Robert W. Wilcox, Cattle in the Backlands: Mato Grosso and the Evolution of Ranching in the Brazilian Tropics (2017), review: https://muse.jhu.edu/pub/15/article/692073/pdf
       - The slow turn. As the years pass, things change slowly in both of them: smaller incidents at first, then they evolve. She develops the pride; he starts being paranoid. Proposed events (to confirm): her first silk dress ordered from Corumbá; then a piano or European furniture nobody uses; she stops going down to the corrals; she starts correcting his Portuguese and the sons' manners. He counts the cattle twice; he locks the storehouse and keeps the key on him; he hears thieves at night and fires into the sky; later he accuses his sons.
       - The sons are born; Lucília becomes godmother. The first son, raised by his mother and Lucília, is the heir and wants to be accepted by the white elite. She tells the children she came "to marry a rich man", the version grandma heard; she can never write home the truth, and she searches for Ruchla for years.
       - His wife and sons reject his African culture: they are not interested in capoeira or the songs he sings. His ways and traumas make it harder to be close to them, and harder for them to accept his culture: small aspects of racism inside the family.
       - He turns out harsh and strict, his wishes orders, and the marriage sours, with ups and downs. The critical argument: he says, "You said you would rather be sold to a rich man. I am a rich man. I saved you." She answers: "I meant as a maid or a servant, not a sex slave. You didn't save me, you own me. You made me your slave; you never gave me the choice." It breaks his illusion of being her saviour and puts him in the place of the master. A deep inner conflict he does not know how to deal with. She takes over the household money and the farm accounts.
-      - His distrust grows (it starts with the lottery, ch. 17; developed here). Step by step: first he hides his wealth and keeps the money close; then the white neighbours, who hate a rich Black man, and Black people, who envy him, become in his eyes the same threat. He sees thieves everywhere and fires his gun into the sky at night to scare them off. Finally the suspicion turns inward, onto his own house: he accuses his sons of stealing from him (grandma does the same in the prologue). By the end of the chapter he trusts no one but his wife with the accounts, and even that only half.
+      - His distrust grows (it starts with the lottery, ch. 16; developed here). Step by step: first he hides his wealth and keeps the money close; then the white neighbours, who hate a rich Black man, and Black people, who envy him, become in his eyes the same threat. He sees thieves everywhere and fires his gun into the sky at night to scare them off. Finally the suspicion turns inward, onto his own house: he accuses his sons of stealing from him (grandma does the same in the prologue). By the end of the chapter he trusts no one but his wife with the accounts, and even that only half.
       - Nobody is free at Liberdade. Under the name, each of them is trapped in a different way: he by his fear of losing everything and his distrust; his wife, bought and married without a choice; the sons by their father's anger and rules. The narrator never points out the irony; the reader sees it.
       - Her pride and appearances. Once rich, she becomes materialistic, very proud of how rich she appears: clothes, furniture, the house, how the family is seen in Corumbá. This is part of the divide between her and him. She wants her sons to look like nobility. They are partly Black, which bothers her: she is also a bit racist. The sons refuse to work the land, and she does not force them; she does not like to see them doing heavy work, because it makes them look like slaves, and that disgusts her. Another rift with him.
-      - The sons grow up spoiled and disconnected from reality. Still they suffer racism: they are still Black, even if they are rich. They use the money to compensate for it. They are proud, and angry that they cannot be respected because of their race. This pride and anger will matter when they lose everything (ch. 24).
+      - The sons grow up spoiled and disconnected from reality. Still they suffer racism: they are still Black, even if they are rich. They use the money to compensate for it. They are proud, and angry that they cannot be respected because of their race. This pride and anger will matter when they lose everything (ch. 23).
       - The white boys. The Pires sons and Otávio (son of a Corumbá merchant who trades with the farm; minor character) grow up with his sons, always around at Liberdade. He is reminded of his own childhood with Tonico. But he notices bad intentions towards his sons: they call them moleque when they think no one is listening; in their games his sons are always the horse, the servant, the one who fetches; they ask too many questions (how many head of cattle, where the money is kept); small things go missing after their visits. He warns his sons, but this creates more rifts. His wife is always in favour of the white boys: for her they are a way to get closer to their parents, to be among the noble. He second-guesses himself: Tonico turned out to be a loyal friend after all. Finally he allows the white boys to be always around, and his sons to be with them. The negative signs never disappear; whenever he mentions them, he is accused of being distrustful and paranoid. For the reader: he is paranoid, but not always wrong.
       - The Pires and the wife. The Pires find a chance to remain close to the family at Liberdade by attracting her. They can see she wants to be included, so they lure her in. Through her they learn about the farm, and slowly they manipulate her into conflicts with her husband: they suggest she is not being treated as well as she should be, they make her feel she is not living the life she should; they keep showing her how they live and how much she is still missing. This feeds the rift between the couple. He does not really like the Pires; he can see their bad intentions clearly. They keep a strange relationship, mostly because of the ties of his wife and sons. The Pires are fake people, but very good at keeping the appearance of nobility, education and respect. They can manipulate his wife and sons, but not him. Very often he is put in the position of having to accept the Pires or lose his relationship with his wife and sons. He becomes increasingly paranoid, often with reason, but over time that gets blurry.
       - Option: Luiz Gama, the Black abolitionist lawyer, challenges him in a letter or a meeting (Gama dies in 1882): he bought a woman to free her, but did he give her a choice?
@@ -388,14 +382,14 @@ See the research doc "What a Freed Slave Could and Couldn't Do" for sources.
   - Notes:
       - His throwing himself into the work in the first years is inspired by Rafael's grandfather, Rivaldo (decided Oct 30, 2026). \[FAMILY TRADITION, used as inspiration\]
 
-### 21\. São João
+### 20\. São João
 
   - When / where: c. 1886–88 · Jacadigo
   - Stories:
       
       - A June night on the farm. One of his sons, about 7 or 8, comes home from the festa de São João dressed as a caipira, a moustache and beard painted on with burnt cork, laughing, holding a paper lantern, smelling of bonfire smoke. The father sees the painted beard on a small boy's face in the firelight and is back at Acosta Ñu. He beats the child hard, without a word, then scrubs his face until the skin is raw. The boy thinks: "Why does he have to be so angry?", the words his father once thought about the master. He never explains; the family never learns why, so it looks like pure cruelty. Only the reader knows.
       - His wife pulls the child away and, for the first time, stands against him in front of the children. After years of building the farms together she no longer recognises him; it feels like a betrayal of their partnership. The distance that opens that night is the deepest in their marriage and never fully closes.
-      - The son grows up afraid of his father and never understands (pays off in ch. 24).
+      - The son grows up afraid of his father and never understands (pays off in ch. 23).
       - He never goes to a São João again: every June he stays in the dark while the bonfires burn on the neighbouring farms.
   - Notes:
       
@@ -403,7 +397,7 @@ See the research doc "What a Freed Slave Could and Couldn't Do" for sources.
       - Real aspects: the festas juninas (bonfires, quadrilha dances, children dressed as caipiras) as a living tradition; the war's trauma passed silently to children who never saw it.
       - To verify: that drawn-on moustaches and beards for children were part of São João in the 1880s (if not, charcoal face-painting or another period costume detail); the false beards at Acosta Ñu (Clodfelter, Warfare and Armed Conflicts, 4th ed., 2017, p. 322, a secondary source; a primary source is still to find).
 
-### 22\. The Gates
+### 21\. The Gates
 
   - When / where: 1888–1889 · Jacadigo
   - Stories:
@@ -413,7 +407,7 @@ See the research doc "What a Freed Slave Could and Couldn't Do" for sources.
 
 ## PART VI — THE FALL (1890s)
 
-### 23\. The Name
+### 22\. The Name
 
   - When / where: 1890s · Jacadigo
   - Stories:
@@ -425,15 +419,15 @@ See the research doc "What a Freed Slave Could and Couldn't Do" for sources.
       - **Alone** (decided Oct 30, 2026). By his last years every trusted friend is gone: Bastião, Firmino, the veterans of Liberdade; from Bahia, no news of Tonico ever again. He dies feeling alone, even with his wife and children around him: they are there, but none of them knew the boy, the soldier or the songs.
       - His death. He tells his wife his true name; the reader never hears it. She keeps it. Around him, the lament comes back, in the sons' mouths or only in his head: "We look for our father, and cannot find him." The watercourse keeps its name (see research/music/luzia-songs.md).
 
-### 24\. The Table
+### 23\. The Table
 
   - When / where: 1890s · Corumbá
   - Stories:
       
       - The sons inherit; the Pires lend on credit. Dr. Teles's deeds were clean, and the land is lost anyway: registries, credit and inheritance law work as they were built to.
       - Why they start: the sons never learned to run the land, and Liberdade loses money year after year. Every time there is trouble at the farm, they gamble to raise cash. Their father bet on luck and won, didn't he? It is their easy way out.
-      - Who they play with: the white boys they grew up with (ch. 20), now men, the Pires sons and Otávio, who pretend to be their friends and want only their wealth. The cards are marked. The whites take it slowly, sometimes letting them win, eating away at what they have. Pride and the wish to be like the white elite keep the sons at the table. They resent their father, but they do not want to be poor; they lose everything out of pride and the desire to be like the white elite.
-      - The last game: they are pushed to go all in, sure they hold a great hand: "The cards will open the way." One of them hums Olúrónbí at the table without knowing what it is. It seals it: they lose everything. The whites win. That night the son of the São João beating (ch. 21) has, for the first time, let himself grow a beard, some time after his father's death.
+      - Who they play with: the white boys they grew up with (ch. 19), now men, the Pires sons and Otávio, who pretend to be their friends and want only their wealth. The cards are marked. The whites take it slowly, sometimes letting them win, eating away at what they have. Pride and the wish to be like the white elite keep the sons at the table. They resent their father, but they do not want to be poor; they lose everything out of pride and the desire to be like the white elite.
+      - The last game: they are pushed to go all in, sure they hold a great hand: "The cards will open the way." One of them hums Olúrónbí at the table without knowing what it is. It seals it: they lose everything. The whites win. That night the son of the São João beating (ch. 20) has, for the first time, let himself grow a beard, some time after his father's death.
       - Silvio, the second son, his father's favourite, becomes a sort of miner, a garimpeiro searching for precious stones (after the farms are lost, to confirm), also believing in luck. He is always scamming people, trying to find the easy way out of things and make easy money. He makes some great deals at times, but also loses a lot on gambling and fighting. "The ground will open the way." (Where he digs: to research, the diamond garimpos of Mato Grosso.)
 
 ## Epilogue (option) — What Remains
@@ -529,7 +523,7 @@ E2 \[plan\] The newspapers call him "the lucky Black man".
 
 E3 \[plan\] Luzia's letter: the shock of a mother who turned against luck.
 
-E4 \[decided Oct 30, 2026\] Tonico finds Bastião and sends the letter with him; Bastião, who cannot read, carries it to Corumbá (Interlude, ch. 17–18).
+E4 \[decided Oct 30, 2026\] Tonico finds Bastião and sends the letter with him; Bastião, who cannot read, carries it to Corumbá (Interlude, ch. 16–17).
 
 E5 \[new\] After reading her letter he burns his own unsent war letters, or keeps them forever.
 
@@ -571,7 +565,7 @@ H2 \[plan\] The Pires neighbours: polite in public, hostile in private; later le
 
 H3 \[plan\] Did the farms use enslaved labour before 1888? The hardest choice in the book.
 
-H4 \[plan\] He hosts fugitives from nearby ranches for a while, then, paranoid and jealous, sends them all away in anger. (Bastião joins him at Liberdade c. 1878, ch. 20.)
+H4 \[plan\] He hosts fugitives from nearby ranches for a while, then, paranoid and jealous, sends them all away in anger. (Bastião joins him at Liberdade c. 1878, ch. 19.)
 
 H5 \[decided\] Ezequiel's arc ends in Bahia with Tonico's: Tonico fires and banishes him; rumours of his end (Interlude).
 

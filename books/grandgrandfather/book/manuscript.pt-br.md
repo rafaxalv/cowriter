@@ -140,39 +140,35 @@ Ela manteve a cara parada. Não olhou pra trás, pra fila. Tinha catorze anos, e
 
 ## PARTE III — LIVRE, MAS NÃO IGUAL (1870–c. 1877)
 
-### 10. O Rio
+### 10. O Papel
 
 *(a escrever)*
 
-### 11. O Papel
-
-*(a escrever)*
-
-### 12. O Bilhete
+### 11. O Bilhete
 
 *(a escrever)*
 
 ## PARTE IV — A MULHER DA ESPANHA
 
-### 13. Galiza
+### 12. Galiza
 
 *(a escrever)*
 
-### 14. A Travessia
+### 13. A Travessia
 
 *(a escrever)*
 
-### 15. Buenos Aires
+### 14. Buenos Aires
 
 *(a escrever)*
 
-### 16. Rio Acima
+### 15. Rio Acima
 
 *(a escrever)*
 
 ## PARTE V — FORTUNA
 
-### 17. A Loteria
+### 16. A Loteria
 
 *(a escrever)*
 
@@ -180,33 +176,33 @@ Ela manteve a cara parada. Não olhou pra trás, pra fila. Tinha catorze anos, e
 
 *(a escrever)*
 
-### 18. A Compra
+### 17. A Compra
 
 *(a escrever)*
 
-### 19. Jacadigo
+### 18. Jacadigo
 
 *(a escrever)*
 
-### 20. A Casa
+### 19. A Casa
 
 *(a escrever)*
 
-### 21. São João
+### 20. São João
 
 *(a escrever)*
 
-### 22. As Porteiras
+### 21. As Porteiras
 
 *(a escrever)*
 
 ## PARTE VI — A QUEDA
 
-### 23. O Nome
+### 22. O Nome
 
 *(a escrever)*
 
-### 24. A Mesa
+### 23. A Mesa
 
 *(a escrever)*
 

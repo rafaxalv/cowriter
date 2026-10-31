@@ -1,8 +1,8 @@
 # Pecuária no Pantanal, c. 1870–1890: o que a Liberdade pode mudar
 
-30 out. 2026 · pesquisa para Rafael (cap. 20, os primeiros anos na Liberdade, 1878–1886)
+30 out. 2026 · pesquisa para Rafael (cap. 19, os primeiros anos na Liberdade, 1878–1886)
 
-Rótulos de verdade como no BOOK.md. Onde a fonte trata de outro lugar ou época, isso está dito. As "histórias de descoberta" de cada seção são propostas para o cap. 20 [FICTIONAL]; a prática em si é documentada.
+Rótulos de verdade como no BOOK.md. Onde a fonte trata de outro lugar ou época, isso está dito. As "histórias de descoberta" de cada seção são propostas para o cap. 19 [FICTIONAL]; a prática em si é documentada.
 
 ## 0. O ponto de partida: quase ninguém fazia o básico
 
@@ -19,7 +19,7 @@ Rótulos de verdade como no BOOK.md. Onde a fonte trata de outro lugar ou época
   - **O sal amansa.** No Pantanal, o jeito tradicional de amansar o gado bagual (selvagem) era juntá-lo ao gado manso para que comesse sal dos **cochos** e perdesse o medo do homem. O gado que conhece o sal volta sozinho para o lugar do cocho. [DOCUMENTED, etnografia moderna] (Süssekind 2016)
   - **Detalhe útil:** vacas e bois **gostam muito de sal** e o procuram por conta própria; um estoque mal guardado atrai o rebanho. [PLAUSIBLE RECONSTRUCTION, comportamento conhecido]
   - **Os efeitos na história:** gado mais gordo, mais bezerros, e gado que vem quando se chama. Isso facilita tudo o mais (contagem, marcação, venda).
-  - **História de descoberta (proposta):** os bois roubam o sal. Ver o cap. 20.
+  - **História de descoberta (proposta):** os bois roubam o sal. Ver o cap. 19.
 
 ## 2. A cerca
 
@@ -27,7 +27,7 @@ Rótulos de verdade como no BOOK.md. Onde a fonte trata de outro lugar ou época
   - **Como se cercava antes do arame** (no Sul, onde há estudos): **valos** (valas), cercas vivas de espinho, cactos e gravatás, cercas de madeira e muros de pedra. Os muros de pedra serviam sobretudo para o manejo do gado (currais, invernadas). [DOCUMENTED] (Garcia 2024, Rio Grande do Sul)
   - **O arame:** na Argentina, o primeiro cercado de arame é de 1843; no Uruguai, há referências desde o fim dos anos 1850, e em 1884 o país estava quase todo cercado. No Brasil, a referência mais antiga é um anúncio em Pelotas, em 1863. A importação do RS saltou de 58 rolos (1876) para 5.951 (1881); nos anos 1880, uma em cada dez fazendas da Campanha tinha arame, e em 1886 a primeira foi toda cercada (e passou a valer mais que as vizinhas). Em 1874 o arame custava 500 réis por braça, contra 2$000 do muro de pedra. [DOCUMENTED] (Garcia 2024)
   - **O arame farpado** foi inventado nos EUA nos anos 1870 (Wilcox 2009). Os primeiros cercados platinos eram de arame **liso**. A data em que o farpado chega a Mato Grosso: **to verify**.
-  - **O que isso permite no livro:** Corumbá comerciava rio abaixo com Montevidéu e Buenos Aires (entreposto de 1870 a 1914, fonte no plano do cap. 20). Comprar arame liso uruguaio pelo rio é [PLAUSIBLE RECONSTRUCTION]. A Liberdade pode ser uma das "uma ou duas" fazendas cercadas em 1887.
+  - **O que isso permite no livro:** Corumbá comerciava rio abaixo com Montevidéu e Buenos Aires (entreposto de 1870 a 1914, fonte no plano do cap. 19). Comprar arame liso uruguaio pelo rio é [PLAUSIBLE RECONSTRUCTION]. A Liberdade pode ser uma das "uma ou duas" fazendas cercadas em 1887.
   - **O lado escuro (documentado no Sul):** a cerca diminuiu a necessidade de peões e expulsou agregados e posseiros; houve brigas de limite entre vizinhos. [DOCUMENTED] (Garcia 2024) Pode alimentar a hostilidade dos Pires.
 
 ## 3. Amansar, contar e marcar o gado

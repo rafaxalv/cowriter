@@ -76,7 +76,7 @@ How this voice makes the reader feel what each scene's Reader feeling (in Scenes
 3.  **Dark humour as pressure.** A deadpan line or absurd detail next to the horror, never mocking the victim. Do: the haggling over her like over a horse. Don't: a joke at her pain.
 4.  **Catharsis is rationed.** The Tarantino release (the worst turns on someone who earned it, and the camera stays to watch) happens only at the catharsis points marked in Chapters. Everywhere else violence lands with no release. Even at those points, the one who wins keeps his contradictions and pays a cost.
 
-Catharsis points (Chapters, Oct 10, 2026; to revisit): ch. 3, he beats Ezequiel; Interlude, Tonico banishes Ezequiel with the urine letter; ch. 5, Tuiuti (the zouaves hold in the mud) and Curuzu (Marcolino plants the flag from his back); ch. 9, he stops Damião; ch. 18, he bursts into Albino's house.
+Catharsis points (Chapters, Oct 10, 2026; to revisit): ch. 3, he beats Ezequiel; Interlude, Tonico banishes Ezequiel with the urine letter; ch. 5, Tuiuti (the zouaves hold in the mud) and Curuzu (Marcolino plants the flag from his back); ch. 9, he stops Damião; ch. 17, he bursts into Albino's house.
 
 ## Language layer: EN
 
