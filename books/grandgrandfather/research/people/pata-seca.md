@@ -24,7 +24,7 @@ Rótulos de verdade como no BOOK.md. Pata Seca tem descendentes vivos: no livro 
   - Não há registro de filhos de Pata Seca na Guerra do Paraguai. Roque Júnior é inventado.
   - **Plausibilidade:** se Pata Seca nasceu c. 1827/28, um filho nascido c. 1846–48 teria 18–20 anos em 1866. Escravizados paulistas também foram mandados à guerra (libertos para servir, substitutos). Ele não estaria no batalhão de Benedito (baiano), mas as tropas se misturavam nos acampamentos e enfermarias. [PLAUSIBLE RECONSTRUCTION]
   - **A mãe diz** que Pata Seca é o pai, e lhe deu o nome dele; nunca confirmado. Em 1866 ele diria "meu pai tem muitos filhos", não os 200 da lenda, que se formou depois.
-  - **No plano:** cap. 5 (a fama dos 50 mortos), cap. 6 (ferido em Curupaiti, a enfermaria, "um espécime raro", a história), cap. 7 (salva Benedito em Humaitá: "Agora estamos quites"), cap. 10 (volta para São Paulo; Benedito nunca mais sabe dele).
+  - **No plano:** cap. 4 (Benedito o vê pela primeira vez nos acampamentos do sul, sem história), cap. 5 (ferido em Curupaiti, trazido pelas macas), cap. 6 (a enfermaria, "um espécime raro", a história), cap. 7 (salva Benedito do Sargento Mbareté no assalto a Humaitá, 16 jul. 1868: "Agora estamos quites"), cap. 10 (volta para São Paulo; Benedito nunca mais sabe dele).
   - **Ideia do Concept:** família e descendência. Um pai de filhos demais para ser pai de algum.
   - **Cuidado:** sem detalhe sexual; o peso fica no filho e nas mulheres; Pata Seca nunca em cena.
 
