@@ -22,3 +22,4 @@ Status: `wanted` (not started), `downloading`, `needs domain` (name it), `needs 
 | Stephen Crane | Short stories (The Open Boat and others) | EN | all | Gutenberg | needs domain | Not found on Standard Ebooks |
 | Leo Tolstoy | The Death of Ivan Ilyich; The Cossacks; short stories (Maude translations) | EN | all | Gutenberg | needs domain | Not found on Standard Ebooks |
 | Fyodor Dostoevsky | The Idiot (Garnett) | EN | all | Gutenberg | needs domain | Not found on Standard Ebooks |
+| Machado de Assis | Memórias póstumas de Brás Cubas; Dom Casmurro (clean copies) | PT | all | Wikisource pt | wanted | Current NLTK copies lost their dialogue dashes; needed for dialogue measures |
