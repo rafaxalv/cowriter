@@ -2,7 +2,7 @@
 
 Full texts of public-domain books, kept as style references for the voices of any book in this repo (see each book's `voices/00-author-library.md`). Shared by all books; nothing book-specific goes here.
 
-Every text here is public domain in the US and Brazil: books published in 1930 or earlier, by authors who died more than 70 years ago, in their original language or in an old public-domain translation. Modern translations (e.g. Pevear and Volokhonsky) are under copyright and are not included. One folder per author; one plain-text file per book, with a short header naming the source.
+Every text here is public domain in the US and Brazil unless marked "BR only" (free in Brazil, for the Portuguese layer): books published in 1930 or earlier, by authors who died more than 70 years ago, in their original language or in an old public-domain translation. Modern translations (e.g. Pevear and Volokhonsky) are under copyright and are not included. One folder per author; one plain-text file per book, with a short header naming the source.
 
 ## Russian (English translations)
 
@@ -34,6 +34,7 @@ Every text here is public domain in the US and Brazil: books published in 1930 o
 | Machado de Assis | Relíquias de casa velha (1906), stories incl. "Pai contra mãe" and "Um capitão de voluntários" | `machado-de-assis/contos-reliquias-de-casa-velha.txt` |
 | Aluísio Azevedo | O cortiço (1890) | `azevedo/o-cortico.txt` |
 | Manuel Antônio de Almeida | Memórias de um sargento de milícias (1854) | `almeida/memorias-de-um-sargento-de-milicias.txt` |
+| Graciliano Ramos | Vidas secas (1938, first edition), **BR only** | `graciliano-ramos/vidas-secas.txt` |
 
 ## Spanish American (original Spanish)
 
@@ -67,6 +68,6 @@ Every text here is public domain in the US and Brazil: books published in 1930 o
 - Azevedo and Almeida: Wikisource (pt), via the literaturaBR corpus (github.com/sillasgonzaga/literaturaBR).
 - Quiroga and Hernández: GITenberg mirrors on GitHub.
 
-## Wanted, not yet found
+## Wanted
 
-Taunay (A retirada da Laguna, Inocência), Lima Barreto, Euclides da Cunha (Os sertões), Castro Alves, Maria Firmina dos Reis (Úrsula), Simões Lopes Neto, Rafael Barrett (El dolor paraguayo), Harriet Jacobs, Stephen Crane's stories. Graciliano Ramos (Vidas secas) is public domain in Brazil but not yet in the US.
+Books chosen but not yet downloaded are in `QUEUE.md`. The **library-builder** skill proposes new books, downloads them and keeps the queue.
