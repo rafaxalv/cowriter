@@ -48,13 +48,13 @@ Who each character is, in short bullets: role, personality, motives, relationshi
   - Loves music and dance (batuques, samba de roda): where he feels free. Athletic, a capoeirista; in the war capoeira becomes a weapon (ch. 3, 5).
   - Violence is the first language he learned: not angry day to day, but explosive when disrespected ("moleque" is enough).
   - His anger slowly decreases with Kalunga's lessons but is always present (ch. 3); it comes back after the war (ch. 10).
-  - Free and rich, he is demanding: his wishes are orders. Jealous of his wife (ch. 15, 17).
-  - Good with the land and with men: works beside his workers, knows their language, finds smarter ways to run the farm (ch. 15).
-  - In the first years at Liberdade he works harder than anyone and no job is beneath him; he finds, almost by accident, what changes the farm: salt, counting and branding, cacimbas, hides, the sick horses, Descalvados, the fence (ch. 15). Inspired by Rafael's grandfather Rivaldo.
+  - Free and rich, he is demanding: his wishes are orders. Jealous of his wife (ch. 15, 16).
+  - Good with the land and with men: works beside his workers, knows their language, finds smarter ways to run the farm (ch. 14).
+  - In the first years at Liberdade he works harder than anyone and no job is beneath him; he finds, almost by accident, what changes the farm: salt, counting and branding, cacimbas, hides, the sick horses, Descalvados, the fence (ch. 14, 15). Inspired by Rafael's grandfather Rivaldo.
   - Sees through the Pires, though they can manipulate his wife and sons (ch. 15).
   - Never really loved Carmen: liked and admired her; Rosária was the real connection (ch. 10, 13). Suspects his sons' spoiled ways are the white part of their blood, and thinks of Ezequiel (ch. 15).
-  - Wants to teach his sons the farm, as Inácio taught him, and to sing with them, as Luzia did; they prefer their mother's world. Resents them as spoiled, weak and unaware of how hard the world is, like the worst of Tonico; feels they are not even his friends (ch. 15, 18).
-  - In old age his memory fails, never named as a disease (ch. 18).
+  - Wants to teach his sons the farm, as Inácio taught him, and to sing with them, as Luzia did; they prefer their mother's world. Resents them as spoiled, weak and unaware of how hard the world is, like the worst of Tonico; feels they are not even his friends (ch. 15, 17).
+  - In old age his memory fails, never named as a disease (ch. 17).
   - The key to him: innocent of what he is accused of, guilty of what nobody knows (Acosta Ñu, refusing to help Joca; ch. 6, 9).
 
 ### What he wants
@@ -76,8 +76,8 @@ Who each character is, in short bullets: role, personality, motives, relationshi
 | Free, not equal | 1870–c. 1877 | 24–31 | Freedom without money, papers or respect is still a kind of slavery | 10 |
 | Luck | c. 1877 | 31 | Luck proved "right" feeds his worst instincts; the prize brings distrust | 12 |
 | Wealth | late 1870s–1880s | 31–c. 40 | Becomes a master who "buys" a person | 13–15 |
-| Abolition | 1888 | 42 | Celebrates; the white neighbours never accept him | 17 |
-| Death | 1890s | | The fortune he never trusted the world with goes to sons he never taught | 18 |
+| Abolition | 1888 | 42 | Celebrates; the white neighbours never accept him | 16 |
+| Death | 1890s | | The fortune he never trusted the world with goes to sons he never taught | 17 |
 
 ### Wounds and traumas
 
@@ -85,24 +85,24 @@ Who each character is, in short bullets: role, personality, motives, relationshi
   - Second wound: losing his mother; he searches the lists of the freed until her letter comes (ch. 2, 10, 12).
   - Freedom bought with his body, offered by his master, even though he chose to go (ch. 3).
   - The cholera camps (ch. 6).
-  - Acosta Ñu: the boy with the false beard; the memory he never tells (ch. 9), which returns at São João (ch. 16).
-  - Hit in the head at Humaitá (1868): headaches ever after, slowly worse, a real problem only in old age, feeding his anger and confusion (ch. 7, 10, 15, 18).
+  - Acosta Ñu: the boy with the false beard; the memory he never tells (ch. 9), which returns at São João (ch. 15).
+  - Hit in the head at Humaitá (1868): headaches ever after, slowly worse, a real problem only in old age, feeding his anger and confusion (ch. 7, 10, 15, 17).
   - Accused of what he tried to stop (Joca's whipping, Damião's rampage): no trial, only the stain (ch. 5, 9). Echoes the family's oral tradition about Brazilian soldiers and Paraguayan women.
   - His wife and sons reject his African culture (ch. 15).
-  - Bastião killed by the Pires' men, and nobody believes him; his own family joins the gaslighting: the loss that starts his decline (ch. 18).
-  - Dies alone: every trusted friend gone before him (Bastião, Firmino, the veterans; no news of Tonico), though his wife and children are with him (ch. 18).
+  - Bastião killed by the Pires' men, and nobody believes him; his own family joins the gaslighting: the loss that starts his decline (ch. 17).
+  - Dies alone: every trusted friend gone before him (Bastião, Firmino, the veterans; no news of Tonico), though his wife and children are with him (ch. 17).
 
 ### Names others give him
 
   - The master's family: "the boy". Luzia: a secret Yoruba name. The army roll: a registered name we never see. Comrades: "Zuavo". Newspapers: "the lucky Black man". His wife: "senhor", and in rare private moments something the reader never hears. The narration: only *he*.
-  - Padre Felício's list holds his real name and is lost (ch. 6, 9). He tells his wife his true name before he dies; the reader never hears it (ch. 18).
+  - Padre Felício's list holds his real name and is lost (ch. 6, 9). He tells his wife his true name before he dies; the reader never hears it (ch. 17).
 
 ## Theme: luck, fortune and the gambling inheritance
 
   - Luck is a worldview, not a curse: a rational belief for people whose effort never paid off, and luck sees no race.
   - The lottery win is the trap: it proves his faith "right", and he teaches his sons that money comes from the sky (ch. 12).
   - Luzia turns against luck; her letter reaches him just as the lottery proves his faith right. The shock leads to The Purchase: he decides instead of waiting (ch. 13).
-  - Each generation: he sees luck as justice; the woman from Spain trusts only what she can count (luck against ledgers is one of their recurring arguments); the sons gamble to cover losses, then out of pride, to sit as equals at the white men's table (ch. 19); grandma plays small and regularly, a ritual of hope (Epilogue).
+  - Each generation: he sees luck as justice; the woman from Spain trusts only what she can count (luck against ledgers is one of their recurring arguments); the sons gamble to cover losses, then out of pride, to sit as equals at the white men's table (ch. 18); grandma plays small and regularly, a ritual of hope (Epilogue).
   - Signs and dreams: the Ogum guia, his mother's songs, a dream that points to a number (ch. 10).
   - Language: *vício do jogo* or *mania*, never "addiction". The book never moralises against gambling.
   - Real aspects: imperial and provincial lotteries; the 1874 *Lei do Sorteio* (to verify); the lottery as one of the few ways up for poor and Black Brazilians.
@@ -111,10 +111,10 @@ Who each character is, in short bullets: role, personality, motives, relationshi
 
 Shown through scenes and repeated lines, never explained. Some chains break or mutate, by chance.
 
-  - **Faith in luck.** "The orixás will open the way" (Luzia) → "Luck will open the way" (him) → "The cards will open the way" (a son, ch. 19) → "The ground will open the way" (Silvio, ch. 19) → grandma's lottery (Epilogue).
-  - **Violence.** "Why does he have to be so angry?": the boy about the master (ch. 2), his son about him (ch. 16). Ezequiel shows the chain at its darkest (ch. 2). Grandma "could be really mean" (prologue).
-  - **Fear of losing everything.** Luzia sold and scammed (ch. 2, Interlude); his distrust starts with the lottery (ch. 12), grows on the farm (ch. 15), peaks at the gates (ch. 17), blurs with his memory (ch. 18). Paranoid, but not always wrong (ch. 15, 19). Grandma fires a shotgun at a noise on the roof and accuses people of stealing her things (prologue).
-  - **Music.** Luzia's songs: in the market and over Inácio (ch. 2), in the war, on the farm; rejected by his family (ch. 15); one son hums one without knowing it (ch. 18, 19). The songs and lines (Olúrónbí, the funeral lament, Orí ni baba, Atotô, Ògún yè) are in research/music/luzia-songs.md. What reaches grandma: to decide.
+  - **Faith in luck.** "The orixás will open the way" (Luzia) → "Luck will open the way" (him) → "The cards will open the way" (a son, ch. 18) → "The ground will open the way" (Silvio, ch. 18) → grandma's lottery (Epilogue).
+  - **Violence.** "Why does he have to be so angry?": the boy about the master (ch. 2), his son about him (ch. 15). Ezequiel shows the chain at its darkest (ch. 2). Grandma "could be really mean" (prologue).
+  - **Fear of losing everything.** Luzia sold and scammed (ch. 2, Interlude); his distrust starts with the lottery (ch. 12), grows on the farm (ch. 15), peaks at the gates (ch. 16), blurs with his memory (ch. 17). Paranoid, but not always wrong (ch. 15, 18). Grandma fires a shotgun at a noise on the roof and accuses people of stealing her things (prologue).
+  - **Music.** Luzia's songs: in the market and over Inácio (ch. 2), in the war, on the farm; rejected by his family (ch. 15); one son hums one without knowing it (ch. 17, 18). The songs and lines (Olúrónbí, the funeral lament, Orí ni baba, Atotô, Ògún yè) are in research/music/luzia-songs.md. What reaches grandma: to decide.
   - **Healing.** Luzia the healer and midwife (ch. 1–2) → Benedito, who nurses his father and becomes a healer in the war (ch. 2, 6) → grandma, a nursing assistant (Prologue, Epilogue). One of the few good things passed down; never explained.
   - **Broken, not inherited:** keeping his head down. He drops it in the war and never lowers it again (ch. 5); on the farm that pride becomes the senhor's anger.
 
@@ -146,8 +146,8 @@ Slavery from the inside: an ordinary sugar estate where cruelty is routine and k
       - Capoeirista, joker, storyteller.
       - Real aspect: capoeira as resistance; quilombos in the Recôncavo.
       - Smart, a very good fighter, taught by Kalunga; knows his way around.
-      - Killed in the 1890s defending Liberdade when the Pires' men steal its cattle; Benedito buries him and cannot prove who did it (ch. 18).
-      - Chapters: ch. 2–3; refuses to go to the war and runs to a quilombo (ch. 3); cannot read: Tonico brings him the newspaper and a pass, and he crosses Brazil carrying Luzia's letter (Interlude), arriving in Corumbá c. late November 1877, four or five months after the win (ch. 12); stands with him when he challenges Albino for the woman from Spain (ch. 13); one of the most trusted men at Liberdade (ch. 15); dies before him, and Benedito buries him (ch. 18).
+      - Killed in the 1890s defending Liberdade when the Pires' men steal its cattle; Benedito buries him and cannot prove who did it (ch. 17).
+      - Chapters: ch. 2–3; refuses to go to the war and runs to a quilombo (ch. 3); cannot read: Tonico brings him the newspaper and a pass, and he crosses Brazil carrying Luzia's letter (Interlude), arriving in Corumbá c. late November 1877, four or five months after the win (ch. 12); stands with him when he challenges Albino for the woman from Spain (ch. 13); one of the most trusted men at Liberdade (ch. 14); dies before him, and Benedito buries him (ch. 17).
   - **Velho Kalunga**, an old capoeirista, a Black man who escaped a farm long ago and lives free.
       - Funny, not solemn: jokes all the time, teases, makes hard things easy. The boys tell legends about him half as jokes (a capitão do mato killed with one kick, dogs that never find his trail, a prince in Africa, a ghost); he neither confirms nor denies, and laughs.
       - Teaches only while joking: every sentence a joke and a lesson; spicy, ironic, philosophical, or silly (farts, Ezequiel's hard dick). Lessons in small pieces: the ginga as instinct; tricking the opponent; the acting game; the mind game; the ginga as an art. "The strongest kicks are delivered with a smile." The clan's creed: the art protects freedom, never imposes on others as the lords did (ch. 3).
@@ -221,11 +221,11 @@ Setting: Corumbá and the Jacadigo farms on the Bolivian border. The war freed h
 
   - **Euclides Bastos**: white comrade from the war; decent but blind. Vouches for Benedito in jail; his land claim goes through while Benedito's stays "under review" (ch. 10). [FICTIONAL] (decided Nov 1, 2026)
   - **Seu Bento**: elderly free Black lottery-ticket seller; his most honest friend; tells him to save; vouches for him against the agent (ch. 10, 12). Real aspect: the lotteries.
-  - **Dr. Aurélio Teles**: white lawyer and notary, honest and correct; every deed still calls him *preto* (ch. 14); the land is lost anyway (ch. 19). Real aspect: the 1850 Land Law and the bureaucracy of exclusion.
-  - **Luiz Gama** (real, option): Black abolitionist lawyer; challenges him over the woman he bought (ch. 15). Real aspect: legal abolitionism.
-  - **The Pires family**: old cattle ranchers next door. Polite in public, hostile in private; fake nobility; slave owners who cannot undersell Liberdade. Manipulate the wife and sons, never him; lend to the sons. Real aspect: exclusion of rich Black men; credit networks (ch. 14, 15, 18, 19).
-  - **Otávio** (minor): a Corumbá merchant's son; grows up with the sons in the Pires boys' shadow, later cheats them at cards (ch. 15, 19). Real aspect: the white elite of Corumbá.
-  - **Firmino**: war comrade freed by the war; his most loyal, wage-paid worker and right hand; dies slowly of an old war wound in the 1880s; his death leaves the farm without its old hands (ch. 15, 18). Real aspect: freed veterans looking for work and land.
+  - **Dr. Aurélio Teles**: white lawyer and notary, honest and correct; every deed still calls him *preto* (ch. 14); the land is lost anyway (ch. 18). Real aspect: the 1850 Land Law and the bureaucracy of exclusion.
+  - **Luiz Gama** (real, option): Black abolitionist lawyer; challenges him over the woman he bought (ch. 14). Real aspect: legal abolitionism.
+  - **The Pires family**: old cattle ranchers next door. Polite in public, hostile in private; fake nobility; slave owners who cannot undersell Liberdade. Manipulate the wife and sons, never him; lend to the sons. Real aspect: exclusion of rich Black men; credit networks (ch. 14, 15, 17, 18).
+  - **Otávio** (minor): a Corumbá merchant's son; grows up with the sons in the Pires boys' shadow, later cheats them at cards (ch. 15, 18). Real aspect: the white elite of Corumbá.
+  - **Firmino**: war comrade freed by the war; his most loyal, wage-paid worker and right hand; dies slowly of an old war wound in the 1880s; his death leaves the farm without its old hands (ch. 14, 15, 17). Real aspect: freed veterans looking for work and land.
 
 ## Carmen, the woman from Spain
 
@@ -249,9 +249,9 @@ Setting: Corumbá and the Jacadigo farms on the Bolivian border. The war freed h
   - Her dream: a respectable marriage, a husband of her choosing, to be a *señora* with a house (ch. 11). (decided Nov 1, 2026)
   - Counts everything: learned from her mother's lacemaking piecework; men believe in luck, women count (ch. 11). (decided Nov 1, 2026)
   - Fear of Black men planted by Madame Angélique's warning; afraid of him at first sight, undone by talking, back later (ch. 10, 11, 15). (decided Nov 1, 2026)
-  - Saved and bought at once: grateful, then hurt; their marriage has warmth and distance, ups and downs (ch. 13, 15).
+  - Saved and bought at once: grateful, then hurt; their marriage has warmth and distance, ups and downs (ch. 13, 14, 15).
   - Once rich: proud of appearances, wants her sons to look like nobility, uneasy that they are partly Black, sides with the white boys; the Pires lure her in (ch. 15).
-  - Traumas: the deception, the passage, the fear of the brothel, losing Ruchla, never writing home the truth (ch. 11, 15).
+  - Traumas: the deception, the passage, the fear of the brothel, losing Ruchla, never writing home the truth (ch. 11, 14).
 
 ### The relationship with him (decided Nov 1, 2026)
 
@@ -259,32 +259,32 @@ Setting: Corumbá and the Jacadigo farms on the Bolivian border. The war freed h
   - Before the lottery: a kind, safe companion, never a candidate; brave, polite, strong, skilled, but poor. She admires him, never connects; never understands his songs, not like Rosária (ch. 10).
   - He probably never loved her: he liked her, she was beautiful, few women around, and she was white (whitening, his view) (ch. 13).
   - Her "yes" at the altar: calm, the best of bad options; free in law, not in fact. The bond is debt and gratitude (ch. 13).
-  - Warm in the first years, cold later; gratitude wears slowly into resentment, no single breaking point (ch. 15).
+  - Warm in the first years, cold later; gratitude wears slowly into resentment, no single breaking point (ch. 14, 15).
   - Learns his life by being sold, then relapses into European racism once rich and courted by the elite (ch. 15).
   - Learns of Rosária once, from Bastião, and never forgets it (ch. 15).
-  - At his death her grief is real: she loved him in her way, and it surprises her (ch. 18).
-  - The widow: takes over with sons who cannot and will not run the farm; fights with her ledgers and loses; her hem money keeps grandma's line alive (ch. 19).
+  - At his death her grief is real: she loved him in her way, and it surprises her (ch. 17).
+  - The widow: takes over with sons who cannot and will not run the farm; fights with her ledgers and loses; her hem money keeps grandma's line alive (ch. 18).
 
 ## Her passage: Vigo → Buenos Aires → Corumbá (c. 1876–1877)
 
 A free European woman could not legally be a slave in Brazil; trafficked women were sold anyway, with no papers and no law that reached them. The family legend of "buying a Spanish girl" is literally true (ch. 13).
 
   - **Señor Alvarado**, the *gancho*: charming recruiter with letters "from girls who married well" (ch. 11). Real aspect: the ganchos; the *trata de blancas*.
-  - **Ruchla (Raquel)**: Jewish girl from Austrian Galicia, her closest friend; sold in Buenos Aires; searched for for years (ch. 11, 15). Real aspect: the *polacas* (later the Zwi Migdal).
+  - **Ruchla (Raquel)**: Jewish girl from Austrian Galicia, her closest friend; sold in Buenos Aires; searched for for years (ch. 11, 14). Real aspect: the *polacas* (later the Zwi Migdal).
   - **Capitán Iriarte**: the steamer's captain; bribed, once kind (ch. 11). Real aspect: corrupt ports.
   - **Doña Engracia**: older Galician woman emigrating legally (ch. 11). Real aspect: ordinary emigration beside trafficking.
   - **Madame Angélique**: French madam in Buenos Aires; keeps her untouched to sell her dear (ch. 11). Real aspect: the Buenos Aires brothel economy.
   - **Seu Albino**: Portuguese tavern owner in Corumbá, a trafficker in secret; crude, cruel, a good host; passes her off as his niece; wants one big private sale; always threatens her with the brothel, and it works (ch. 11). After Benedito's first offer he hides her completely and raises the price; at the showdown he haggles, then sells her for two contos, "double what you ever dreamed of" (ch. 13). Real aspect: Portuguese dominance of commerce and trafficking.
-  - **Lucília**: free Black laundress at Albino's; her first friend; teaches her Portuguese, then is kept away from her while Albino hides her (ch. 11, 13); godmother of her first son (ch. 11, 13, 15). Real aspect: free Black women's work and *compadrio*.
+  - **Lucília**: free Black laundress at Albino's; her first friend; teaches her Portuguese, then is kept away from her while Albino hides her (ch. 11, 13); godmother of her first son (ch. 11, 13, 14). Real aspect: free Black women's work and *compadrio*.
 
 ## The sons
 
   - Born c. 1878–1890; rich, mixed-race (*mestiços*), accepted by neither side; grow up in the years of abolition and the Republic.
   - Spoiled and wounded: never learn the land; suffer racism however rich; proud and angry; use money to compensate (ch. 15).
   - Prefer their mother's world (reading, manners, good clothes, coffees with the elite children, riding) to their father's farm and songs; think he works too much and smells of cow shit (ch. 15).
-  - Lose everything at the card table to the white boys they grew up with (ch. 19). The *jogo do bicho* (Rio, 1892) stays in the background, for grandma's time.
-  - **First son**: raised by his mother and Lucília; the heir; wants the white elite's acceptance (ch. 15). The son beaten at São João, afraid of his father all his life (ch. 16, 19). To add: name, character, what he gambled on.
-  - **Silvio**: his father's favourite; cocky, lucky at cards until he isn't; scams people, looks for easy money; becomes a garimpeiro (ch. 19). Strikes a diamond and gambles it away in one night (ch. 19). To add: where he digs (the diamond garimpos of Mato Grosso).
+  - Lose everything at the card table to the white boys they grew up with (ch. 18). The *jogo do bicho* (Rio, 1892) stays in the background, for grandma's time.
+  - **First son**: raised by his mother and Lucília; the heir; wants the white elite's acceptance (ch. 14, 15). The son beaten at São João, afraid of his father all his life (ch. 15, 18). To add: name, character, what he gambled on.
+  - **Silvio**: his father's favourite; cocky, lucky at cards until he isn't; scams people, looks for easy money; becomes a garimpeiro (ch. 18). Strikes a diamond and gambles it away in one night (ch. 18). To add: where he digs (the diamond garimpos of Mato Grosso).
   - **Others / daughters**: grandma's line; who carried the story down to her: to decide.
 
 ## Who is around at each stage (a menu, not a cast list)

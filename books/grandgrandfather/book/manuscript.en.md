@@ -162,29 +162,25 @@ She kept her face still. She did not look back at the line. She was fourteen, an
 
 *(to be written)*
 
-### 14. Jacadigo
+### 14. Liberdade
 
 *(to be written)*
 
-### 15. The House
+### 15. São João
 
 *(to be written)*
 
-### 16. São João
-
-*(to be written)*
-
-### 17. The Gates
+### 16. The Gates
 
 *(to be written)*
 
 ## PART VI — THE FALL
 
-### 18. The Name
+### 17. The Name
 
 *(to be written)*
 
-### 19. The Table
+### 18. The Table
 
 *(to be written)*
 

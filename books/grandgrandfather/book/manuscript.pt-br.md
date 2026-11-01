@@ -162,29 +162,25 @@ Ela manteve a cara parada. Não olhou pra trás, pra fila. Tinha catorze anos, e
 
 *(a escrever)*
 
-### 14. Jacadigo
+### 14. Liberdade
 
 *(a escrever)*
 
-### 15. A Casa
+### 15. São João
 
 *(a escrever)*
 
-### 16. São João
-
-*(a escrever)*
-
-### 17. As Porteiras
+### 16. As Porteiras
 
 *(a escrever)*
 
 ## PARTE VI — A QUEDA
 
-### 18. O Nome
+### 17. O Nome
 
 *(a escrever)*
 
-### 19. A Mesa
+### 18. A Mesa
 
 *(a escrever)*
 

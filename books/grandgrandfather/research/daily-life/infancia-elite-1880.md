@@ -22,7 +22,7 @@ Rótulos de verdade como no BOOK.md. Fontes sobre Corumbá nos anos 1880 são po
   - **Aulas em casa:** leitura, caligrafia, catecismo, contas; francês para quem quer parecer da elite. [PLAUSIBLE RECONSTRUCTION; to verify para Corumbá]
   - **Cafés e visitas** com os filhos dos Pires e de Otávio (já no plano); missa de domingo de roupa nova. [PLAUSIBLE RECONSTRUCTION]
   - **Esportes "de moda":** no Rio, desde os anos 1850–70, a elite tinha o turfe (corridas de cavalo; Jockey Club em 1868), o remo (regatas; Club de Regatas Guanabarense, 1874) e o críquete dos ingleses. [DOCUMENTED, Rio] (Melo 2015) Em Corumbá, uma corrida de cavalos entre filhos de fazendeiros, ou regatas no rio Paraguai imitando o Rio e o Prata, seriam plausíveis, mas sem fonte por enquanto. [to verify]
-  - **Teatro amador e festas beneficentes** (documentados a partir de 1894): servem para os anos 1890, quando os filhos já são rapazes (caps. 17–19). [DOCUMENTED para 1894+]
+  - **Teatro amador e festas beneficentes** (documentados a partir de 1894): servem para os anos 1890, quando os filhos já são rapazes (caps. 16–18). [DOCUMENTED para 1894+]
 
 ## A verificar
 
