@@ -137,6 +137,7 @@ Slavery from the inside: an ordinary sugar estate where cruelty is routine and k
       - Never a candidate for the war; watches his milk brother leave and stays. A loyal friend after all.
       - Real aspect: the exemption of the elite; the "milk brother" bond.
       - Chapters: ch. 1–2, 3; banishes Ezequiel, finds Luzia, always knows where Kalunga and Bastião hide and never tells (Interlude); reads of the lottery, goes to Kalunga's hideout for the first time and is made a member of the Kalunga clan; takes Bastião down the river as his captured runaway past the capitães do mato who know him, then leaves him with a pass naming Tonico as owner, Luzia's letter, and his own: an apology for never helping, he was a boy and afraid; he cannot leave the estate (Interlude; read in ch. 17). Never goes to Liberdade; after the letter there is no news of him again (decided Oct 30, 2026).
+      - The first outsider ever at Kalunga's hideout, unarmed and alone; catches the same-day steamer with Bastião and gives him the pass, the letters and money for the journey (Interlude).
   - **Bastião**, best friend, two or three years older, enslaved on the estate; Velho Kalunga's student.
       - Knew Benedito as a boy but not closely; teased him, jokingly, as the master's son's pet (ch. 2).
       - Sees his anger when Luzia is sold and reaches out; brings him into the senzala's secret world, the roda, the terreiro, Kalunga (ch. 3).
@@ -154,7 +155,7 @@ Slavery from the inside: an ordinary sugar estate where cruelty is routine and k
       - Goes from place to place helping others train in secret; Bastião's master, then Benedito's. Teaches the ginga, the rhythm and the songs before the kicks: "Your body can't sing yet." Benedito's master.
       - His jokes are weapons: the rumour about Ezequiel's first whipping is his, and it spreads through the Recôncavo (ch. 3).
       - Real aspect: capoeira as resistance; runaways living free in the margins.
-      - Middle-aged and strong when he taught Ezequiel (c. 1845) and sent him away; old by Benedito's time, and Ezequiel's hunt grows harder to escape.
+      - Middle-aged and strong when he taught Ezequiel (c. 1845) and sent him away; old by Benedito's time, and Ezequiel's hunt grows harder to escape. About 77 and almost dying in 1877, when he blesses Bastião's going to Benedito (Interlude).
       - Chapters: ch. 2 (sends Ezequiel away), ch. 3; stays in the woods when the war comes, still at the hideout in 1877 (Interlude).
   - **Rosária**, enslaved house servant and apprentice of the Boa Morte sisterhood in Cachoeira (she helps and sings at its festa; the sisters are older freed women); a friend from the terreiro, then his first love.
       - Clever and religious. Her sale mirrors Luzia's.
