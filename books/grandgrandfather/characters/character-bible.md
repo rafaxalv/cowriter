@@ -146,7 +146,7 @@ Slavery from the inside: an ordinary sugar estate where cruelty is routine and k
       - Real aspect: capoeira as resistance; quilombos in the Recôncavo.
       - Smart, a very good fighter, taught by Kalunga; knows his way around.
       - Killed in the 1890s defending Liberdade when the Pires' men steal its cattle; Benedito buries him and cannot prove who did it (ch. 22).
-      - Chapters: ch. 2–3; refuses to go to the war and runs to a quilombo (ch. 3); cannot read: Tonico brings him the newspaper and a pass, and he crosses Brazil carrying Luzia's letter (Interlude), arriving in Corumbá (ch. 16); stands with him when he challenges Albino for the woman from Spain (ch. 17); one of the most trusted men at Liberdade (ch. 19); dies before him, and Benedito buries him (ch. 22).
+      - Chapters: ch. 2–3; refuses to go to the war and runs to a quilombo (ch. 3); cannot read: Tonico brings him the newspaper and a pass, and he crosses Brazil carrying Luzia's letter (Interlude), arriving in Corumbá c. late November 1877, four or five months after the win (ch. 16); stands with him when he challenges Albino for the woman from Spain (ch. 17); one of the most trusted men at Liberdade (ch. 19); dies before him, and Benedito buries him (ch. 22).
   - **Velho Kalunga**, an old capoeirista, a Black man who escaped a farm long ago and lives free.
       - Funny, not solemn: jokes all the time, teases, makes hard things easy. The boys tell legends about him half as jokes (a capitão do mato killed with one kick, dogs that never find his trail, a prince in Africa, a ghost); he neither confirms nor denies, and laughs.
       - Teaches only while joking: every sentence a joke and a lesson; spicy, ironic, philosophical, or silly (farts, Ezequiel's hard dick). Lessons in small pieces: the ginga as instinct; tricking the opponent; the acting game; the mind game; the ginga as an art. "The strongest kicks are delivered with a smile." The clan's creed: the art protects freedom, never imposes on others as the lords did (ch. 3).
@@ -269,8 +269,8 @@ A free European woman could not legally be a slave in Brazil; trafficked women w
   - **Capitán Iriarte**: the steamer's captain; bribed, once kind (ch. 13). Real aspect: corrupt ports.
   - **Doña Engracia**: older Galician woman emigrating legally (ch. 13). Real aspect: ordinary emigration beside trafficking.
   - **Madame Angélique**: French madam in Buenos Aires; keeps her untouched to sell her dear (ch. 14). Real aspect: the Buenos Aires brothel economy.
-  - **Seu Albino**: Portuguese tavern owner in Corumbá, a trafficker in secret; crude, cruel, a good host; passes her off as his niece; wants one big private sale (ch. 15, 17). Real aspect: Portuguese dominance of commerce and trafficking.
-  - **Lucília**: free Black laundress at Albino's; her first friend; godmother of her first son (ch. 15, 17, 19). Real aspect: free Black women's work and *compadrio*.
+  - **Seu Albino**: Portuguese tavern owner in Corumbá, a trafficker in secret; crude, cruel, a good host; passes her off as his niece; wants one big private sale; always threatens her with the brothel, and it works (ch. 15). After Benedito's first offer he hides her completely and raises the price; at the showdown he haggles, then sells her for two contos, "double what you ever dreamed of" (ch. 17). Real aspect: Portuguese dominance of commerce and trafficking.
+  - **Lucília**: free Black laundress at Albino's; her first friend; teaches her Portuguese, then is kept away from her while Albino hides her (ch. 15, 17); godmother of her first son (ch. 15, 17, 19). Real aspect: free Black women's work and *compadrio*.
 
 ## The sons
 
