@@ -243,6 +243,16 @@ select { max-width: 260px; }
 .librow.cur { color: var(--accent); font-weight: 600; }
 button.librow { width: 100%; text-align: left; border: 0; border-top: 1px solid var(--rule); background: transparent; }
 button.librow:hover { color: var(--accent); }
+.rtree { display: grid; margin-top: 8px; }
+.rt { display: grid; grid-template-columns: 16px minmax(0, 1fr) auto; gap: 4px; align-items: baseline; width: 100%; text-align: left; border: 0; background: transparent; padding: 6px 4px; border-radius: 4px; color: var(--ink-2); }
+.rt:hover { background: var(--bg); color: var(--accent); }
+.rt .chev { color: var(--ink-3); font-size: 11px; }
+.rt small { color: var(--ink-3); font: 11px var(--font-mono); }
+.rt1 { font-weight: 600; color: var(--ink); border-top: 1px solid var(--rule); border-radius: 0; padding-block: 8px; }
+.rt1:first-child { border-top: 0; }
+.rt2 { padding-left: 18px; font-size: 13px; }
+.rt2.cur { color: var(--accent); font-weight: 600; background: var(--accent-soft); }
+.rt3 { padding-left: 38px; font-size: 12.5px; color: var(--ink-3); }
 .toc { display: grid; }
 .toc button { text-align: left; border: 0; border-top: 1px solid var(--rule); background: transparent; padding: 5px 0; font-size: 12.5px; color: var(--ink-2); }
 .toc button.l3 { padding-left: 12px; color: var(--ink-3); }
@@ -1342,11 +1352,60 @@ Reply with only this JSON, one entry per sentence id above, in order:
     }
     return list;
   }
+  // The Research menu: topic (folder) > research file > the file's sections (its ## headings). All collapsed at first.
+  const topicName = (f) => f === "research" ? "General" : f.split("/").map((x) => x.replace(/-/g, " ")).join(" / ").replace(/^./, (c) => c.toUpperCase());
+  function mdSections(md) {
+    const out = []; let fence = false;
+    for (const line of (md || "").split("\n")) {
+      if (/^\s*(```|~~~)/.test(line)) fence = !fence;
+      else if (!fence && /^## /.test(line)) out.push(line.slice(3).replace(/\\/g, "").replace(/[*_`]/g, "").trim());
+    }
+    return out;
+  }
+  function researchTree() {
+    S.resOpen ||= { topics: new Set(), files: new Set() };
+    const tree = el("nav", "rtree"); tree.setAttribute("aria-label", "Research files");
+    const topics = new Map();
+    for (const d of researchDocs()) { const f = resFolder(d); if (!topics.has(f)) topics.set(f, []); topics.get(f).push(d); }
+    const row = (cls, level, open, label, extra) => {
+      const b = el("button", "rt rt" + level + (cls ? " " + cls : ""));
+      if (open != null) { b.setAttribute("aria-expanded", String(open)); b.append(el("span", "chev", open ? "▾" : "▸")); } else b.append(el("span", "chev", ""));
+      const t = el("span", "rt-label", label); b.append(t); if (extra) b.append(el("small", null, extra));
+      return b;
+    };
+    for (const [f, docs] of topics) {
+      const open = S.resOpen.topics.has(f);
+      const tb = row(null, 1, open, topicName(f), String(docs.length));
+      tb.onclick = () => { open ? S.resOpen.topics.delete(f) : S.resOpen.topics.add(f); renderPanel(); };
+      tree.append(tb);
+      if (!open) continue;
+      for (const d of docs) {
+        const secs = mdSections(d.md), fopen = S.resOpen.files.has(d.id);
+        const fb = row(d.id === S.resDoc ? "cur" : "", 2, secs.length ? fopen : null, d.title);
+        fb.onclick = () => {
+          if (d.id !== S.resDoc) { S.resOpen.files.add(d.id); openResearch(d.id); return; }
+          if (secs.length) { fopen ? S.resOpen.files.delete(d.id) : S.resOpen.files.add(d.id); renderPanel(); }
+        };
+        tree.append(fb);
+        if (!fopen) continue;
+        secs.forEach((name, i) => {
+          const sb = row("", 3, null, name);
+          sb.onclick = () => {
+            if (d.id !== S.resDoc) openResearch(d.id);
+            const h = $("main").querySelectorAll(".md h2")[i]; h?.scrollIntoView({ behavior: "smooth", block: "start" });
+          };
+          tree.append(sb);
+        });
+      }
+    }
+    if (!topics.size) tree.append(el("p", "p-empty", "No research files loaded yet."));
+    return tree;
+  }
   function openResearch(id) { S.resDoc = id; pref.set("res:" + S.slug, id || ""); renderMain(); window.scrollTo({ top: 0 }); }
   function renderDocPanel() {
     const body = $("pBody"); body.replaceChildren(); $("pPid").textContent = "";
     $("pTitle").textContent = S.tab === "concept" ? "Concept" : S.tab === "scenes" ? "Scenes" : "Research";
-    const heads = [...$("main").querySelectorAll(".md h2, .md h3")];
+    const heads = S.tab === "research" ? [] : [...$("main").querySelectorAll(".md h2, .md h3")];
     if (heads.length) {
       const sec = el("section", "group"); sec.append(el("h3", null, S.tab === "scenes" ? "In this scene map" : "In this file"));
       const toc = el("div", "toc");
@@ -1360,17 +1419,7 @@ Reply with only this JSON, one entry per sentence id above, in order:
       for (const c of have) { const b = el("button", "librow" + (c.id === S.chapter ? " cur" : ""), cleanTitle(S.planCh.get(c.id)?.title) || titleOf(c, langs()[0]?.key)); b.onclick = () => goChapter(c.id); sec.append(b); }
       body.append(sec);
     }
-    if (S.tab === "research") {
-      const sec = el("section", "group"); sec.append(el("h3", null, "Research files"));
-      let last = null;
-      for (const d of researchDocs()) {
-        const f = resFolder(d); if (f !== last) { last = f; sec.append(el("small", "vmeta", f)); }
-        const b = el("button", "librow" + (d.id === S.resDoc ? " cur" : "")); b.append(el("span", null, d.title));
-        const ch = citedIn(d.path); b.append(el("small", null, ch.length ? "cited in " + ch.join(", ") : "not cited yet"));
-        b.onclick = () => openResearch(d.id); sec.append(b);
-      }
-      body.append(sec);
-    }
+    if (S.tab === "research") body.append(researchTree());
     if (!body.childElementCount) body.append(el("p", "p-empty", "Nothing to show here yet."));
   }
 
