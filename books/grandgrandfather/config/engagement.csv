@@ -1,4 +1,50 @@
 Paragraph ID,Sentence,Opening words,Engagement,Tension,Emotion,Pace,Hot words,Uncertain,Reason,Date
+00.001,1,My grandmother died after years with …,3,2,4,3,Alzheimer's,,blunt opening loss; sets emotional frame,2026-11-01
+00.001,2,"All her life, small memories slipped …",2,2,2,1,in between conversations,,reflective; hints at inherited memories,2026-11-01
+00.001,3,"With the disease, the forgetting came …",2,1,3,2,,,quiet explanation of disease progression,2026-11-01
+00.001,4,"Then, little by little, things turned …",2,2,3,2,lucidity the exception,,"inversion lands softly, sad",2026-11-01
+00.001,5,Those were the saddest moments.,2,1,4,2,saddest moments,,"emotional signal, sets up scene",2026-11-01
+00.001,6,"In one of them, somewhere between …",4,3,5,3,My mind is not working properly,,vulnerable moment of self-awareness,2026-11-01
+00.001,7,Will you please take care of …,4,2,5,3,Will you please take care of me?,,heartbreaking plea from someone formerly harsh,2026-11-01
+00.002,1,Her life was hard from the …,2,2,3,2,hard from the start,,"opens backstory, curiosity about hardship",2026-11-01
+00.002,2,In her stories there was a …,3,2,2,1,fragile canoe,,vivid image of river and school,2026-11-01
+00.002,3,"Then came the animals: jaguars, caimans, …",3,3,2,2,"jaguars, caimans, snakes",,"danger imagery, sensory jolt",2026-11-01
+00.002,4,About her father she said less.,3,3,2,2,said less,,open question about the father,2026-11-01
+00.002,5,"The two never got along, and …",3,3,3,3,left home very young,,conflict and early departure,2026-11-01
+00.002,6,"""Moça de família só saía de …",3,2,3,2,"married, or not at all",,cultural rule raises stakes of her choice,2026-11-01
+00.002,7,She left without marrying.,3,3,3,3,without marrying,,"defiance, short punchy turn",2026-11-01
+00.002,8,She went to live in other …,3,4,3,2,nobody in the family can say whose,,mystery gap in family history,2026-11-01
+00.002,9,She was completely alone.,3,2,4,3,completely alone,,"stark isolation, empathy",2026-11-01
+00.002,10,I never asked how old she …,3,3,3,3,never asked how old,,regret and uncertainty about her age,2026-11-01
+00.003,1,"She became a nursing assistant, got …",2,1,2,4,,,"summary of life events, factual",2026-11-01
+00.003,2,She was not the most affectionate …,3,2,3,3,not the most affectionate,,"complicates sympathy, honest",2026-11-01
+00.003,3,"My mom, my aunts and my …",3,2,4,3,many bad memories,,family hurt revealed,2026-11-01
+00.003,4,She was not easy.,2,1,3,3,not easy,,terse understatement,2026-11-01
+00.003,5,She could be really mean.,3,2,3,3,really mean,,blunt admission,2026-11-01
+00.003,6,She had learned that somewhere.,4,3,4,3,learned that somewhere,,open question: where did cruelty come from?,2026-11-01
+00.004,1,I saw some of it with …,2,2,2,3,,,narrator shifts to personal witness,2026-11-01
+00.004,2,Her repeated accusations that someone had …,3,2,2,3,so absurd they seemed funny,,"light humor, paranoia",2026-11-01
+00.004,3,The best of all: someone had …,3,2,3,3,stolen her underwear,,"funny, surprising detail",2026-11-01
+00.005,1,The fear of being robbed was …,3,3,3,3,fear of being robbed,,hints fear rooted in past,2026-11-01
+00.005,2,"When I was a kid, she …",4,3,3,3,shotgun in her bedroom,,"startling detail, danger",2026-11-01
+00.005,3,More than once she heard a …,4,4,3,4,fired into the air,,"action, noise on roof, shots",2026-11-01
+00.005,4,"Probably a cat, or a rat; …",3,3,2,3,we will never know,,"unresolved mystery, wry",2026-11-01
+00.005,5,But the shots worked.,3,2,2,4,shots worked,,dry humor,2026-11-01
+00.005,6,The noise stopped.,3,2,2,4,noise stopped,,short beat,2026-11-01
+00.005,7,At least for that day.,3,3,3,4,At least for that day,,"ominous, lingering fear",2026-11-01
+00.006,1,In her last years she hardly …,3,2,4,3,hardly spoke,,"decline, silence",2026-11-01
+00.006,2,"The disease took her memories and, …",3,2,5,2,everything she was,,poignant loss of self,2026-11-01
+00.007,1,"As I write, my grandfather, her …",4,4,4,3,has the disease too,,"new blow, ongoing present stakes",2026-11-01
+00.008,1,The fog around memory seems to …,3,3,3,2,haunt this family,,"thematic hook, ominous",2026-11-01
+00.008,2,But not only because of the …,4,4,3,3,not only because of the disease,,opens a question about other causes,2026-11-01
+00.009,1,"While she was still lucid, my …",4,4,3,3,"grandfather, who had been a slave",,"core story reveal, hook",2026-11-01
+00.009,2,Nobody remembers his name.,4,4,4,3,Nobody remembers his name,,striking erasure,2026-11-01
+00.009,3,"We tried to check those stories, …",3,3,4,3,too late; documents had been lost,,"failed verification, regret",2026-11-01
+00.009,4,"In the end, it wasn't Alzheimer's …",4,3,4,2,erased the memory of an entire generation,,"answers earlier hint, strong statement",2026-11-01
+00.009,5,"In our reality, memory was never …",3,2,3,2,never really valued,,reflective social insight,2026-11-01
+00.009,6,Surviving came first.,3,2,3,4,Surviving came first,,"terse, resonant",2026-11-01
+00.009,7,"Remembering was left for later, and …",4,3,4,3,later hardly ever came,,"poignant line, sets up purpose",2026-11-01
+00.010,1,I'm here to change that.,4,4,4,4,I'm here to change that,,"promise of the book, drive forward",2026-11-01
 01.001,1,"They landed at night, on a …",3,3,2,3,at night; far from the harbour,,clandestine landing; open question of who and why,2026-10-10
 01.001,2,Nobody lit a lamp.,3,3,2,3,Nobody lit a lamp,,"secrecy, dread building",2026-10-10
 01.001,3,Men whispered in a language she …,3,3,3,4,a language she did not have yet,,displacement; illegal trafficking implied,2026-10-10
