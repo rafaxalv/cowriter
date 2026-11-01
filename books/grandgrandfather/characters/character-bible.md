@@ -85,6 +85,7 @@ Who each character is, in short bullets: role, personality, motives, relationshi
   - Freedom bought with his body, offered by his master, even though he chose to go (ch. 3).
   - The cholera camps (ch. 6).
   - Acosta Ñu: the boy with the false beard; the memory he never tells (ch. 9), which returns at São João (ch. 20).
+  - Hit in the head at Humaitá (1868): headaches ever after, slowly worse, a real problem only in old age, feeding his anger and confusion (ch. 7, 10, 19, 22).
   - Accused of what he tried to stop (Joca's whipping, Damião's rampage): no trial, only the stain (ch. 5, 9). Echoes the family's oral tradition about Brazilian soldiers and Paraguayan women.
   - His wife and sons reject his African culture (ch. 19).
   - Bastião killed by the Pires' men, and nobody believes him; his own family joins the gaslighting: the loss that starts his decline (ch. 22).
@@ -198,7 +199,7 @@ He goes south with the Zuavos baianos, the all-Black companies of Bahian volunte
   - **Ramon Benites**: white gaucho cavalryman; charismatic, racist one minute, loyal the next; Benedito's moral rival inside his own army (ch. 8). Real aspect: violence against Paraguayan civilians; tension among the allies.
   - **Roque Júnior, "Sansão"**: enslaved paulista sent to the war; enormous, thin shins; Benedito first sees him in the camps in the south, a stranger with no story yet (ch. 4).
       - His mother says his father is Pata Seca, the enslaved man used to father children on a São Paulo fazenda; never confirmed; she named him after him. Has brothers and sisters he never met and looks for them in the camps (ch. 6).
-      - Gravely wounded at Curupaiti, carried in by Benedito's stretchers (ch. 5); Benedito nurses him and calls him "a rare specimen"; he recovers fast (ch. 6). Saves Benedito's life from Sargento Mbareté in the assault on Humaitá, 16 July 1868: "Now we're even" (ch. 7).
+      - Gravely wounded at Curupaiti, carried in by Benedito's stretchers (ch. 5); Benedito nurses him and calls him "a rare specimen"; he recovers fast (ch. 6). Saves Benedito's life from Sargento Mbareté in the assault on Humaitá, 16 July 1868, after Benedito is hit in the head, and carries him out: "Now we're even" (ch. 7).
       - Goes back to São Paulo after the war; Benedito never hears of him again (ch. 10).
       - Real aspect: the exploitation of enslaved people's reproduction after the end of the trade (1850); the legend of Pata Seca. \[Roque Júnior: FICTIONAL\]
   - **Padre Felício**: chaplain; keeps the only list with Benedito's real name, which is lost (ch. 6, 9).
