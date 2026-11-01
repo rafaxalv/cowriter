@@ -153,12 +153,12 @@ Slavery from the inside: an ordinary sugar estate where cruelty is routine and k
       - His jokes are weapons: the rumour about Ezequiel's first whipping is his, and it spreads through the Recôncavo (ch. 3).
       - Real aspect: capoeira as resistance; runaways living free in the margins.
       - Middle-aged and strong when he taught Ezequiel (c. 1845) and sent him away; old by Benedito's time, and Ezequiel's hunt grows harder to escape.
-      - Chapters: ch. 2 (sends Ezequiel away), ch. 3 (option: disappears when the war comes, and Bastião follows him).
+      - Chapters: ch. 2 (sends Ezequiel away), ch. 3; stays in the woods when the war comes, still at the hideout in 1877 (Interlude).
   - **Rosária**, enslaved house servant and apprentice of the Boa Morte sisterhood in Cachoeira (she helps and sings at its festa; the sisters are older freed women); a friend from the terreiro, then his first love.
       - Clever and religious. Her sale mirrors Luzia's.
       - Real aspect: family separation through sale; the Irmandade da Boa Morte in Cachoeira.
       - They meet at Mãe Otília's terreiro when he joins her song; friends first; the romance starts after the fight at the festa in Cachoeira (ch. 3).
-      - Chapters: ch. 3; sold to Salvador (ch. 3). Option: he later thinks he sees her among the Boa Morte sisters (where: to decide, since he never returns to Bahia).
+      - Chapters: ch. 3; sold to Salvador (ch. 3). Bastião brings word of what became of her in 1877 (ch. 16; what: to decide).
   - **Ezequiel**, overseer and capitão do mato; pardo; born enslaved c. 1834, freed c. 1858.
       - The master's unacknowledged son and Tonico's half-brother; nobody says it aloud.
       - Wants his father to see him as special; the master uses it to control him.
@@ -184,7 +184,7 @@ He goes south with the Zuavos baianos, the all-Black companies of Bahian volunte
 
   - **Quirino Antônio do Espírito Santo**: old Black veteran of Independence, founder of the first zouave company; a father figure; dies in Montevideo, Nov 1865 (ch. 4). Carries Henrique Dias's memory.
   - **Captain Marcolino**: zouave captain and capoeirista; climbs Benedito's back to plant the flag at Curuzu; history forgets the man underneath (ch. 5).
-  - **Cândido da Fonseca Galvão, later Dom Obá II**: teaches him to read with old newspapers (ch. 5); option: a Rio visit in the 1880s (ch. 19). Service to the Emperor as a claim to citizenship.
+  - **Cândido da Fonseca Galvão, later Dom Obá II**: teaches him to read with old newspapers in the camps of early 1866, before his discharge in March 1866 (ch. 4); option: a Rio visit in the 1880s (ch. 19). Service to the Emperor as a claim to citizenship.
   - **André Rebouças**: seen on the ship *São Francisco*; the first Black man with authority he has seen (ch. 4).
   - **General Osório**: speaks before Tuiuti (ch. 5); disbands the zouave companies (ch. 6).
   - **Duke of Caxias**: seen from afar; his stricter order, or its rumour (ch. 7).
