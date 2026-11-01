@@ -231,8 +231,8 @@ See the research doc "What a Freed Slave Could and Couldn't Do" for sources.
       
       - Discharged without back pay. The boats go downriver to Bahia; he doesn't take one.
       - **Roque Júnior goes home** (decided Oct 30, 2026). They part at the discharge: Roque Júnior goes back to São Paulo, to his mother and the brothers he has never met. Benedito never hears of him again.
-      - Arrival in booming Corumbá.
-      - A night in jail without his carta de alforria; a clerk mentions an auction.
+      - Benedito Arrives in booming Corumbá.
+      - He sleeps every day in a different place. No one wants a negro around. In one of these nights he loses his documents. The police checks him and he ends up in jail. A night in jail without his carta de alforria; a clerk mentions an auction. At least for that night he did not have to think about where he is going to sleep. The police looks for the name he gives them, finally finds his registry a few days later.
       - The land plot promised by the 1865 decree: a white comrade's claim goes through; his stays "under review". No one says why.
       - Working as a porter, ranch hand or arsenal labourer beside Paraguayan immigrants, the men he fought. Freedom is harder than he dreamed: now he must pay rent and buy food, with no guarantee of work or money. As a slave he always had a roof and a ration; free, he can go hungry. He never wishes to go back, but freedom is thinner than the war promised (his experience, never the narrator's verdict).
       - **The anger comes back** (decided Nov 1, 2026). The anger that Kalunga's lessons had slowly softened (ch. 3) comes back after the war, stronger: the war, the unpaid discharge, the jail, the plot "under review", a freedom thinner than promised. The headaches from the blow at Humaitá (ch. 7) start here, now and then, and they make the anger worse (decided Nov 1, 2026).
