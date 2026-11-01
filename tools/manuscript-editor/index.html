@@ -656,14 +656,12 @@ button.librow:hover { color: var(--accent); }
     } else {
       const t = p.tuning || {};
       const acts = el("div", "p-actions");
-      const same = JSON.stringify(sortObj(t)) === JSON.stringify(sortObj(p.appliedTuning || {}));
       const apply = el("button", "btn primary", "Apply to text"); apply.id = "p-apply";
-      apply.disabled = !S.sample || !!S.applying || same || !(p.text && Object.values(p.text).some((x) => x.trim()));
-      apply.title = same ? "The text already matches these settings" : "Rewrite this paragraph in every language to match these settings";
       apply.onclick = () => applyTuning(p.pid);
-      const reset = el("button", "btn", "Reset to voice base"); reset.disabled = !Object.keys(t).length;
+      const reset = el("button", "btn", "Reset to voice base"); reset.id = "p-reset";
       reset.onclick = () => save(p.pid, { tuning: {} });
       acts.append(apply, reset); body.append(acts);
+      updateApplyState(p);
       body.append(applyBox(p));
       const groups = {};
       for (const d of S.book.dims) (groups[d.group] ||= { name: d.groupName, dims: [] }).dims.push(d);
@@ -703,6 +701,17 @@ button.librow:hover { color: var(--accent); }
     }
   }
 
+  // Apply is enabled whenever the tuning differs from what the text was last rewritten to; kept current as sliders move.
+  function updateApplyState(p) {
+    const apply = $("p-apply"), reset = $("p-reset"); if (!apply || !p) return;
+    const t = p.tuning || {};
+    const same = JSON.stringify(sortObj(t)) === JSON.stringify(sortObj(p.appliedTuning || {}));
+    const hasText = !!(p.text && Object.values(p.text).some((x) => (x || "").trim()));
+    apply.disabled = !S.sample || !!S.applying || same || !hasText;
+    apply.title = !S.sample ? "Rewriting needs Claude, which is not available in this view" : same ? "The text already matches these settings" : !hasText ? "This paragraph has no text yet" : "Rewrite this paragraph in every language to match these settings";
+    if (reset) reset.disabled = !Object.keys(t).some((k) => t[k]);
+  }
+
   function dimRow(p, v, d) {
     const vd = v.dims[d.n]; const row = el("div", "dim");
     const tune = (p.tuning || {})[d.n] || 0;
@@ -728,7 +737,7 @@ button.librow:hover { color: var(--accent); }
       const nt = Number(inp.value) - vd.base; const t = { ...(S.paras.get(p.pid).tuning || {}) };
       if (nt) t[d.n] = nt; else delete t[d.n];
       save(p.pid, { tuning: t }, { keepPanel: true });
-      const cur = S.paras.get(p.pid); if (cur) updateCell(cur);
+      const cur = S.paras.get(p.pid); if (cur) { updateCell(cur); updateApplyState(cur); }
     };
     sl.append(inp); row.append(sl);
     const poles = el("div", "poles"); poles.append(el("span", null, d.low), el("span", null, d.high)); row.append(poles);
