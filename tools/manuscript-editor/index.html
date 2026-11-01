@@ -2,6 +2,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
 <style>
 /* Layout: a writer's desk. Left: the settings of the paragraph in hand. Right: the chapter as a column of paragraph cells. */
 :root {
@@ -43,6 +45,7 @@
   color-scheme: dark;
 }
 * { box-sizing: border-box; }
+[hidden] { display: none !important; }
 html, body { height: 100%; }
 body { background: var(--bg); color: var(--ink); font: 14px/1.45 var(--font-ui); margin: 0; }
 button, select, input, textarea { font: inherit; color: inherit; }
@@ -80,6 +83,8 @@ select { max-width: 260px; }
   .desk { grid-template-columns: minmax(0, 1fr); }
   .panel { position: static; max-height: none; border-right: 0; border-bottom: 1px solid var(--rule); }
   .main { padding-inline: 16px; }
+  /* On narrow screens the page's own content comes first; the panel follows it (except in Book, where it holds the paragraph's settings). */
+  .desk:not([data-tab="book"]) .panel { order: 2; border-bottom: 0; border-top: 1px solid var(--rule); }
 }
 
 /* Panel */
@@ -205,6 +210,43 @@ select { max-width: 260px; }
 .state { max-width: 560px; margin: 60px auto; text-align: center; color: var(--ink-2); }
 .state h1 { font: 600 24px var(--font-text); color: var(--ink); }
 .toast { position: fixed; left: 50%; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); background: var(--ink); color: var(--paper); padding: 8px 14px; border-radius: var(--radius); font-size: 13px; z-index: 20; max-width: calc(100% - 32px); }
+/* Read-only documents: Concept, Scenes, Research */
+.doc { max-width: 760px; margin: 0 auto; font: 16.5px/1.65 var(--font-text); }
+.doc > h1 { font: 600 26px/1.2 var(--font-text); margin: 10px 0 2px; text-wrap: balance; }
+.doc .part { font: 11px var(--font-ui); text-transform: uppercase; letter-spacing: .08em; color: var(--ink-3); }
+.doc .blank { margin-top: 16px; }
+.doc .docpath { font: 12px var(--font-mono); color: var(--ink-3); margin-top: 2px; }
+.doc .readonly { font: 12.5px/1.45 var(--font-ui); color: var(--ink-3); margin: 6px 0 0; }
+.doc .md h1 { font: 600 26px/1.2 var(--font-text); margin: 18px 0 6px; text-wrap: balance; }
+.doc .md h2 { font: 600 20px/1.3 var(--font-text); margin: 30px 0 8px; padding-top: 10px; border-top: 1px solid var(--rule); scroll-margin-top: calc(var(--bar-h, 61px) + 12px); }
+.doc .md h3 { font: 600 17px/1.35 var(--font-text); margin: 22px 0 6px; scroll-margin-top: calc(var(--bar-h, 61px) + 12px); }
+.doc .md h4 { font: 600 13px var(--font-ui); text-transform: uppercase; letter-spacing: .05em; color: var(--ink-2); margin: 18px 0 4px; }
+.doc .md p, .doc .md li { overflow-wrap: break-word; }
+.doc .md ul, .doc .md ol { padding-left: 22px; }
+.doc .md li { margin: 3px 0; }
+.doc .md a { color: var(--accent); }
+.doc .md hr { border: 0; border-top: 1px solid var(--rule); margin: 24px 0; }
+.doc .md blockquote { margin: 12px 0; padding: 2px 14px; border-left: 3px solid var(--rule-2); color: var(--ink-2); }
+.doc .md code { font: 13px var(--font-mono); background: var(--bg); padding: 1px 4px; border-radius: 3px; }
+.doc .md pre { overflow-x: auto; background: var(--bg); padding: 10px; border-radius: var(--radius); }
+.doc .md .tbl { overflow-x: auto; margin: 12px 0; }
+.doc .md table { border-collapse: collapse; font: 13.5px/1.45 var(--font-ui); }
+.doc .md th, .doc .md td { border: 1px solid var(--rule); padding: 5px 8px; text-align: left; vertical-align: top; }
+.doc .md th { background: var(--bg); }
+.doc .md img { max-width: 100%; }
+.backlink { border: 0; background: transparent; color: var(--accent); padding: 0; font: 500 13px var(--font-ui); }
+.reslist { display: grid; gap: 4px; margin-top: 18px; font: 14px/1.45 var(--font-ui); }
+.reslist h2 { font: 600 12px var(--font-ui); text-transform: uppercase; letter-spacing: .07em; color: var(--ink-3); margin: 18px 0 2px; }
+.resrow { display: grid; gap: 1px; text-align: left; width: 100%; border: 1px solid var(--rule); background: var(--paper); border-radius: var(--radius); padding: 8px 12px; }
+.resrow:hover { border-color: var(--accent); }
+.resrow small, .librow small { color: var(--ink-3); }
+.librow.cur { color: var(--accent); font-weight: 600; }
+button.librow { width: 100%; text-align: left; border: 0; border-top: 1px solid var(--rule); background: transparent; }
+button.librow:hover { color: var(--accent); }
+.toc { display: grid; }
+.toc button { text-align: left; border: 0; border-top: 1px solid var(--rule); background: transparent; padding: 5px 0; font-size: 12.5px; color: var(--ink-2); }
+.toc button.l3 { padding-left: 12px; color: var(--ink-3); }
+.toc button:hover { color: var(--accent); }
 .confirm { display: inline-flex; gap: 6px; align-items: center; font-size: 12px; color: var(--warn); }
 @media (prefers-reduced-motion: no-preference) { .cell { transition: border-color .15s, box-shadow .15s; } }
 </style>
@@ -213,11 +255,14 @@ select { max-width: 260px; }
   <header class="bar">
     <div class="brand"><span class="book" id="bookTitle">Manuscript Desk</span><span class="sub" id="syncLine">Loading the manuscript…</span></div>
     <nav class="tabs" id="tabs" role="tablist" aria-label="File">
+      <button role="tab" data-tab="concept" aria-selected="false">Concept</button>
       <button role="tab" data-tab="plan" aria-selected="false">Chapters</button>
+      <button role="tab" data-tab="scenes" aria-selected="false">Scenes</button>
       <button role="tab" data-tab="book" aria-selected="false">Book</button>
+      <button role="tab" data-tab="research" aria-selected="false">Research</button>
     </nav>
     <div class="ctl"><label for="bookSel" id="bookSelLabel" hidden>Book</label><select id="bookSel" hidden></select></div>
-    <div class="ctl">
+    <div class="ctl chap-only">
       <button class="iconbtn" id="prevCh" aria-label="Previous chapter">‹</button>
       <select id="chapSel" aria-label="Chapter"></select>
       <button class="iconbtn" id="nextCh" aria-label="Next chapter">›</button>
@@ -239,7 +284,7 @@ select { max-width: 260px; }
   </header>
 
   <div class="desk" id="desk">
-    <aside class="panel" id="panel" aria-label="Paragraph settings">
+    <aside class="panel" id="panel" aria-label="Side panel">
       <div class="p-head"><h2 id="pTitle">Paragraph</h2><span class="pid" id="pPid"></span></div>
       <div id="pBody"><p class="p-empty">Select a paragraph to see and tune its voice.</p></div>
     </aside>
@@ -261,7 +306,7 @@ select { max-width: 260px; }
     paras: new Map(), voices: new Map(), heat: new Map(),
     chapter: null, lang: null, heatMetric: "off", selected: null,
     pending: new Map(), timers: new Map(), editing: null, running: null,
-    unsubs: [], plan: new Map(), planCh: new Map(), tab: "plan",
+    unsubs: [], plan: new Map(), planCh: new Map(), tab: "plan", docs: new Map(), resDoc: null,
   };
   const $ = (id) => document.getElementById(id);
   const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
@@ -344,7 +389,8 @@ select { max-width: 260px; }
     S.unsubs.splice(1).forEach((u) => u());
     S.slug = slug; pref.set("book", slug);
     S.book = S.books.find((b) => b.id === slug);
-    S.paras.clear(); S.voices.clear(); S.heat.clear(); S.plan.clear(); S.planCh.clear();
+    S.paras.clear(); S.voices.clear(); S.heat.clear(); S.plan.clear(); S.planCh.clear(); S.docs.clear();
+    S.resDoc = pref.get("res:" + slug) || null;
     S.lang = pref.get("lang:" + slug) || langs()[0]?.key;
     if (S.lang !== "both" && !langs().some((l) => l.key === S.lang)) S.lang = langs()[0]?.key;
     S.chapter = pref.get("chap:" + slug) || null;
@@ -380,6 +426,10 @@ select { max-width: 260px; }
       if (!panelBusy()) renderPanel();
     }, dbErr));
     subscribePlan(base);
+    S.unsubs.push(S.db.collection(base + "/docs").onSnapshot((snap) => {
+      S.docs.clear(); snap.docs.forEach((d) => S.docs.set(d.id, d.data()));
+      if (DOC_TABS.includes(S.tab)) renderMain();
+    }, dbErr));
   }
   function firstWrittenChapter() {
     const withText = S.book.chapters.find((c) => chapterParas(c.id).length && c.id !== "00");
@@ -420,6 +470,7 @@ select { max-width: 260px; }
   function renderMain() {
     if (!S.book || !S.chapter) return;
     if (S.tab === "plan") return renderPlanMain();
+    if (DOC_TABS.includes(S.tab)) return renderDocMain();
     const m = $("main"); m.replaceChildren();
     const c = chapterInfo(S.chapter);
     const wrap = el("div", "chap");
@@ -575,6 +626,7 @@ select { max-width: 260px; }
 
   function renderPanel() {
     if (S.tab === "plan") { if (S.book) renderPlanPanel(); return; }
+    if (DOC_TABS.includes(S.tab)) { if (S.book) renderDocPanel(); return; }
     $("pTitle").textContent = "Paragraph";
     const p = S.paras.get(S.selected); const body = $("pBody");
     $("pPid").textContent = p ? p.pid : "";
@@ -945,8 +997,8 @@ Reply with only this JSON, one entry per sentence id above, in order:
   const KINDS = [
     ["event", "Stories", "What happens in the chapter, in order.", "Add a story event"],
     ["fact", "Facts", "Historical facts the chapter relies on, each with a truth label and the sources that back it.", "Add a fact"],
-    ["source", "Sources", "Where the facts come from: articles, books, links and the book's research files.", "Add a source"],
     ["note", "Notes", "Open questions and options still to decide.", "Add a note"],
+    ["source", "Sources", "Where the facts come from: articles, books, links and the book's research files.", "Add a source"],
   ];
   const KIND_NAME = { event: "Story event", fact: "Fact", source: "Source", note: "Note" };
   const planItems = (cid) => [...S.plan.values()].filter((x) => x.chapter === cid).sort((a, b) => a.order - b.order);
@@ -1190,11 +1242,6 @@ Reply with only this JSON, one entry per sentence id above, in order:
       for (const y of cites) { const b = el("button", "linkrow", `${KIND_NAME[y.kind]}: ${(y.text || "").slice(0, 90)}`); b.onclick = () => { select(y.id); cellEl(y.id)?.scrollIntoView({ behavior: "smooth", block: "center" }); }; sec.append(b); }
       body.append(sec);
     }
-    const ms = el("select"); ms.id = "plan-move";
-    for (const c of S.book.chapters) ms.append(new Option(cleanTitle(S.planCh.get(c.id)?.title) || titleOf(c, langs()[0]?.key), c.id));
-    ms.value = x.chapter; ms.onchange = () => planMoveChapter(x, ms.value);
-    field("Chapter", ms);
-    body.append(el("div", "vmeta", "Moving an item to another chapter clears its source links, because sources are numbered per chapter."));
   }
 
   function renderPlanStats() { if (S.tab === "plan" && !S.plan.get(S.selected)) renderPanel(); }
@@ -1217,21 +1264,122 @@ Reply with only this JSON, one entry per sentence id above, in order:
       b.onclick = () => { select(x.id); cellEl(x.id)?.scrollIntoView({ behavior: "smooth", block: "center" }); }; sec.append(b);
     }
     body.append(sec);
-    const lib = el("section", "group"); lib.append(el("h3", null, "Research files"));
-    lib.append(el("p", "vmeta", "The book's research folder. Link a source to one of these from its settings."));
-    const used = {}; for (const x of S.plan.values()) if (!x.removed && x.kind === "source" && x.file) (used[x.file] ||= new Set()).add(x.chapter);
-    for (const r of research()) {
-      const row = el("div", "librow"); row.append(el("span", null, r.title));
-      const ch = used[r.path]; row.append(el("small", null, ch ? "cited in " + [...ch].sort().join(", ") : "not cited yet"));
-      lib.append(row);
+  }
+
+  // ---------- Concept, Scenes and Research tabs: read-only views of the repo's files ----------
+  const TABS = ["concept", "plan", "scenes", "book", "research"];
+  const DOC_TABS = ["concept", "scenes", "research"];
+  const researchDocs = () => [...S.docs.values()].filter((d) => d.kind === "research").sort((a, b) => a.path.localeCompare(b.path));
+  const resFolder = (d) => d.path.split("/").slice(1, -1).join("/") || "research";
+  function citedIn(path) {
+    const ch = new Set(); for (const x of S.plan.values()) if (!x.removed && x.kind === "source" && x.file === path) ch.add(x.chapter);
+    return [...ch].sort();
+  }
+  function currentDoc() {
+    if (S.tab === "concept") return S.docs.get("concept");
+    if (S.tab === "scenes") return S.docs.get("scenes-" + S.chapter);
+    if (S.tab === "research") return S.docs.get(S.resDoc);
+    return null;
+  }
+  function renderMd(md) {
+    const box = el("div", "md");
+    try { box.innerHTML = window.DOMPurify.sanitize(window.marked.parse(md || "", { gfm: true })); }
+    catch { const pre = el("pre", null, md || ""); pre.style.whiteSpace = "pre-wrap"; box.append(pre); }
+    box.querySelectorAll("table").forEach((t) => { const w = el("div", "tbl"); t.replaceWith(w); w.append(t); });
+    box.querySelectorAll("a[href^='http']").forEach((a) => { a.target = "_blank"; a.rel = "noopener"; });
+    box.querySelectorAll("h2, h3").forEach((h, i) => (h.id = "h-" + i));
+    return box;
+  }
+  function docHead(wrap, title, path) {
+    wrap.append(el("h1", null, title));
+    if (path) wrap.append(el("div", "docpath", path));
+    wrap.append(el("p", "readonly", "Read-only copy of the repo file. Ask Claude to change it; the copy here updates after the next load."));
+  }
+  function renderDocMain() {
+    const m = $("main"); m.replaceChildren();
+    const wrap = el("div", "doc");
+    if (!S.docs.size) {
+      wrap.append(el("div", "blank", "These files are not loaded in the editor yet. Ask Claude to load the book's Concept, Scenes and research files."));
+      m.append(wrap); renderPanel(); return;
     }
-    body.append(lib);
+    if (S.tab === "concept") {
+      const d = S.docs.get("concept");
+      if (!d?.md) wrap.append(el("div", "blank", "This book has no Concept file yet."));
+      else { wrap.append(el("div", "docpath", d.path)); wrap.append(el("p", "readonly", "Read-only copy of the repo file. Ask Claude to change it; the copy here updates after the next load.")); wrap.append(renderMd(d.md)); }
+    } else if (S.tab === "scenes") {
+      const d = currentDoc(), info = chapterInfo(S.chapter), lk = langs()[0]?.key;
+      if (info?.part?.[lk]) wrap.append(el("div", "part", info.part[lk]));
+      if (d) { wrap.append(el("div", "docpath", d.path)); wrap.append(el("p", "readonly", "Read-only copy of this chapter's scene map. Ask Claude to change it; the copy here updates after the next load.")); wrap.append(renderMd(d.md)); }
+      else {
+        wrap.append(el("h1", null, cleanTitle(S.planCh.get(S.chapter)?.title) || titleOf(info, lk)));
+        wrap.append(el("div", "blank", "No scene map for this chapter yet. Ask Claude to break the chapter into scenes (the scene-builder skill)."));
+      }
+    } else {
+      const d = S.docs.get(S.resDoc);
+      if (!d) {
+        wrap.append(el("h1", null, "Research"));
+        wrap.append(el("p", "readonly", "The book's research folder. Open a file to read it; link a source to one of these from the source's settings in Chapters."));
+        wrap.append(researchList());
+      } else {
+        const back = el("button", "backlink", "‹ All research files"); back.onclick = () => openResearch(null); wrap.append(back);
+        if (/^#\s/.test(d.md || "")) { wrap.append(el("div", "docpath", d.path)); wrap.append(el("p", "readonly", "Read-only copy of the repo file. Ask Claude to change it; the copy here updates after the next load.")); }
+        else docHead(wrap, d.title, d.path);
+        const ch = citedIn(d.path);
+        wrap.append(el("p", "readonly", ch.length ? "Cited as a source in chapter " + ch.join(", ") + "." : "Not cited as a source in any chapter yet."));
+        if (d.md) wrap.append(renderMd(d.md));
+        else wrap.append(el("div", "blank", "This is a PDF. Open it in the repo at " + d.path + "."));
+      }
+    }
+    m.append(wrap); renderPanel();
+  }
+  function researchList() {
+    const list = el("div", "reslist"); let last = null;
+    for (const d of researchDocs()) {
+      const f = resFolder(d); if (f !== last) { last = f; list.append(el("h2", null, f)); }
+      const b = el("button", "resrow"); const ch = citedIn(d.path);
+      b.append(el("span", null, d.title), el("small", null, ch.length ? "cited in " + ch.join(", ") : "not cited yet"));
+      b.onclick = () => openResearch(d.id); list.append(b);
+    }
+    return list;
+  }
+  function openResearch(id) { S.resDoc = id; pref.set("res:" + S.slug, id || ""); renderMain(); window.scrollTo({ top: 0 }); }
+  function renderDocPanel() {
+    const body = $("pBody"); body.replaceChildren(); $("pPid").textContent = "";
+    $("pTitle").textContent = S.tab === "concept" ? "Concept" : S.tab === "scenes" ? "Scenes" : "Research";
+    const heads = [...$("main").querySelectorAll(".md h2, .md h3")];
+    if (heads.length) {
+      const sec = el("section", "group"); sec.append(el("h3", null, S.tab === "scenes" ? "In this scene map" : "In this file"));
+      const toc = el("div", "toc");
+      for (const h of heads) { const b = el("button", h.tagName === "H3" ? "l3" : null, h.textContent); b.onclick = () => h.scrollIntoView({ behavior: "smooth", block: "start" }); toc.append(b); }
+      sec.append(toc); body.append(sec);
+    }
+    if (S.tab === "scenes") {
+      const sec = el("section", "group"); sec.append(el("h3", null, "Chapters with a scene map"));
+      const have = (S.book.chapters || []).filter((c) => S.docs.has("scenes-" + c.id));
+      if (!have.length) sec.append(el("p", "p-empty", "None yet."));
+      for (const c of have) { const b = el("button", "librow" + (c.id === S.chapter ? " cur" : ""), cleanTitle(S.planCh.get(c.id)?.title) || titleOf(c, langs()[0]?.key)); b.onclick = () => goChapter(c.id); sec.append(b); }
+      body.append(sec);
+    }
+    if (S.tab === "research") {
+      const sec = el("section", "group"); sec.append(el("h3", null, "Research files"));
+      let last = null;
+      for (const d of researchDocs()) {
+        const f = resFolder(d); if (f !== last) { last = f; sec.append(el("small", "vmeta", f)); }
+        const b = el("button", "librow" + (d.id === S.resDoc ? " cur" : "")); b.append(el("span", null, d.title));
+        const ch = citedIn(d.path); b.append(el("small", null, ch.length ? "cited in " + ch.join(", ") : "not cited yet"));
+        b.onclick = () => openResearch(d.id); sec.append(b);
+      }
+      body.append(sec);
+    }
+    if (!body.childElementCount) body.append(el("p", "p-empty", "Nothing to show here yet."));
   }
 
   function setTab(tab) {
     S.tab = tab; pref.set("tab", tab);
     for (const b of $("tabs").children) { const on = b.dataset.tab === tab; b.setAttribute("aria-selected", String(on)); b.tabIndex = on ? 0 : -1; }
     document.querySelectorAll(".book-only").forEach((n) => (n.hidden = tab !== "book"));
+    document.querySelectorAll(".chap-only").forEach((n) => (n.hidden = !["plan", "scenes", "book"].includes(tab)));
+    $("desk").dataset.tab = tab;
     S.selected = null;
     renderMain(); renderCurve();
   }
@@ -1262,7 +1410,7 @@ Reply with only this JSON, one entry per sentence id above, in order:
   S.chartOpen = pref.get("chart") !== "closed";
   $("chartToggle").onclick = () => { S.chartOpen = !S.chartOpen; pref.set("chart", S.chartOpen ? "open" : "closed"); renderCurve(); };
   const m0 = pref.get("metric"); if (m0) setMetric(m0);
-  setTab(pref.get("tab") === "book" ? "book" : "plan");
+  setTab(TABS.includes(pref.get("tab")) ? pref.get("tab") : "plan");
 
   if (window.claude?.use) boot(); else { showState("Open this page in Claude", "The manuscript and its settings are stored with this page and load only inside Claude."); $("syncLine").textContent = "Store unavailable"; }
 })();

@@ -194,6 +194,8 @@ def main(book_dir, out):
         write(out, "skills/paragraph-review.json", {"brief": m.group(1).strip() if m else ""})
     # The Chapters file, as items for the editor's Chapters tab.
     export_plan(book_dir, slug, out)
+    # Concept, scene maps and research documents, shown read-only in their own tabs.
+    export_docs(book_dir, slug, out)
     vdir = os.path.join(book_dir, "voices")
     for f in sorted(os.listdir(vdir)):
         if f.endswith(".md") and not f.startswith("00-") and re.match(r"[A-Z]", f):
@@ -244,6 +246,29 @@ def export_plan(book_dir, slug, out):
                 "sources": [ids[id(s)] for s in it["sourceRefs"]], "updatedAt": None,
             })
         write(out, f"books/{slug}/planChapters/{cid}.json", {"chapter": cid, "title": ch["title"], "when": ch["when"], "updatedAt": None})
+
+
+def export_docs(book_dir, slug, out):
+    """books/<slug>/docs/<id>: the Concept, the Scenes file's introduction, one scene map per chapter
+    (scenes-<chapter>) and each research document (r-<path>), as {id, kind, path, title, chapter, md}."""
+    def rd(rel):
+        p = os.path.join(book_dir, rel)
+        return open(p, encoding="utf-8").read() if os.path.exists(p) else ""
+    def doc(did, kind, path, title, md, chapter=None):
+        write(out, f"books/{slug}/docs/{did}.json", {"id": did, "kind": kind, "path": path, "title": title, "chapter": chapter, "md": md})
+    doc("concept", "concept", "outline/concept.md", "Concept", rd("outline/concept.md"))
+    parts = re.split(r"^(?=## )", rd("outline/scenes.md"), flags=re.M)
+    doc("scenes", "scenes", "outline/scenes.md", "Scenes", parts[0].strip())
+    for part in parts[1:]:
+        head = part.split("\n", 1)[0][3:].strip()
+        m = re.match(r"Chapter (\d+)", head)
+        cid = chap_id(m.group(1) + ".") if m else chap_id(head)
+        if cid:
+            doc(f"scenes-{cid}", "scenes", "outline/scenes.md", head, part.strip(), cid)
+    for r in research_files(book_dir):
+        did = "r-" + re.sub(r"[^A-Za-z0-9_.-]+", "-", r["path"][len("research/"):])
+        md = rd(r["path"]) if r["path"].endswith(".md") else ""
+        doc(did, "research", r["path"], r["title"], md)
 
 
 def md_section(text, title_re):

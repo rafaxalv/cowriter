@@ -1,6 +1,6 @@
 # Manuscript Desk (manuscript editor)
 
-A page for working on a book, with two tabs: **Chapters** (the plan of record) and **Book** (the text, paragraph by paragraph). Works for any book in `books/`.
+A page for working on a book, with five tabs: **Concept**, **Chapters** (the plan of record), **Scenes**, **Book** (the text, paragraph by paragraph) and **Research**. The chapter selector in the top bar is the only chapter selector; it drives Chapters, Scenes and Book. Works for any book in `books/`.
 
 ## Chapters tab
 
@@ -8,10 +8,14 @@ Each chapter's entry in the Chapters file, organized into four sections, each it
 
 - **Stories**: the events of the chapter, in order.
 - **Facts**: historical facts the chapter relies on, each with a truth label (from BOOK.md) and the sources that back it.
-- **Sources**: articles, books and links, numbered S1, S2… per chapter; each can point to one of the book's research files.
 - **Notes**: open questions and options.
+- **Sources** (last): articles, books and links, numbered S1, S2… per chapter; each can point to one of the book's research files.
 
-Select a cell to set it up in the panel on the left: its kind, a fact's truth label and "to verify" flag, which sources back a fact or event (tick them), which research file a source belongs to, or move it to another chapter. With nothing selected, the panel lists what is left to organize in the chapter (facts with no source or no label, things to verify, sources nobody cites) and the book's research files with the chapters that cite each one. The chapter header holds the "When / where" line, the counts, and a warning when the Chapters file and the Book file give the chapter different titles.
+Select a cell to set it up in the panel on the left: its kind, a fact's truth label and "to verify" flag, which sources back a fact or event (tick them), or which research file a source belongs to. Items change chapter only through the Chapters file (ask Claude). With nothing selected, the panel lists what is left to organize in the chapter (facts with no source or no label, things to verify, sources nobody cites). On narrow screens the panel comes after the chapter, so the title, When / where and Stories are always first. The chapter header holds the "When / where" line, the counts, and a warning when the Chapters file and the Book file give the chapter different titles.
+
+## Concept, Scenes and Research tabs
+
+Read-only copies of `outline/concept.md`, the open chapter's scene map from `outline/scenes.md`, and the documents in `research/` (Research lists them by folder with the chapters that cite each one; open one to read it). The panel shows the open file's headings to jump to. To change them, ask Claude; they are refreshed with every load.
 
 ## Book tab
 
@@ -27,7 +31,7 @@ Select a cell to set it up in the panel on the left: its kind, a fact's truth la
 
 The page does not edit the repo directly. It keeps the book in its own store, and Claude moves it in and out:
 
-1. **Keep the context current**: after changing the Concept, Chapters, Scenes, the Character Bible, a voice file, BOOK.md or the paragraph-review skill, re-run the export and upload only `books/<slug>/context/*`, `books/<slug>/voices/*` (update, with `if_version`) and `skills/paragraph-review`, so rewrites never use an outdated plan. Do not re-upload paragraphs that have unsynced edits.
+1. **Keep the context current**: after changing the Concept, Chapters, Scenes, the Character Bible, a voice file, BOOK.md, a research file or the paragraph-review skill, re-run the export and upload only `books/<slug>/context/*`, `books/<slug>/docs/*` (`set`; delete docs whose file is gone), `books/<slug>/voices/*` (update, with `if_version`) and `skills/paragraph-review`, so rewrites never use an outdated plan. Do not re-upload paragraphs that have unsynced edits.
 1. **Load a book into the editor**: `python3 tools/manuscript-editor/export_book.py books/<slug> <out>` writes one JSON file per store document; upload them with the ArtifactData tool (`batch`, `set`, `file_path`) to the paths below. Re-loading replaces the editor's copy, so sync first if there are edits there.
 2. **Sync edits back to the repo**: read the store with ArtifactData `list` and `out_dir` for each of `books/<slug>/paragraphs`, `books/<slug>/voices`, `books/<slug>/heatmaps`, `books/<slug>/plan` and `books/<slug>/planChapters`, then run `python3 tools/manuscript-editor/sync_back.py books/<slug> <out_dir>`. It rewrites each chapter entry of `outline/chapters.md` as When / where, Stories, Facts, Sources and Notes (removed items dropped; the file's introduction, part notes and arc brainstorm untouched), the manuscript files (text, order, IDs; removed paragraphs dropped), `config/paragraph-parameters.csv` (voice, version, tuning, reason, status, issues, engagement avg and peak) and `config/engagement.csv` (latest scores of the first language). Show the author `git diff`, commit after approval, then set `syncedAt` on the `books/<slug>` document to the current time in milliseconds so the page stops flagging those paragraphs.
 
@@ -42,6 +46,7 @@ The page shows "not in repo yet" on every paragraph and Chapters item edited sin
 | `books/<slug>/voices/<ID>` | `id`, `name`, `version`, `dims` (dimension number → `base`, `min`, `max`, `note`, from the voice file's Target profile table) and `brief` (Voice rules, Conveying feeling and each language layer without references or sample paragraphs) |
 | `books/<slug>/context/book` | `brief` (BOOK.md's people and roles and standing rules, the Concept's handle-with-care notes, Shared Rules, Lexicon) and `continuity` (the Character Bible's Continuity section) |
 | `books/<slug>/context/ch-<chapter>` | `brief`: per scene of the scene map, when, where, point of view, beats and Reader feeling (or the start of the chapter's plan if there is no scene map) |
+| `books/<slug>/docs/<id>` | read-only files for the Concept, Scenes and Research tabs: `concept`, `scenes` (the Scenes file's introduction), `scenes-<chapter>` (one scene map), `r-<path>` (one research document; PDFs have no `md`); fields `id`, `kind`, `path`, `title`, `chapter`, `md` |
 | `skills/paragraph-review` | `brief`: the skill's "Rewrite brief" section, sent with every rewrite |
 | `books/<slug>/plan/<id>` | one Chapters item: `id`, `chapter`, `order`, `kind` (`event`, `fact`, `source`, `note`), `text`, `label` (truth label), `verify`, `file` (research file path, sources only), `sources` (ids of the chapter's source items), `removed`, `updatedAt` |
 | `books/<slug>/planChapters/<chapter>` | `title` (as written in the Chapters file), `when`, `updatedAt` |
