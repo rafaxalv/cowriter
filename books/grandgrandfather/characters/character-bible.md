@@ -87,6 +87,7 @@ Who each character is, in short bullets: role, personality, motives, relationshi
   - Acosta Ñu: the boy with the false beard; the memory he never tells (ch. 9), which returns at São João (ch. 20).
   - Accused of what he tried to stop (Joca's whipping, Damião's rampage): no trial, only the stain (ch. 5, 9). Echoes the family's oral tradition about Brazilian soldiers and Paraguayan women.
   - His wife and sons reject his African culture (ch. 19).
+  - Bastião killed by the Pires' men, and nobody believes him; his own family joins the gaslighting: the loss that starts his decline (ch. 22).
   - Dies alone: every trusted friend gone before him (Bastião, Firmino, the veterans; no news of Tonico), though his wife and children are with him (ch. 22).
 
 ### Names others give him
@@ -142,6 +143,7 @@ Slavery from the inside: an ordinary sugar estate where cruelty is routine and k
       - Capoeirista, joker, storyteller.
       - Real aspect: capoeira as resistance; quilombos in the Recôncavo.
       - Smart, a very good fighter, taught by Kalunga; knows his way around.
+      - Killed in the 1890s defending Liberdade when the Pires' men steal its cattle; Benedito buries him and cannot prove who did it (ch. 22).
       - Chapters: ch. 2–3; refuses to go to the war and runs to a quilombo (ch. 3); cannot read: Tonico brings him the newspaper and a pass, and he crosses Brazil carrying Luzia's letter (Interlude), arriving in Corumbá (ch. 16); stands with him when he challenges Albino for the woman from Spain (ch. 17); one of the most trusted men at Liberdade (ch. 19); dies before him, and Benedito buries him (ch. 22).
   - **Velho Kalunga**, an old capoeirista, a Black man who escaped a farm long ago and lives free.
       - Funny, not solemn: jokes all the time, teases, makes hard things easy. The boys tell legends about him half as jokes (a capitão do mato killed with one kick, dogs that never find his trail, a prince in Africa, a ghost); he neither confirms nor denies, and laughs.
@@ -201,12 +203,12 @@ He goes south with the Zuavos baianos, the all-Black companies of Bahian volunte
       - Real aspect: the exploitation of enslaved people's reproduction after the end of the trade (1850); the legend of Pata Seca. \[Roque Júnior: FICTIONAL\]
   - **Padre Felício**: chaplain; keeps the only list with Benedito's real name, which is lost (ch. 6, 9).
   - **Constantino**: young cadet captured at Curupaiti (inspired by the real Bigode); back after two years at the Ybycuí foundry, he tells the Paraguayan side (ch. 7; his return date, 1869, may fit ch. 8 better).
-  - **Damião**: enslaved and freed to serve, like him, brave; in a taken village his freedom becomes the power to do to others what was done to him. Benedito's dark mirror: what he could become, and one answer to "what is freedom?" (ch. 9; options in its Notes).
+  - **Damião**: enslaved and freed to serve, like him, brave; in a taken village his freedom becomes the power to do to others what was done to him. Benedito's dark mirror: what he could become, and one answer to "what is freedom?" (ch. 9). Left tied in the burning village; Benedito never learns if he lived (ch. 9).
 
 ### The other side
 
   - **Sargento Mbareté** ("strength" in Guaraní): Paraguayan sergeant, a poor man fighting for someone else's glory; Benedito's mirror (ch. 5, 7). Real aspect: Paraguayan war propaganda (*Cabichuí*).
-  - **Ceferina**: a *residenta*; love or debt (ch. 8). Real aspect: Paraguay's demographic catastrophe; the women who rebuilt it.
+  - **Ceferina**: a *residenta*; only a short, random encounter in occupied Asunción (ch. 8). Real aspect: Paraguay's demographic catastrophe; the women who rebuilt it.
   - **The boy at Acosta Ñu**: child soldier, about 12, never named (ch. 9). Real aspect: Acosta Ñu, now Paraguay's Children's Day.
   - **Captain Albuquerque**: white Brazilian officer; humiliates and flogs Black soldiers, steals their pay; a stronger enemy than any Paraguayan (ch. 5, 7). Real aspect: racism in the army; unpaid wages.
 
