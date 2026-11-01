@@ -158,7 +158,7 @@ Slavery from the inside: an ordinary sugar estate where cruelty is routine and k
       - Clever and religious. Her sale mirrors Luzia's.
       - Real aspect: family separation through sale; the Irmandade da Boa Morte in Cachoeira.
       - They meet at Mãe Otília's terreiro when he joins her song; friends first; the romance starts after the fight at the festa in Cachoeira (ch. 3).
-      - Chapters: ch. 3; sold to Salvador (ch. 3). Bastião brings word of what became of her in 1877 (ch. 16; what: to decide).
+      - Chapters: ch. 3; sold to Salvador (ch. 3). Bastião brings word in 1877: she is married, with children, a life of her own in Salvador (ch. 16).
   - **Ezequiel**, overseer and capitão do mato; pardo; born enslaved c. 1834, freed c. 1858.
       - The master's unacknowledged son and Tonico's half-brother; nobody says it aloud.
       - Wants his father to see him as special; the master uses it to control him.
@@ -221,7 +221,7 @@ Setting: Corumbá and the Jacadigo farms on the Bolivian border. The war freed h
   - **Luiz Gama** (real, option): Black abolitionist lawyer; challenges him over the woman he bought (ch. 19). Real aspect: legal abolitionism.
   - **The Pires family**: old cattle ranchers next door. Polite in public, hostile in private; fake nobility; slave owners who cannot undersell Liberdade. Manipulate the wife and sons, never him; lend to the sons. Real aspect: exclusion of rich Black men; credit networks (ch. 18, 19, 22, 23).
   - **Otávio** (minor): a Corumbá merchant's son; grows up with the sons in the Pires boys' shadow, later cheats them at cards (ch. 19, 23). Real aspect: the white elite of Corumbá.
-  - **Firmino**: war comrade freed by the war; his most loyal, wage-paid worker and right hand; his death (to decide) leaves the farm without its old hands (ch. 19, 22). Real aspect: freed veterans looking for work and land.
+  - **Firmino**: war comrade freed by the war; his most loyal, wage-paid worker and right hand; dies slowly of an old war wound in the 1880s; his death leaves the farm without its old hands (ch. 19, 22). Real aspect: freed veterans looking for work and land.
 
 ## Carmen, the woman from Spain
 
@@ -264,9 +264,8 @@ A free European woman could not legally be a slave in Brazil; trafficked women w
   - Spoiled and wounded: never learn the land; suffer racism however rich; proud and angry; use money to compensate (ch. 19).
   - Prefer their mother's world (reading, manners, good clothes, coffees with the elite children, riding) to their father's farm and songs; think he works too much and smells of cow shit (ch. 19).
   - Lose everything at the card table to the white boys they grew up with (ch. 23). The *jogo do bicho* (Rio, 1892) stays in the background, for grandma's time.
-  - **First son**: raised by his mother and Lucília; the heir; wants the white elite's acceptance (ch. 19). To add: name, character, what he gambled on.
-  - **Silvio**: his father's favourite; cocky, lucky at cards until he isn't; scams people, looks for easy money; becomes a garimpeiro (ch. 23). To add: his fate; where he digs (the diamond garimpos of Mato Grosso).
-  - **The São João son**: beaten at the festival, afraid of his father all his life (ch. 20, 23). Which son: to decide.
+  - **First son**: raised by his mother and Lucília; the heir; wants the white elite's acceptance (ch. 19). The son beaten at São João, afraid of his father all his life (ch. 20, 23). To add: name, character, what he gambled on.
+  - **Silvio**: his father's favourite; cocky, lucky at cards until he isn't; scams people, looks for easy money; becomes a garimpeiro (ch. 23). Strikes a diamond and gambles it away in one night (ch. 23). To add: where he digs (the diamond garimpos of Mato Grosso).
   - **Others / daughters**: grandma's line; who carried the story down to her: to decide.
 
 ## Who is around at each stage (a menu, not a cast list)
