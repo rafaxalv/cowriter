@@ -313,7 +313,7 @@ See the research doc "What a Freed Slave Could and Couldn't Do" for sources.
       - Structure (decided Oct 30, 2026): told here, between Bastião putting the letters in his hands (end of ch. 13) and his reading them (start of ch. 14), so the reader learns Tonico's side, Ezequiel's banishment and Luzia's death at the moment Benedito does.
   - Sources:
       
-      - [S1] Sources (coffee world, Vassouras, the Paraíba Valley): Redalyc article on the coffee economy of the Paraíba Valley (big owners in Vassouras and Bananal held over 70% of the enslaved; gangs of 20–25; about 5,000 bushes per worker by the 1870s): <https://www.redalyc.org/pdf/273/27315299004.pdf> (Research file: `research/capoeira/moves.md`)
+      - [S1] Sources (coffee world, Vassouras, the Paraíba Valley): Redalyc article on the coffee economy of the Paraíba Valley (big owners in Vassouras and Bananal held over 70% of the enslaved; gangs of 20–25; about 5,000 bushes per worker by the 1870s): <https://www.redalyc.org/pdf/273/27315299004.pdf>
       - [S2] Sources (how Luzia was sold south): Richard Graham, "Another Middle Passage", on the internal slave trade from the Northeast and Bahia to the coffee Southeast after 1850: <https://macmillan.yale.edu/glc/another-middle-passage-brazil>
 
 ### 14\. The Purchase
