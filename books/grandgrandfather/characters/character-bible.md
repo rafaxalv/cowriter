@@ -52,6 +52,7 @@ Who each character is, in short bullets: role, personality, motives, relationshi
   - Good with the land and with men: works beside his workers, knows their language, finds smarter ways to run the farm (ch. 19).
   - In the first years at Liberdade he works harder than anyone and no job is beneath him; he finds, almost by accident, what changes the farm: salt, counting and branding, cacimbas, hides, the sick horses, Descalvados, the fence (ch. 19). Inspired by Rafael's grandfather Rivaldo.
   - Sees through the Pires, though they can manipulate his wife and sons (ch. 19).
+  - Wants to teach his sons the farm, as Inácio taught him, and to sing with them, as Luzia did; they prefer their mother's world. Resents them as spoiled, weak and unaware of how hard the world is, like the worst of Tonico; feels they are not even his friends (ch. 19, 22).
   - In old age his memory fails, never named as a disease (ch. 22).
   - The key to him: innocent of what he is accused of, guilty of what nobody knows (Acosta Ñu, refusing to help Joca; ch. 6, 9).
 
@@ -237,6 +238,7 @@ Setting: Corumbá and the Jacadigo farms on the Bolivian border. The war freed h
 
   - Sharp-tongued, stubborn, practical. Reads, does sums, remembers every humiliation. Catholic, superstitious about the sea, homesick for rain.
   - From object to owner of her own life: bought twice, by the traffickers and by him; she takes over the household money and the farm accounts (ch. 19).
+  - Wins the argument that the sons must learn to read; he accepts it, but resents the poshness that comes with it (ch. 19).
   - Arrives with European racism; being sold teaches her his life, but it does not make things simple (ch. 14, 19).
   - Saved and bought at once: grateful, then hurt; their marriage has warmth and distance, ups and downs (ch. 17, 19).
   - Once rich: proud of appearances, wants her sons to look like nobility, uneasy that they are partly Black, sides with the white boys; the Pires lure her in (ch. 19).
@@ -258,6 +260,7 @@ A free European woman could not legally be a slave in Brazil; trafficked women w
 
   - Born c. 1878–1890; rich, mixed-race (*mestiços*), accepted by neither side; grow up in the years of abolition and the Republic.
   - Spoiled and wounded: never learn the land; suffer racism however rich; proud and angry; use money to compensate (ch. 19).
+  - Prefer their mother's world (reading, manners, good clothes, coffees with the elite children, riding) to their father's farm and songs; think he works too much and smells of cow shit (ch. 19).
   - Lose everything at the card table to the white boys they grew up with (ch. 23). The *jogo do bicho* (Rio, 1892) stays in the background, for grandma's time.
   - **First son**: raised by his mother and Lucília; the heir; wants the white elite's acceptance (ch. 19). To add: name, character, what he gambled on.
   - **Silvio**: his father's favourite; cocky, lucky at cards until he isn't; scams people, looks for easy money; becomes a garimpeiro (ch. 23). To add: his fate; where he digs (the diamond garimpos of Mato Grosso).
