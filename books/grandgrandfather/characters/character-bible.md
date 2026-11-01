@@ -52,6 +52,7 @@ Who each character is, in short bullets: role, personality, motives, relationshi
   - Good with the land and with men: works beside his workers, knows their language, finds smarter ways to run the farm (ch. 19).
   - In the first years at Liberdade he works harder than anyone and no job is beneath him; he finds, almost by accident, what changes the farm: salt, counting and branding, cacimbas, hides, the sick horses, Descalvados, the fence (ch. 19). Inspired by Rafael's grandfather Rivaldo.
   - Sees through the Pires, though they can manipulate his wife and sons (ch. 19).
+  - Never really loved Carmen: liked and admired her; Rosária was the real connection (ch. 11, 17). Suspects his sons' spoiled ways are the white part of their blood, and thinks of Ezequiel (ch. 19).
   - Wants to teach his sons the farm, as Inácio taught him, and to sing with them, as Luzia did; they prefer their mother's world. Resents them as spoiled, weak and unaware of how hard the world is, like the worst of Tonico; feels they are not even his friends (ch. 19, 22).
   - In old age his memory fails, never named as a disease (ch. 22).
   - The key to him: innocent of what he is accused of, guilty of what nobody knows (Acosta Ñu, refusing to help Joca; ch. 6, 9).
@@ -246,6 +247,18 @@ Setting: Corumbá and the Jacadigo farms on the Bolivian border. The war freed h
   - Saved and bought at once: grateful, then hurt; their marriage has warmth and distance, ups and downs (ch. 17, 19).
   - Once rich: proud of appearances, wants her sons to look like nobility, uneasy that they are partly Black, sides with the white boys; the Pires lure her in (ch. 19).
   - Traumas: the deception, the passage, the fear of the brothel, losing Ruchla, never writing home the truth (ch. 12–15, 19).
+
+### The relationship with him (decided Nov 1, 2026)
+
+  - The most complex relationship in the book. Both were property: "not free" binds them, but means different things (him: not owned, dignity, land; her: choosing a husband, respectability).
+  - Before the lottery: a kind, safe companion, never a candidate; brave, polite, strong, skilled, but poor. She admires him, never connects; never understands his songs, not like Rosária (ch. 11).
+  - He probably never loved her: he liked her, she was beautiful, few women around, and she was white (whitening, his view) (ch. 17).
+  - Her "yes" at the altar: calm, the best of bad options; free in law, not in fact. The bond is debt and gratitude (ch. 17).
+  - Warm in the first years, cold later; gratitude wears slowly into resentment, no single breaking point (ch. 19).
+  - Learns his life by being sold, then relapses into European racism once rich and courted by the elite (ch. 19).
+  - Learns of Rosária once, from Bastião, and never forgets it (ch. 19).
+  - At his death her grief is real: she loved him in her way, and it surprises her (ch. 22).
+  - The widow: takes over with sons who cannot and will not run the farm; fights with her ledgers and loses; her hem money keeps grandma's line alive (ch. 23).
 
 ## Her passage: Vigo → Buenos Aires → Corumbá (c. 1876–1877)
 
