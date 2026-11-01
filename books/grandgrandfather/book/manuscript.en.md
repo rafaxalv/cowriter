@@ -150,25 +150,11 @@ She kept her face still. She did not look back at the line. She was fourteen, an
 
 ## PART IV — THE WOMAN FROM SPAIN
 
-### 12. Galicia
+### 12. Her Road
 
 *(to be written)*
 
-### 13. The Crossing
-
-*(to be written)*
-
-### 14. Buenos Aires
-
-*(to be written)*
-
-### 15. Upriver
-
-*(to be written)*
-
-## PART V — FORTUNE
-
-### 16. The Lottery
+### 13. The Lottery
 
 *(to be written)*
 
@@ -176,33 +162,33 @@ She kept her face still. She did not look back at the line. She was fourteen, an
 
 *(to be written)*
 
-### 17. The Purchase
+### 14. The Purchase
 
 *(to be written)*
 
-### 18. Jacadigo
+### 15. Jacadigo
 
 *(to be written)*
 
-### 19. The House
+### 16. The House
 
 *(to be written)*
 
-### 20. São João
+### 17. São João
 
 *(to be written)*
 
-### 21. The Gates
+### 18. The Gates
 
 *(to be written)*
 
 ## PART VI — THE FALL
 
-### 22. The Name
+### 19. The Name
 
 *(to be written)*
 
-### 23. The Table
+### 20. The Table
 
 *(to be written)*
 

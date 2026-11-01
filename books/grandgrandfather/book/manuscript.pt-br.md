@@ -150,25 +150,11 @@ Ela manteve a cara parada. Não olhou pra trás, pra fila. Tinha catorze anos, e
 
 ## PARTE IV — A MULHER DA ESPANHA
 
-### 12. Galiza
+### 12. O Caminho Dela
 
 *(a escrever)*
 
-### 13. A Travessia
-
-*(a escrever)*
-
-### 14. Buenos Aires
-
-*(a escrever)*
-
-### 15. Rio Acima
-
-*(a escrever)*
-
-## PARTE V — FORTUNA
-
-### 16. A Loteria
+### 13. A Loteria
 
 *(a escrever)*
 
@@ -176,33 +162,33 @@ Ela manteve a cara parada. Não olhou pra trás, pra fila. Tinha catorze anos, e
 
 *(a escrever)*
 
-### 17. A Compra
+### 14. A Compra
 
 *(a escrever)*
 
-### 18. Jacadigo
+### 15. Jacadigo
 
 *(a escrever)*
 
-### 19. A Casa
+### 16. A Casa
 
 *(a escrever)*
 
-### 20. São João
+### 17. São João
 
 *(a escrever)*
 
-### 21. As Porteiras
+### 18. As Porteiras
 
 *(a escrever)*
 
 ## PARTE VI — A QUEDA
 
-### 22. O Nome
+### 19. O Nome
 
 *(a escrever)*
 
-### 23. A Mesa
+### 20. A Mesa
 
 *(a escrever)*
 
