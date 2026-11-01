@@ -27,7 +27,7 @@ A family story told by the author's grandmother: her grandfather was born enslav
 1.  **Bahia (1846–1865).** Born enslaved on a sugar estate, son of Luzia, a healer and singer who trusts luck and the orixás, in the same season as the master's heir and in the shadow of the master's unnamed pardo son: three boys, three colours. A childhood with laughter as well as cruelty, a friendship with the master's son, his father dying in his hands and the sale of his mother; a youth of capoeira and a sour rivalry he finally wins. He bets on the war as his door to freedom.
 2.  **War (1865–1870).** The Paraguayan War: comrades, cholera, atrocities on all sides, and a man who stops keeping his head down.
 3.  **Free, not equal (1870–c. 1877).** Freedom in Corumbá is poorer and harder than he dreamed. He keeps buying lottery tickets.
-4.  **Her road (c. 1858–1877).** A girl from Galicia is deceived and trafficked through Buenos Aires to Corumbá, kept untouched to be sold. The two lines alternate and meet.
+4.  **Her road (c. 1858–1877).** A girl from Galicia is deceived and trafficked through Buenos Aires to Corumbá, kept untouched to be sold. Her road is told in one chapter, after the two meet.
 5.  **Fortune (c. 1877–1889).** The lottery win; his mother's last letter; he buys the woman and marries her, saving her and owning her at once. A cattle farm called Liberdade, good years, then pride, distrust and the neighbours' slow manipulation.
 6.  **The fall (1890s).** His memory fails, his family and the neighbours doubt him, and after his death the sons lose everything at cards. The frame returns to the grandmother, who remembers the story but not his name.
 
@@ -46,7 +46,7 @@ A family story told by the author's grandmother: her grandfather was born enslav
   - **History blended in, never explained.** No factual step-outs; the real world enters through objects, documents, dialogue and rumour. The line between truth and invention is drawn once, in an author's note.
   - **Chance, contradictions, no judgement.** No heroes and no villains, Black or white; the reader sees the reasons behind each choice and weighs it.
   - **Voices.** The chapters are in close third person, following him and later her. The prologue and epilogue are in the author's own voice (AUTHOR-MAIN), about his grandmother.
-  - **Chapter shape.** Hook, scene, texture, turn, cliffhanger. His chapters and hers alternate from Part III until they meet.
+  - **Chapter shape.** Hook, scene, texture, turn, cliffhanger. The book follows him, in long chapters. Her road before Corumbá is one chapter of her own (ch. 11), told after they meet and before the lottery, so the reader knows who she is before he buys her (decided Nov 1, 2026).
   - **Tone range.** From a funny, mischievous childhood to the war's horror; humour keeps him from being only a victim.
 
 ## Handle with care

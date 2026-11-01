@@ -4,7 +4,7 @@ Oct 2, 2026 · Rafael
 
 Working list of chapters and the stories planned for each. Working names, for planning only and never in the book text: Benedito (him) and Carmen (the woman from Spain). Built from the Character Bible arc. Style: immersive fiction, history blended into the scenes (no factual step-outs). Every chapter ends on a hook. Neither he nor the woman from Spain is ever named.
 
-Structure note: Part IV (her story) does not run as a block. Her chapters alternate with his from Part III onwards, cutting away at high points, until the two lines meet in "The Purchase".
+Structure note: Part IV (her story) is one chapter, "Her Road" (ch. 11). It comes right after he meets her at Albino's (ch. 10) and before the lottery, so her background is known before "The Purchase" (decided Nov 1, 2026).
 
 Open option: a short prologue and epilogue in the grandmother's voice, telling the story to a grandchild. Open option for Part II: tell much of the war through his letters to his mother (see chapter 4). Catharsis points (Oct 10, 2026; Tarantino-style release, rationed, see NARR-MAIN; to revisit): ch. 3 (he beats Ezequiel), Interlude (Tonico banishes Ezequiel), ch. 5 (Tuiuti; Curuzu), ch. 9 (he stops Damião), ch. 13 (Albino's house).
 
@@ -254,7 +254,7 @@ See the research doc "What a Freed Slave Could and Couldn't Do" for sources.
       - [DOCUMENTED] Vagrancy (Criminal Code of 1830): a man without steady work could be warned to find an occupation and jailed if he did not. Poor Black men were the usual targets. (see research/freed-slave-rights-1865-1888.md)
       - [DOCUMENTED] Brazil-born freedmen were citizens and could vote in parish elections if they met the income requirement, but could not be electors (who chose deputies). (see research/freed-slave-rights-1865-1888.md)
 
-## PART IV — THE WOMAN FROM SPAIN (c. 1858–1877, alternating)
+## PART IV — THE WOMAN FROM SPAIN (c. 1858–1877)
 
 ### 11\. Her Road
 
