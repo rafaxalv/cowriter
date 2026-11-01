@@ -231,15 +231,20 @@ See the research doc "What a Freed Slave Could and Couldn't Do" for sources.
       
       - Discharged without back pay. The boats go downriver to Bahia; he doesn't take one.
       - **Roque Júnior goes home** (decided Oct 30, 2026). They part at the discharge: Roque Júnior goes back to São Paulo, to his mother and the brothers he has never met. Benedito never hears of him again.
-      - Benedito Arrives in booming Corumbá.
-      - He sleeps every day in a different place. No one wants a negro around. In one of these nights he loses his documents. The police checks him and he ends up in jail. A night in jail without his carta de alforria; a clerk mentions an auction. At least for that night he did not have to think about where he is going to sleep. The police looks for the name he gives them, finally finds his registry a few days later.
-      - The land plot promised by the 1865 decree: a white comrade's claim goes through; his stays "under review". No one says why.
+      - Benedito arrives in booming Corumbá.
+      - **The jail (c. 1870)** (decided Nov 1, 2026). He sleeps every day in a different place; no one wants a negro around. One night he loses his documents. The police check him and he ends up in jail. Without his carta de alforria he can be taken for a runaway: a clerk mentions that, if no one claims him and nothing proves he is free, he will be advertised and sold at auction. The first night is almost a relief: at least for that night he does not have to think about where he is going to sleep. Then every day the registry is not found, the fear grows. After about a week, Euclides Bastos, a white comrade from the war, recognises him and vouches for him; his word is enough, because he is white. Then the police find his registry. Euclides means well and never sees why his word counted and Benedito's did not.
+      - **The vagrancy threat (c. 1871)** (decided Nov 1, 2026). Between jobs, a policeman warns him that a man with no work is a vagrant; the memory of the cell does the rest. He takes the first steady job going: porter for Seu Albino's tavern, carrying barrels and goods from the port. To him Albino is just a stingy, crude boss; he knows nothing of the trafficking until the woman from Spain tells him (ch. 11).
+      - The land plot promised by the 1865 decree: Euclides Bastos's claim goes through without a thought; his stays "under review". No one says why.
+      - **The vote that isn't his (parish election, 1872; to verify)** (decided Nov 1, 2026): one paragraph, not a scene. A local boss, a regular at Albino's, herds him and the other porters to the polls to vote for a man who will never answer to them. His first act as a citizen is not his.
       - Working as a porter, ranch hand or arsenal labourer beside Paraguayan immigrants, the men he fought. Freedom is harder than he dreamed: now he must pay rent and buy food, with no guarantee of work or money. As a slave he always had a roof and a ration; free, he can go hungry. He never wishes to go back, but freedom is thinner than the war promised (his experience, never the narrator's verdict).
       - **The anger comes back** (decided Nov 1, 2026). The anger that Kalunga's lessons had slowly softened (ch. 3) comes back after the war, stronger: the war, the unpaid discharge, the jail, the plot "under review", a freedom thinner than promised. The headaches from the blow at Humaitá (ch. 7) start here, now and then, and they make the anger worse (decided Nov 1, 2026).
-      - The old master's letter threatening revocation for "ingratitude", until the Free Womb Law (Sept 1871) ends it.
-      - The vote that isn't his; the vagrancy threat.
       - Whenever a list of the freed or a newspaper from the south reaches Corumbá, he searches it for Luzia's name (he stops only when her letter comes, ch. 14).
       - He buys a lottery ticket for every lottery. for all those years. this is a minor detail, a small ritual of him believing his luck. We will make this a repetitive process in the chapter. He becomes friends with Seu Bento - the ticket seller - this way.
+  - Facts:
+      
+      - [PLAUSIBLE RECONSTRUCTION] A freedman caught without papers could be held as a suspected runaway; captured runaways were advertised and, if unclaimed, sold at auction. (to verify for Mato Grosso in the 1870s)
+      - [DOCUMENTED] Vagrancy (Criminal Code of 1830): a man without steady work could be warned to find an occupation and jailed if he did not. Poor Black men were the usual targets. (see research/freed-slave-rights-1865-1888.md)
+      - [DOCUMENTED] Brazil-born freedmen were citizens and could vote in parish elections if they met the income requirement, but could not be electors (who chose deputies). (see research/freed-slave-rights-1865-1888.md)
 
 ### 11\. The Ticket
 
@@ -247,6 +252,7 @@ See the research doc "What a Freed Slave Could and Couldn't Do" for sources.
   - Stories:
       
       - Seu Bento, the ticket seller, an elderly free Black street vendor: he sells him tickets "because you have a winner's face", becomes his most honest friend and keeps telling him to save.
+      - He has carried for Albino's tavern since 1871 (ch. 10), so he knows the place years before she arrives (decided Nov 1, 2026).
       - At Albino's he meets the woman from Spain, whom everyone takes for Albino's niece. Only when they talk does he learn the truth: she was taken and trafficked, she is not free, and she is being sold; she tells him her price, one conto de réis (1:000$000; plausible, to verify). Albino himself never names it. He likes her, but Albino, more and more protective of her, above all against a Black man, chases him off every time he tries to get near her. 
       - They bond over not being free: he tells her that even freed, he does not feel free; she understands, and says she would rather be sold to a rich man than end up in a brothel (she means as a maid or a servant). A free woman's life would not be easy either; all her options look bad. 
       - They agree that even with freedom things are not easy. He tells his story and how people seem to do their best to make his life as a free man harder than as a slave.

@@ -219,6 +219,7 @@ He goes south with the Zuavos baianos, the all-Black companies of Bahian volunte
 
 Setting: Corumbá and the Jacadigo farms on the Bolivian border. The war freed him but did not pay him; the lottery makes him rich but not accepted.
 
+  - **Euclides Bastos**: white comrade from the war; decent but blind. Vouches for Benedito in jail; his land claim goes through while Benedito's stays "under review" (ch. 10). [FICTIONAL] (decided Nov 1, 2026)
   - **Seu Bento**: elderly free Black lottery-ticket seller; his most honest friend; tells him to save; vouches for him against the agent (ch. 10, 11, 13). Real aspect: the lotteries.
   - **Dr. Aurélio Teles**: white lawyer and notary, honest and correct; every deed still calls him *preto* (ch. 15); the land is lost anyway (ch. 20). Real aspect: the 1850 Land Law and the bureaucracy of exclusion.
   - **Luiz Gama** (real, option): Black abolitionist lawyer; challenges him over the woman he bought (ch. 16). Real aspect: legal abolitionism.
@@ -287,7 +288,7 @@ A free European woman could not legally be a slave in Brazil; trafficked women w
 
   - **Bahia (1846–1865):** Luzia, Inácio, Coronel Menezes, Dona Mariana, Tonico, Bastião, Velho Kalunga, Rosária, Ezequiel, Mãe Otília. Mentioned: the Malê rebels, the 1857 *ganhadores* strike.
   - **War (1865–1870):** Quirino, Roque Júnior, Marcolino, Dom Obá, Gregório, Joca Cabinda, Damião, Ramon Benites, Padre Felício, Constantino, Mbareté, Ceferina, the boy at Acosta Ñu, Captain Albuquerque. Passing through: Rebouças, Osório, Caxias, Ana Néri, the Count d'Eu, López.
-  - **Free, not equal (1870–c. 1877):** Seu Bento, Paraguayan workers, the clerks and police of Corumbá; far away, Tonico and Luzia (Interlude).
+  - **Free, not equal (1870–c. 1877):** Seu Bento, Euclides Bastos, Seu Albino (as his boss), Paraguayan workers, the clerks and police of Corumbá; far away, Tonico and Luzia (Interlude).
   - **Her road (1858–1877):** Rosa, Manuel and Xosé Lousada, Don Faustino, Alvarado, Ruchla, Doña Engracia, Capitán Iriarte, Madame Angélique, Seu Albino, Lucília.
   - **Fortune (c. 1877–1889):** Firmino and the other veterans at Liberdade, Bastião, the Pires sons and Otávio, Seu Bento, the lottery agent, Dr. Teles, the Pires family, Lucília, Dom Obá, Luiz Gama; the Emperor and Princess Isabel only as news.
   - **The fall (1890s):** the sons, the Pires family, card tables and garimpos (Silvio); grandma's line.
