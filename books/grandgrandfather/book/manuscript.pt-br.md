@@ -140,21 +140,17 @@ Ela manteve a cara parada. Não olhou pra trás, pra fila. Tinha catorze anos, e
 
 ## PARTE III — LIVRE, MAS NÃO IGUAL (1870–c. 1877)
 
-### 10. O Papel
-
-*(a escrever)*
-
-### 11. O Bilhete
+### 10. Sete Anos de Liberdade, Pobreza e Azar
 
 *(a escrever)*
 
 ## PARTE IV — A MULHER DA ESPANHA
 
-### 12. O Caminho Dela
+### 11. O Caminho Dela
 
 *(a escrever)*
 
-### 13. A Loteria
+### 12. A Loteria
 
 *(a escrever)*
 
@@ -162,33 +158,33 @@ Ela manteve a cara parada. Não olhou pra trás, pra fila. Tinha catorze anos, e
 
 *(a escrever)*
 
-### 14. A Compra
+### 13. A Compra
 
 *(a escrever)*
 
-### 15. Jacadigo
+### 14. Jacadigo
 
 *(a escrever)*
 
-### 16. A Casa
+### 15. A Casa
 
 *(a escrever)*
 
-### 17. São João
+### 16. São João
 
 *(a escrever)*
 
-### 18. As Porteiras
+### 17. As Porteiras
 
 *(a escrever)*
 
 ## PARTE VI — A QUEDA
 
-### 19. O Nome
+### 18. O Nome
 
 *(a escrever)*
 
-### 20. A Mesa
+### 19. A Mesa
 
 *(a escrever)*
 

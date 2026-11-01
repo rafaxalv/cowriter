@@ -140,21 +140,17 @@ She kept her face still. She did not look back at the line. She was fourteen, an
 
 ## PART III — FREE, NOT EQUAL (1870–c. 1877)
 
-### 10. The Paper
-
-*(to be written)*
-
-### 11. The Ticket
+### 10. Seven Years of Freedom, Poverty and Bad Luck
 
 *(to be written)*
 
 ## PART IV — THE WOMAN FROM SPAIN
 
-### 12. Her Road
+### 11. Her Road
 
 *(to be written)*
 
-### 13. The Lottery
+### 12. The Lottery
 
 *(to be written)*
 
@@ -162,33 +158,33 @@ She kept her face still. She did not look back at the line. She was fourteen, an
 
 *(to be written)*
 
-### 14. The Purchase
+### 13. The Purchase
 
 *(to be written)*
 
-### 15. Jacadigo
+### 14. Jacadigo
 
 *(to be written)*
 
-### 16. The House
+### 15. The House
 
 *(to be written)*
 
-### 17. São João
+### 16. São João
 
 *(to be written)*
 
-### 18. The Gates
+### 17. The Gates
 
 *(to be written)*
 
 ## PART VI — THE FALL
 
-### 19. The Name
+### 18. The Name
 
 *(to be written)*
 
-### 20. The Table
+### 19. The Table
 
 *(to be written)*
 
