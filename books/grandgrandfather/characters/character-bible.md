@@ -27,7 +27,7 @@ Who each character is, in short bullets: role, personality, motives, relationshi
       - Trusts the orixás and luck; money is meant to flow, so she never saves. "The orixás will open the way."
       - Teaches him to keep his head down, to trust luck, her songs, and how to treat wounds and fevers (it saves him in the war).
       - Silent about the master's nights; hides them from Inácio and her son.
-      - Arc: the sale breaks her faith; she turns against the gods, saves for the first time, is scammed, starts again and buys her own freedom. She stops waiting for luck and makes her own destiny.
+      - Arc: the sale breaks her faith ("How could the orixás allow such an atrocity?"); she turns against the gods, saves for the first time to go back to her son, is scammed, starts again and buys her own freedom c. 1866, too late: he is already at the war. Tonico finds her c. 1868, before she can travel. She stops waiting for luck and makes her own destiny.
       - Chapters: sold as a girl, ganhadeira in Salvador, the Malê Revolt, sold to the estate c. 1843, meets Inácio, his birth (ch. 1); healer, singer, sold south c. 1858 (ch. 2); free healer in Vassouras, her letter, her death c. 1869 (Interlude); the letter reaches him (Bastião brings it, ch. 16; read in ch. 17).
   - **Inácio** (working name). Enslaved boiling-house worker, Luzia's companion, his father.
       - Teaches him the sugar chain at the mill: the seed of the farms he will run.
