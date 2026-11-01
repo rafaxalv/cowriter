@@ -248,6 +248,7 @@ Setting: Corumbá and the Jacadigo farms on the Bolivian border. The war freed h
   - Arrives with European racism; being sold teaches her his life, but it does not make things simple (ch. 11, 15).
   - Her dream: a respectable marriage, a husband of her choosing, to be a *señora* with a house (ch. 11). (decided Nov 1, 2026)
   - Counts everything: learned from her mother's lacemaking piecework; men believe in luck, women count (ch. 11). (decided Nov 1, 2026)
+  - Tells him her whole story over many stolen meetings at Albino's, February–July 1877, finishing just before his win; he once gives her a lottery ticket, and she finds it silly (ch. 10, 11). (decided Nov 2, 2026)
   - Fear of Black men planted by Madame Angélique's warning; afraid of him at first sight, undone by talking, back later (ch. 10, 11, 15). (decided Nov 1, 2026)
   - Saved and bought at once: grateful, then hurt; their marriage has warmth and distance, ups and downs (ch. 13, 14, 15).
   - Once rich: proud of appearances, wants her sons to look like nobility, uneasy that they are partly Black, sides with the white boys; the Pires lure her in (ch. 15).
