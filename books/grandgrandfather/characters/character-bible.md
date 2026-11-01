@@ -47,6 +47,7 @@ Who each character is, in short bullets: role, personality, motives, relationshi
   - Sings well: he learned singing at work beside his family, every day, most of the day (ch. 1–2). Skeptical of Kalunga's ginga, then in love with it: once his body can sing he becomes a dangerous fighter; his move is the rabo de arraia (ch. 3).
   - Loves music and dance (batuques, samba de roda): where he feels free. Athletic, a capoeirista; in the war capoeira becomes a weapon (ch. 3, 5).
   - Violence is the first language he learned: not angry day to day, but explosive when disrespected ("moleque" is enough).
+  - His anger slowly decreases with Kalunga's lessons but is always present (ch. 3); it comes back after the war (ch. 10).
   - Free and rich, he is demanding: his wishes are orders. Jealous of his wife (ch. 19, 21).
   - Good with the land and with men: works beside his workers, knows their language, finds smarter ways to run the farm (ch. 19).
   - In the first years at Liberdade he works harder than anyone and no job is beneath him; he finds, almost by accident, what changes the farm: salt, counting and branding, cacimbas, hides, the sick horses, Descalvados, the fence (ch. 19). Inspired by Rafael's grandfather Rivaldo.
@@ -143,6 +144,7 @@ Slavery from the inside: an ordinary sugar estate where cruelty is routine and k
       - Chapters: ch. 2–3; refuses to go to the war and runs to a quilombo (ch. 3); cannot read: Tonico brings him the newspaper and a pass, and he crosses Brazil carrying Luzia's letter (Interlude), arriving in Corumbá (ch. 16); stands with him when he challenges Albino for the woman from Spain (ch. 17); one of the most trusted men at Liberdade (ch. 19); dies before him, and Benedito buries him (ch. 22).
   - **Velho Kalunga**, an old capoeirista, a Black man who escaped a farm long ago and lives free.
       - Funny, not solemn: jokes all the time, teases, makes hard things easy. The boys tell legends about him half as jokes (a capitão do mato killed with one kick, dogs that never find his trail, a prince in Africa, a ghost); he neither confirms nor denies, and laughs.
+      - Teaches only while joking: every sentence a joke and a lesson; spicy, ironic, philosophical, or silly (farts, Ezequiel's hard dick). Lessons in small pieces: the ginga as instinct; tricking the opponent; the acting game; the mind game; the ginga as an art. "The strongest kicks are delivered with a smile." The clan's creed: the art protects freedom, never imposes on others as the lords did (ch. 3).
       - His clan's rule: only those who have proven themselves worthy belong, and no outsider may ever come to the hideout (ch. 3); Tonico is made a member in 1877 (Interlude).
       - Goes from place to place helping others train in secret; Bastião's master, then Benedito's. Teaches the ginga, the rhythm and the songs before the kicks: "Your body can't sing yet." Benedito's master.
       - His jokes are weapons: the rumour about Ezequiel's first whipping is his, and it spreads through the Recôncavo (ch. 3).
