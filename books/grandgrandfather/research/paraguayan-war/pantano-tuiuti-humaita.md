@@ -17,7 +17,8 @@ Rótulos como no BOOK.md.
   - **A água:** Dionísio Cerqueira, nas memórias: "água amarelenta e grossa, poluída pela vizinhança dos cadáveres". Corpos empilhados ou jogados nos rios. \[DOCUMENTED\]
   - **Os urubus:** vísceras de gado deixadas ao sol; "Os urubus e caranchos encarregavam-se da limpeza" (Cerqueira). \[DOCUMENTED\]
   - **Mais:** trincheiras alagadas, ratos, insetos; soldados do Norte morrendo de frio no inverno por falta de roupa (Dourado 2014); fome e prostituição nos acampamentos. \[DOCUMENTED\]
-  - **Mosquitos, cobras, jacarés, sanguessugas:** próprios do terreno (Ñeembucú, brejos e esteros); nenhuma fonte específica ainda sobre ataques. \[PLAUSIBLE RECONSTRUCTION; procurar em Cerqueira, *Reminiscências da Campanha do Paraguai*, e em Taunay\]
+  - **Mosquitos, cobras, jacarés, sanguessugas:** próprios do terreno (Ñeembucú, brejos e esteros, o "carrizal" de juncos que protegia Humaitá por terra); ainda sem fonte de época sobre ataques. \[PLAUSIBLE RECONSTRUCTION\] Busca de 2 nov.: os trechos de Cerqueira citados em artigos não falam de bichos; falam de "cinco anos de rudeza extrema" (p. 47) e de soldados que "passavam a vida aspérrima, sorrindo e cantando" (p. 281). Para achar os bichos é preciso ler o livro inteiro (há edição do Senado Federal, *Reminiscências da Campanha do Paraguai, 1865–1870*, que o site do Senado não deixou baixar daqui).
+  - **A lama (outra frente):** Taunay, na coluna de Mato Grosso (não em Tuiuti), descreve "lama, lama visguenta, traiçoeira, lama fétida, negra e insolúvel" e homens atolados "até o pescoço" (citado por Luiz de Castro Souza). Serve de textura e de vocabulário de época, avisando que é outro lugar. \[DOCUMENTED, citação de segunda mão\]
 
 ## 3. Causos do pântano (para dar tempero)
 
@@ -25,7 +26,7 @@ A busca não achou relatos de soldados com lendas do pântano; o que segue é fo
 
   - **Boitatá:** a cobra de fogo do folclore brasileiro, ligada aos fogos-fátuos (luzes de gás do brejo e de matéria em decomposição). Num pântano cheio de mortos, as luzes sobre a água à noite são plausíveis, e os baianos dariam a elas o nome de casa. \[FOLCLORE real; o episódio é PLAUSIBLE RECONSTRUCTION\]
   - **Lendas guaranis dos paraguaios** (ouvidas de prisioneiros ou das mulheres do acampamento): o **Pombero**, que assobia no mato à noite e de quem se deixa fumo e cachaça para ficar em paz; o **Mbói Tu'i**, cobra com cabeça de papagaio, guardião dos banhados; o **Luisón**, que ronda os cemitérios. \[FOLCLORE real; o contato no acampamento é PLAUSIBLE RECONSTRUCTION; verificar\]
-  - **Coisas estranhas e verdadeiras:** os mortos magros demais para queimar (Thompson, acima); os camalotes, ilhas de plantas flutuantes no rio, e as minas flutuantes paraguaias (o encouraçado *Rio de Janeiro* afundado por minas em 2 set. 1866: a verificar); canhões falsos de madeira em Humaitá (a verificar).
+  - **Coisas estranhas e verdadeiras:** os mortos magros demais para queimar (Thompson, acima); os camalotes, ilhas de plantas flutuantes no rio; as minas flutuantes paraguaias, chamadas "torpedos": em 2 set. 1866, um dia depois de bombardear Curuzu, o encouraçado *Rio de Janeiro* bate em duas delas e afunda na hora, com 53 homens; ainda está lá, sob uns 15 m de areia \[DOCUMENTED\]; em Humaitá, os paraguaios amarravam garrafões vazios no rio para os brasileiros pensarem que eram torpedos, e a corrente que fechava o rio era de sete correntes torcidas, sustentadas por canoas e três pontões (Burton, Thompson) \[DOCUMENTED\]. Os canhões falsos de madeira em Humaitá não foram confirmados: deixar de fora.
 
 ## 4. Humaitá (julho–agosto 1868)
 
@@ -35,12 +36,15 @@ A busca não achou relatos de soldados com lendas do pântano; o que segue é fo
 
 ## A verificar
 
-  1. Cerqueira e Taunay: passagens sobre cobras, jacarés, mosquitos, e qualquer lenda contada no acampamento.
-  2. Minas flutuantes e o *Rio de Janeiro* (2 set. 1866); canhões falsos em Humaitá.
+  1. Ler Cerqueira (*Reminiscências*, ed. Senado) e Taunay inteiros: passagens sobre cobras, jacarés, mosquitos, e qualquer lenda contada no acampamento. Rafael pode baixar o PDF do Senado e pôr no repositório.
+  2. Lendas guaranis no acampamento: nenhuma fonte liga o Pombero ou o Luisón aos soldados; usar como PLAUSIBLE RECONSTRUCTION.
   3. Onde exatamente os rendidos de 5 ago. foram presos (o Chaco, defronte de Humaitá).
 
 ## Fontes
 
   - [Battle of Tuyutí (Wikipédia)](https://en.wikipedia.org/wiki/Battle_of_Tuyut%C3%AD), com Thompson 1869, Murad 1957, Fragoso 1934, Williams 2000.
   - [Humaitá campaign (Wikipédia)](https://en.wikipedia.org/wiki/Humait%C3%A1_campaign); [Siege of Humaitá](https://en.wikipedia.org/wiki/Siege_of_Humait%C3%A1).
+  - [Brazilian ironclad Rio de Janeiro (Wikipédia)](https://en.wikipedia.org/wiki/Brazilian_ironclad_Rio_de_Janeiro); [Fortress of Humaitá (Wikipédia)](https://en.wikipedia.org/wiki/Fortress_of_Humait%C3%A1).
+  - Cerqueira citado em [Multitemas/UCDB](https://www.multitemas.ucdb.br/multitemas/article/download/1362/1252/4067); Taunay citado em [Hiram Reis e Silva, "A medicina na Guerra do Paraguai VIII"](https://www.gentedeopiniao.com.br/colunista/hiram-reis-e-silva/terceira-margem-parte-dcxxxvi-a-medicina-na-guerra-do-paraguai-parte-viii).
+  - [Asunción Times, o Pombero](https://asunciontimes.com/culture/paraguayan-history/the-pombero-lord-of-the-night-guardian-of-the-guarani-wilds/).
   - [Pesquisa FAPESP, "O terror das doenças na Guerra do Paraguai"](https://revistapesquisa.fapesp.br/o-terror-das-doencas-na-guerra-do-paraguai/).
