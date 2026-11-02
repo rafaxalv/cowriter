@@ -144,11 +144,13 @@ Ela manteve a cara parada. Não olhou pra trás, pra fila. Tinha catorze anos, e
 
 *(a escrever)*
 
-## PARTE IV — A MULHER DA ESPANHA
+## PARTE IV — A MULHER DA ESPANHA (c. 1858–1877)
 
 ### 11. O Caminho Dela
 
 *(a escrever)*
+
+## PARTE V — FORTUNA (c. 1877–1888)
 
 ### 12. A Loteria
 
@@ -174,7 +176,7 @@ Ela manteve a cara parada. Não olhou pra trás, pra fila. Tinha catorze anos, e
 
 *(a escrever)*
 
-## PARTE VI — A QUEDA
+## PARTE VI — A QUEDA (anos 1890)
 
 ### 17. O Nome
 

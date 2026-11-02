@@ -144,11 +144,13 @@ She kept her face still. She did not look back at the line. She was fourteen, an
 
 *(to be written)*
 
-## PART IV — THE WOMAN FROM SPAIN
+## PART IV — THE WOMAN FROM SPAIN (c. 1858–1877)
 
 ### 11. Her Road
 
 *(to be written)*
+
+## PART V — FORTUNE (c. 1877–1888)
 
 ### 12. The Lottery
 
@@ -174,7 +176,7 @@ She kept her face still. She did not look back at the line. She was fourteen, an
 
 *(to be written)*
 
-## PART VI — THE FALL
+## PART VI — THE FALL (1890s)
 
 ### 17. The Name
 
