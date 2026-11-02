@@ -136,27 +136,27 @@ Slavery from the inside: an ordinary sugar estate where cruelty is routine and k
       - Takes on the estate as he grows, working with his father, rarely around; Ezequiel defies him, and Benedito blames him for doing nothing (ch. 3).
       - Never a candidate for the war; watches his milk brother leave and stays. A loyal friend after all.
       - Real aspect: the exemption of the elite; the "milk brother" bond.
-      - Chapters: ch. 1–2, 3; banishes Ezequiel, finds Luzia, always knows where Kalunga and Bastião hide and never tells (Interlude); reads of the lottery, goes to Kalunga's hideout for the first time and is made a member of the Kalunga clan; takes Bastião down the river as his captured runaway past the capitães do mato who know him, then leaves him with a pass naming Tonico as owner, Luzia's letter, and his own: an apology for never helping, he was a boy and afraid; he cannot leave the estate (Interlude; read in ch. 13). Never goes to Liberdade; after the letter there is no news of him again (decided Oct 30, 2026).
-      - The first outsider ever at Kalunga's hideout, unarmed and alone; catches the same-day steamer with Bastião and gives him the pass, the letters and money for the journey (Interlude).
+      - Chapters: ch. 1–2, 3; fires Ezequiel after finding in the accounts how well his father paid him (c. 1868), finds Luzia, always knows where Bastião hides and never tells (Interlude); reads of the lottery and goes to Bastião; takes Bastião down the river as his captured runaway past the capitães do mato who know him, then leaves him with a pass naming Tonico as owner, Luzia's letter, and his own: an apology for never helping, he was a boy and afraid; he cannot leave the estate (Interlude; read in ch. 13). Never goes to Liberdade; after the letter there is no news of him again (decided Oct 30, 2026).
+      - Goes to Bastião's hiding place unarmed and alone; never part of the Kalunga clan (decided Nov 2, 2026); catches the same-day steamer with Bastião and gives him the pass, the letters and money for the journey (Interlude).
   - **Bastião**, best friend, two or three years older, enslaved on the estate; Velho Kalunga's student.
       - Knew Benedito as a boy but not closely; teased him, jokingly, as the master's son's pet (ch. 2).
       - Sees his anger when Luzia is sold and reaches out; brings him into the senzala's secret world, the roda, the terreiro, Kalunga (ch. 3).
-      - Calls him "the milk brother" as a tease (ch. 2); when Benedito joins the Kalunga clan: "Does this make us the coffee brothers?" (ch. 3); when Tonico joins too: "Your milk brother is a coffee brother now" (ch. 12).
+      - Calls him "the milk brother" as a tease (ch. 2); when Benedito joins the Kalunga clan: "Does this make us the coffee brothers?" (ch. 3). The coffee brothers are only the two of them.
       - At first teases him in the roda for not knowing its traditions; the teasing turns into friendship, and he stands by him against Ezequiel. With Kalunga, Benedito's first family after Luzia (ch. 3).
       - Capoeirista, joker, storyteller.
       - Real aspect: capoeira as resistance; quilombos in the Recôncavo.
       - Smart, a very good fighter, taught by Kalunga; knows his way around.
       - Killed in the 1890s defending Liberdade when the Pires' men steal its cattle; Benedito buries him and cannot prove who did it (ch. 17).
-      - Chapters: ch. 2–3; refuses to go to the war and runs to a quilombo (ch. 3); cannot read: Tonico brings him the newspaper and a pass, and he crosses Brazil carrying Luzia's letter (Interlude), arriving in Corumbá c. late November 1877, four or five months after the win (ch. 12); stands with him when he challenges Albino for the woman from Spain (ch. 13); one of the most trusted men at Liberdade (ch. 14); dies before him, and Benedito buries him (ch. 17).
+      - Chapters: ch. 2–3; refuses to go to the war and runs to a quilombo (ch. 3); kills Ezequiel when he burns the hideout and kills Kalunga, c. 1868; then lives alone (Interlude); cannot read: Tonico brings him the newspaper and a pass, and he crosses Brazil carrying Luzia's letter (Interlude), arriving in Corumbá c. late November 1877, four or five months after the win (ch. 12); stands with him when he challenges Albino for the woman from Spain (ch. 13); one of the most trusted men at Liberdade (ch. 14); dies before him, and Benedito buries him (ch. 17).
   - **Velho Kalunga**, an old capoeirista, a Black man who escaped a farm long ago and lives free.
       - Funny, not solemn: jokes all the time, teases, makes hard things easy. The boys tell legends about him half as jokes (a capitão do mato killed with one kick, dogs that never find his trail, a prince in Africa, a ghost); he neither confirms nor denies, and laughs.
       - Teaches only while joking: every sentence a joke and a lesson; spicy, ironic, philosophical, or silly (farts, Ezequiel's hard dick). Lessons in small pieces: the ginga as instinct; tricking the opponent; the acting game; the mind game; the ginga as an art. "The strongest kicks are delivered with a smile." The clan's creed: the art protects freedom, never imposes on others as the lords did (ch. 3).
-      - His clan's rule: only those who have proven themselves worthy belong, and no outsider may ever come to the hideout (ch. 3); Tonico is made a member in 1877 (Interlude).
+      - His clan's rule: only those who have proven themselves worthy belong, and no outsider may ever come to the hideout (ch. 3).
       - Goes from place to place helping others train in secret; Bastião's master, then Benedito's. Teaches the ginga, the rhythm and the songs before the kicks: "Your body can't sing yet." Benedito's master.
       - His jokes are weapons: the rumour about Ezequiel's first whipping is his, and it spreads through the Recôncavo (ch. 3).
       - Real aspect: capoeira as resistance; runaways living free in the margins.
-      - Middle-aged and strong when he taught Ezequiel (c. 1845) and sent him away; old by Benedito's time, and Ezequiel's hunt grows harder to escape. About 77 and almost dying in 1877, when he blesses Bastião's going to Benedito (Interlude).
-      - Chapters: ch. 2 (sends Ezequiel away), ch. 3; stays in the woods when the war comes, still at the hideout in 1877 (Interlude).
+      - Middle-aged and strong when he taught Ezequiel (c. 1845) and sent him away; old by Benedito's time, and Ezequiel's hunt grows harder to escape. In his late sixties in 1868, when Ezequiel, led by the man he maimed, sets the hideout on fire and kills him with many of the clan; the clan breaks up (Interlude, decided Nov 2, 2026).
+      - Chapters: ch. 2 (sends Ezequiel away), ch. 3; stays in the woods when the war comes; killed by Ezequiel c. 1868 (Interlude).
   - **Rosária**, enslaved house servant and apprentice of the Boa Morte sisterhood in Cachoeira (she helps and sings at its festa; the sisters are older freed women); a friend from the terreiro, then his first love.
       - Clever and religious. Her sale mirrors Luzia's.
       - Real aspect: family separation through sale; the Irmandade da Boa Morte in Cachoeira.
@@ -168,11 +168,11 @@ Slavery from the inside: an ordinary sugar estate where cruelty is routine and k
       - Enjoys cruelty and is feared for it: a man of colour who enforces slavery to stay above it.
       - A bully with his own friends, never punished; humiliated by the capoeira boys at the festa in Cachoeira (ch. 3).
       - Taught briefly by Velho Kalunga as a boy and sent away for his pride and violence (ch. 2); hunts him as capitão do mato (ch. 3).
-      - After his first whipping, Kalunga's joke about him follows him through the Recôncavo, to the festa and past his banishment (ch. 3, Interlude).
+      - After his first whipping, Kalunga's joke about him follows him through the Recôncavo, to the festa and past his firing (ch. 3, Interlude).
       - Taunts Benedito with his freedom; refuses Tonico's orders as Tonico takes on the estate (ch. 3).
       - Spared from the war because he is no longer enslaved (and protected by the master): the freedom Benedito must fight for keeps Ezequiel at home, part of their rivalry (ch. 3).
       - Real aspect: the colour hierarchy (free people of colour as overseers and capitães-do-mato).
-      - Chapters: his birth (ch. 1); the goiabeira night, the informer years, the pee prank (ch. 2); freed c. 1858, the first whipping, beaten by Benedito (ch. 3); banished by Tonico, the revenge of the man whose hand he took (Interlude).
+      - Chapters: his birth (ch. 1); the goiabeira night, the informer years, the pee prank (ch. 2); freed c. 1858, the first whipping, beaten by Benedito (ch. 3); fired by Tonico c. 1868 with the letter that smells of urine; tortures the man whose hand he took into showing the hideout, burns it and kills Kalunga; killed by Bastião (Interlude, decided Nov 2, 2026).
   - **Mãe Otília**, a Candomblé priestess in Cachoeira.
       - Priestess of the terreiro where he meets Rosária; comes to know him there (ch. 3).
       - Gives him a guia for Ogum; he wears it through the whole war.
