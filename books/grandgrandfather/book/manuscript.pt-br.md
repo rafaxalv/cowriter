@@ -166,11 +166,11 @@ Ela manteve a cara parada. Não olhou pra trás, pra fila. Tinha catorze anos, e
 
 *(a escrever)*
 
-### 15. São João
+### 15. A Cerca
 
 *(a escrever)*
 
-### 16. As Porteiras
+### 16. São João
 
 *(a escrever)*
 

@@ -119,7 +119,7 @@ Invented details in both reference paragraphs (from the scene 1 sample, to confi
 
   - Rafael's mom to review the colloquial PT-BR narration ("pra", "tirou ela").
   - Rum or cachaça in English.
-  - Catharsis points to revisit (Albuquerque's stolen pay, Joca Cabinda's flogging as a sour release, Benites left as a failure).
+  - Catharsis points to revisit (Albuquerque's stolen pay, Damião's flogging as a sour release, Benites left as a failure).
   - Matching update to 00 Shared Rules and the 00 Book Concept for the "door stays closed" rule.
 
 ## Change log

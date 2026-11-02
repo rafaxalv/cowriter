@@ -166,11 +166,11 @@ She kept her face still. She did not look back at the line. She was fourteen, an
 
 *(to be written)*
 
-### 15. São João
+### 15. The Fence
 
 *(to be written)*
 
-### 16. The Gates
+### 16. São João
 
 *(to be written)*
 
