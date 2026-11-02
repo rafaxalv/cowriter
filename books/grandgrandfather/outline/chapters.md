@@ -334,7 +334,8 @@ See the research doc "What a Freed Slave Could and Couldn't Do" for sources.
   - When / where: 1878–c. 1884 · Jacadigo, Bolivian border (a rural area about 20–30 km south and southwest of Corumbá: the iron-red Jacadigo hills behind, the plain and the Lagoa do Jacadigo in front, Bolivia over the hills; see project note places-jacadigo) (Jacadigo and the good years of The House merged, Nov 1, 2026: the purchase of the land and the first good years)
   - Stories:
       
-      - Buying land. Dr. Teles is honest and his deeds are clean, but the forms still call him preto.
+      - **Opening scene: the horses** (decided Nov 2, 2026). Very short. Spring, a few months after he bought the farm (c. 1878). Benedito checks the teeth of some horses he is buying. They seem fine; he pays the seller. Things are good. Then the chapter moves back in time to the purchase of the land with Dr. Teles and to the Pires neighbours (below), and proceeds from there. (Note for the writer, not for the text: the teeth echo Luzia's sale, ch. 1, and the recruiter checking his own teeth, ch. 4; now he is the one checking. Never pointed out.)
+      - Buying land (told looking back, after the opening scene). Dr. Teles is honest and his deeds are clean, but the forms still call him preto.
       - The Pires neighbours: they first try to buy him out.
       - He names the farm Liberdade. After slavery, the war, the poor years in Corumbá and the lottery, it reads like the happy ending of an epic: a beautiful farm whose name says everything he fought for. Write it so that the reader believes it too.
       - The good years. The chapter starts positive: they have some good years at Liberdade. The lands are beautiful; the couple is fairly happy; she is still young and innocent. There is real warmth between them in these first years (decided Nov 1, 2026). He employs free men who were once enslaved, promising a fair wage and respect. This sets the tone of a happy ending.
