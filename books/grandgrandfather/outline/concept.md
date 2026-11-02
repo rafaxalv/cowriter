@@ -55,9 +55,12 @@ In order of importance. The voices draw on them in every chapter; the first one 
   - **The country's forgetting.** In December 1890 the finance minister Rui Barbosa ordered the slavery records held by the treasury to be burned \[DOCUMENTED; to cite\]. The state, too, chose not to remember. Real aspect for the author's note; never explained in the chapters.
   - **Memory you cannot trust.** The grandmother's fog in the frame, his failing memory at the end (never named as a disease, ch. 17): the reader is not always sure who is right.
 
-### 5. Liberdade, where nobody is free
+### 5. Freedom
 
-  - The farm that looks like the happy ending traps everyone in it, each in a different way.
+  - **What freedom is worth, and what it costs.** He bets his life on the war as a door to freedom, and gets it; then freedom in Corumbá is poorer and harder than he dreamed (Part III, "Free, not equal"). The paper says free; the street, the clerk who writes *preto* on the deed, and the neighbours say otherwise. Freedom is not the happy ending.
+  - **Many kinds of freedom.** The law's (a letter of manumission, 1888 as news from far away), money's (the lottery buys land, not respect), and the inner kind that no paper gives: freedom from fear, from the war in his head, from the master he carries inside. He wins the first two and never the third.
+  - **Freedom bought and sold.** Luzia buys her freedom, and still cannot go back to her son for lack of the fare. The free woman from Spain is sold, and he buys her: saving her and owning her at once ("You didn't save me, you own me", ch. 16).
+  - **Liberdade, where nobody is free.** The farm whose name says everything he fought for traps everyone in it, each in a different way: him by fear and distrust, her by a marriage she never chose, the sons by their father's anger and rules. The narrator never points out the irony; the reader sees it.
 
 ### 6. Mirrors
 
