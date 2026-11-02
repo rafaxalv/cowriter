@@ -113,7 +113,7 @@ Who each character is, in short bullets: role, personality, motives, relationshi
 
 Shown through scenes and repeated lines, never explained. Some chains break or mutate, by chance.
 
-  - **Faith in luck.** "The orixás will open the way" (Luzia) → "Luck will open the way" (him) → "The cards will open the way" (a son, ch. 18) → "The ground will open the way" (Xosé, ch. 18) → grandma's lottery (Epilogue).
+  - **Faith in luck.** "The orixás will open the way" (Luzia) → "Luck will open the way" (him) → "The cards will open the way" (a son, ch. 18) → grandma's lottery (Epilogue).
   - **Violence.** "Why does he have to be so angry?": the boy about the master (ch. 2), his son about him (ch. 16). Ezequiel shows the chain at its darkest (ch. 2). Grandma "could be really mean" (prologue).
   - **Fear of losing everything.** Luzia sold (ch. 2); his distrust starts with the lottery (ch. 12), grows on the farm (ch. 15), peaks at the gates and blurs with his memory (ch. 17). Paranoid, but not always wrong (ch. 15, 18). Grandma fires a shotgun at a noise on the roof and accuses people of stealing her things (prologue).
   - **Music.** Luzia's songs: in the market and over Inácio (ch. 2), in the war, on the farm; rejected by his family (ch. 16); one son hums one without knowing it (ch. 17, 18). The songs and lines (Olúrónbí, the funeral lament, Orí ni baba, Atotô, Ògún yè) are in research/music/luzia-songs.md. What reaches grandma: to decide.
@@ -284,11 +284,11 @@ A free European woman could not legally be a slave in Brazil; trafficked women w
   - Spoiled and wounded: never learn the land; suffer racism however rich; proud and angry; use money to compensate (ch. 16).
   - Prefer their mother's world (reading, manners, good clothes, coffees with the elite children, riding) to their father's farm and songs; think he works too much and smells of cow shit (ch. 16).
   - Lose everything at the card table to the white boys they grew up with (ch. 18). The *jogo do bicho* (Rio, 1892) stays in the background, for grandma's time.
-  - Four sons (working names, decided Nov 2, 2026), oldest to youngest: Afonso, Inácio, Manuel, Xosé (José).
+  - Four sons (working names, decided Nov 2, 2026), oldest to youngest: Afonso, Inácio, Manuel, José (renamed from Xosé (decided Nov 2, 2026)).
   - **Afonso**: the heir, named by his mother; raised by her and Lucília; wants the white elite's acceptance (ch. 14, 16). The son beaten at São João, afraid of his father all his life (ch. 16, 18); never lets a beard grow until after his father's death (ch. 16, 18). Loses everything at the last card game, told from inside him (ch. 18).
   - **Inácio**: named after his father's father. The follower (decided Nov 2, 2026): copies Afonso in everything, and gambles to keep up with him (ch. 16, 18).
   - **Manuel**: named after her father, who went to Buenos Aires and stopped writing. The dreamer (decided Nov 2, 2026): quiet and bookish, the one who believes the Pires' quotes; goes to study in Cuiabá or Rio, which costs cattle (ch. 16, 18).
-  - **Xosé (José)**: the youngest, named after her brother lost in Cuba; his father's favourite; cocky, lucky at cards until he isn't; scams people, looks for easy money; becomes a garimpeiro (ch. 18). Strikes a diamond and gambles it away in one night (ch. 18). To add: where he digs (the diamond garimpos of Mato Grosso).
+  - **José**: the youngest, named after her brother Xosé, lost in Cuba; his father's favourite. (His garimpo story was removed (decided Nov 2, 2026).)
   - **Others / daughters**: grandma's line; who carried the story down to her: to decide.
 
 ## Who is around at each stage (a menu, not a cast list)
@@ -298,7 +298,7 @@ A free European woman could not legally be a slave in Brazil; trafficked women w
   - **Free, not equal (1870–c. 1877):** Seu Bento, Euclides Bastos, Seu Albino (as his boss), Paraguayan workers, the clerks and police of Corumbá; far away, Tonico and Luzia (Interlude).
   - **Her road (1858–1877):** Rosa, Manuel and Xosé Lousada, Don Faustino, Alvarado, Ruchla, Doña Engracia, Capitán Iriarte, Madame Angélique, Seu Albino, Lucília.
   - **Fortune (c. 1877–1889):** Firmino and the other veterans at Liberdade, Bastião, the Pires sons and Otávio, Seu Bento, the lottery agent, Dr. Teles, the Pires family, Lucília; the Emperor and Princess Isabel only as news.
-  - **The fall (1890s):** the sons, the Pires family, card tables and garimpos (Xosé); grandma's line.
+  - **The fall (1890s):** the sons, the Pires family, card tables; grandma's line.
 
 ## Fact map and open questions
 
