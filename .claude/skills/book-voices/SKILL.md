@@ -46,11 +46,12 @@ Every voice has a **core**, shared by all languages, and a **language layer** fo
 3. **Tags** (from the voice-generator framework): narrative person, addressed to, form, and **literacy**.
 4. **Literacy profile** (essential for character voices): the level (from cannot write, through barely literate and basic, to educated and formal), and what it means on the page: vocabulary range, spelling, punctuation, sentence length, grammar, regional and period speech, first language. If the character cannot write, say how their letters exist (dictated to someone, so the scribe's hand shows) or whether they only speak. Check plausibility for the period, place, gender, class and status of the character, and flag anything that seems unlikely. The level is the same in every language; how it shows is in each language layer.
 5. **Reference authors** with weights (for example 70% author A, 30% author B).
-6. **Target profile**: each of the 26 dimensions with a **base value** and an **allowed tuning range** (for example Violence: base 3, range 2-5). Paragraph-level tuning must stay inside the range.
+6. **Target profile**: each of the 31 dimensions with a **base value** and an **allowed tuning range** (for example Violence: base 3, range 2-5). Paragraph-level tuning must stay inside the range.
 7. **Neighbour voices**: the voices this one must stay clearly different from, and the ones it must stay consistent with (the same character in another form).
 8. **Voice rules**: 5-12 rules, each checkable on one paragraph in any language, with a short do and don't example set in the story.
 9. **Conveying feeling**: how this voice makes the reader feel what a scene's **Reader feeling** asks for (every scene map carries one): through the senses or through statement, implied or shown, whether feelings are ever named, how a shift of feeling within a scene is marked, and how far the voice goes with disgust, horror or tenderness (always inside the Shared Rules and the Concept's handle-with-care notes). 2-4 rules, each checkable on one paragraph, with a do and don't example. They must fit the voice's scores on Sensory detail (8), Violence rendering (17), Emotional temperature (18) and Feeling rendering (23).
 9a. **Narrative technique**: how this voice tells an event: where it enters and leaves, what happens at the peak, how many steps an action gets, and what is explained versus left for the reader to infer. 2-4 rules, each checkable on one event, with a do and don't example, consistent with the scores on dimensions 19-26 (the same in every language). Voices written before this field existed get it the next time they are updated.
+9b. **Scene architecture**: how this voice cuts a chapter into scenes: how many and how long, how a scene opens and ends, how scenes are joined, one beat or several threads per scene. 1-3 rules consistent with the scores on dimensions 27-31. scene-builder reads them when it builds a scene map in this voice.
 
 **Language layer (one section per language)**
 
@@ -89,7 +90,7 @@ Every creation or update of a voice goes through this exchange, whether the auth
 - **Literacy**: plausible for the character, period and place.
 - **Shared rules**: no voice rule contradicts the Shared Rules; proposed shared rules are reviewed separately.
 - **Feeling**: the Conveying feeling rules are present and consistent with the voice's scores on dimensions 8, 17, 18 and 23, and with the handle-with-care notes.
-- **Technique**: the Narrative technique rules are present and consistent with dimensions 19-26, and group F has no language offsets.
+- **Technique**: the Narrative technique rules are present and consistent with dimensions 19-26, the Scene architecture rules with dimensions 27-31, and groups F and G have no language offsets.
 - **Complete**: every core field and every field of each language layer is filled.
 
 If something fails, send it back to voice-generator with the problem described. When it passes, show the author the result (for an Update, the before/after and the affected chapters), and after their OK save the voice file, update the Voice Index, raise the version, add the change log line, and hand the change to the **book-repo** skill, which saves it. For an Update, list the chapters that use the voice so the author can decide whether to re-run chapter-review on them.

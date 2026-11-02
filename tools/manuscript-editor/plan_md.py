@@ -5,6 +5,7 @@ A chapter entry in the Chapters file has this shape once organized by the editor
     ### 1\\. Good Teeth
 
       - When / where: before and around his birth (1846) · Salvador and the Recôncavo
+      - Readiness: 72/100 · beats 4 · arc 3 · links 4 · facts 3 · decisions 3 · voice 2 (Nov 2, 2026)
       - Stories:
 
           - An event of the chapter. (Sources: S2)
@@ -17,6 +18,9 @@ A chapter entry in the Chapters file has this shape once organized by the editor
       - Notes:
 
           - An open question or option.
+
+The Readiness line is computed in the repo (co-writer skill) and is read-only in the editor;
+syncing edits back keeps the file's value.
 
 Older entries keep everything under "Stories:" (and the interlude uses top-level bullets);
 on reading, bullets that start with "Sources" / "Further reading" become sources and bullets
@@ -66,7 +70,7 @@ def parse(text):
             cid = chap_id(h.group(2))
             cur = None
             if cid and not h.group(2).lower().startswith("arc brainstorm"):
-                cur = chapters.setdefault(cid, {"title": h.group(2).strip(), "when": "", "items": []})
+                cur = chapters.setdefault(cid, {"title": h.group(2).strip(), "when": "", "readiness": "", "items": []})
                 order.append(cid)
             kind_ctx = None
             continue
@@ -79,6 +83,9 @@ def parse(text):
             w = re.match(r"When\s*/\s*where:\s*(.*)$", body)
             if w:
                 cur["when"] = w.group(1).strip(); kind_ctx = None; continue
+            r = re.match(r"Readiness:\s*(.*)$", body)
+            if r:
+                cur["readiness"] = r.group(1).strip(); kind_ctx = None; continue
             sec = re.match(r"([A-Za-z ]+):\s*$", body)
             if sec and sec.group(1).strip().lower() in SECTION_KIND:
                 kind_ctx = SECTION_KIND[sec.group(1).strip().lower()]; continue
@@ -123,13 +130,15 @@ def item_from(body, kind):
     return it
 
 
-def render_chapter(when, items):
+def render_chapter(when, items, readiness=""):
     """Markdown body for one chapter entry (without its heading)."""
     srcs = [it for it in items if it["kind"] == "source"]
     num = {it["id"]: i + 1 for i, it in enumerate(srcs)}
     out = [""]
     if when:
         out.append(f"  - When / where: {when}")
+    if readiness:
+        out.append(f"  - Readiness: {readiness}")
     for kind, title in KINDS.items():
         group = [it for it in items if it["kind"] == kind]
         if not group:
@@ -155,6 +164,7 @@ def render_chapter(when, items):
 
 def rewrite(text, chapters):
     """Replace each chapter entry's body in `text` with the items in `chapters` (by chapter id)."""
+    old, _ = parse(text)  # the readiness line is computed in the repo, never edited in the Desk: keep the file's value
     out, skipping = [], False
     for line in text.split("\n"):
         h = re.match(r"(#{1,3}) (.+)$", line)
@@ -163,7 +173,8 @@ def rewrite(text, chapters):
             if cid and cid in chapters:
                 ch = chapters[cid]
                 out.append(f"{h.group(1)} {ch.get('title') or h.group(2)}")
-                out += render_chapter(ch.get("when", ""), ch["items"])
+                rd = ch.get("readiness") or old.get(cid, {}).get("readiness", "")
+                out += render_chapter(ch.get("when", ""), ch["items"], rd)
                 skipping = True
                 continue
             skipping = False

@@ -10,6 +10,7 @@ Open option: a short prologue and epilogue in the grandmother's voice, telling t
 
 ## Prologue — The Fog
 
+  - Readiness: 66/100 · beats 3 · arc 3 · links 3 · facts 5 · decisions 4 · voice 2 (Nov 2, 2026)
   - Stories:
       
       - Only this: it is a story my grandma used to tell. No summary of what happens; the reader goes in knowing nothing.
@@ -24,6 +25,7 @@ Open option: a short prologue and epilogue in the grandmother's voice, telling t
 ### 1\. Good Teeth
 
   - When / where: c. 1832–1846 · Salvador, then Coronel Menezes's sugar estate in the Recôncavo
+  - Readiness: 65/100 · beats 4 · arc 3 · links 3 · facts 3 · decisions 4 · voice 2 (Nov 2, 2026)
   - Stories:
       
       - **Prelude: Luzia, c. 1832–33, Salvador. The sale (opening scene).** Buyers check her teeth, guess her age, chalk prices and haggle as if over a horse. Luzia, about 14, is just off the ship. A dirty old buyer with stinking breath touches her in a way no buyer needs to. Because she is beautiful she is taken apart from the group, cleaned and dressed. Told from inside the silence of the one being sold; never explicit. She lands just after the 1831 ban: by law she is free, and she is enslaved anyway (see Facts).
@@ -63,6 +65,7 @@ Open option: a short prologue and epilogue in the grandmother's voice, telling t
 ### 2\. The Engenho
 
   - When / where: 1846–1858, age 0–12 · sugar estate in the Recôncavo · Tone: funny. There is suffering in this childhood, but also a lot of laughter and adventure (the pranks, the stick fights, the river). It turns dark with Inácio's death. He is a mischievous, quick, cheeky boy, not only a victim. The hard moments (Inácio's death, Luzia's sale) land harder because we have laughed with him first.
+  - Readiness: 71/100 · beats 4 · arc 4 · links 4 · facts 4 · decisions 3 · voice 2 (Nov 2, 2026)
   - Stories:
       
       - **c. 1845–46. Kalunga and the boy Ezequiel** (decided Oct 30, 2026). Ezequiel, 11–12, finds his way to Velho Kalunga's secret rodas and learns from him. But he is proud, and violent with the other boys: he hurts them, he wants to win, not to play. Kalunga, then a strong man in middle age, sees quickly that he does not care for their cause, and sends him away. Ezequiel never forgets it. (Before the goiabeira night and long before the road to capitão do mato.)
@@ -108,6 +111,7 @@ Open option: a short prologue and epilogue in the grandmother's voice, telling t
 ### 3\. The Roda
 
   - When / where: 1858–1865, age 12–19 · the estate, Cachoeira · his youth and growth, capoeira, the rivalry with Ezequiel grown up and sour, up to the fight at the festa; then the war (merged with The Bargain, Oct 27, 2026)
+  - Readiness: 76/100 · beats 4 · arc 4 · links 5 · facts 4 · decisions 4 · voice 2 (Nov 2, 2026)
   - Stories:
       
       - **The shape of the chapter.** After his father dies in his hands (ch. 2) and his mother is sold, he wants one thing: freedom, somehow. He becomes a fighter: he grows strong, picks fights he could lose, and throws himself into the roda (decided Oct 27, 2026). He finds his people: the capoeira boys, misfits who have to hide their skills and train in secret, and the terreiro, a faith to follow. This is the part of his life when he is closest to his African community: the roda, the terreiro, the songs Luzia left him. Ezequiel is the bully, with a few friends of his own, and whatever he does goes unpunished; when it does, Benedito blames Tonico for doing nothing, like always. Underdogs against the bully. Over the years his skill grows: the roda is where his force turns into play. With each of Kalunga's lessons his anger slowly decreases, but it is always there; it comes back after the war (ch. 10) (decided Nov 1, 2026). The chapter ends with the first real door to freedom he has ever seen: the war.
@@ -153,6 +157,7 @@ How the war is told (decided Oct 30, 2026; revised Nov 2, 2026): he is not on ev
 ### 4\. The Zouaves
 
   - When / where: 1865–66, age 19–20 · Salvador, ship São Francisco, the allied camps in the south
+  - Readiness: 54/100 · beats 2 · arc 2 · links 3 · facts 4 · decisions 4 · voice 2 (Nov 2, 2026)
   - Stories:
       
       - Enlisting; the recruiter checks his teeth (echo of chapter 1). The army roll registers him under a name the reader never sees; his comrades call him Zuavo. The zouave uniform starts his vanity about clothes: for the first time he wears something that marks him as a man, not as property.
@@ -166,6 +171,7 @@ How the war is told (decided Oct 30, 2026; revised Nov 2, 2026): he is not on ev
 ### 5\. Curuzu
 
   - When / where: 1866, age 20 · Tuiuti, Curuzu, Curupaiti
+  - Readiness: 72/100 · beats 4 · arc 4 · links 3 · facts 4 · decisions 4 · voice 2 (Nov 2, 2026)
   - Stories:
       
       - **Core event 1: Tuiuti (24 May 1866), his first battle** (expanded (decided Nov 2, 2026)). General Osório speaks to the men before the battle. Sargento Mbareté faces him for the first time; the Paraguayans call the Black troops macacos (as in the Cabichuí caricatures). \[Catharsis point: the zouaves hold in the mud with bayonets and capoeira until the line turns; the first time he fights back and it works. "Ògún yè!" under his breath. Cost: the same week, in camp, the field is not level.\]
@@ -181,6 +187,7 @@ How the war is told (decided Oct 30, 2026; revised Nov 2, 2026): he is not on ev
 ### 6\. Cholera
 
   - When / where: 1866–67, age 20–21 · the allied camps, the infirmary
+  - Readiness: 73/100 · beats 3 · arc 5 · links 4 · facts 3 · decisions 5 · voice 2 (Nov 2, 2026)
   - Stories:
       
       - **Roque Júnior in the infirmary** (decided Oct 30, 2026). Roque Júnior, gravely wounded at Curupaiti (ch. 5), is in the infirmary, and Benedito treats him with what Luzia taught him. He recovers too fast; Benedito, impressed by his strength, says he must be "a rare specimen" (*um espécime raro*). Roque Júnior laughs without humour: it is a word for animals. Then he tells his story. His mother says his father is Pata Seca, a tall enslaved man with thin shins on a fazenda in the interior of São Paulo, chosen for his body and brought to the women so the master would have more slaves; it was never confirmed, but she named her son after him. He has brothers and sisters he has never met, and he looks for them in the camps, among the tall paulistas with thin shins. A father of too many children to be a father to any (see Concept: family and descent). In 1866 he says "my father has many children", not the two hundred of the later legend. \[Pata Seca: FAMILY TRADITION / legend of a real man; Roque Júnior: FICTIONAL; see research/people/pata-seca.md.\]
@@ -196,6 +203,7 @@ How the war is told (decided Oct 30, 2026; revised Nov 2, 2026): he is not on ev
 ### 7\. Humaitá
 
   - When / where: 1867–68, age 21–22 · siege of Humaitá
+  - Readiness: 83/100 · beats 5 · arc 5 · links 4 · facts 4 · decisions 4 · voice 2 (Nov 2, 2026)
   - Stories:
       
       - **Core event 4: the assault on Humaitá (16 July 1868): Roque Júnior repays the debt** (decided Oct 30, 2026; expanded into four beats, Nov 2, 2026). He goes back to the line for the allied assault on the fortress: Osório's division, sent by Caxias against about 3,000 defenders, is repelled with more than a thousand Brazilian casualties against fewer than a hundred Paraguayan dead \[DOCUMENTED; see research/paraguayan-war/pantano-tuiuti-humaita.md\] (next four items).
@@ -209,6 +217,7 @@ How the war is told (decided Oct 30, 2026; revised Nov 2, 2026): he is not on ev
 ### 8\. Asunción
 
   - When / where: Dec 1868 – 1869, age 22–23 · occupied Asunción
+  - Readiness: 49/100 · beats 2 · arc 2 · links 2 · facts 3 · decisions 4 · voice 2 (Nov 2, 2026)
   - Stories:
       
       - **Entering an empty Asunción (1 Jan 1869)** (decided Oct 30, 2026). The residents fled two days earlier. The sacking starts the moment the troops arrive: palaces, the López family's houses and the Congress are stripped of pianos, mirrors, carpets, paintings and silver, shipped to Rio and Buenos Aires. A man who was property walks through the empty houses of the rich while everyone around him takes what they want. He takes a book (decided Nov 1, 2026): he is learning to read (Dom Obá's newspapers, ch. 4), and while the others carry off pianos and silver, his loot is quiet and private.
@@ -219,6 +228,7 @@ How the war is told (decided Oct 30, 2026; revised Nov 2, 2026): he is not on ev
 ### 9\. Acosta Ñu
 
   - When / where: Aug 1869 – 1870, age 23–24 · Piribebuy, Acosta Ñu, the hunt for López
+  - Readiness: 78/100 · beats 5 · arc 4 · links 5 · facts 4 · decisions 3 · voice 2 (Nov 2, 2026)
   - Stories:
       
       - **Core event 5: Piribebuy and Acosta Ñu, the deepest wound** (expanded into beats (decided Nov 2, 2026)). The wound that comes back at São João (ch. 16) (next items).
@@ -244,6 +254,7 @@ See the research doc "What a Freed Slave Could and Couldn't Do" for sources.
 ### 10\. Seven years of freedom, poverty and bad luck
 
   - When / where: 1870–1877, age 24–31 · the discharge, the river to Corumbá; Corumbá (The River and The Paper merged Oct 31, 2026; The Ticket merged in, Nov 1, 2026)
+  - Readiness: 60/100 · beats 3 · arc 3 · links 3 · facts 3 · decisions 4 · voice 2 (Nov 2, 2026)
   - Stories:
       
       - **The Paper (1870–1876).** Discharged without back pay. The boats go downriver to Bahia; he doesn't take one.
@@ -272,6 +283,7 @@ See the research doc "What a Freed Slave Could and Couldn't Do" for sources.
 ### 11\. Her Road
 
   - When / where: c. February–July 1877 · the back of Seu Albino's tavern, Corumbá; her story, told to him: a fishing village near Vigo (1858–1876); the steamer Vigo → Buenos Aires (c. mid-1876); Buenos Aires (c. August 1876–January 1877); upriver through Asunción to Corumbá (c. February 1877; steamer times to verify) (Galicia, The Crossing, Buenos Aires and Upriver merged into one chapter, Nov 1, 2026; retold as her telling him, Nov 2, 2026)
+  - Readiness: 66/100 · beats 4 · arc 4 · links 3 · facts 2 · decisions 4 · voice 2 (Nov 2, 2026)
   - Stories:
       
       - **How the chapter works: she tells him her story** (decided Nov 2, 2026). After their first meeting (ch. 10) they meet many times, in stolen moments at the back of the house; Lucília keeps watch. At first Albino does not mind; but he sees the two growing fond of each other, fears Benedito might "spoil" her virginity, and starts chasing him off whenever he finds them talking (decided Nov 2, 2026). They do not exactly hide, but they make small efforts to talk in peace; the rising risk runs under every meeting. He asks: where are you from, who taught you to read, what happened to your family, how did you come here; she answers part by part, in dialogue, and the story flows. Told from her side: what it costs her to tell it, what she softens, and her fear of him wearing off. Each part below is something she tells him. Her story must be finished before the win: the day after it, Albino hides her (ch. 12).
@@ -301,6 +313,7 @@ See the research doc "What a Freed Slave Could and Couldn't Do" for sources.
 ### 12\. The Lottery
 
   - When / where: c. 1877 · Corumbá
+  - Readiness: 59/100 · beats 3 · arc 2 · links 3 · facts 4 · decisions 4 · voice 2 (Nov 2, 2026)
   - Stories:
       
       - **The win (Day 0, c. mid-July 1877)** (decided Nov 1, 2026). The draw is in Rio, c. June 1877; the results come upriver about 3–4 weeks later, printed in the Rio papers on the steamer (Corumbá has no telegraph; travel time to verify). The win: 20 contos, the top prize of the Court lottery (Loteria da Corte), which from 1867 to 1880 had one draw of 6,000 tickets with a top prize of 20 contos (Loner 2014) (decided Nov 2, 2026); what it means in years of a labourer's wages. Enough for land, cattle and a comfortable life. The win soon becomes a burden: everyone knows. People ask for loans and favours, try to cheat him, strangers claim to be cousins and old comrades. He loses his privacy and cannot tell friends from opportunists. His distrust and paranoia start here.
@@ -316,6 +329,7 @@ See the research doc "What a Freed Slave Could and Couldn't Do" for sources.
 
 ### Interlude — Tonico's Journey (c. 1866–1877)
 
+  - Readiness: 71/100 · beats 4 · arc 4 · links 4 · facts 3 · decisions 4 · voice 2 (Nov 2, 2026)
   - Stories:
       
       - Tonico watches his milk brother leave for the war; he stays.
@@ -338,6 +352,7 @@ See the research doc "What a Freed Slave Could and Couldn't Do" for sources.
 ### 13\. The Purchase
 
   - When / where: c. 1877–78 · Corumbá
+  - Readiness: 69/100 · beats 3 · arc 4 · links 4 · facts 4 · decisions 4 · voice 2 (Nov 2, 2026)
   - Stories:
       
       - **c. 1877. The letters** (decided Oct 30, 2026; revised Nov 2, 2026). He opens them with Bastião beside him. Bastião hands him Tonico's letter first, as Tonico told him to (decided Nov 2, 2026). **Tonico's letter, given in full in the book** (decided Nov 2, 2026), short: he breaks the news that Luzia is dead, so her son does not learn it from her own hand, and tells him how she lived and died: free, paid, a nurse in Cachoeira, near enough for Tonico to help her when she needed it; she lies in a marked grave, buried by the Boa Morte sisterhood, a place he can visit. Then he apologises for never helping him in the past (with Luzia's sale, with Ezequiel, all the times he did nothing), explains that he was a boy and too afraid of his father, and that he is still ashamed of it; he would like to have come himself, but he cannot leave the estate, its debts and its business are his now. He signs it as the milk brother, and asks nothing: he knows he was never a coffee brother, and the joke from ch. 3 closes here (decided Nov 2, 2026). **Then Luzia's bundle** (decided Nov 2, 2026): twenty or thirty letters tied with string, the first written in Vassouras with Tonico's help, the rest alone in Cachoeira, some only a few lines on scraps. He did not know they existed. He reads her words himself (Dom Obá taught him). **In the book: a few key passages, woven into the scene, and her last letter in full**, the peak of the chapter (decided Nov 2, 2026). He expected a mother proud of his luck; he finds a woman who kept her faith but stopped waiting on luck and made her own destiny (*Deus ajuda quem cedo madruga*; see Interlude). A shock. Joy and grief arrive together, in his oldest friend's hands. He finally stops searching the lists for her name. Its first effect: the Purchase, below. (Voice of her letters: CHAR-LUZIA-LETTERS, to create from BASE-LETTERS-DESPERATE, adjusted to her literacy: the Vassouras letter cleaner, with Tonico's help; the Cachoeira ones in her own hand, misspelled, getting better.)
@@ -349,6 +364,7 @@ See the research doc "What a Freed Slave Could and Couldn't Do" for sources.
 ### 14\. Liberdade
 
   - When / where: spring 1878, then looking back to early 1878, and on to c. 1884 · Jacadigo, Bolivian border (a rural area about 20–30 km south and southwest of Corumbá: the iron-red Jacadigo hills behind, the plain and the Lagoa do Jacadigo in front, Bolivia over the hills; see project note places-jacadigo) (Jacadigo and the good years of The House merged, Nov 1, 2026: the purchase of the land and the first good years; reorganized Nov 2, 2026)
+  - Readiness: 78/100 · beats 4 · arc 3 · links 5 · facts 5 · decisions 5 · voice 2 (Nov 2, 2026)
   - Stories:
       
       - **How the chapter runs** (reorganized Nov 2, 2026). The opening scene (spring 1878) → back in time: buying the land, the Pires, naming the farm (early 1878) → the people of Liberdade → the good years and what he changes (1878–c. 1883) → the neighbours grow wary → the sons are born. The whole chapter is the happy ending the reader believes in; the slow turn starts in ch. 15.
@@ -389,6 +405,7 @@ See the research doc "What a Freed Slave Could and Couldn't Do" for sources.
 ### 15\. The Fence
 
   - When / where: c. 1884–87 · Jacadigo (the negative things start; split from São João (decided Nov 2, 2026); reorganized Nov 2, 2026)
+  - Readiness: 73/100 · beats 4 · arc 4 · links 5 · facts 4 · decisions 3 · voice 2 (Nov 2, 2026)
   - Stories:
       
       - **How the chapter runs** (reorganized Nov 2, 2026). The fence and the Pires → the old hands begin to go, Firmino dies → the slow turn in both of them → her pride, the Pires drawing her in, the teas → the white boys → his distrust → the other fence, which closes the chapter. The fence frames the chapter (decided Nov 2, 2026): it opens with the wire between the farms and ends with the fence growing between him and Carmen. Two meanings, one laid out at the start and one at the end. The negative things start here; the family breaks in ch. 16.
@@ -414,6 +431,7 @@ See the research doc "What a Freed Slave Could and Couldn't Do" for sources.
 ### 16\. São João
 
   - When / where: c. 1884–88 · Jacadigo (the family breaks; split from The Fence (decided Nov 2, 2026); reorganized into small events, Nov 2, 2026)
+  - Readiness: 82/100 · beats 5 · arc 5 · links 5 · facts 3 · decisions 4 · voice 2 (Nov 2, 2026)
   - Stories:
       
       - **How the chapter runs** (reorganized Nov 2, 2026). Too much was packed into one story, so the chapter is now told through small events, each one a single conflict, building to the São João night. Four movements: the sons drift from the farm (1–3) → the culture he brings, hushed and mocked (4–5) → the arguments Carmen wins with the Pires' quotes, and what the ledgers show him (6) → he becomes "senhor" and nobody is free (7–8) → the São João night, which closes the chapter (9). The boys are small here (Afonso c. 5–8, José a toddler at the start): keep the events child-sized.
@@ -452,6 +470,7 @@ See the research doc "What a Freed Slave Could and Couldn't Do" for sources.
 ### 17\. The Name
 
   - When / where: 1888–1890s · Jacadigo
+  - Readiness: 52/100 · beats 2 · arc 3 · links 3 · facts 2 · decisions 4 · voice 2 (Nov 2, 2026)
   - Stories:
       
       - **1888. The gates** (moved from the old ch. 16, decided Nov 2, 2026): one small event, not a long scene, that adds to the decay of his mind and understanding. The peak of his paranoia. Fugitives from nearby ranches arrive at his gates, and he takes them in. For a while he hosts them: a Black landowner sheltering enslaved people on the run, a strange and rich situation. They work his land, eat at his table, hide when the ranchers' men come asking. He is proud, generous, the master of his house, and it is new for him. It does not last. He starts to suspect them: they want to steal from him, take advantage of him. And he is jealous: one of the fugitives looks at his wife, or he believes he does. In the end he sends them all away in anger. The man who was enslaved shuts his gates on people running from slavery.
@@ -466,6 +485,7 @@ See the research doc "What a Freed Slave Could and Couldn't Do" for sources.
 ### 18\. The Table
 
   - When / where: 1890s · Corumbá
+  - Readiness: 69/100 · beats 3 · arc 4 · links 4 · facts 3 · decisions 5 · voice 2 (Nov 2, 2026)
   - Stories:
       
       - **How the chapter runs** (reorganized (decided Nov 2, 2026)). The inheritance and the Pires' credit (1) → the widow and her ledgers (2) → why the sons gamble (3) and with whom (4) → the last card game, told from inside Afonso, which ends the chapter and the story (5). (Xosé's garimpo story removed (decided Nov 2, 2026).) Nothing comes after the last game in this chapter; the frame returns in the Epilogue.
@@ -477,6 +497,7 @@ See the research doc "What a Freed Slave Could and Couldn't Do" for sources.
 
 ## Epilogue (option) — What Remains
 
+  - Readiness: 65/100 · beats 3 · arc 3 · links 4 · facts 5 · decisions 3 · voice 2 (Nov 2, 2026)
   - Stories:
       
       - Back to grandma, and now she says it plainly: "Your great-great-grandfather was a slave who went to war, won the lottery and bought a Spanish girl." After the whole book, the reader knows how much that one sentence leaves out. The story survives, the name doesn't: the proverb turned around ("the watercourse still keeps its name", see Prologue).

@@ -21,7 +21,7 @@ This skill is generic. Everything specific to one book lives in that book's fold
 
 In the book's voices folder (owned by book-voices; paths from the profile):
 
-- Every author analyzed goes into the **Author Library** (tags, 26 scores with reasons, portrait). Check the library first and reuse analyses instead of redoing them.
+- Every author analyzed goes into the **Author Library** (tags, 31 scores with reasons, portrait). Check the library first and reuse analyses instead of redoing them.
 - When an author's full text is in the repo's shared library (`library/`), their **style study** (see "Text-based style study") is saved next to the text, as `library/<author-slug>/STYLE.md`. It describes the author, not the fit to one book, so it is shared by every book; the book's Author Library links to it and keeps the scores and the fit.
 - Author searches (sources, shortlists, the author's selections and decisions) are recorded in an **author search** file in the voices folder (for example `author-search-YYYY-MM.md`), and the file is listed in the profile.
 - Language-wide word and translation decisions go into the **Bilingual Lexicon** (through book-voices).
@@ -39,7 +39,7 @@ In the book's voices folder (owned by book-voices; paths from the profile):
 - **Literacy** of the voice: cannot write (spoken or dictated) / barely literate / basic / educated / formal or official, plus the first language and regional or period speech. For authors, note the literacy of the voices they write (for example: ordinary people speaking, mostly plain and unschooled).
 - **Language**: for authors, the language they write in, and whether they were read in the original or in translation (a translation is partly the translator's style; say so). For voices and paragraphs, which language layer applies.
 
-### The 26 scored dimensions
+### The 31 scored dimensions
 
 Each is a spectrum from 1 to 5 with a named pole at each end; 3 means balanced or mixed. Always give a one-line reason for each score, based on observed features of the text, not on reputation.
 
@@ -81,9 +81,16 @@ Each is a spectrum from 1 to 5 with a named pole at each end; 3 means balanced o
 25. **Explanation and reader inference**: 1 = causes, motives and context spelled out; little left to infer / 5 = much left unsaid; the reader must infer motives, causes, even what happened
 26. **Dialogue subtext**: 1 = characters say what they mean / 5 = the meaning runs under the words; what matters is not said
 
+#### G. Scene architecture (how a chapter is cut into scenes; used by scene-builder)
+27. **Scene length**: 1 = many short scenes, a page or less each / 5 = few long scenes that run for many pages
+28. **Scene opening**: 1 = orientation first (place, time, who is there) before anything happens / 5 = opens on an action, a line of dialogue or a gesture; the reader is oriented later, or never fully
+29. **Scene ending**: 1 = closes on a resolution, a summary or a reflection / 5 = cuts on an image, a line or an unanswered question
+30. **Transitions**: 1 = scenes bridged by summary, time continuous / 5 = hard cuts and white space, jumps in time and place left unexplained
+31. **Scene focus**: 1 = one purpose and one main beat per scene / 5 = several threads braided in one scene (texture, several characters' agendas, past and present)
+
 Present scores as a table (authors as columns, the tags at the top, then the dimensions as rows) and, when useful, offer a visual comparison (a radar or heat-map chart, or an interactive page with sliders).
 
-Group F is best scored from a text-based style study (below). Without the text, score it from what is well known about the author and mark those scores "(not text-based)". Authors and voices scored before group F existed keep their 18 scores; add 19-26 the next time they are used.
+Groups F and G are best scored from a text-based style study (below). Without the text, score them from what is well known about the author and mark those scores "(not text-based)". Group G describes whole chapters, so score it from one or two complete chapters (where the scene breaks fall, how scenes open and end, how they are joined), not from short passages. Authors and voices scored before groups F or G existed keep their scores; add the missing ones (19-26, 27-31) the next time they are used.
 
 Do not add, drop or rename tags or dimensions on the fly. If the author wants to change the framework itself, propose an update to this skill (it applies to every book).
 
@@ -152,7 +159,9 @@ For each passage, write short notes (a table row per lens) and quote at most a s
 - **Subtext**: in dialogue, what is said versus what is meant.
 - **Repetition and signposting**: does the author repeat key information or flag what matters, or trust one mention?
 
-Then give each passage a quick 1-5 on dimensions 19-26 and note the spread: an author's habit is the pattern across passages, and the exceptions (where they break it) are often their most powerful moments; record both.
+**Lens E, scene architecture** (on one or two whole chapters, not passages): mark the scene breaks; count the scenes and their rough lengths; note how each opens (orientation or in the middle) and ends (resolution or cut); how scenes are joined (summary bridges or hard cuts and jumps); and whether a scene carries one beat or braids several threads.
+
+Then give each passage a quick 1-5 on dimensions 19-26 (and each chapter of lens E a 1-5 on 27-31) and note the spread: an author's habit is the pattern across passages, and the exceptions (where they break it) are often their most powerful moments; record both.
 
 ### Step 5. Write the style study
 
@@ -163,7 +172,8 @@ Save `library/<author-slug>/STYLE.md` (one per author; add a section per book if
 3. **How events are told** (lenses A and B): the author's typical event shape and action chain in 6-10 lines, with one or two short quotes and the exceptions.
 4. **How feelings reach the reader** (lens C): the modes used, with rough shares (for example "mostly bodily and behavioural; named emotions rare and usually at a distance in time").
 5. **What is explained and what is left** (lens D): what the reader is trusted to infer, typical gaps, subtext.
-6. **Scores 1-26** with a one-line reason each, citing measures or passages.
+5a. **How chapters are cut into scenes** (lens E): number and length of scenes, openings, endings, transitions, focus, in 4-6 lines.
+6. **Scores 1-31** with a one-line reason each, citing measures or passages.
 7. **Techniques a voice can borrow**: 4-8 concrete, checkable moves (for example "the decisive act happens between two paragraphs; the next one opens on its result").
 
 Keep it under about 1,500 words. Never paste long passages; the full text is already in the library.
@@ -182,7 +192,7 @@ The approach is the same in every language; the means differ. A reader of each l
 
 ### The core (shared by all languages)
 
-Tags, literacy level, the 26-dimension target profile with base values and tuning ranges, the voice rules, the conveying-feeling rules, the narrative technique rules, the neighbour voices. The core is what makes it the same voice. Group F (19-26) never takes language offsets: how an event is shaped and what is left unsaid must be the same in every language.
+Tags, literacy level, the 31-dimension target profile with base values and tuning ranges, the voice rules, the conveying-feeling rules, the narrative technique rules, the scene architecture rules, the neighbour voices. The core is what makes it the same voice. Groups F and G (19-31) never take language offsets: how an event is shaped, how a chapter is cut into scenes and what is left unsaid must be the same in every language.
 
 ### The language layer (one per language of the book)
 
@@ -253,7 +263,7 @@ The author changes the voice in plain words or by setting numbers, either for th
 Build a **voice package** and give it to book-voices, which validates and saves it:
 
 - **Mode and ID**: New, Derive (from which voice) or Update (with the version it updates).
-- **Core**: tags and literacy level; reference authors with weights (link their style studies when they exist); the 26 dimensions with base values and allowed tuning ranges (ask the author where they want room to vary); voice rules (5-12, each checkable on one paragraph, written as rule, why, do example, don't example; not vague); **conveying-feeling rules** (2-4: how the voice makes the reader feel a scene's Reader feeling: senses or statement, implied or shown, whether feelings are named, how a shift is marked, how far it goes with disgust, horror or tenderness; consistent with dimensions 8, 17, 18 and 23 and with the handle-with-care notes; each with do and don't examples); **narrative technique rules** (2-4: how the voice enters and leaves an event, what happens at the peak, how many steps an action gets, and what is explained versus left to the reader; consistent with dimensions 19-26; each with do and don't examples, ideally modelled on a technique from a reference author's style study).
+- **Core**: tags and literacy level; reference authors with weights (link their style studies when they exist); the 31 dimensions with base values and allowed tuning ranges (ask the author where they want room to vary); voice rules (5-12, each checkable on one paragraph, written as rule, why, do example, don't example; not vague); **conveying-feeling rules** (2-4: how the voice makes the reader feel a scene's Reader feeling: senses or statement, implied or shown, whether feelings are named, how a shift is marked, how far it goes with disgust, horror or tenderness; consistent with dimensions 8, 17, 18 and 23 and with the handle-with-care notes; each with do and don't examples); **narrative technique rules** (2-4: how the voice enters and leaves an event, what happens at the peak, how many steps an action gets, and what is explained versus left to the reader; consistent with dimensions 19-26; each with do and don't examples, ideally modelled on a technique from a reference author's style study); **scene architecture rules** (1-3: how this voice cuts a chapter into scenes: how many and how long, how a scene opens and ends, how scenes are joined, one beat or several threads; consistent with dimensions 27-31; scene-builder applies them when it builds a scene map in this voice).
 - **One language layer per language of the book**: language references, offsets with reasons, vocabulary strategy, phrase-building strategies, address and dialogue, literacy markers, language rules, and a reference paragraph written natively in that language.
 - **Proposed lexicon entries**: words and translation decisions that should apply across voices, for the Bilingual Lexicon.
 - **For an Update**: a short before/after of what changed (core and/or which layer), and the chapters and paragraphs that use the voice and may need a new chapter-review.

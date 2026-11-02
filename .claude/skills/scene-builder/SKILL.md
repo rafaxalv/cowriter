@@ -24,8 +24,19 @@ Read, for the chapter:
 - the chapter's full entry in **Chapters**, including sources and open items, and the entries of the previous and next chapters;
 - the **Character Bible** entries of everyone who appears, and its **Continuity** record;
 - the research files the chapter's sources point to, when a scene needs more historical or factual detail;
-- the **Voice Index** (via book-voices) to know which voices exist;
+- the **Voice Index** (via book-voices) to know which voices exist, and the **voice file** of the voice chosen for the chapter: its scores on narrative technique (19-26) and scene architecture (27-31), and its narrative technique and scene architecture rules;
 - the scene maps of the previous and next chapters in **Scenes**, if they exist.
+
+### 1a. Readiness check (before building)
+
+Read the chapter's **Readiness** line (computed with the co-writer's `readiness.md`; recalculate it first if it is missing or older than the chapter's last change).
+
+- **80 or more**: build.
+- **60-79**: before building, ask the author one short round of questions (3-4, multiple choice where possible) on the two weakest parameters, for example the beats of a key moment, what it leaves in the point-of-view character, an open option. Write the answers into Chapters (after approval), recalculate the score, then build.
+- **Below 60**: do not build. Say what is missing, parameter by parameter, and hand back to the co-writer's planning step.
+- If the voice parameter is low because the chapter's voice has no scene architecture scores (27-31), offer to complete them with **voice-generator** first; if the author prefers to go on, build with the defaults below and mark the map "voice profile incomplete".
+
+Never fill a gap by inventing story: a gap becomes a question, or a **[proposal]**.
 
 If Scenes does not exist yet, create it at the path the profile gives (after asking) with the header below.
 
@@ -33,6 +44,15 @@ Before changing a scene map that already exists, re-read it: the author may have
 
 ## 2. Build the scenes
 
+0. **Read the voice's scene shape.** Before grouping events, turn the voice's scores into concrete decisions for this chapter and write them in the map's header ("Voice shape"):
+   - **27 Scene length** sets how many scenes the chapter's budget is cut into (low: many short scenes; high: few long ones).
+   - **19 Event entry** and **28 Scene opening** set where each scene starts (with setup and orientation, or late, on an action or a line).
+   - **20 Event exit** and **29 Scene ending** set where each scene stops (carried into the aftermath, or cut at or before the peak, on an image or a line).
+   - **21 Peak treatment** and **22 Action granularity** decide which moments are slowed down beat by beat and which are compressed or told after the fact.
+   - **30 Transitions** and **10 Chronology** decide how scenes are joined (summary bridges, or hard cuts and jumps, flashbacks).
+   - **31 Scene focus** and **9 Scene vs summary** decide whether texture events get their own scenes or are braided into others, and what is told as summary between scenes.
+   - **23-26** (feelings, interior access, inference, subtext) set what each scene leaves unsaid, recorded per scene below.
+   The voice's scene architecture rules override these defaults where they are more specific. When the voice has no scores for 27-31, use 3 (balanced) and say so.
 1. **List every event** in the chapter's Chapters entry. Each event must land in at least one scene; one scene can carry several events.
 2. **Group and order.** Turn events into scenes (a continuous moment in one place and time). Order them so cause leads to effect and the chapter follows the Concept's chapter shape (for example hook, texture, turn, cliffhanger). Daily-life or texture events can be woven into other scenes instead of standing alone. Prefer scenes driven by action (something happens, someone wants something) over summary or description.
 3. **Find the gaps.** Where the Chapters entry jumps (in time, place or logic), add a bridge scene or passage, marked **[proposal]**.
@@ -49,7 +69,7 @@ Before changing a scene map that already exists, re-read it: the author may have
    - **History carried** (the real fact or piece of the world the scene brings in, how it enters without explanation, with a source or truth label);
    - **Forces or themes touched** (from the Concept);
    - **Function** in the chapter (hook, texture, turn, set-up, payoff, cliffhanger) and set-ups or payoffs it serves elsewhere;
-   - **Voice** (which voice from the Voice Index, or "to define");
+   - **Voice** (which voice from the Voice Index, or "to define") and **voice shape**: one line on how the voice shapes this scene (where it opens and cuts, what is slowed down, what stays off the page or unsaid);
    - **Open items**;
    - **Target length** in words.
 5. **Feeling curve.** Read the Reader feeling of all scenes in order and check the chapter's emotional curve: avoid several scenes in a row with the same feeling, and make sure the chapter's last scene lands its feeling (relief, dread, a hook).
@@ -67,7 +87,7 @@ Before changing a scene map that already exists, re-read it: the author may have
 
 Write the scene map into **Scenes** under a heading "Chapter N — Title (scene map, draft X, date)", with:
 
-- a short header: source in Chapters, voice plan, target length, chapter shape, throughline, dates used;
+- a short header: source in Chapters, the chapter's Readiness score at the time of building, voice plan and **voice shape** (step 0), target length, chapter shape, throughline, dates used;
 - one section per scene with the fields above;
 - a **Checks** list at the end: every Chapters event and where it is covered; the feeling curve (one line per scene with its Reader feeling); proposals to approve; clashes and open items; sources to add; total length.
 

@@ -245,7 +245,7 @@ def export_plan(book_dir, slug, out):
                 "text": it["text"], "label": it["label"], "verify": it["verify"], "file": it["file"],
                 "sources": [ids[id(s)] for s in it["sourceRefs"]], "updatedAt": None,
             })
-        write(out, f"books/{slug}/planChapters/{cid}.json", {"chapter": cid, "title": ch["title"], "when": ch["when"], "updatedAt": None})
+        write(out, f"books/{slug}/planChapters/{cid}.json", {"chapter": cid, "title": ch["title"], "when": ch["when"], "readiness": ch.get("readiness", ""), "updatedAt": None})
 
 
 def export_docs(book_dir, slug, out):
