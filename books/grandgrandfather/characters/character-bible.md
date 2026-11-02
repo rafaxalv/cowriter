@@ -250,7 +250,7 @@ Setting: Corumbá and the Jacadigo farms on the Bolivian border. The war freed h
   - Tells him her whole story over many stolen meetings at Albino's, February–July 1877, finishing just before his win; he once gives her a lottery ticket, and she finds it silly (ch. 10, 11). (decided Nov 2, 2026)
   - Fear of Black men planted by Madame Angélique's warning; afraid of him at first sight, undone by talking, back later (ch. 10, 11, 15). (decided Nov 1, 2026)
   - Saved and bought at once: grateful, then hurt; their marriage has warmth and distance, ups and downs (ch. 13, 14, 15).
-  - Once rich: proud of appearances, wants her sons to look like nobility, uneasy that they are partly Black, sides with the white boys; the Pires lure her in (ch. 15).
+  - Once rich: proud of appearances, wants her sons to look like nobility, uneasy that they are partly Black, sides with the white boys; the Pires lure her in: teas at their house, then, after he forbids her to go, at Liberdade, where at least he can watch (ch. 15).
   - Traumas: the deception, the passage, the fear of the brothel, losing Ruchla, never writing home the truth (ch. 11, 14).
 
 ### The relationship with him (decided Nov 1, 2026)
