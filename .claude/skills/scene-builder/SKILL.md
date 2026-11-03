@@ -71,9 +71,10 @@ Before changing a scene map that already exists, re-read it: the author may have
    - **Function** in the chapter (hook, texture, turn, set-up, payoff, cliffhanger) and set-ups or payoffs it serves elsewhere;
    - **Voice** (which voice from the Voice Index, or "to define") and **voice shape**: one line on how the voice shapes this scene (where it opens and cuts, what is slowed down, what stays off the page or unsaid);
    - **Open items**;
-   - **Target length** in words.
-5. **Feeling curve.** Read the Reader feeling of all scenes in order and check the chapter's emotional curve: avoid several scenes in a row with the same feeling, and make sure the chapter's last scene lands its feeling (relief, dread, a hook).
-6. **Budget.** Give the chapter a target length from the profile's length target and the number of chapters; share it across scenes, and say which scenes to trim first.
+   - **Scene shape** (the scene-level decisions; the voice's scene architecture gives the defaults, the scene decides): **Opening**: orientation first, or in the action, and on what (a gesture, a line of dialogue, an image, an object); **Ending**: resolved, or cut, and on what (an image, a line, an unanswered question); **Into the next scene**: summary bridge, hard cut, or jump in time or place (for the chapter's last scene: how the chapter ends); **Length**: the target in words. When a choice departs from the voice's default (28 Scene opening, 29 Scene ending, 30 Transitions, 27 Scene length, 31 Scene focus), say why in a few words, as a chapter's tuning gives a reason: for example "cuts on the boy's eyes although the voice usually carries events into their aftermath: the memory he never tells".
+5. **Shape curve.** Read the Scene shape of all scenes in order, next to the voice's defaults: the pattern of lengths, openings, endings and joins should read as this voice across the chapter, with departures where the moment needs them and few enough that the habit stays visible. Flag runs that break the voice without a reason.
+6. **Feeling curve.** Read the Reader feeling of all scenes in order and check the chapter's emotional curve: avoid several scenes in a row with the same feeling, and make sure the chapter's last scene lands its feeling (relief, dread, a hook).
+7. **Budget.** Give the chapter a target length from the profile's length target and the number of chapters; share it across scenes, and say which scenes to trim first.
 
 ## 3. Rules
 
@@ -89,9 +90,9 @@ Write the scene map into **Scenes** under a heading "Chapter N — Title (scene 
 
 - a short header: source in Chapters, the chapter's Readiness score at the time of building, voice plan and **voice shape** (step 0), target length, chapter shape, throughline, dates used;
 - one section per scene with the fields above;
-- a **Checks** list at the end: every Chapters event and where it is covered; the feeling curve (one line per scene with its Reader feeling); proposals to approve; clashes and open items; sources to add; total length.
+- a **Checks** list at the end: every Chapters event and where it is covered; the feeling curve (one line per scene with its Reader feeling); the shape curve (one line per scene: opening → ending → join, length, and any departure from the voice with its reason); proposals to approve; clashes and open items; sources to add; total length.
 
-Show the author a short summary (a table of scenes with their Reader feeling) and the decisions needed. Do not mark the map ready until the author has answered them.
+Show the author a short summary (a table of scenes with their Reader feeling and scene shape) and the decisions needed. Do not mark the map ready until the author has answered them.
 
 ## 5. After approval
 

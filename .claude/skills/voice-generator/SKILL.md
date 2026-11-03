@@ -82,6 +82,7 @@ Each is a spectrum from 1 to 5 with a named pole at each end; 3 means balanced o
 26. **Dialogue subtext**: 1 = characters say what they mean / 5 = the meaning runs under the words; what matters is not said
 
 #### G. Scene architecture (how a chapter is cut into scenes; used by scene-builder)
+These scores are the voice's habits, its defaults. Each scene makes its own choices in the scene map (scene-builder's Scene shape: opening, ending, join to the next scene, length) starting from them, and gives a reason when it departs. Like tuning: voice default → chapter → scene.
 27. **Scene length**: 1 = many short scenes, a page or less each / 5 = few long scenes that run for many pages
 28. **Scene opening**: 1 = orientation first (place, time, who is there) before anything happens / 5 = opens on an action, a line of dialogue or a gesture; the reader is oriented later, or never fully
 29. **Scene ending**: 1 = closes on a resolution, a summary or a reflection / 5 = cuts on an image, a line or an unanswered question
