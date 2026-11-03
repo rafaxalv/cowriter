@@ -50,7 +50,7 @@ For each moment, decide which voice applies (the scene map names it), and point 
 - places where the voice should change (for example a letter inside the narration) and whether the transition is clear to the reader;
 - places where the current voice does not fit and a different voice, or an adjustment to the voice, is needed. Voice changes are made with the **book-voices** skill, not here.
 
-Then decide the **chapter's tuning**: one set of changes inside the voice's ranges for the whole chapter, when the chapter as a whole needs it (for example more sensory detail for a chapter of arrival, faster pace for a war chapter). Moments inside the chapter are shaped within those settings, by the writing itself; keep tuning purposeful and sparse, and most chapters at the base values. Show the map and the planned tuning to the author before going on.
+Then decide the **chapter's tuning**: one set of changes inside the voice's ranges for the whole chapter, when the chapter as a whole needs it (for example more sensory detail for a chapter of arrival, faster pace for a war chapter). Moments inside the chapter are shaped within those settings, by the writing itself; keep tuning purposeful and sparse, and most chapters at the base values. Show the map and the planned tuning to the author before going on (to settle a chapter's tuning with the author in depth, use **chapter-voice-tuning**).
 
 ### 3. Send each paragraph to paragraph-review
 

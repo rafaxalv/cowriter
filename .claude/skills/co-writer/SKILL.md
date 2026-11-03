@@ -45,6 +45,7 @@ This skill is generic and works for any book in this repo. Everything specific t
 ## The book skills and who does what
 
 - **co-writer** (this skill): coordinates; plans chapters with the author; writes the prose from the scene maps; keeps files in sync.
+- **chapter-voice-tuning**: fine-tunes a chapter's narrator voice (its 31 parameters) through a round of questions; records it in Chapter Voices.
 - **chapter-revision**: revises a chapter's plan before scenes: brainstorm, research, organize, fit in the book, plot holes, readiness.
 - **scene-builder**: Chapters -> Scenes.
 - **character-voice**: how each character speaks in dialogue (speech voice, set per chapter), saved through book-voices.

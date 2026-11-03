@@ -24,7 +24,7 @@ Read, for the chapter:
 - the chapter's full entry in **Chapters**, including sources and open items, and the entries of the previous and next chapters;
 - the **Character Bible** entries of everyone who appears, and its **Continuity** record;
 - the research files the chapter's sources point to, when a scene needs more historical or factual detail;
-- the **Voice Index** (via book-voices) to know which voices exist, and the **voice file** of the voice chosen for the chapter: its scores on narrative technique (19-26) and scene architecture (27-31), and its narrative technique and scene architecture rules;
+- the **Voice Index** (via book-voices) to know which voices exist, and the **voice file** of the voice chosen for the chapter: its scores on narrative technique (19-26) and scene architecture (27-31), and its narrative technique and scene architecture rules; and the chapter's **tuning** in the book's Chapter Voices file;
 - the scene maps of the previous and next chapters in **Scenes**, if they exist.
 
 ### 1a. Readiness check (before building)
@@ -44,7 +44,7 @@ Before changing a scene map that already exists, re-read it: the author may have
 
 ## 2. Build the scenes
 
-0. **Read the voice's scene shape.** Before grouping events, turn the voice's scores into concrete decisions for this chapter and write them in the map's header ("Voice shape"):
+0. **Read the voice's scene shape.** Before grouping events, turn the voice's scores, **with the chapter's tuning applied** (base + the chapter's offsets from Chapter Voices), into concrete decisions for this chapter and write them in the map's header ("Voice shape", noting the tuning used). If the chapter has no tuning yet, offer **chapter-voice-tuning** first, so the scenes are built on the final settings; if the author prefers to go on, use the base values. If the tuning changes later, check the map's Scene shapes against it:
    - **27 Scene length** sets how many scenes the chapter's budget is cut into (low: many short scenes; high: few long ones).
    - **19 Event entry** and **28 Scene opening** set where each scene starts (with setup and orientation, or late, on an action or a line).
    - **20 Event exit** and **29 Scene ending** set where each scene stops (carried into the aftermath, or cut at or before the peak, on an image or a line).
