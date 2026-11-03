@@ -45,6 +45,7 @@ This skill is generic and works for any book in this repo. Everything specific t
 ## The book skills and who does what
 
 - **co-writer** (this skill): coordinates; plans chapters with the author; writes the prose from the scene maps; keeps files in sync.
+- **chapter-revision**: revises a chapter's plan before scenes: brainstorm, research, organize, fit in the book, plot holes, readiness.
 - **scene-builder**: Chapters -> Scenes.
 - **character-voice**: how each character speaks in dialogue (speech voice, set per chapter), saved through book-voices.
 - **book-voices**: owns the voices; **voice-generator** builds or updates a voice with it.
@@ -83,7 +84,7 @@ If the author starts a new book (or no `BOOK.md` exists for it):
 
 ### 1. Plan the chapter (Chapters)
 
-Work with the author until the chapter's events are **well defined**: when and where, ages, the stories in order, the characters present (checked against the Bible and its Continuity record), the history it carries with sources, the key ideas it touches, open items resolved or consciously left open, and a continuity check against the previous and next chapters. Show what is missing. Propose ideas, but the author decides; mark proposals as proposals. The chapter's **Readiness score** (`readiness.md`) shows what is missing: below 80, ask a short round of questions on the weakest parameters before building scenes.
+Work with the author until the chapter's events are **well defined**: when and where, ages, the stories in order, the characters present (checked against the Bible and its Continuity record), the history it carries with sources, the key ideas it touches, open items resolved or consciously left open, and a continuity check against the previous and next chapters. Show what is missing. Propose ideas, but the author decides; mark proposals as proposals. The chapter's **Readiness score** (`readiness.md`) shows what is missing: below 80, run **chapter-revision** on it (or at least a short round of questions on the weakest parameters) before building scenes.
 
 ### 2. Choose the voices
 
