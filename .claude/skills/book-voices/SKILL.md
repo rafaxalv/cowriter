@@ -34,7 +34,7 @@ Every skill that plans, writes or checks a scene (scene-builder, co-writer, chap
 
 1. **Narration**: the chapter's voice from the book's Chapter Voices file (and its tuning), unless a paragraph names its own voice.
 2. **Dialogue**: the scene card's **Characters** field in Scenes lists who is in the scene. For each named character, look up the Voice Index row with Type "Character speech" whose **Whose voice** matches the name (or one of its aliases), open that file, and use its base with the **row for this chapter** from its "Settings per chapter" table (or the last earlier row, if the file says changes persist).
-3. A character listed in the scene with no speech voice speaks within the chapter's narrator voice and the Character Bible; say so ("no speech voice yet") and offer to build one with **character-voice** if they speak a lot.
+3. A character with no speech voice of their own uses the **base speech voice** of their group: the Voice Index row with Type "Base speech" whose **Whose voice** lists them (for example enslaved Bahians, planters, Paraguayans), adjusted by their notes in the Character Bible. A character with neither speaks within the chapter's narrator voice and the Bible; say so ("no speech voice yet") and offer to build one with **character-voice** if they speak a lot.
 4. When a scene map does not exist yet, use the characters named in the chapter's entry in Chapters, and say the list is provisional.
 
 ## Types of voices
@@ -42,6 +42,7 @@ Every skill that plans, writes or checks a scene (scene-builder, co-writer, chap
 - **Narrator voices**: usually one or two (for example the main narrator and a frame narrator).
 - **Author voice**: the author speaking as themselves (a prologue, an author's note), when the book has one.
 - **Character voices**: one per character who needs a distinct voice: their dialogue, letters, inner speech or testimony. A character can have more than one voice if the form differs a lot (speech vs letters), or if they change over the book (as a child vs as an old person).
+- **Base speech voices** (`BASE-SPEECH-<GROUP>`): a generic speech voice for a group (enslaved Bahians, planters, Paraguayans, foreigners speaking a learned language), used for every character listed in its **Whose voice** who has no speech voice of their own, and as the starting point when one of them gets one. Same sections as a character speech voice, with **Variants** (a line per listed character) instead of settings per chapter.
 - **Character speech voices** (`CHAR-<NAME>-SPEECH`): how a character talks in dialogue, built by the **character-voice** skill: a 12-dimension speech profile (S1-S12) with key ideas, a language layer per language and a setting per chapter, instead of the 31-dimension narrative profile. Check them for caricature (the character-voice skill's handle-with-care notes), for consistency with the character's other voices, and for clear difference from the characters they talk to most.
 - **Base voices**: a shared starting point that several character voices are derived from. A base voice is not used directly in the text.
 - **Document voices**: newspapers, official records, gossip and legends told by a passer-by.

@@ -17,6 +17,10 @@ This skill is generic. Everything specific to one book lives in that book's fold
 2. Read `BOOK.md`: voices folder, voice ID convention, languages, people and roles, standing rules (for example working names that never appear in the text), truth labels.
 3. Read the **Concept** in full: the central ideas, how the book is told, and the handle-with-care notes.
 
+## 0. Generic voices for groups
+
+When the author asks for voices for the many characters who do not need one of their own, build **base speech voices** (`BASE-SPEECH-<GROUP>`), one per group that shares a background (for example enslaved and freed people of one region, the landed class, soldiers, a foreign people, immigrants, people speaking a learned language). Each holds the same sections as a character speech voice, with typical scores for the group, and a **Variants** section with one line per listed character (what sets them apart) instead of settings per chapter. List every character it covers in the Voice Index's **Whose voice** (Type "Base speech"), so a character without their own voice is found through it. When a character later gets their own speech voice, start from their group's base voice and remove them from its list.
+
 ## 1. Gather the character
 
 Read, for the character the author names:

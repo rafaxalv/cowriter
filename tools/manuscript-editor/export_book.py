@@ -233,7 +233,11 @@ def main(book_dir, out):
         brief = scenes.get(cid) or (("(No scene map yet. Start of the chapter's plan:)\n" + plan[cid][:1500]) if plan.get(cid) else "")
         # Speech voices of the characters listed in the chapter's scene map (Characters field), at this chapter's setting.
         who = " ".join(re.findall(r"^\s*- Characters:\s*(.+)$", raw_scenes.get(cid, ""), re.M))
-        found = [sv for sv in speech if any(re.search(r"\b" + re.escape(n) + r"\b", who) for n in sv["names"])]
+        hit = lambda sv: [n for n in sv["names"] if re.search(r"\b" + re.escape(n) + r"\b", who)]
+        own = [sv for sv in speech if not sv["base"] and hit(sv)]
+        covered = {n for sv in own for n in sv["names"]}
+        # A generic (base) speech voice is used only for characters who have no speech voice of their own.
+        found = own + [sv for sv in speech if sv["base"] and any(not any(n in c for c in covered) for n in hit(sv))]
         sp = "\n\n".join(speech_brief(sv, cid) for sv in found)
         if sp:
             brief += "\n\nSPEECH VOICES (dialogue of the characters in this chapter's scenes)\n" + sp
@@ -254,6 +258,8 @@ def main(book_dir, out):
         deleted = set(json.load(open(os.path.join(lab, "deleted.json"), encoding="utf-8")))
     for f in sorted(os.listdir(vdir)):
         if f.endswith(".md") and not f.startswith("00-") and re.match(r"[A-Z]", f):
+            if re.search(r"\*\*Type\*\*:\s*(Character|Base) speech", open(os.path.join(vdir, f), encoding="utf-8").read()):
+                continue  # character speech voices reach the editor through each chapter's context, not as narrative voices
             vid, v = voice_profile(os.path.join(vdir, f))
             if vid in deleted:
                 continue
@@ -401,13 +407,14 @@ def speech_voices(book_dir):
     if not os.path.exists(idx):
         return out
     for r in csv.DictReader(open(idx, encoding="utf-8")):
-        if r.get("Type", "").strip().lower() != "character speech":
+        kind = r.get("Type", "").strip().lower()
+        if kind not in ("character speech", "base speech"):
             continue
         f = os.path.join(book_dir, "voices", r["ID"] + ".md")
         if not os.path.exists(f):
             continue
         names = [n.strip() for n in re.split(r"\s*/\s*", r.get("Whose voice", "")) if n.strip()]
-        out.append({"id": r["ID"], "names": names, "text": open(f, encoding="utf-8").read()})
+        out.append({"id": r["ID"], "names": names, "base": kind == "base speech", "text": open(f, encoding="utf-8").read()})
     return out
 
 
