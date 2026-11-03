@@ -19,7 +19,7 @@ This skill is generic. Everything specific to one book lives in that book's fold
 
 Owned by this skill. Paths come from the profile; the usual layout is:
 
-- **Voice Index** (`00-voice-index.csv`): all voices: ID, name, type, whose voice, when used, based on (for derived voices), version, status (draft / active / retired), notes.
+- **Voice Index** (`00-voice-index.csv`): all voices: ID, name, type, whose voice, when used, based on (for derived voices), version, status (draft / active / retired), notes. For a character speech voice, **Whose voice** holds the character's name exactly as the Character Bible and the scene maps write it, with other names they go by separated by " / " (for example "Luzia / Mãe Luzia"), and **Type** is "Character speech": this is how the other skills find it.
 - **Shared Rules** (`00-shared-rules.md`): rules every voice follows (the book's tone and how history or the world is woven in), plus bilingual notes.
 - **Bilingual Lexicon** (`00-bilingual-lexicon.md`, multilingual books; create the first time it is needed): decisions that apply across all voices: words kept untranslated and how context makes them clear; agreed translations of recurring terms; spelling of places and names; period terms to use or avoid in each language; forms of address and how each is carried into the other languages.
 - **Author Library** (`00-author-library.md`): the reference authors analyzed with the voice-generator framework (tags, language, 26 scores, portraits, and a link to the author's style study in the shared `library/` when one exists), so they are not re-analyzed each time.
@@ -28,11 +28,21 @@ Owned by this skill. Paths come from the profile; the usual layout is:
 
 One copy of each file only; look before creating anything. If a file is not where the profile says, search the book folder before concluding it is missing, and tell the author if it has moved.
 
+## Finding the voices of a scene
+
+Every skill that plans, writes or checks a scene (scene-builder, co-writer, chapter-review, paragraph-review, the Manuscript Desk) finds its voices the same way:
+
+1. **Narration**: the chapter's voice from the book's Chapter Voices file (and its tuning), unless a paragraph names its own voice.
+2. **Dialogue**: the scene card's **Characters** field in Scenes lists who is in the scene. For each named character, look up the Voice Index row with Type "Character speech" whose **Whose voice** matches the name (or one of its aliases), open that file, and use its base with the **row for this chapter** from its "Settings per chapter" table (or the last earlier row, if the file says changes persist).
+3. A character listed in the scene with no speech voice speaks within the chapter's narrator voice and the Character Bible; say so ("no speech voice yet") and offer to build one with **character-voice** if they speak a lot.
+4. When a scene map does not exist yet, use the characters named in the chapter's entry in Chapters, and say the list is provisional.
+
 ## Types of voices
 
 - **Narrator voices**: usually one or two (for example the main narrator and a frame narrator).
 - **Author voice**: the author speaking as themselves (a prologue, an author's note), when the book has one.
 - **Character voices**: one per character who needs a distinct voice: their dialogue, letters, inner speech or testimony. A character can have more than one voice if the form differs a lot (speech vs letters), or if they change over the book (as a child vs as an old person).
+- **Character speech voices** (`CHAR-<NAME>-SPEECH`): how a character talks in dialogue, built by the **character-voice** skill: a 12-dimension speech profile (S1-S12) with key ideas, a language layer per language and a setting per chapter, instead of the 31-dimension narrative profile. Check them for caricature (the character-voice skill's handle-with-care notes), for consistency with the character's other voices, and for clear difference from the characters they talk to most.
 - **Base voices**: a shared starting point that several character voices are derived from. A base voice is not used directly in the text.
 - **Document voices**: newspapers, official records, gossip and legends told by a passer-by.
 

@@ -222,9 +222,22 @@ def main(book_dir, out):
         cid = chap_id(m.group(1) + ".") if m else chap_id(head)
         if cid:
             scenes[cid] = scene_brief(head, body)
+    speech = speech_voices(book_dir)
+    raw_scenes = {}
+    for head, body in re.findall(r"^## (Chapter[^\n]*)\n(.*?)(?=^## |\Z)", read("outline/scenes.md"), re.M | re.S):
+        m = re.match(r"Chapter (\d+)", head)
+        cid = chap_id(m.group(1) + ".") if m else chap_id(head)
+        if cid:
+            raw_scenes[cid] = body
     for cid in order_ch:
         brief = scenes.get(cid) or (("(No scene map yet. Start of the chapter's plan:)\n" + plan[cid][:1500]) if plan.get(cid) else "")
-        write(out, f"books/{slug}/context/ch-{cid}.json", {"chapter": cid, "brief": brief})
+        # Speech voices of the characters listed in the chapter's scene map (Characters field), at this chapter's setting.
+        who = " ".join(re.findall(r"^\s*- Characters:\s*(.+)$", raw_scenes.get(cid, ""), re.M))
+        found = [sv for sv in speech if any(re.search(r"\b" + re.escape(n) + r"\b", who) for n in sv["names"])]
+        sp = "\n\n".join(speech_brief(sv, cid) for sv in found)
+        if sp:
+            brief += "\n\nSPEECH VOICES (dialogue of the characters in this chapter's scenes)\n" + sp
+        write(out, f"books/{slug}/context/ch-{cid}.json", {"chapter": cid, "brief": brief, "speechVoices": [sv["id"] for sv in found]})
     skill = os.path.join(os.path.dirname(os.path.abspath(__file__)), "../../.claude/skills/paragraph-review/SKILL.md")
     if os.path.exists(skill):
         st = open(skill, encoding="utf-8").read()
@@ -381,6 +394,46 @@ def md_section(text, title_re):
     return ("## " + m.group(1) + "\n" + m.group(2).strip()) if m else ""
 
 
+def speech_voices(book_dir):
+    """Character speech voices from the Voice Index (Type "Character speech"); names from "Whose voice" (aliases split by " / ")."""
+    out = []
+    idx = os.path.join(book_dir, "voices/00-voice-index.csv")
+    if not os.path.exists(idx):
+        return out
+    for r in csv.DictReader(open(idx, encoding="utf-8")):
+        if r.get("Type", "").strip().lower() != "character speech":
+            continue
+        f = os.path.join(book_dir, "voices", r["ID"] + ".md")
+        if not os.path.exists(f):
+            continue
+        names = [n.strip() for n in re.split(r"\s*/\s*", r.get("Whose voice", "")) if n.strip()]
+        out.append({"id": r["ID"], "names": names, "text": open(f, encoding="utf-8").read()})
+    return out
+
+
+def speech_brief(sv, cid):
+    """Key ideas, language layers and this chapter's row from a character speech voice file."""
+    t = sv["text"]
+    parts = [f"### {sv['id']} ({' / '.join(sv['names'])})"]
+    for title in (r"Key ideas", r"Typical mistakes"):
+        x = md_section(t, title)
+        if x:
+            parts.append(x)
+    for head, body in re.findall(r"^## (Language layer[^\n]*)\n(.*?)(?=^## |\Z)", t, re.M | re.S):
+        parts.append("#### " + head + "\n" + body.strip())
+    sec = re.search(r"^## Settings per chapter\s*\n(.*?)(?=^## |\Z)", t, re.M | re.S)
+    row = None
+    if sec:
+        want = cid.lstrip("0") or "0"
+        for line in sec.group(1).split("\n"):
+            c = [x.strip() for x in line.strip().strip("|").split("|")]
+            if len(c) > 1 and re.sub(r"^ch\.?\s*", "", c[0]).lstrip("0") == want:
+                row = line.strip()
+        persist = re.search(r"persist", sec.group(1), re.I)
+        parts.append("This chapter's setting: " + (row or ("no row for this chapter: use the last row before it, or the base" if persist else "no row for this chapter: use the base")))
+    return "\n".join(parts)
+
+
 def voice_brief(text):
     """Voice rules, Conveying feeling and the working parts of each language layer; no scores or samples."""
     parts = [md_section(text, r"Voice rules"), md_section(text, r"Conveying feeling")]
@@ -399,7 +452,7 @@ def scene_brief(head, body):
         keep.append(intro)
     for line in body.split("\n"):
         s = line.strip()
-        if s.startswith("### ") or re.match(r"- (When|Where|POV|Beats|Reader feeling):", s) or (s.startswith("- Scene ") ):
+        if s.startswith("### ") or re.match(r"- (When|Where|POV|Characters|Beats|Reader feeling):", s) or (s.startswith("- Scene ") ):
             keep.append(line.rstrip())
     return "\n".join(keep)
 

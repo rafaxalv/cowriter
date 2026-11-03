@@ -70,6 +70,7 @@ With all paragraph results in hand, check:
 - **Plot and logic**: contradictions with the Continuity record or earlier chapters (dates, ages, distances, who knows what, who is alive), unexplained jumps in cause and effect, characters acting on information they do not have, set-ups with no payoff and payoffs with no set-up, gaps against the scene map, the chapter plan and its sources.
 - **History and facts**: anything that conflicts with the sources listed for the chapter.
 - **Rules**: the profile's standing rules and the Concept's handle-with-care notes (for example names never given, things never shown directly).
+- **Dialogue voices**: every line of dialogue follows its speaker's speech voice (character-voice) at this chapter's setting: fluency, sentence building, figures of speech, signature words (rationed), never-says, in every language; drift from earlier chapters that the speech voice's per-chapter table does not explain is flagged.
 - **Voice coherence**: each voice stays consistent across the chapter and with how it sounds in other chapters (compare with the Paragraph Parameters rows and reference paragraphs); transitions between voices are clear; tuning does not drift so much that the voice becomes unrecognizable.
 - **Languages**: every language file has the same paragraphs with the same IDs, and they say the same thing.
 - **Rhythm of the chapter**: whether the pace, violence and emotion curves across the chapter serve the story (for example, no long stretch at the same intensity), and whether each scene lands its Reader feeling.

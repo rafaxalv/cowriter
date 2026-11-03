@@ -60,7 +60,7 @@ Before changing a scene map that already exists, re-read it: the author may have
    - **When** (date or period; ages of the main characters);
    - **Where** (place, and what kind of place);
    - **Point of view**;
-   - **Characters** (named characters from the Bible; unnamed extras described by role);
+   - **Characters** (named characters from the Bible, written exactly as the Bible names them, because the speech voices are looked up by these names; unnamed extras described by role); for each character who speaks, their speech voice ID and the chapter's setting from it (see "Finding the voices of a scene" in book-voices), or "no speech voice yet";
    - **What happens** (the beats, in order);
    - **Motivations** (what each character wants in the scene);
    - **Feelings** (what each character feels, and what they hide);

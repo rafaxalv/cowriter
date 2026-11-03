@@ -39,6 +39,8 @@ Rewrite the paragraph in every language of the book to hit the target profile (v
 
 ## 2. Review each paragraph
 
+Dialogue inside the paragraph is checked against the speaker's **speech voice** (character-voice) at the chapter's setting, not against the narrator's profile: the narration around it follows the voice and tuning below.
+
 Target for each language = the voice's core base values + that language's offsets + the chapter's tuning (none for a paragraph with its own voice).
 
 For each language version:

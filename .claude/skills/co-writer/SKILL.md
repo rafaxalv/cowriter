@@ -46,6 +46,7 @@ This skill is generic and works for any book in this repo. Everything specific t
 
 - **co-writer** (this skill): coordinates; plans chapters with the author; writes the prose from the scene maps; keeps files in sync.
 - **scene-builder**: Chapters -> Scenes.
+- **character-voice**: how each character speaks in dialogue (speech voice, set per chapter), saved through book-voices.
 - **book-voices**: owns the voices; **voice-generator** builds or updates a voice with it.
 - **chapter-review**: reviews a written chapter against its scene map, the voices, plot and continuity; sends paragraphs to **paragraph-review**.
 - **paragraph-review**: checks and fine-tunes paragraphs against a voice.
@@ -95,7 +96,7 @@ Run **scene-builder** on the chapter. It writes the scene map into Scenes and li
 ### 4. Write the prose (from the scene map, in the voices)
 
 - Read the chapter's scene map as it is now (the author may have edited it directly; their wording wins), the voice files it names (core, language layer, rules, reference paragraphs), the Shared Rules and the Bilingual Lexicon.
-- Write scene by scene, following the beats, motivations, feelings, place details and target lengths. Each paragraph belongs to one voice; note it so the Paragraph Parameters rows can be filled. If a voice is not defined yet, write plainly in the point of view the scene map gives and say so.
+- Write scene by scene, following the beats, motivations, feelings, place details and target lengths. Dialogue follows each speaker's speech voice (character-voice) at that chapter's setting, when the character has one; offer to build one for a character who speaks a lot and has none. Each paragraph belongs to one voice; note it so the Paragraph Parameters rows can be filled. If a voice is not defined yet, write plainly in the point of view the scene map gives and say so.
 - Aim every scene at its **Reader feeling** from the scene map, using the **Conveying feeling** rules of the voice that writes it. If the voice has no such rules yet, say so and offer to add them with voice-generator before writing.
 - Do not add events, named characters or facts that are not in the scene map. If the prose needs something new, propose it and, after approval, add it to Scenes and Chapters first.
 - For a multilingual book, write first in the language the profile marks as written first (or the one the author starts in); produce the others after the first is approved, so every version says the same thing. Follow the profile on whose wording is the source in each language.
