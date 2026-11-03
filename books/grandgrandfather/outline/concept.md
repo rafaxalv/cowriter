@@ -1,24 +1,6 @@
 # 00 Book Concept
 
-A short introduction to the project for the author, a co-writer or an AI. It holds the central ideas only; the events, in order and with sources, live in **Chapters** (`outline/chapters.md`), and the people in the **Character Bible**. Last updated Nov 2, 2026 (reorganized: the working context brought up to date, the six movements replaced by a pointer to Chapters, the key ideas rewritten as central ideological pillars, in order of importance). Revised Nov 3, 2026 with Rafael: a central question added; the pillars cut to four (family, luck, freedom, violence), each written as a tension, with its thinkers; faith and the names folded into family, money and paper into freedom; mirrors moved to How it is told. The earlier long version is kept as "Book Concept — archive (long version, Oct 7, 2026)".
-
-## Working context
-
-  - **Book**: working title "Book: Grandgrand father story" (to decide). Author: Rafael; his mom writes or revises parts in Portuguese. English and Brazilian Portuguese side by side. Target about 300 pages (80,000–85,000 words); 350 is a hard limit. Word budgets per chapter are adjusted as he writes.
-  - **The story and its structure**: see **Chapters** (`outline/chapters.md`), the backbone of the book, with every event per chapter, in order, with sources. Current shape: Prologue (The Fog) · Part I, Bahia (ch. 1–3) · Part II, War (ch. 4–9) · Part III, Free, not equal (ch. 10) · Part IV, The woman from Spain (ch. 11, Her Road) · Part V, Fortune (ch. 12, the Interlude, Tonico's Journey, ch. 13–16) · Part VI, The fall (ch. 17–18) · Epilogue (option). This file does not repeat the plot.
-  - **Working names, for planning only**: Benedito (him) and Carmen (the woman from Spain). Never in the book text.
-  - **Standing rules from Rafael**: every story line he gives goes into Chapters, with all his details, and he confirms which chapter an event goes into; the Character Bible holds only short bullets (personality, backstory, minor details); no new characters, or expanded ones, without his approval; he writes the funny childhood stories himself; show changes before applying them and never overwrite his or his mom's text without approval (her Portuguese is the source when she wrote it); brainstorm before cutting arcs; the book lives only in the repo (`rafaxalv/cowriter`), and downloads go into the repo, never onto his computer.
-  - **How the files fit together**:
-    1.  **00 Book Concept** (this file): the central ideas. Least detail.
-    2.  **Chapters**: the skeleton. Every event per chapter, in order, with sources for real events that must be accurate.
-    3.  **Scenes**: each chapter's events expanded into ordered scenes (when, where, point of view, characters, beats, motivations, feelings, place details, voice). Built by the scene-builder skill.
-    4.  **Book**: the final text, written from the scenes in the planned voices. Full detail.
-      - Branching from the Concept, used at every level: the Character Bible (who people are, plus a Continuity section with what the text has established), the historical research (`research/`), the Voices (`voices/`), and the shared reference library (`library/`, with style studies).
-      - Changes flow down (concept → chapters → scenes → text); deliberate changes in the text flow back up.
-  - **Files**: listed in the book profile, `BOOK.md` (paths in this repo).
-  - **Manuscript format**: one file per language (`book/manuscript.en.md`, `book/manuscript.pt-br.md`), one paragraph per block, each preceded by a hidden Paragraph ID (chapter.row; prologue 00, interlude INT, epilogue 99) that matches across the two files.
-  - **Manuscript Desk** (`tools/manuscript-editor/`): an editor page that keeps its own copy of the book; sync its edits back before changing the manuscript or Paragraph Parameters in the repo, and refresh it after the plan changes (steps in its README).
-  - **Editing notes**: changes are shown first, applied after approval, then committed and pushed to GitHub through the book-repo skill (see `BOOK.md`).
+The book's central ideas: the question it asks, its pillars, how it is told and what to handle with care. A short introduction for the author, a co-writer or an AI, and the reference behind every page written. The events, in order and with sources, live in **Chapters** (`outline/chapters.md`), and the people in the **Character Bible**; how the work is organized (people, files, working order, standing rules, working names) is in the book profile, `BOOK.md`. Revised Nov 3, 2026 with Rafael: a central question added; the pillars cut to four (family, luck, freedom, violence), each written as a tension, with its thinkers; mirrors moved to How it is told; the working context moved to BOOK.md. Earlier versions are in the git history.
 
 ## The book in one paragraph
 
