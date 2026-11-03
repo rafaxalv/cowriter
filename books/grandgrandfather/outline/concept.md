@@ -4,7 +4,7 @@ The book's central ideas: the question it asks, its pillars, how it is told and 
 
 ## The book in one paragraph
 
-A family story told by the author's grandmother: her grandfather was born enslaved, went to the Paraguayan War, came back free, won the lottery, bought farms and "bought a Spanish girl" whom he married; after his death the sons lost everything gambling. The book is immersive historical fiction built around those few remembered facts, with the real world of nineteenth-century Brazil around them. Much is invented; the history is not.
+A family story told by the author's grandmother: her grandfather was born enslaved, went to the Paraguayan War, came back free, won the lottery, bought farms and "bought a Spanish girl" whom he married; after his death the sons lost everything gambling. The book is immersive historical fiction built around those few remembered facts, with the real world of nineteenth-century Brazil around them. Much is invented; the history is not. It asks one question: when chance hands you power, do you break the chain you inherited, or pass it on?
 
 ## The central question
 
@@ -110,15 +110,21 @@ Part of pillar 1 (what is withheld) and pillar 3 (paper), kept here because the 
 
 ## How it is told
 
-  - **History blended in, never explained.** No factual step-outs; the real world enters through objects, documents, dialogue and rumour. The line between truth and invention is drawn once, in an author's note.
-  - **Chance, contradictions, no judgement.** No heroes and no villains, Black or white; the reader sees the reasons behind each choice and weighs it.
-  - **Voices.** The chapters are in close third person, following him and later her. The prologue and epilogue are in the author's own voice (AUTHOR-MAIN), about his grandmother.
-  - **Chapter shape.** Hook, scene, texture, turn, cliffhanger. The book follows him, in long chapters. Her road before Corumbá is one chapter of her own (ch. 11): over many meetings at Albino's in 1877 she tells him her story, part by part, told from her side; it comes after they meet and before the lottery, so the reader knows who she is before he buys her (decided Nov 1–2, 2026).
-  - **Mirrors** (moved from the pillars, Nov 3, 2026: a technique, not an idea). The gossip says he is the master's son and it is false; Ezequiel is, and nobody says it. The enslaved man becomes a master; the free woman loses her freedom; the boyhood friendship across the colour line returns as the white "friends" who ruin his sons. The fence between the farms becomes the fence in the marriage (ch. 15). Never pointed out.
+Each rule says which pillar it serves. The concrete settings (voices, their parameters, each chapter's tuning, how scenes are cut, opened and joined) live in the voice files and Chapter Voices; this section holds only the principles they follow.
+
+  - **History blended in, never explained** (all pillars). No factual step-outs: the real world enters as the characters live it, through objects, documents, dialogue and rumour; dates only for major events (BOOK.md, rule 7). The line between truth and invention is drawn once, in an author's note.
+  - **No verdicts** (pillars 3 and 4). No heroes and no villains, Black or white. Everyone takes part in a dysfunctional society and nobody is condemned; force ruins whoever touches it. The reader sees the reasons behind each choice and weighs it.
+  - **Chance is visible** (pillar 2). Luck happens on the page as luck, the bullet that misses, the ticket that wins, never as the author's convenience.
+  - **Inheritance shown, never explained** (pillar 1). Repeated lines, gestures, fears and skills; the reader connects the generations, the narrator never does.
+  - **Mirrors** (all pillars). The gossip says he is the master's son and it is false; Ezequiel is, and nobody says it. The enslaved man becomes a master; the free woman loses her freedom; the boyhood friendship across the colour line returns as the white "friends" who ruin his sons. The fence between the farms becomes the fence in the marriage (ch. 15). Never pointed out.
+  - **Point of view.** Close third person, following him, and her in her own chapter (ch. 11: over many meetings at Albino's in 1877 she tells him her story, part by part, from her side; after they meet and before the lottery, so the reader knows who she is before he buys her). The prologue and epilogue are in the author's own voice, about his grandmother.
+  - **Chapter shape.** The book follows him in long chapters. Each chapter opens on a hook and closes on a turn that pulls into the next. How its scenes are cut, opened and joined is set by its voice and tuning, not here.
   - **Tone range.** From a funny, mischievous childhood to the war's horror; humour keeps him from being only a victim.
 
 ## Handle with care
 
   - Scenes of slavery are told from inside the person being sold or used, never through the buyers' eyes; sexual violence is never shown directly. Exceptions chosen by Rafael: Ezequiel's goiabeira night (ch. 2) and first whipping (ch. 3) are explicit; they are cathartic character set-ups.
   - The hardships of freedom are his lived experience, never the narrator's verdict (the "better off enslaved" argument belonged to the planters).
+  - **"Everyone wants to be the master" never falls mainly on the formerly enslaved** (pillar 3). That would repeat the old racist argument. The whole society shows it, the white characters first: the Pires, Carmen, the sons.
+  - **The thinkers never appear on the page**, except Seneca, whom the Pires quote in their salon (ch. 15–16).
   - Family traditions are never quietly turned into facts. Working notes use truth labels (DOCUMENTED, STRONGLY SUPPORTED, FAMILY TRADITION, PLAUSIBLE RECONSTRUCTION, FICTIONAL); the reader never sees them.
