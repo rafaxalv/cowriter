@@ -13,6 +13,9 @@ Updates, in the book folder:
   - config/paragraph-parameters.csv: one row per paragraph
   - config/chapter-voices.csv: one row per chapter (voice, tuning, reason), when
     the dump holds .../chapterVoice/*.json
+  - voices/lab/: voices created or edited in the Voice Lab (<ID>.json) and the
+    IDs of voices deleted there (deleted.json), when the dump holds .../voices/*.json;
+    the book-voices skill folds them into the voice files after approval
   - config/engagement.csv: the latest heatmap scores of the first language
   - the Chapters file (outline/chapters.md), when the dump holds the Chapters tab's
     documents (.../plan/*.json and .../planChapters/*.json): each chapter entry is
@@ -23,7 +26,7 @@ Prints a short summary; review with `git diff` before committing.
 import csv, datetime, glob, json, os, re, sys
 
 sys.path.insert(0, os.path.dirname(__file__))
-from export_book import DIMS, chap_id  # noqa: E402
+from export_book import DIMS, chap_id, voice_profile  # noqa: E402
 import plan_md  # noqa: E402
 
 PLACEHOLDER = {"en": "*(to be written)*", "pt_br": "*(a escrever)*"}
@@ -84,6 +87,7 @@ def main(book_dir, dump):
     base = os.path.join(dump, "books", slug)
     sync_plan(book_dir, base)
     chv = sync_chapter_voices(book_dir, base)
+    sync_voices(book_dir, base)
     paras = list(load_docs(os.path.join(base, "paragraphs")).values())
     if not paras:
         return
@@ -157,6 +161,38 @@ def main(book_dir, dump):
     with open(en_path, "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=eh); w.writeheader(); w.writerows(keep + new)
     print("updated config/engagement.csv:", len(new), "scored sentences from", sorted(scored_ch) or "no chapters")
+
+
+def sync_voices(book_dir, base):
+    """Voice Lab edits: write voices/lab/<ID>.json for voices changed in the editor, and voices/lab/deleted.json."""
+    store = load_docs(os.path.join(base, "voices"))
+    if not store:
+        return
+    vdir = os.path.join(book_dir, "voices"); lab = os.path.join(vdir, "lab")
+    files = {}
+    for f in os.listdir(vdir):
+        if f.endswith(".md") and not f.startswith("00-") and re.match(r"[A-Z]", f):
+            files[voice_profile(os.path.join(vdir, f))[0]] = f
+    keep = ("id", "name", "description", "authors", "dims", "brief", "version", "status", "origin")
+    written = []
+    for vid, d in store.items():
+        if d.get("updatedAt"):  # edited or created in the Voice Lab since the last load
+            os.makedirs(lab, exist_ok=True)
+            doc = {k: d[k] for k in keep if k in d}; doc["id"] = d.get("id", vid)
+            json.dump(doc, open(os.path.join(lab, f"{doc['id']}.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+            written.append(doc["id"])
+    gone = set(files) - set(store)
+    if os.path.isdir(lab):
+        for f in os.listdir(lab):
+            if f.endswith(".json") and f != "deleted.json" and f[:-5] not in store:
+                os.remove(os.path.join(lab, f)); print("removed", f"voices/lab/{f}", "(deleted in the Voice Lab)")
+    dpath = os.path.join(lab, "deleted.json")
+    old = set(json.load(open(dpath, encoding="utf-8"))) if os.path.exists(dpath) else set()
+    if gone or old:
+        os.makedirs(lab, exist_ok=True)
+        json.dump(sorted((old | gone) - set(store)), open(dpath, "w", encoding="utf-8"), indent=1)
+    if written or gone:
+        print("updated voices/lab:", "written", written or "none", "· deleted", sorted(gone) or "none")
 
 
 def sync_chapter_voices(book_dir, base):

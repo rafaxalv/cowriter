@@ -11,7 +11,7 @@ store paths (see README.md):
   books/<slug>/voices/<ID>.json          one per voice with a target-profile table
 Upload them with the ArtifactData tool (batch, file_path).
 """
-import csv, json, os, re, sys, unicodedata
+import csv, glob, json, os, re, sys, unicodedata
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
@@ -235,11 +235,77 @@ def main(book_dir, out):
     # Concept, scene maps and research documents, shown read-only in their own tabs.
     export_docs(book_dir, slug, out)
     vdir = os.path.join(book_dir, "voices")
+    lab = os.path.join(vdir, "lab")
+    deleted = set()
+    if os.path.exists(os.path.join(lab, "deleted.json")):
+        deleted = set(json.load(open(os.path.join(lab, "deleted.json"), encoding="utf-8")))
     for f in sorted(os.listdir(vdir)):
         if f.endswith(".md") and not f.startswith("00-") and re.match(r"[A-Z]", f):
             vid, v = voice_profile(os.path.join(vdir, f))
+            if vid in deleted:
+                continue
             v["brief"] = voice_brief(open(os.path.join(vdir, f), encoding="utf-8").read())
+            v["origin"] = "file"
             write(out, f"books/{slug}/voices/{vid}.json", v)
+    # Voice Lab drafts (voices/lab/<ID>.json) override or add to the voice files until book-voices folds them in.
+    if os.path.isdir(lab):
+        for f in sorted(os.listdir(lab)):
+            if f.endswith(".json") and f != "deleted.json":
+                v = json.load(open(os.path.join(lab, f), encoding="utf-8"))
+                v["updatedAt"] = None
+                write(out, f"books/{slug}/voices/{v['id']}.json", v)
+    # Reference authors for the Voice Lab: the book's Author Library table, plus style studies in the shared library.
+    for a in reference_authors(book_dir):
+        write(out, f"books/{slug}/authors/{a['id']}.json", a)
+
+
+def reference_authors(book_dir):
+    """Authors with scores: the Author Library's comparison table (dimensions as rows) and library/<author>/STYLE.md score tables."""
+    out, seen = [], set()
+    def slug(x):
+        x = unicodedata.normalize("NFKD", x).encode("ascii", "ignore").decode().lower()
+        return re.sub(r"[^a-z0-9]+", "-", x).strip("-")
+    lib = os.path.join(book_dir, "voices/00-author-library.md")
+    if os.path.exists(lib):
+        text = open(lib, encoding="utf-8").read()
+        rows = [r for r in text.split("\n") if r.startswith("|")]
+        if rows:
+            names = [re.sub(r"\*", "", c).strip() for c in rows[0].strip().strip("|").split("|")][1:]
+            cols = [{"name": n, "scores": {}, "work": ""} for n in names]
+            for r in rows[2:]:
+                c = [x.strip() for x in r.strip().strip("|").split("|")]
+                m = re.match(r"^(\d+)\b", c[0])
+                if m:
+                    for i, v in enumerate(c[1:len(cols) + 1]):
+                        if v.isdigit():
+                            cols[i]["scores"][m.group(1)] = int(v)
+                elif c[0].lower() == "work":
+                    for i, v in enumerate(c[1:len(cols) + 1]):
+                        cols[i]["work"] = v
+            portraits = dict(re.findall(r"^  - \*\*([^*]+)\*\*:\s*(.+)$", text, re.M))
+            for a in cols:
+                full = next((k for k in portraits if a["name"].split()[0].lower() in k.lower()), a["name"])
+                aid = slug(full)
+                seen.add(aid)
+                out.append({"id": aid, "name": full, "work": a["work"], "scores": a["scores"],
+                            "portrait": portraits.get(full, ""), "source": "voices/00-author-library.md"})
+    libdir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(book_dir))), "library")
+    for st in sorted(glob.glob(os.path.join(libdir, "*", "STYLE.md"))):
+        text = open(st, encoding="utf-8").read()
+        m = re.search(r"^# Style study:\s*(.+)$", text, re.M)
+        if not m:
+            continue
+        name = m.group(1).strip(); aid = slug(name)
+        scores = {n: int(v) for n, v in re.findall(r"^\|\s*(\d+)\s*\|[^|]*\|\s*(\d)\s*\|", text, re.M)}
+        tech = re.search(r"^## 7\. Techniques a voice can borrow\s*\n(.*?)(?=^## |\Z)", text, re.M | re.S)
+        a = next((x for x in out if x["id"] == aid), None)
+        rel = os.path.relpath(st, os.path.dirname(libdir))
+        if a:
+            a["scores"].update(scores); a["styleStudy"] = rel
+        else:
+            out.append({"id": aid, "name": name, "work": "", "scores": scores, "source": rel, "styleStudy": rel,
+                        "portrait": (tech.group(1).strip()[:900] if tech else "")})
+    return out
 
 
 def truth_labels(profile):

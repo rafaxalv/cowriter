@@ -281,6 +281,39 @@ button.librow:hover { color: var(--accent); }
 .p-actions .btn { margin-top: 4px; }
 .cv-status { font-size: 12px; color: var(--ink-3); margin-top: 8px; }
 .p-head.p-sub { margin-top: 22px; padding-top: 14px; border-top: 1px solid var(--rule); }
+/* Voice lab */
+.vl-list { display: grid; gap: 2px; margin-top: 10px; }
+.vl-list button { text-align: left; border: 1px solid transparent; background: transparent; border-radius: var(--radius); padding: 6px 8px; display: grid; gap: 1px; }
+.vl-list button:hover { background: var(--bg); }
+.vl-list button[aria-current="true"] { border-color: var(--accent); background: var(--accent-soft); }
+.vl-list .vid { font: 500 12.5px var(--font-mono); color: var(--accent); }
+.vl-list .vname { font-size: 12px; color: var(--ink-2); }
+.vl-row { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; margin-top: 10px; }
+.vl-new { display: grid; gap: 6px; margin-top: 8px; padding: 10px; border: 1px dashed var(--rule-2); border-radius: var(--radius); }
+.vl-new input { border: 1px solid var(--rule-2); border-radius: var(--radius); padding: 6px 8px; }
+.auth { display: grid; grid-template-columns: auto 1fr auto; gap: 2px 8px; align-items: center; padding-block: 5px; border-top: 1px solid var(--rule); font-size: 12.5px; }
+.auth:first-of-type { border-top: 0; }
+.auth .aw { width: 52px; border: 1px solid var(--rule-2); border-radius: var(--radius); padding: 2px 4px; }
+.auth .ameta { grid-column: 2 / -1; font-size: 11px; color: var(--ink-3); }
+.rng { grid-column: 1 / -1; display: flex; gap: 6px; align-items: center; font-size: 11px; color: var(--ink-3); }
+.rng select { padding: 1px 4px; font-size: 11.5px; }
+.btn.danger { color: var(--warn); border-color: var(--warn); }
+.vl-del { margin-top: 10px; padding: 10px; border: 1px solid var(--warn); background: var(--warn-soft); border-radius: var(--radius); font-size: 12.5px; display: grid; gap: 8px; }
+.lab-form { display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: end; margin-top: 12px; padding: 12px; background: var(--paper); border: 1px solid var(--rule); border-radius: var(--radius); }
+.lab-form .field { margin-top: 0; }
+.lab-form .field.grow { flex: 1 1 260px; }
+.lab-form input[type=number] { width: 80px; }
+.tests { display: grid; gap: 12px; margin-top: 16px; }
+.test { background: var(--paper); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 14px 12px; }
+.test.cmp { border-color: var(--accent); }
+.test .t-head { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: 12px; color: var(--ink-3); }
+.test .t-head .c-actions { margin-left: auto; }
+.test .t-body { font: 16px/1.6 var(--font-text); }
+.test .t-body p { margin: 10px 0 0; }
+.test .t-note { margin-top: 8px; font-size: 12.5px; color: var(--ink-2); }
+.sec-h { font: 600 15px var(--font-text); margin: 22px 0 0; }
+.cmpgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
+@media (max-width: 900px) { .cmpgrid { grid-template-columns: 1fr; } }
 </style>
 
 <div class="app">
@@ -288,6 +321,7 @@ button.librow:hover { color: var(--accent); }
     <div class="brand"><span class="book" id="bookTitle">Manuscript Desk</span><span class="sub" id="syncLine">Loading the manuscript…</span></div>
     <nav class="tabs" id="tabs" role="tablist" aria-label="File">
       <button role="tab" data-tab="concept" aria-selected="false">Concept</button>
+      <button role="tab" data-tab="voices" aria-selected="false">Voice lab</button>
       <button role="tab" data-tab="plan" aria-selected="false">Chapters</button>
       <button role="tab" data-tab="scenes" aria-selected="false">Scenes</button>
       <button role="tab" data-tab="book" aria-selected="false">Book</button>
@@ -338,7 +372,7 @@ button.librow:hover { color: var(--accent); }
     paras: new Map(), voices: new Map(), heat: new Map(),
     chapter: null, lang: null, heatMetric: "off", selected: null,
     pending: new Map(), timers: new Map(), editing: null, running: null,
-    unsubs: [], plan: new Map(), planCh: new Map(), chVoice: new Map(), tab: "plan", docs: new Map(), resDoc: null,
+    unsubs: [], plan: new Map(), planCh: new Map(), chVoice: new Map(), authors: new Map(), tests: new Map(), lab: { voice: null, cmp: [], newOpen: false, del: false, busy: null }, tab: "plan", docs: new Map(), resDoc: null,
   };
   const $ = (id) => document.getElementById(id);
   const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
@@ -429,7 +463,8 @@ button.librow:hover { color: var(--accent); }
     S.unsubs.splice(1).forEach((u) => u());
     S.slug = slug; pref.set("book", slug);
     S.book = S.books.find((b) => b.id === slug);
-    S.paras.clear(); S.voices.clear(); S.heat.clear(); S.plan.clear(); S.planCh.clear(); S.chVoice.clear(); S.docs.clear();
+    S.paras.clear(); S.voices.clear(); S.heat.clear(); S.plan.clear(); S.planCh.clear(); S.chVoice.clear(); S.authors.clear(); S.tests.clear(); S.docs.clear();
+    S.lab.voice = pref.get("labv:" + slug) || null; S.lab.cmp = [];
     S.resDoc = pref.get("res:" + slug) || null;
     S.lang = pref.get("lang:" + slug) || langs()[0]?.key;
     if (S.lang !== "both" && !langs().some((l) => l.key === S.lang)) S.lang = langs()[0]?.key;
@@ -454,10 +489,20 @@ button.librow:hover { color: var(--accent); }
       if (S.selected && !panelBusy()) renderPanel();
     }, dbErr));
     S.unsubs.push(S.db.collection(base + "/voices").onSnapshot((snap) => {
-      S.voices.clear(); snap.docs.forEach((d) => S.voices.set(d.id, d.data()));
+      S.voices.clear(); snap.docs.forEach((d) => { const data = { ...d.data() }; const local = voiceSaver.pending.get(d.id); if (local) Object.assign(data, local); S.voices.set(d.id, data); });
+      renderSyncLine();
+      if (S.tab === "voices") { if (!panelBusy()) renderPanel(); renderLabMain(true); return; }
       if (S.tab !== "book") return;
       if (!panelBusy()) renderPanel();
       chapterParas(S.chapter).forEach(updateCell);
+    }, dbErr));
+    S.unsubs.push(S.db.collection(base + "/authors").onSnapshot((snap) => {
+      S.authors.clear(); snap.docs.forEach((d) => S.authors.set(d.id, d.data()));
+      if (S.tab === "voices" && !panelBusy()) renderPanel();
+    }, dbErr));
+    S.unsubs.push(S.db.collection(base + "/voiceTests").onSnapshot((snap) => {
+      S.tests.clear(); snap.docs.forEach((d) => S.tests.set(d.id, d.data()));
+      if (S.tab === "voices") renderLabMain(true);
     }, dbErr));
     S.unsubs.push(S.db.collection(base + "/chapterVoice").onSnapshot((snap) => {
       S.chVoice.clear();
@@ -512,12 +557,15 @@ button.librow:hover { color: var(--accent); }
     const parts = [];
     if (k) parts.push(`${k} Chapters item${k > 1 ? "s" : ""}`);
     if (cv) parts.push(`${cv} chapter voice setting${cv > 1 ? "s" : ""}`);
+    const vv = [...S.voices.values()].filter(unsynced).length;
+    if (vv) parts.push(`${vv} voice${vv > 1 ? "s" : ""}`);
     if (n) parts.push(`${n} paragraph${n > 1 ? "s" : ""}`);
     $("syncLine").textContent = parts.length ? `${parts.join(" and ")} edited here since the last sync to the repo` : (S.book.syncedAt ? "In sync with the repo" : "Loaded from the repo");
   }
 
   // ---------- main ----------
   function renderMain() {
+    if (S.book && S.tab === "voices") return renderLabMain();
     if (!S.book || !S.chapter) return;
     if (S.tab === "plan") return renderPlanMain();
     if (DOC_TABS.includes(S.tab)) return renderDocMain();
@@ -729,6 +777,7 @@ button.librow:hover { color: var(--accent); }
   // in the Chapters tab the selected item's settings follow below it.
   function renderPanel(force) {
     if (DOC_TABS.includes(S.tab)) { if (S.book) renderDocPanel(); return; }
+    if (S.tab === "voices") { if (S.book) renderLabPanel(); return; }
     const pb = $("pBody");
     let vw = $("pVoice"), iw = $("pItem");
     if (!vw || !iw || !pb.contains(vw)) { pb.replaceChildren(); vw = el("div"); vw.id = "pVoice"; iw = el("div"); iw.id = "pItem"; pb.append(vw, iw); force = true; }
@@ -867,7 +916,7 @@ button.librow:hover { color: var(--accent); }
     const p = S.paras.get(pid); if (p) updateCell(p);
     if (!opts.keepPanel && S.selected === pid) renderPanel();
   }
-  window.addEventListener("beforeunload", () => { for (const pid of [...S.pending.keys()]) flush(pid); planSaver.flushAll(); headSaver.flushAll(); cvSaver.flushAll(); });
+  window.addEventListener("beforeunload", () => { for (const pid of [...S.pending.keys()]) flush(pid); planSaver.flushAll(); headSaver.flushAll(); cvSaver.flushAll(); voiceSaver.flushAll(); });
 
   async function addParagraph(after) {
     const cid = after ? after.chapter : S.chapter;
@@ -1166,6 +1215,7 @@ Reply with only this JSON, one entry per sentence id above, in order:
   const planSaver = makeSaver((id) => `books/${S.slug}/plan/${id}`, (id) => S.plan.get(id));
   const headSaver = makeSaver((cid) => `books/${S.slug}/planChapters/${cid}`, (cid) => S.planCh.get(cid), "set");
   const cvSaver = makeSaver((cid) => `books/${S.slug}/chapterVoice/${cid}`, (cid) => S.chVoice.get(cid), "set");
+  const voiceSaver = makeSaver((id) => `books/${S.slug}/voices/${id}`, (id) => S.voices.get(id), "set");
 
   function subscribePlan(base) {
     let first = true;
@@ -1402,8 +1452,342 @@ Reply with only this JSON, one entry per sentence id above, in order:
     body.append(sec);
   }
 
+  // ---------- Voice lab: create, edit, delete and test voices ----------
+  // Stage 1 (side panel): a voice's description, reference authors (blended into a starting profile), its 31-dimension
+  // profile with allowed ranges, and its rules (written by Claude from the profile, then editable).
+  // Stage 2 (main area): test paragraphs written from a chapter's plan in the voice, kept in the Lab only (voiceTests).
+  const labVoice = () => S.voices.get(S.lab.voice) || null;
+  function labSelect(id) { S.lab.voice = id; S.lab.del = false; pref.set("labv:" + S.slug, id || ""); renderPanel(); renderLabMain(true); }
+  function voiceUse(id) {
+    const chapters = (S.book?.chapters || []).filter((c) => chv(c.id).voice === id).map((c) => c.id);
+    const paras = [...S.paras.values()].filter((p) => !p.removed && p.voice === id).map((p) => p.pid);
+    return { chapters, paras };
+  }
+  function queueVoice(id, patch) { voiceSaver.queue(id, patch); }
+  function saveVoice(id, patch) { return voiceSaver.now(id, patch); }
+
+  function renderLabPanel() {
+    $("pTitle").textContent = "Voice lab"; $("pPid").textContent = "";
+    const body = $("pBody"); body.replaceChildren();
+    if (!S.lab.voice || !S.voices.has(S.lab.voice)) S.lab.voice = [...S.voices.keys()].sort()[0] || null;
+    // the voices
+    const list = el("div", "vl-list");
+    for (const v of [...S.voices.values()].sort((a, b) => a.id.localeCompare(b.id))) {
+      const b = el("button"); b.setAttribute("aria-current", String(v.id === S.lab.voice));
+      b.append(el("span", "vid", v.id + (v.status === "draft" || /draft/.test(v.version || "") ? "  · draft" : "")), el("span", "vname", v.name || ""));
+      b.onclick = () => labSelect(v.id); list.append(b);
+    }
+    if (!S.voices.size) list.append(el("p", "p-empty", "No voices yet. Create the first one."));
+    body.append(list);
+    const nb = el("button", "btn", "New voice"); nb.onclick = () => { S.lab.newOpen = !S.lab.newOpen; renderPanel(); };
+    const row = el("div", "vl-row"); row.append(nb); body.append(row);
+    if (S.lab.newOpen) {
+      const box = el("div", "vl-new");
+      const idI = el("input"); idI.placeholder = "ID, e.g. CHAR-LUZIA-LETTERS"; idI.setAttribute("aria-label", "New voice ID");
+      const nmI = el("input"); nmI.placeholder = "Name, e.g. Luzia's letters"; nmI.setAttribute("aria-label", "New voice name");
+      const from = el("select"); from.setAttribute("aria-label", "Start from"); from.append(new Option("Start empty", ""));
+      for (const v of [...S.voices.values()].sort((a, b) => a.id.localeCompare(b.id))) from.append(new Option("Copy of " + v.id, v.id));
+      const msg = el("div", "vmeta");
+      const ok = el("button", "btn primary", "Create");
+      ok.onclick = async () => {
+        const id = idI.value.trim().toUpperCase().replace(/\s+/g, "-");
+        if (!/^[A-Z][A-Z0-9-]{1,40}$/.test(id)) { msg.textContent = "Use capital letters, digits and hyphens, e.g. CHAR-LUZIA-LETTERS."; return; }
+        if (S.voices.has(id)) { msg.textContent = "A voice with this ID already exists."; return; }
+        const src = S.voices.get(from.value);
+        const doc = { id, name: nmI.value.trim(), description: src?.description || "", authors: src?.authors ? JSON.parse(JSON.stringify(src.authors)) : [], dims: src ? JSON.parse(JSON.stringify(src.dims || {})) : {}, brief: src?.brief || "", version: "0.1", status: "draft", origin: "lab", updatedAt: Date.now() };
+        try { await S.db.doc(`books/${S.slug}/voices/${id}`).set(doc); S.voices.set(id, doc); S.lab.newOpen = false; labSelect(id); }
+        catch (e) { msg.textContent = "Could not create the voice (" + e.code + ")."; }
+      };
+      box.append(idI, nmI, from, ok, msg); body.append(box);
+    }
+    const v = labVoice(); if (!v) return;
+    const hd = el("div", "p-head p-sub"); hd.append(el("h2", null, "Stage 1 · Build the voice"), el("span", "pid", v.id)); body.append(hd);
+    const fld = (label, ctrl) => { const f = el("label", "field"); f.append(el("span", null, label), ctrl); body.append(f); return ctrl; };
+    const nm = el("input"); nm.value = v.name || ""; nm.oninput = () => queueVoice(v.id, { name: nm.value }); nm.onblur = () => voiceSaver.flush(v.id); fld("Name", nm);
+    const ds = el("textarea"); ds.value = v.description || ""; ds.placeholder = "Who speaks, to whom, when it is used (for example: letters Luzia writes to her son, c. 1868-73)";
+    ds.oninput = () => queueVoice(v.id, { description: ds.value }); ds.onblur = () => voiceSaver.flush(v.id); fld("Who and when", ds);
+    body.append(el("div", "vmeta", `Version ${v.version || "–"} · ${v.origin === "lab" ? "made in the Voice lab" : "from the repo's voice file"}${v.updatedAt ? " · edited here, not in the repo yet" : ""}`));
+    // reference authors
+    const as = el("details", "group"); as.open = pref.get("grp:authors") !== "closed"; as.addEventListener("toggle", () => pref.set("grp:authors", as.open ? "open" : "closed"));
+    const asm = el("summary"); const ah = el("h3"); ah.append(el("span", null, "Reference authors")); asm.append(ah); as.append(asm);
+    const chosen = new Map((v.authors || []).map((a) => [a.id, a.weight]));
+    if (!S.authors.size) as.append(el("p", "p-empty", "No authors loaded. Add authors to the Author Library or the shared library, then reload the book."));
+    for (const a of [...S.authors.values()].sort((x, y) => x.name.localeCompare(y.name))) {
+      const r = el("label", "auth"); const cb = el("input"); cb.type = "checkbox"; cb.checked = chosen.has(a.id);
+      const w = el("input"); w.type = "number"; w.min = 1; w.max = 100; w.className = "aw"; w.value = chosen.get(a.id) || 1; w.disabled = !cb.checked; w.title = "Weight in the blend";
+      const upd = () => { const cur = new Map((labVoice().authors || []).map((x) => [x.id, x.weight])); if (cb.checked) cur.set(a.id, Math.max(1, Number(w.value) || 1)); else cur.delete(a.id); w.disabled = !cb.checked; queueVoice(v.id, { authors: [...cur].map(([id, weight]) => ({ id, weight })) }); };
+      cb.onchange = upd; w.oninput = upd; w.onblur = () => voiceSaver.flush(v.id);
+      r.append(cb, el("span", null, a.name), w, el("span", "ameta", `${a.work ? a.work + " · " : ""}${Object.keys(a.scores || {}).length} of 31 scores${a.styleStudy ? " · text-based study" : ""}`));
+      as.append(r);
+    }
+    const bl = el("button", "btn", "Blend authors into the profile"); bl.style.marginTop = "8px";
+    bl.title = "Weighted average of the chosen authors' scores becomes each base value; the allowed range starts at base ±1. Dimensions no chosen author has are left as they are.";
+    bl.onclick = () => {
+      const cur = labVoice(); const au = (cur.authors || []).filter((x) => S.authors.has(x.id));
+      if (!au.length) { toast("Choose at least one author first."); return; }
+      const dims = { ...(cur.dims || {}) };
+      for (const d of S.book.dims) {
+        let sw = 0, sv = 0; for (const x of au) { const sc = S.authors.get(x.id).scores?.[d.n]; if (sc) { sw += x.weight; sv += x.weight * sc; } }
+        if (!sw) continue; const b = Math.max(1, Math.min(5, Math.round(sv / sw)));
+        dims[d.n] = { base: b, min: Math.max(1, b - 1), max: Math.min(5, b + 1), note: (dims[d.n]?.note) || "" };
+      }
+      saveVoice(cur.id, { dims }); renderPanel(); renderLabMain(true); toast("Profile blended from " + au.length + " author" + (au.length > 1 ? "s" : "") + ". Adjust the sliders as you like.");
+    };
+    as.append(bl); body.append(as);
+    // profile
+    const groups = {};
+    for (const d of S.book.dims) (groups[d.group] ||= { name: d.groupName, dims: [] }).dims.push(d);
+    for (const [g, gr] of Object.entries(groups)) {
+      const sec = el("details", "group"); const k = "lgrp:" + g; sec.open = pref.get(k) === "open";
+      sec.addEventListener("toggle", () => pref.set(k, sec.open ? "open" : "closed"));
+      const set = gr.dims.filter((d) => v.dims?.[d.n]).length;
+      const sm = el("summary"); const h = el("h3"); h.append(el("span", null, `${g}. ${gr.name}`), el("span", "vmeta", `${set}/${gr.dims.length} set`)); sm.append(h); sec.append(sm);
+      for (const d of gr.dims) sec.append(labDimRow(v, d));
+      body.append(sec);
+    }
+    // rules
+    const rs = el("details", "group"); rs.open = pref.get("grp:rules") !== "closed"; rs.addEventListener("toggle", () => pref.set("grp:rules", rs.open ? "open" : "closed"));
+    const rsm = el("summary"); const rh = el("h3"); rh.append(el("span", null, "Rules")); rsm.append(rh); rs.append(rsm);
+    const rt = el("textarea"); rt.value = v.brief || ""; rt.rows = 10; rt.placeholder = "Voice rules, conveying feeling, narrative technique and scene architecture rules. Write them, or let Claude draft them from the profile.";
+    rt.style.width = "100%"; rt.oninput = () => queueVoice(v.id, { brief: rt.value }); rt.onblur = () => voiceSaver.flush(v.id); rs.append(rt);
+    const gb = el("button", "btn", S.lab.busy === "rules" ? "Writing the rules…" : "Write the rules with Claude"); gb.disabled = !S.sample || !!S.lab.busy;
+    gb.title = S.sample ? "Drafts the rules from the description, the authors and the profile. Replaces the text above (you can edit it after)." : "Needs Claude, which is not available in this view";
+    gb.onclick = writeRules; rs.append(gb); body.append(rs);
+    // delete
+    const del = el("button", "btn danger", "Delete this voice"); del.style.marginTop = "18px"; del.onclick = () => { S.lab.del = true; renderPanel(); };
+    body.append(del);
+    if (S.lab.del) {
+      const use = voiceUse(v.id); const box = el("div", "vl-del");
+      box.append(el("div", null, use.chapters.length || use.paras.length
+        ? `${v.id} is used by ${use.chapters.length} chapter${use.chapters.length === 1 ? "" : "s"}${use.chapters.length ? " (" + use.chapters.join(", ") + ")" : ""}${use.paras.length ? ` and ${use.paras.length} paragraph${use.paras.length === 1 ? "" : "s"} with their own voice` : ""}. Choose the voice that replaces it:`
+        : `Delete ${v.id}? No chapter or paragraph uses it.`));
+      let rep = null;
+      if (use.chapters.length || use.paras.length) {
+        rep = el("select"); rep.append(new Option("No voice", ""));
+        for (const o of [...S.voices.values()].sort((a, b) => a.id.localeCompare(b.id))) if (o.id !== v.id) rep.append(new Option(o.id + (o.name ? " · " + o.name : ""), o.id));
+        box.append(rep);
+      }
+      const r2 = el("div", "vl-row"); const yes = el("button", "btn danger", rep ? "Replace and delete" : "Delete"); const no = el("button", "btn", "Keep it");
+      no.onclick = () => { S.lab.del = false; renderPanel(); };
+      yes.onclick = async () => {
+        const to = rep ? rep.value : "";
+        try {
+          for (const cid of use.chapters) saveChVoice(cid, { voice: to, tuning: {} });
+          for (const pid of use.paras) { const p = S.paras.get(pid); save(pid, { voice: to && to !== chv(p.chapter).voice ? to : "" }); }
+          await cvSaver.flushAll();
+          voiceSaver.pending.delete(v.id);
+          await S.db.doc(`books/${S.slug}/voices/${v.id}`).delete();
+          S.voices.delete(v.id); toast(`${v.id} deleted${use.chapters.length ? "; its chapters now use " + (to || "no voice") : ""}. The repo's voice file changes on the next sync.`);
+          labSelect(null);
+        } catch (e) { toast("Could not delete the voice (" + (e.code || "error") + ")."); }
+      };
+      r2.append(yes, no); box.append(r2); body.append(box);
+    }
+  }
+
+  function labDimRow(v, d) {
+    const vd = v.dims?.[d.n]; const row = el("div", "dim");
+    row.append(el("span", "name", `${d.n}. ${d.name}`));
+    if (!vd) {
+      const add = el("button", "btn", "Set"); add.style.padding = "1px 8px"; add.onclick = () => { const dims = { ...(labVoice().dims || {}) }; dims[d.n] = { base: 3, min: 2, max: 4, note: "" }; saveVoice(v.id, { dims }); renderPanel(); renderLabMain(true); };
+      row.append(add, el("span", "dimnote", `Not set · 1 ${d.low} / 5 ${d.high}`)); return row;
+    }
+    const valEl = el("span", "val", String(vd.base)); row.append(valEl);
+    const sl = el("div", "slider"); const tr = el("div", "track"); sl.append(tr);
+    const pct = (x) => ((x - 1) / 4) * 100;
+    const band = el("div", "band"); tr.append(band);
+    const paint = (x) => { band.style.left = pct(x.min) + "%"; band.style.width = Math.max(pct(x.max) - pct(x.min), 1.5) + "%"; };
+    paint(vd);
+    const inp = el("input"); inp.type = "range"; inp.min = 1; inp.max = 5; inp.step = 1; inp.value = vd.base; inp.setAttribute("aria-label", `${d.name} base value: 1 ${d.low}, 5 ${d.high}`);
+    const put = (patch) => { const dims = { ...(labVoice().dims || {}) }; dims[d.n] = { ...dims[d.n], ...patch }; const x = dims[d.n]; if (x.min > x.base) x.min = x.base; if (x.max < x.base) x.max = x.base; queueVoice(v.id, { dims }); paint(x); mi.value = x.min; ma.value = x.max; valEl.textContent = String(x.base); };
+    inp.oninput = () => put({ base: Number(inp.value) }); inp.onchange = () => voiceSaver.flush(v.id);
+    sl.append(inp); row.append(sl);
+    const poles = el("div", "poles"); poles.append(el("span", null, d.low), el("span", null, d.high)); row.append(poles);
+    const rg = el("div", "rng"); const mi = el("select"), ma = el("select");
+    for (let i = 1; i <= 5; i++) { mi.append(new Option(String(i), i)); ma.append(new Option(String(i), i)); }
+    mi.value = vd.min; ma.value = vd.max; mi.setAttribute("aria-label", d.name + " lowest allowed"); ma.setAttribute("aria-label", d.name + " highest allowed");
+    mi.onchange = () => { put({ min: Math.min(Number(mi.value), labVoice().dims[d.n].base) }); voiceSaver.flush(v.id); };
+    ma.onchange = () => { put({ max: Math.max(Number(ma.value), labVoice().dims[d.n].base) }); voiceSaver.flush(v.id); };
+    const clr = el("button", null, "Clear"); clr.className = "linklike"; clr.style.cssText = "border:0;background:transparent;color:var(--ink-3);font-size:11px;margin-left:auto";
+    clr.onclick = () => { const dims = { ...(labVoice().dims || {}) }; delete dims[d.n]; saveVoice(v.id, { dims }); renderPanel(); };
+    rg.append("Allowed range", mi, "to", ma, clr); row.append(rg);
+    return row;
+  }
+
+  function voiceProfileText(v) {
+    return S.book.dims.map((d) => { const x = v.dims?.[d.n]; return x ? `${d.n}. ${d.name} (1 ${d.low} / 5 ${d.high}): base ${x.base}, allowed ${x.min}-${x.max}` : null; }).filter(Boolean).join("\n") || "(no profile yet)";
+  }
+  function voiceAuthorsText(v) {
+    const au = (v.authors || []).filter((x) => S.authors.has(x.id)); const tot = au.reduce((a, x) => a + x.weight, 0) || 1;
+    return au.map((x) => { const a = S.authors.get(x.id); return `- ${a.name} (${Math.round(100 * x.weight / tot)}%)${a.work ? ", " + a.work : ""}: ${(a.portrait || "").slice(0, 700)}`; }).join("\n") || "(none chosen)";
+  }
+
+  async function writeRules() {
+    const v = labVoice(); if (!v || !S.sample || S.lab.busy) return;
+    await voiceSaver.flush(v.id);
+    S.lab.busy = "rules"; renderPanel();
+    try {
+      const book = await ctxDoc(`books/${S.slug}/context/book`);
+      const prompt = `You write the rules of a narrative voice for a novel (the voice-generator skill's voice rules). Original guidance only: never quote or imitate a specific author's sentences.
+
+VOICE: ${v.id}${v.name ? " · " + v.name : ""}
+WHO AND WHEN: ${v.description || "(not described yet)"}
+
+REFERENCE AUTHORS (with their weight in the blend)
+${voiceAuthorsText(v)}
+
+TARGET PROFILE (1-5 per dimension, with the allowed range)
+${voiceProfileText(v)}
+
+BOOK BRIEF
+${book?.brief || "(none)"}
+
+Write, in plain English, consistent with the profile and the book's handle-with-care notes:
+1. "Voice rules": 5-8 rules, each checkable on one paragraph, as: rule — why — do: (short example) — don't: (short example).
+2. "Conveying feeling": 2-3 rules on how the voice makes the reader feel a scene (senses or statement, named or not, how far it goes).
+3. "Narrative technique": 2-3 rules on how it enters and leaves an event, the peak, action steps, what is left unsaid (dimensions 19-26).
+4. "Scene architecture": 1-3 rules on how it cuts a chapter into scenes: length, openings, endings, transitions, focus (dimensions 27-31).
+Examples must be original, short, and fit the novel (nineteenth-century Brazil).
+
+Reply with only this JSON: {"brief":"the four sections in Markdown, each under a ### heading"}`;
+      const res = await S.sample.json(prompt, { modelTier: "default", cache: false });
+      if (typeof res?.brief !== "string" || !res.brief.trim()) throw { code: "invalid_json" };
+      await saveVoice(v.id, { brief: res.brief.trim() });
+      toast("Rules drafted. Read and edit them in the Rules box.");
+    } catch (e) { toast(APPLY_ERR[e?.code] || "Could not write the rules. Try again."); }
+    finally { S.lab.busy = null; renderPanel(); renderLabMain(true); }
+  }
+
+  function renderLabMain(soft) {
+    if (S.tab !== "voices") return;
+    const m = $("main");
+    if (soft && m.contains(document.activeElement) && document.activeElement.matches("input, textarea, select")) { paintTests(); return; }
+    m.replaceChildren();
+    const wrap = el("div", "chap"); m.append(wrap);
+    const v = labVoice();
+    wrap.append(el("div", "part", "Voice lab"));
+    wrap.append(el("h1", null, v ? `Stage 2 · Test ${v.id}` : "Voice lab"));
+    if (!v) { wrap.append(el("p", "p-empty", "Create or choose a voice in the side panel, then test it here on any chapter.")); return; }
+    wrap.append(el("div", "meta", "Claude writes a few paragraphs from the chapter's plan (and its scene map, if there is one) in this voice. Tests stay in the Lab: they never go into the manuscript."));
+    const form = el("div", "lab-form");
+    const f = (label, ctrl, cls) => { const x = el("label", "field" + (cls ? " " + cls : "")); x.append(el("span", null, label), ctrl); form.append(x); return ctrl; };
+    const cs = el("select"); cs.id = "lab-ch";
+    for (const c of S.book.chapters || []) cs.append(new Option(titleOf(c, langs()[0].key), c.id));
+    cs.value = pref.get("labch:" + S.slug) || S.chapter || S.book.chapters?.[0]?.id; cs.onchange = () => pref.set("labch:" + S.slug, cs.value);
+    f("Chapter", cs);
+    const ls = el("select"); ls.id = "lab-lang"; for (const l of langs()) ls.append(new Option(l.name, l.key)); if (langs().length > 1) ls.append(new Option("Both languages", "both"));
+    ls.value = pref.get("lablang:" + S.slug) || langs()[0].key; ls.onchange = () => pref.set("lablang:" + S.slug, ls.value);
+    f("Language", ls);
+    const n = el("input"); n.type = "number"; n.min = 1; n.max = 12; n.id = "lab-n"; n.value = pref.get("labn:" + S.slug) || 3; n.onchange = () => pref.set("labn:" + S.slug, n.value);
+    f("Paragraphs", n);
+    const mo = el("input"); mo.id = "lab-moment"; mo.placeholder = "Optional: which moment, e.g. 5.3 The boy"; f("Moment to write", mo, "grow");
+    const go = el("button", "btn primary", S.lab.busy === "test" ? "Writing…" : "Write test"); go.id = "lab-go";
+    const vReady = Object.keys(v.dims || {}).length || (v.brief || "").trim();
+    go.disabled = !S.sample || !!S.lab.busy || !vReady;
+    go.title = !S.sample ? "Needs Claude, which is not available in this view" : !vReady ? "Give the voice a profile or rules first" : "Write the test";
+    go.onclick = () => runTest(cs.value, ls.value, Math.max(1, Math.min(12, Number(n.value) || 3)), mo.value.trim());
+    form.append(go);
+    if (S.lab.busy === "test") { const st = el("button", "btn", "Stop"); st.onclick = () => S.lab.ctl?.abort(); form.append(st); }
+    wrap.append(form);
+    const box = el("div"); box.id = "lab-tests"; wrap.append(box);
+    paintTests();
+  }
+
+  function testCard(t) {
+    const card = el("article", "test" + (S.lab.cmp.includes(t.id) ? " cmp" : ""));
+    const h = el("div", "t-head");
+    const c = chapterInfo(t.chapter);
+    h.append(el("span", "chip voice", t.voice), el("span", null, titleOf(c, langs()[0].key) || t.chapter), el("span", null, "· " + new Date(t.createdAt).toLocaleString([], { dateStyle: "medium", timeStyle: "short" })));
+    if (t.moment) h.append(el("span", "chip", t.moment));
+    const act = el("div", "c-actions");
+    const cmp = el("button", null, S.lab.cmp.includes(t.id) ? "Stop comparing" : "Compare");
+    cmp.onclick = () => { const i = S.lab.cmp.indexOf(t.id); if (i >= 0) S.lab.cmp.splice(i, 1); else { S.lab.cmp.push(t.id); if (S.lab.cmp.length > 2) S.lab.cmp.shift(); } paintTests(); };
+    const del = el("button", null, "Delete");
+    del.onclick = async () => { try { await S.db.doc(`books/${S.slug}/voiceTests/${t.id}`).delete(); S.tests.delete(t.id); S.lab.cmp = S.lab.cmp.filter((x) => x !== t.id); paintTests(); } catch (e) { toast("Could not delete the test."); } };
+    act.append(cmp, del); h.append(act); card.append(h);
+    const body = el("div", "t-body");
+    const keys = t.lang === "both" ? langs().map((l) => l.key) : [t.lang];
+    for (const k of keys) {
+      if (keys.length > 1) body.append(el("div", "lang-tag", langName(k)));
+      for (const p of t.paragraphs || []) if (p[k]) body.append(el("p", null, p[k]));
+    }
+    card.append(body);
+    if (t.note) card.append(el("div", "t-note", t.note));
+    if (t.profile) card.append(el("div", "vmeta", "Profile used: " + t.profile));
+    return card;
+  }
+  function paintTests() {
+    const box = $("lab-tests"); if (!box) return; box.replaceChildren();
+    const v = labVoice(); if (!v) return;
+    const cmp = S.lab.cmp.map((id) => S.tests.get(id)).filter(Boolean);
+    if (cmp.length === 2) {
+      box.append(el("h2", "sec-h", "Side by side"));
+      const g = el("div", "cmpgrid"); cmp.forEach((t) => g.append(testCard(t))); box.append(g);
+    }
+    const mine = [...S.tests.values()].filter((t) => t.voice === v.id).sort((a, b) => b.createdAt - a.createdAt);
+    const others = [...S.tests.values()].filter((t) => t.voice !== v.id).sort((a, b) => b.createdAt - a.createdAt);
+    box.append(el("h2", "sec-h", `Tests of ${v.id}`));
+    const list = el("div", "tests");
+    if (!mine.length) list.append(el("p", "p-empty", "No tests yet. Choose a chapter and write one."));
+    mine.forEach((t) => list.append(testCard(t))); box.append(list);
+    if (others.length) {
+      const d = el("details"); d.style.marginTop = "18px"; d.append(el("summary", null, `Tests of other voices (${others.length}), to compare`));
+      const l2 = el("div", "tests"); others.forEach((t) => l2.append(testCard(t))); d.append(l2); box.append(d);
+    }
+    if (cmp.length === 1) box.prepend(el("div", "notice", "Choose a second test to compare side by side."));
+  }
+
+  async function runTest(cid, lang, n, moment) {
+    const v = labVoice(); if (!v || !S.sample || S.lab.busy) return;
+    await voiceSaver.flush(v.id);
+    const ctl = new AbortController(); S.lab.ctl = ctl; S.lab.busy = "test"; renderLabMain();
+    try {
+      const [book, ch] = await Promise.all([ctxDoc(`books/${S.slug}/context/book`), ctxDoc(`books/${S.slug}/context/ch-${cid}`)]);
+      const c = chapterInfo(cid), head = S.planCh.get(cid);
+      const items = planLive(cid);
+      const stories = items.filter((x) => x.kind === "event").map((x, i) => `${i + 1}. ${x.text}`).join("\n") || "(no stories planned yet)";
+      const facts = items.filter((x) => x.kind === "fact").map((x) => `- ${x.label ? "[" + x.label + "] " : ""}${x.text}`).join("\n") || "(none)";
+      const ks = lang === "both" ? langs() : langs().filter((l) => l.key === lang);
+      const prompt = `You write a short TEST passage for a novel, to try out a narrative voice before the chapter is written. Write ${n} paragraph${n > 1 ? "s" : ""} in ${ks.map((l) => l.name).join(" and ")}${ks.length > 1 ? " (each paragraph in both languages, each written natively, not translated word for word)" : ""}.
+
+VOICE: ${v.id}${v.name ? " · " + v.name : ""}
+WHO AND WHEN: ${v.description || "(not described)"}
+TARGET PROFILE (1-5; aim at the base values)
+${voiceProfileText(v)}
+RULES
+${v.brief || "(no written rules; follow the profile)"}
+REFERENCE AUTHORS (for the feel only; never copy or imitate their actual sentences)
+${voiceAuthorsText(v)}
+
+CHAPTER: ${titleOf(c, langs()[0].key)}
+WHEN / WHERE: ${head?.when || "(not set)"}
+STORIES (the plan, in order)
+${stories}
+FACTS THE CHAPTER RELIES ON
+${facts}
+SCENE BRIEF
+${ch?.brief || "(no scene map yet)"}
+${moment ? `\nWRITE THIS MOMENT: ${moment}\n` : "\nWrite the opening of the chapter, or the moment that best shows the voice.\n"}
+BOOK BRIEF
+${book?.brief || "(none)"}
+
+Rules for the test: only events, characters and facts from the plan above; no new named characters; follow the book's handle-with-care notes; the working names in the plan are never used in the text if the book brief says so. Original prose only.
+
+Reply with only this JSON: {"paragraphs":[{${ks.map((l) => `"${l.key}":"paragraph in ${l.code}"`).join(",")}}],"note":"two sentences on how the voice's profile and rules shaped this passage"}`;
+      const res = await S.sample.json(prompt, { signal: ctl.signal, modelTier: "default", cache: false });
+      const paras = (res?.paragraphs || []).filter((p) => ks.every((l) => typeof p?.[l.key] === "string" && p[l.key].trim()));
+      if (!paras.length) throw { code: "invalid_json" };
+      const id = "t" + Date.now().toString(36);
+      const prof = S.book.dims.filter((d) => v.dims?.[d.n]).map((d) => `${d.n}:${v.dims[d.n].base}`).join(" ");
+      const doc = { id, voice: v.id, chapter: cid, lang, n, moment, paragraphs: paras, note: String(res.note || ""), profile: prof, createdAt: Date.now() };
+      await S.db.doc(`books/${S.slug}/voiceTests/${id}`).set(doc); S.tests.set(id, doc);
+      toast("Test written.");
+    } catch (e) { toast(APPLY_ERR[e?.code] || "The test failed. Try again in a moment."); }
+    finally { S.lab.busy = null; S.lab.ctl = null; renderLabMain(); }
+  }
+
   // ---------- Concept, Scenes and Research tabs: read-only views of the repo's files ----------
-  const TABS = ["concept", "plan", "scenes", "book", "research"];
+  const TABS = ["concept", "voices", "plan", "scenes", "book", "research"];
   const DOC_TABS = ["concept", "scenes", "research"];
   const researchDocs = () => [...S.docs.values()].filter((d) => d.kind === "research").sort((a, b) => a.path.localeCompare(b.path));
   const resFolder = (d) => d.path.split("/").slice(1, -1).join("/") || "research";
