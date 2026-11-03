@@ -53,6 +53,7 @@ Who each character is, in short bullets: role, personality, motives, relationshi
   - Good with the land and with men: works beside his workers, knows their language, finds smarter ways to run the farm (ch. 14).
   - In the first years at Liberdade he works harder than anyone and no job is beneath him; he finds, almost by accident, what changes the farm: salt, counting and branding, cacimbas, hides, the sick horses, Descalvados, the fence (ch. 14, 15). Inspired by Rafael's grandfather Rivaldo.
   - Sees through the Pires, though they can manipulate his wife and sons (ch. 15).
+  - Keeps a Spanish *Don Quixote* looted in Asunción, the first thing he owns that he chose; never reads it to the end; Carmen finds Sancho's line in it (ch. 8, 15).
   - Loses every argument out loud to Carmen's quotes; reads in her ledgers that the cattle pay for the culture that despises them, and says nothing (ch. 16, 6).
   - Never really loved Carmen: liked and admired her; Rosária was the real connection (ch. 10, 13). Suspects his sons' spoiled ways are the white part of their blood, and thinks of Ezequiel (ch. 15).
   - Wants to teach his sons the farm, as Inácio taught him, and to sing with them, as Luzia did; they prefer their mother's world. Resents them as spoiled, weak and unaware of how hard the world is, like the worst of Tonico; feels they are not even his friends (ch. 15, 17).
@@ -199,7 +200,7 @@ He goes south with the Zuavos baianos, the all-Black companies of Bahian volunte
 ### Comrades (invented)
 
   - **Gregório "Doutor"**: free-born Black tailor, volunteer; reads, argues politics, believes in citizenship. Writes Benedito's first letters (ch. 4); his death of cholera ends Benedito's faith in the nation (ch. 6). Real aspect: the Voluntários da Pátria.
-  - **Ramon Benites**: white gaucho cavalryman; charismatic, racist one minute, loyal the next; Benedito's moral rival inside his own army (ch. 8). Real aspect: violence against Paraguayan civilians; tension among the allies.
+  - **Ramon Benites**: white gaucho cavalryman; charismatic, racist one minute, loyal the next; Benedito's moral rival inside his own army; in Asunción Benedito tries to stop him and fails, and nobody punishes him (ch. 8). Real aspect: violence against Paraguayan civilians; tension among the allies.
   - **Roque Júnior, "Sansão"**: enslaved paulista sent to the war; enormous, thin shins; Benedito first sees him in the camps in the south, a stranger with no story yet (ch. 4).
       - His mother says his father is Pata Seca, the enslaved man used to father children on a São Paulo fazenda; never confirmed; she named him after him. Has brothers and sisters he never met and looks for them in the camps (ch. 6).
       - Gravely wounded at Curupaiti, carried in by Benedito's stretchers (ch. 5); Benedito nurses him and calls him "a rare specimen"; he recovers fast (ch. 6). Saves Benedito's life from Sargento Mbareté in the assault on Humaitá, 16 July 1868, after Benedito is hit in the head, and carries him out: "Now we're even" (ch. 7).
@@ -212,7 +213,7 @@ He goes south with the Zuavos baianos, the all-Black companies of Bahian volunte
 ### The other side
 
   - **Sargento Mbareté** ("strength" in Guaraní): Paraguayan sergeant, a poor man fighting for someone else's glory; Benedito's mirror (ch. 5, 7). Real aspect: Paraguayan war propaganda (*Cabichuí*).
-  - **Ceferina**: a *residenta*; only a short, random encounter in occupied Asunción (ch. 8). Real aspect: Paraguay's demographic catastrophe; the women who rebuilt it.
+  - **Ceferina**: a *residenta*; comes to the hospital looking for her son among the wounded boys from Avaí; he gives her his ration (ch. 8). Real aspect: Paraguay's demographic catastrophe; the women who rebuilt it.
   - **The boy at Acosta Ñu**: child soldier, about 12, never named (ch. 9). Real aspect: Acosta Ñu, now Paraguay's Children's Day.
   - **Captain Albuquerque**: white Brazilian officer; humiliates and flogs Black soldiers, steals their pay; a stronger enemy than any Paraguayan (ch. 5, 7). Real aspect: racism in the army; unpaid wages.
 
@@ -312,7 +313,7 @@ A free European woman could not legally be a slave in Brazil; trafficked women w
 | 1866 | Tuiuti (24 May); Curuzu, where Marcolino planted the flag; Curupaiti | Marcolino, Mbareté, Constantino | Source doc + to verify |
 | 1867 | Cholera in the allied camps | Gregório, Ana Néri | Source doc (deaths by cholera) |
 | 1868 | Spain's Glorious Revolution; Ten Years' War in Cuba begins | The woman from Spain, Xosé | To verify |
-| 1869 | Asunción occupied; Acosta Ñu (16 Aug) | Ceferina (*residenta*), the boy | To verify |
+| 1869 | Asunción occupied (1 Jan); the Count d'Eu takes command (16 Apr); Acosta Ñu (16 Aug) | Ceferina (*residenta*), Ramon Benites, the boy | Documented (dates checked Nov 3, 2026) |
 | 1870 | Death of López at Cerro Corá / Aquidabã; veterans return unpaid | Benedito, Capt. Albuquerque | Source doc |
 | 1870–71 | Moret Law (Spain); Free Womb Law (Brazil) | Woman from Spain / Benedito mirror | To verify |
 | 1870s | Galician *ganchos*; *polacas* traffic | Alvarado, Ruchla | To verify |
