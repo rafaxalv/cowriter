@@ -44,6 +44,7 @@ Every passage exists in both languages and says the same thing; neither is a wor
 | Author search record | `voices/author-search-2026-10.md` |
 | Voice files | `voices/<ID>.md`, e.g. `voices/NARR-MAIN.md` |
 | Paragraph Parameters | `config/paragraph-parameters.csv` |
+| Chapter Voices | `config/chapter-voices.csv` |
 | Engagement scores | `config/engagement.csv` |
 | Engagement Anchors | `config/engagement-anchors.md` |
 | Research | `research/` (war, timelines, places, family records, sources, images) |
@@ -53,7 +54,8 @@ Every passage exists in both languages and says the same thing; neither is a wor
 
 - **Manuscript**: one file per language. `#` title, `##` parts, prologue and epilogue, `###` chapters and the interlude. Each paragraph is preceded by its ID in a hidden comment, e.g. `<!-- 01.003 -->`; the same ID marks the same paragraph in both files. Chapters not yet written hold a placeholder: `*(to be written)*` / `*(a escrever)*`.
 - **Paragraph ID**: chapter.row with three digits, e.g. `01.014`. Prologue `00`, epilogue `99`, the interlude `INT`. A paragraph inserted later gets a suffix (`01.014a`) so the other IDs do not shift; renumber only when Rafael asks, and then in both files together.
-- **Paragraph Parameters** (CSV): Paragraph ID, Chapter, Opening words (EN), Opening words (PT), Voice ID, Voice version, Tuning, Reason for tuning, Review status, Last reviewed, Open issues, Engagement avg, Engagement peak.
+- **Chapter Voices** (CSV): Chapter, Voice ID, Tuning, Reason for tuning. Voice tuning is set per chapter, never per paragraph (decided Nov 3, 2026): one voice and one tuning for the whole chapter.
+- **Paragraph Parameters** (CSV): Paragraph ID, Chapter, Opening words (EN), Opening words (PT), Voice ID (the chapter's voice, or the paragraph's own voice for a letter or document, which keeps that voice's base values), Voice version, Review status, Last reviewed, Open issues, Engagement avg, Engagement peak.
 - **Engagement** (CSV): Paragraph ID, Sentence, Opening words, Engagement, Tension, Emotion, Pace, Hot words, Uncertain, Reason, Date.
 - **Voice Index** (CSV): ID, Name, Type, Whose voice, When used, Based on, Version, Status, Notes.
 - **Voice IDs**: `NARR-<NAME>` for narrators, `AUTHOR-<NAME>` for the author's own voice, `CHAR-<NAME>-<FORM>` for characters (e.g. `CHAR-LUZIA-LETTERS`), `BASE-<NAME>` for base voices, `DOC-<NAME>` for document voices.

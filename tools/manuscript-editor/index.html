@@ -188,6 +188,13 @@ select { max-width: 260px; }
 .chip.stale, .chip.unsynced { background: var(--warn-soft); border-color: transparent; color: var(--warn); }
 .chip.heat { border-color: transparent; }
 .c-actions { margin-left: auto; display: flex; gap: 6px; }
+.c-details { margin-top: 6px; font-size: 12.5px; color: var(--ink-2); }
+.c-details > summary { cursor: pointer; color: var(--ink-3); font-size: 12px; list-style: none; display: inline-flex; gap: 6px; align-items: center; }
+.c-details > summary::-webkit-details-marker { display: none; }
+.c-details > summary::before { content: "▸"; font-size: 10px; }
+.c-details[open] > summary::before { content: "▾"; }
+.c-details .d-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0 14px; }
+.c-details .field { margin-top: 8px; }
 .c-actions button { border: 0; background: transparent; color: var(--ink-3); font-size: 12px; padding: 2px 4px; }
 .c-actions button:hover { color: var(--accent); }
 .c-body { display: grid; gap: 14px; margin-top: 6px; grid-template-columns: repeat(var(--cols, 1), minmax(0, 1fr)); }
@@ -261,6 +268,17 @@ button.librow:hover { color: var(--accent); }
 .toc button:hover { color: var(--accent); }
 .confirm { display: inline-flex; gap: 6px; align-items: center; font-size: 12px; color: var(--warn); }
 @media (prefers-reduced-motion: no-preference) { .cell { transition: border-color .15s, box-shadow .15s; } }
+.p-head .ptoggle { margin-left: auto; width: 26px; height: 26px; font-size: 14px; flex: none; }
+.desk.pc { grid-template-columns: 46px minmax(0, 1fr); }
+.desk.pc .panel { padding-inline: 8px; overflow: hidden; }
+.desk.pc #pBody, .desk.pc .p-head h2, .desk.pc .p-head .pid { display: none; }
+@media (max-width: 900px) { .desk.pc { grid-template-columns: minmax(0, 1fr); } .desk.pc .panel { padding-block: 8px; } }
+.group > summary { list-style: none; cursor: pointer; }
+.group > summary::-webkit-details-marker { display: none; }
+.group > summary h3::before { content: "▾ "; color: var(--ink-3); }
+.group:not([open]) > summary h3::before { content: "▸ "; }
+.p-actions .btn { margin-top: 4px; }
+.cv-status { font-size: 12px; color: var(--ink-3); margin-top: 8px; }
 </style>
 
 <div class="app">
@@ -297,8 +315,8 @@ button.librow:hover { color: var(--accent); }
 
   <div class="desk" id="desk">
     <aside class="panel" id="panel" aria-label="Side panel">
-      <div class="p-head"><h2 id="pTitle">Paragraph</h2><span class="pid" id="pPid"></span></div>
-      <div id="pBody"><p class="p-empty">Select a paragraph to see and tune its voice.</p></div>
+      <div class="p-head"><h2 id="pTitle">Chapter voice</h2><span class="pid" id="pPid"></span><button class="iconbtn ptoggle" id="pToggle" aria-label="Collapse side panel" aria-expanded="true" aria-controls="pBody">«</button></div>
+      <div id="pBody"><p class="p-empty">Open a chapter to see and tune its voice.</p></div>
     </aside>
     <main class="main" id="main">
       <div class="state" id="state">
@@ -318,7 +336,7 @@ button.librow:hover { color: var(--accent); }
     paras: new Map(), voices: new Map(), heat: new Map(),
     chapter: null, lang: null, heatMetric: "off", selected: null,
     pending: new Map(), timers: new Map(), editing: null, running: null,
-    unsubs: [], plan: new Map(), planCh: new Map(), tab: "plan", docs: new Map(), resDoc: null,
+    unsubs: [], plan: new Map(), planCh: new Map(), chVoice: new Map(), tab: "plan", docs: new Map(), resDoc: null,
   };
   const $ = (id) => document.getElementById(id);
   const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
@@ -352,7 +370,15 @@ button.librow:hover { color: var(--accent); }
   const chapterParas = (cid) => [...S.paras.values()].filter((p) => p.chapter === cid).sort((a, b) => a.order - b.order);
   const chapterInfo = (cid) => S.book?.chapters.find((c) => c.id === cid);
   const titleOf = (c, k) => c?.titles?.[k] || c?.titles?.[langs()[0]?.key] || c?.id;
-  const voiceOf = (p) => S.voices.get(p?.voice);
+  // Voice settings live at the chapter level: one voice and one tuning per chapter.
+  // A paragraph can name its own voice (a letter, a document); then it uses that voice's base values, untuned.
+  const chv = (cid) => S.chVoice.get(cid) || { chapter: cid, voice: "", tuning: {}, reason: "" };
+  const voiceIdOf = (p) => (p?.voice || chv(p?.chapter).voice || "");
+  const voiceOf = (p) => S.voices.get(voiceIdOf(p));
+  const onChapterVoice = (p) => !p.voice || p.voice === chv(p.chapter).voice;
+  const hasText = (p) => !!(p?.text && Object.values(p.text).some((x) => (x || "").trim()));
+  // A paragraph is out of date when the chapter's tuning changed after its text was last rewritten to it.
+  const tuningStale = (p) => onChapterVoice(p) && hasText(p) && JSON.stringify(sortObj(chv(p.chapter).tuning || {})) !== JSON.stringify(sortObj(p.appliedTuning || {}));
   const synced = () => S.book?.syncedAt || 0;
   const unsynced = (p) => p.updatedAt && p.updatedAt > synced();
   function heatFor(cid, lk) { return S.heat.get(cid + "_" + lk); }
@@ -363,8 +389,8 @@ button.librow:hover { color: var(--accent); }
     const stale = h.hashes?.[p.pid] !== hash(p.text?.[lk] || "");
     return { ss, avg, peak, stale };
   }
-  function tuningSummary(p) {
-    const v = voiceOf(p); const t = p.tuning || {}; const parts = [];
+  function tuningSummary(t) {
+    t = t || {}; const parts = [];
     for (const d of S.book?.dims || []) { const n = t[d.n]; if (n) parts.push(`${d.name.split(" ")[0]} ${n > 0 ? "+" : ""}${n}`); }
     return parts.join("; ");
   }
@@ -401,7 +427,7 @@ button.librow:hover { color: var(--accent); }
     S.unsubs.splice(1).forEach((u) => u());
     S.slug = slug; pref.set("book", slug);
     S.book = S.books.find((b) => b.id === slug);
-    S.paras.clear(); S.voices.clear(); S.heat.clear(); S.plan.clear(); S.planCh.clear(); S.docs.clear();
+    S.paras.clear(); S.voices.clear(); S.heat.clear(); S.plan.clear(); S.planCh.clear(); S.chVoice.clear(); S.docs.clear();
     S.resDoc = pref.get("res:" + slug) || null;
     S.lang = pref.get("lang:" + slug) || langs()[0]?.key;
     if (S.lang !== "both" && !langs().some((l) => l.key === S.lang)) S.lang = langs()[0]?.key;
@@ -429,6 +455,14 @@ button.librow:hover { color: var(--accent); }
       S.voices.clear(); snap.docs.forEach((d) => S.voices.set(d.id, d.data()));
       if (S.tab !== "book") return;
       if (!panelBusy()) renderPanel();
+      chapterParas(S.chapter).forEach(updateCell);
+    }, dbErr));
+    S.unsubs.push(S.db.collection(base + "/chapterVoice").onSnapshot((snap) => {
+      S.chVoice.clear();
+      for (const d of snap.docs) { const data = { ...d.data() }; const local = cvSaver.pending.get(d.id); if (local) Object.assign(data, local); S.chVoice.set(d.id, data); }
+      renderSyncLine();
+      if (S.tab !== "book") return;
+      if (!panelBusy()) renderPanel(); else updateApplyState();
       chapterParas(S.chapter).forEach(updateCell);
     }, dbErr));
     S.unsubs.push(S.db.collection(base + "/heatmaps").onSnapshot((snap) => {
@@ -472,8 +506,10 @@ button.librow:hover { color: var(--accent); }
     if (!S.book) return;
     const n = [...S.paras.values()].filter(unsynced).length;
     const k = [...S.plan.values()].filter(unsynced).length + [...S.planCh.values()].filter(unsynced).length;
+    const cv = [...S.chVoice.values()].filter(unsynced).length;
     const parts = [];
     if (k) parts.push(`${k} Chapters item${k > 1 ? "s" : ""}`);
+    if (cv) parts.push(`${cv} chapter voice setting${cv > 1 ? "s" : ""}`);
     if (n) parts.push(`${n} paragraph${n > 1 ? "s" : ""}`);
     $("syncLine").textContent = parts.length ? `${parts.join(" and ")} edited here since the last sync to the repo` : (S.book.syncedAt ? "In sync with the repo" : "Loaded from the repo");
   }
@@ -514,6 +550,8 @@ button.librow:hover { color: var(--accent); }
     c.addEventListener("focusin", () => select(p.pid));
     const head = el("div", "c-head"); c.append(head);
     const body = el("div", "c-body"); c.append(body);
+    const det = el("details", "c-details"); c.append(det);
+    det.addEventListener("toggle", () => { if (det.open) renderDetails(S.paras.get(p.pid), det); });
     updateCell(p, c);
     return c;
   }
@@ -525,9 +563,10 @@ button.librow:hover { color: var(--accent); }
     c.classList.toggle("removed", !!p.removed);
     const head = c.querySelector(".c-head"); head.replaceChildren();
     head.append(el("span", "pid", p.pid));
-    const v = voiceOf(p);
-    head.append(el("span", "chip voice", p.voice ? (p.voice + (v?.version ? " v" + v.version : "")) : "No voice"));
-    const ts = tuningSummary(p); if (ts) head.append(el("span", "chip tune", ts));
+    const v = voiceOf(p); const vid = voiceIdOf(p);
+    if (!onChapterVoice(p)) head.append(el("span", "chip voice", `Own voice: ${vid}${v?.version ? " v" + v.version : ""}`));
+    else if (!vid) head.append(el("span", "chip", "No voice"));
+    if (tuningStale(p)) { const ch = el("span", "chip stale", "before the chapter tuning"); ch.title = "Written before the chapter's current voice tuning. Use Apply in the side panel to rewrite it."; head.append(ch); }
     if (p.status && p.status !== "draft") head.append(el("span", "chip", p.status));
     if (p.removed) head.append(el("span", "chip stale", "removed"));
     if (unsynced(p)) head.append(el("span", "chip unsynced", "not in repo yet"));
@@ -557,6 +596,54 @@ button.librow:hover { color: var(--accent); }
       body.replaceChildren(...vl.map((lk) => { const col = el("div", "lang-col"); col.dataset.lang = lk; return col; }));
     }
     for (const col of body.children) renderLangCol(p, col);
+    const det = c.querySelector(".c-details");
+    if (det) { if (det.open) renderDetails(p, det); else renderDetailsSummary(p, det); }
+  }
+
+  // Per-paragraph details, folded under each paragraph: its own voice (if any), review status, open issues,
+  // the last rewrite (with Undo) and the engagement scores. The side panel holds only the chapter's voice.
+  function renderDetailsSummary(p, det) {
+    let sm = det.querySelector("summary"); if (!sm) { sm = el("summary"); det.prepend(sm); }
+    const bits = ["Details"];
+    if (p.notes) bits.push("open issues");
+    if (p.lastApply) bits.push("last rewrite");
+    sm.textContent = bits.join(" · ");
+  }
+  function renderDetails(p, det) {
+    if (!p || det.contains(document.activeElement) && document.activeElement !== det.querySelector("summary")) return;
+    det.replaceChildren(); renderDetailsSummary(p, det);
+    const grid = el("div", "d-grid");
+    const f = el("label", "field"); f.append(el("span", null, "Voice"));
+    const vs = el("select");
+    const cvid = chv(p.chapter).voice;
+    vs.append(new Option(cvid ? `Chapter voice (${cvid})` : "Chapter voice (not chosen yet)", ""));
+    for (const v of [...S.voices.values()].sort((a, b) => a.id.localeCompare(b.id))) if (v.id !== cvid) vs.append(new Option(`Own voice: ${v.id}${v.name ? " · " + v.name : ""}`, v.id));
+    vs.value = p.voice && p.voice !== cvid ? p.voice : "";
+    vs.onchange = () => save(p.pid, { voice: vs.value });
+    f.append(vs); grid.append(f);
+    const sf = el("label", "field"); sf.append(el("span", null, "Review status"));
+    const ss = el("select");
+    for (const o of ["draft", "to review", "reviewed", "approved"]) ss.append(new Option(o, o));
+    ss.value = p.status || "draft"; ss.onchange = () => save(p.pid, { status: ss.value }); sf.append(ss); grid.append(sf);
+    det.append(grid);
+    const nf = el("label", "field"); nf.append(el("span", null, "Open issues"));
+    const ni = el("textarea"); ni.value = p.notes || ""; ni.placeholder = "Anything to check or decide";
+    ni.oninput = () => queueSave(p.pid, { notes: ni.value }); ni.onblur = () => flush(p.pid); nf.append(ni); det.append(nf);
+    det.append(applyBox(p));
+    for (const lk of visibleLangs()) {
+      const ph = paraHeat(p, lk); if (!ph) continue;
+      const sec = el("section", "group"); const h = el("h3");
+      h.append(el("span", null, `Engagement · ${langName(lk)}`), el("span", null, `avg ${ph.avg.toFixed(1)} · peak ${ph.peak}`));
+      sec.append(h);
+      if (ph.stale) sec.append(el("div", "notice", "This paragraph changed after scoring. Run the heatmap again to update it."));
+      const list = el("div", "sents");
+      ph.ss.forEach((s, i) => {
+        const row = el("div", "sent"); row.style.borderLeftColor = `var(--h${s.e})`;
+        row.append(el("div", "sc", `#${i + 1}  E${s.e} T${s.t} M${s.m} P${s.p}${s.u ? "  uncertain" : ""}`), el("div", null, s.r || ""));
+        list.append(row);
+      });
+      sec.append(list); det.append(sec);
+    }
   }
 
   function renderLangCol(p, col) {
@@ -632,91 +719,82 @@ button.librow:hover { color: var(--accent); }
     const prev = S.selected; S.selected = pid;
     if (prev) cellEl(prev)?.classList.remove("sel");
     cellEl(pid)?.classList.add("sel");
-    renderPanel();
+    if (S.tab === "book") updateApplyState(); else renderPanel();
   }
   function panelBusy() { return $("panel").contains(document.activeElement) && document.activeElement !== document.body; }
 
   function renderPanel() {
     if (S.tab === "plan") { if (S.book) renderPlanPanel(); return; }
     if (DOC_TABS.includes(S.tab)) { if (S.book) renderDocPanel(); return; }
-    $("pTitle").textContent = "Paragraph";
-    const p = S.paras.get(S.selected); const body = $("pBody");
-    $("pPid").textContent = p ? p.pid : "";
-    if (!p || !S.book) { body.replaceChildren(el("p", "p-empty", "Select a paragraph to see and tune its voice.")); return; }
+    $("pTitle").textContent = "Chapter voice";
+    const cid = S.chapter; const body = $("pBody");
+    $("pPid").textContent = cid ? "ch. " + cid : "";
+    if (!S.book || !cid) { body.replaceChildren(el("p", "p-empty", "Open a chapter to see and tune its voice.")); return; }
     body.replaceChildren();
-    // voice
-    const f = el("label", "field"); f.append(el("span", null, "Voice"));
-    const vs = el("select"); vs.id = "p-voice";
+    const cv = chv(cid);
+    const f = el("label", "field"); f.append(el("span", null, "Voice of this chapter"));
+    const vs = el("select"); vs.id = "cv-voice";
     vs.append(new Option("No voice yet", ""));
     for (const v of [...S.voices.values()].sort((a, b) => a.id.localeCompare(b.id))) vs.append(new Option(`${v.id}${v.name ? " · " + v.name : ""}`, v.id));
-    vs.value = p.voice || ""; vs.onchange = () => save(p.pid, { voice: vs.value, tuning: {} });
+    vs.value = cv.voice || ""; vs.onchange = () => { saveChVoice(cid, { voice: vs.value, tuning: {} }); renderPanel(); chapterParas(cid).forEach(updateCell); };
     f.append(vs); body.append(f);
-    const v = voiceOf(p);
-    if (v) body.append(el("div", "vmeta", `Version ${v.version || "–"}. Shaded band: the range this voice allows. Tick: its base value. Values show the core profile; language offsets live in the voice file.`));
+    const v = S.voices.get(cv.voice);
+    if (v) body.append(el("div", "vmeta", `Version ${v.version || "–"}. The tuning applies to the whole chapter; paragraphs set to their own voice (a letter, a document) keep that voice's base values. Shaded band: the range this voice allows. Tick: its base value.`));
     if (!v || !Object.keys(v.dims || {}).length) {
-      body.append(el("p", "p-empty", p.voice ? "This voice has no target profile yet, so there is nothing to tune. Build it with the voice skills first." : "Choose the voice this paragraph is written in to tune its parameters."));
+      body.append(el("p", "p-empty", cv.voice ? "This voice has no target profile yet, so there is nothing to tune. Build it with the voice skills first." : "Choose the voice this chapter is written in to tune its parameters."));
     } else {
-      const t = p.tuning || {};
       const acts = el("div", "p-actions");
-      const apply = el("button", "btn primary", "Apply to text"); apply.id = "p-apply";
-      apply.onclick = () => applyTuning(p.pid);
-      const reset = el("button", "btn", "Reset to voice base"); reset.id = "p-reset";
-      reset.onclick = () => save(p.pid, { tuning: {} });
-      acts.append(apply, reset); body.append(acts);
-      updateApplyState(p);
-      body.append(applyBox(p));
+      const a1 = el("button", "btn primary", "Apply to chapter"); a1.id = "cv-apply-ch"; a1.onclick = applyChapter;
+      const a2 = el("button", "btn", "Apply to selected paragraph"); a2.id = "cv-apply-p"; a2.onclick = () => S.selected && applyTuning(S.selected);
+      const reset = el("button", "btn", "Reset to voice base"); reset.id = "cv-reset";
+      reset.onclick = () => { saveChVoice(cid, { tuning: {} }); renderPanel(); chapterParas(cid).forEach(updateCell); };
+      acts.append(a1, a2, reset); body.append(acts);
+      const st = el("div", "cv-status"); st.id = "cv-status"; body.append(st);
+      if (S.applying) {
+        const box = el("div", "apply-box"); box.append(el("p", null, S.applying.msg));
+        const stop = el("button", "btn", "Stop"); stop.onclick = () => S.applying?.ctl.abort(); box.append(stop); body.append(box);
+      }
+      updateApplyState();
       const groups = {};
       for (const d of S.book.dims) (groups[d.group] ||= { name: d.groupName, dims: [] }).dims.push(d);
       for (const [g, gr] of Object.entries(groups)) {
-        const sec = el("section", "group"); const h = el("h3"); h.append(el("span", null, `${g}. ${gr.name}`)); sec.append(h);
-        for (const d of gr.dims) sec.append(dimRow(p, v, d));
+        const sec = el("details", "group"); const k = "grp:" + g; sec.open = pref.get(k) !== "closed";
+        sec.addEventListener("toggle", () => pref.set(k, sec.open ? "open" : "closed"));
+        const sm = el("summary"); const h = el("h3"); h.append(el("span", null, `${g}. ${gr.name}`)); sm.append(h); sec.append(sm);
+        for (const d of gr.dims) sec.append(dimRow(cid, v, d));
         body.append(sec);
       }
       const lg = el("div", "legend-mini"); const a = el("span"); a.append(el("i", "l1b")); a.append("allowed range");
       lg.append(a, el("span", null, "| base value")); body.append(lg);
     }
-    // reason, status, notes
-    const rf = el("label", "field"); rf.append(el("span", null, "Reason for tuning"));
-    const ri = el("input"); ri.id = "p-reason"; ri.value = p.reason || ""; ri.placeholder = "Why this paragraph departs from the voice";
-    ri.oninput = () => queueSave(p.pid, { reason: ri.value }); ri.onblur = () => flush(p.pid); rf.append(ri); body.append(rf);
-    const sf = el("label", "field"); sf.append(el("span", null, "Review status"));
-    const ss = el("select"); ss.id = "p-status";
-    for (const o of ["draft", "to review", "reviewed", "approved"]) ss.append(new Option(o, o));
-    ss.value = p.status || "draft"; ss.onchange = () => save(p.pid, { status: ss.value }); sf.append(ss); body.append(sf);
-    const nf = el("label", "field"); nf.append(el("span", null, "Open issues"));
-    const ni = el("textarea"); ni.id = "p-notes"; ni.value = p.notes || ""; ni.placeholder = "Anything to check or decide";
-    ni.oninput = () => queueSave(p.pid, { notes: ni.value }); ni.onblur = () => flush(p.pid); nf.append(ni); body.append(nf);
-    // heat details
-    for (const lk of visibleLangs()) {
-      const ph = paraHeat(p, lk); if (!ph) continue;
-      const sec = el("section", "group"); const h = el("h3");
-      h.append(el("span", null, `Engagement · ${langName(lk)}`), el("span", null, `avg ${ph.avg.toFixed(1)} · peak ${ph.peak}`));
-      sec.append(h);
-      if (ph.stale) sec.append(el("div", "notice", "This paragraph changed after scoring. Run the heatmap again to update it."));
-      const list = el("div", "sents");
-      ph.ss.forEach((s, i) => {
-        const row = el("div", "sent"); row.style.borderLeftColor = `var(--h${s.e})`;
-        row.append(el("div", "sc", `#${i + 1}  E${s.e} T${s.t} M${s.m} P${s.p}${s.u ? "  uncertain" : ""}`), el("div", null, s.r || ""));
-        list.append(row);
-      });
-      sec.append(list); body.append(sec);
-    }
+    const rf = el("label", "field"); rf.append(el("span", null, "Reason for this chapter's tuning"));
+    const ri = el("input"); ri.id = "cv-reason"; ri.value = cv.reason || ""; ri.placeholder = "Why this chapter departs from the voice";
+    ri.oninput = () => queueChVoice(cid, { reason: ri.value }); ri.onblur = () => cvSaver.flush(cid); rf.append(ri); body.append(rf);
   }
 
-  // Apply is enabled whenever the tuning differs from what the text was last rewritten to; kept current as sliders move.
-  function updateApplyState(p) {
-    const apply = $("p-apply"), reset = $("p-reset"); if (!apply || !p) return;
-    const t = p.tuning || {};
-    const same = JSON.stringify(sortObj(t)) === JSON.stringify(sortObj(p.appliedTuning || {}));
-    const hasText = !!(p.text && Object.values(p.text).some((x) => (x || "").trim()));
-    apply.disabled = !S.sample || !!S.applying || same || !hasText;
-    apply.title = !S.sample ? "Rewriting needs Claude, which is not available in this view" : same ? "The text already matches these settings" : !hasText ? "This paragraph has no text yet" : "Rewrite this paragraph in every language to match these settings";
-    if (reset) reset.disabled = !Object.keys(t).some((k) => t[k]);
+  function ensureChVoice(cid) { if (!S.chVoice.has(cid)) S.chVoice.set(cid, { chapter: cid, voice: "", tuning: {}, reason: "" }); }
+  function queueChVoice(cid, patch) { ensureChVoice(cid); cvSaver.queue(cid, patch); }
+  function saveChVoice(cid, patch) { ensureChVoice(cid); cvSaver.now(cid, patch); }
+
+  // Apply is enabled when paragraphs of the chapter were written before its current tuning; kept current as sliders move.
+  function updateApplyState() {
+    const a1 = $("cv-apply-ch"), a2 = $("cv-apply-p"), reset = $("cv-reset"), st = $("cv-status"); if (!a1) return;
+    const cid = S.chapter, cv = chv(cid);
+    const stale = chapterParas(cid).filter((p) => !p.removed && tuningStale(p));
+    const sel = S.paras.get(S.selected); const selHere = sel && sel.chapter === cid;
+    a1.disabled = !S.sample || !!S.applying || !stale.length;
+    a1.textContent = stale.length ? `Apply to chapter (${stale.length} paragraph${stale.length > 1 ? "s" : ""})` : "Apply to chapter";
+    a1.title = !S.sample ? "Rewriting needs Claude, which is not available in this view" : !stale.length ? "Every paragraph already matches these settings" : "Rewrite, one by one, every paragraph written before this tuning";
+    a2.textContent = selHere ? `Apply to ${sel.pid}` : "Apply to selected paragraph";
+    a2.disabled = !S.sample || !!S.applying || !selHere || !tuningStale(sel);
+    a2.title = !selHere ? "Select a paragraph of this chapter first" : !onChapterVoice(sel) ? "This paragraph uses its own voice, untuned" : !tuningStale(sel) ? "This paragraph already matches these settings" : "Rewrite only this paragraph to the chapter's settings";
+    if (reset) reset.disabled = !Object.values(cv.tuning || {}).some(Boolean);
+    if (st) { const ts = tuningSummary(cv.tuning); st.textContent = (ts ? "Tuning: " + ts + ". " : "No tuning: the voice's base values. ") + (stale.length ? `${stale.length} paragraph${stale.length > 1 ? "s" : ""} written before it.` : ""); }
   }
 
-  function dimRow(p, v, d) {
+  function dimRow(cid, v, d) {
     const vd = v.dims[d.n]; const row = el("div", "dim");
-    const tune = (p.tuning || {})[d.n] || 0;
+    const tune = (chv(cid).tuning || {})[d.n] || 0;
     if (!vd) { row.append(el("span", "name", `${d.n}. ${d.name}`), el("span", "val", "–"), el("span", "dimnote", "Not set in this voice")); return row; }
     const val = Math.max(1, Math.min(5, vd.base + tune));
     const out = val < vd.min || val > vd.max;
@@ -736,10 +814,10 @@ button.librow:hover { color: var(--accent); }
       noteEl.textContent = o ? `Outside this voice's range (${vd.min}–${vd.max}). Keep it as a deliberate exception and give a reason.` : (vd.note || "");
     };
     inp.onchange = () => {
-      const nt = Number(inp.value) - vd.base; const t = { ...(S.paras.get(p.pid).tuning || {}) };
+      const nt = Number(inp.value) - vd.base; const t = { ...(chv(cid).tuning || {}) };
       if (nt) t[d.n] = nt; else delete t[d.n];
-      save(p.pid, { tuning: t }, { keepPanel: true });
-      const cur = S.paras.get(p.pid); if (cur) { updateCell(cur); updateApplyState(cur); }
+      saveChVoice(cid, { tuning: t });
+      chapterParas(cid).forEach(updateCell); updateApplyState();
     };
     sl.append(inp); row.append(sl);
     const poles = el("div", "poles"); poles.append(el("span", null, d.low), el("span", null, d.high)); row.append(poles);
@@ -774,7 +852,7 @@ button.librow:hover { color: var(--accent); }
     const p = S.paras.get(pid); if (p) updateCell(p);
     if (!opts.keepPanel && S.selected === pid) renderPanel();
   }
-  window.addEventListener("beforeunload", () => { for (const pid of [...S.pending.keys()]) flush(pid); planSaver.flushAll(); headSaver.flushAll(); });
+  window.addEventListener("beforeunload", () => { for (const pid of [...S.pending.keys()]) flush(pid); planSaver.flushAll(); headSaver.flushAll(); cvSaver.flushAll(); });
 
   async function addParagraph(after) {
     const cid = after ? after.chapter : S.chapter;
@@ -790,7 +868,7 @@ button.librow:hover { color: var(--accent); }
       pid = root + ch; order = (after.order + nxt.order) / 2;
     }
     const text = {}; langs().forEach((l) => (text[l.key] = ""));
-    const doc = { pid, chapter: cid, order, text, voice: after?.voice || "", tuning: {}, reason: "", status: "draft", notes: "", updatedAt: Date.now() };
+    const doc = { pid, chapter: cid, order, text, voice: after && !onChapterVoice(after) ? after.voice : "", status: "draft", notes: "", updatedAt: Date.now() };
     try {
       await S.db.doc(`books/${S.slug}/paragraphs/${pid}`).set(doc);
       S.selected = pid; setTimeout(() => { const t = document.querySelector(`.cell[data-pid="${CSS.escape(pid)}"] textarea`); t?.focus(); }, 60);
@@ -806,11 +884,6 @@ button.librow:hover { color: var(--accent); }
   }
   function applyBox(p) {
     const box = el("div", "apply-box");
-    if (S.applying?.pid === p.pid) {
-      box.append(el("p", null, S.applying.msg));
-      const stop = el("button", "btn", "Stop"); stop.onclick = () => S.applying?.ctl.abort(); box.append(stop);
-      return box;
-    }
     const last = p.lastApply; if (!last) { box.hidden = true; return box; }
     box.append(el("h4", null, "Last rewrite · " + new Date(last.at).toLocaleString([], { dateStyle: "medium", timeStyle: "short" })));
     if (last.summary) box.append(el("p", null, last.summary));
@@ -824,33 +897,36 @@ button.librow:hover { color: var(--accent); }
     return box;
   }
 
-  async function applyTuning(pid) {
-    if (!S.sample || S.applying) return;
+  const APPLY_ERR = { cancelled: "Rewrite stopped.", not_granted: "Rewriting needs your permission to use Claude.", rate_limited: "Claude is busy or your usage limit is reached. Try again later.", invalid_json: "Claude's answer could not be read. Try again.", no_context: "The book's context is not loaded in the editor yet. Ask Claude to load it.", prompt_too_large: "Too much context for one request." };
+  function refreshText(pid) {
+    const ta = cellEl(pid); const cur = S.paras.get(pid);
+    if (cur && ta) { for (const col of ta.querySelectorAll(".lang-col")) { const x = col.querySelector("textarea"); if (x && document.activeElement !== x) { x.value = cur.text?.[col.dataset.lang] || ""; autosize(x); paintHighlight(cur, col); } } updateCell(cur); }
+  }
+  // Rewrites one paragraph in every language to the chapter's voice settings (paragraph-review hand-tuning). Throws on failure.
+  async function rewriteOne(pid, ctl, setMsg) {
     await flush(pid);
-    const p = S.paras.get(pid); const v = voiceOf(p); if (!p || !v) return;
-    const ctl = new AbortController();
-    S.applying = { pid, ctl, msg: "Reading the chapter and the voice…" }; renderPanel();
-    try {
-      const [book, ch, skill] = await Promise.all([ctxDoc(`books/${S.slug}/context/book`), ctxDoc(`books/${S.slug}/context/ch-${p.chapter}`), ctxDoc("skills/paragraph-review")]);
-      if (!book || !skill?.brief) throw { code: "no_context" };
-      const ps = chapterParas(p.chapter).filter((x) => !x.removed); const i = ps.findIndex((x) => x.pid === pid);
-      const mark = (x) => x.pid === pid ? "  <<< REWRITE THIS ONE" : (x === ps[i - 1] ? "  <<< previous" : (x === ps[i + 1] ? "  <<< next" : ""));
-      const chapterText = langs().map((l) => `--- ${l.code} ---\n` + ps.map((x) => `[${x.pid}]${mark(x)}\n${x.text?.[l.key] || "(empty)"}`).join("\n\n")).join("\n\n");
-      const targets = S.book.dims.map((d) => {
-        const vd = v.dims?.[d.n]; if (!vd) return null;
-        const tn = (p.tuning || {})[d.n] || 0, val = Math.max(1, Math.min(5, vd.base + tn));
-        return `${d.n}. ${d.name} (1 ${d.low} / 5 ${d.high}): base ${vd.base}, allowed ${vd.min}-${vd.max}, target ${val}${tn ? ` (tuning ${tn > 0 ? "+" : ""}${tn}${val < vd.min || val > vd.max ? ", OUTSIDE the voice's range" : ""})` : ""}`;
-      }).filter(Boolean).join("\n");
-      const c = chapterInfo(p.chapter);
-      const prompt = `You rewrite ONE paragraph of a novel to new voice settings (the paragraph-review skill's hand-tuning). You have no files; everything you need is below.
+    const p = S.paras.get(pid); const v = voiceOf(p); if (!p || !v) throw { code: "no_voice" };
+    const cv = chv(p.chapter); const tuning = onChapterVoice(p) ? (cv.tuning || {}) : {};
+    const [book, ch, skill] = await Promise.all([ctxDoc(`books/${S.slug}/context/book`), ctxDoc(`books/${S.slug}/context/ch-${p.chapter}`), ctxDoc("skills/paragraph-review")]);
+    if (!book || !skill?.brief) throw { code: "no_context" };
+    const ps = chapterParas(p.chapter).filter((x) => !x.removed); const i = ps.findIndex((x) => x.pid === pid);
+    const mark = (x) => x.pid === pid ? "  <<< REWRITE THIS ONE" : (x === ps[i - 1] ? "  <<< previous" : (x === ps[i + 1] ? "  <<< next" : ""));
+    const chapterText = langs().map((l) => `--- ${l.code} ---\n` + ps.map((x) => `[${x.pid}]${mark(x)}\n${x.text?.[l.key] || "(empty)"}`).join("\n\n")).join("\n\n");
+    const targets = S.book.dims.map((d) => {
+      const vd = v.dims?.[d.n]; if (!vd) return null;
+      const tn = tuning[d.n] || 0, val = Math.max(1, Math.min(5, vd.base + tn));
+      return `${d.n}. ${d.name} (1 ${d.low} / 5 ${d.high}): base ${vd.base}, allowed ${vd.min}-${vd.max}, target ${val}${tn ? ` (tuning ${tn > 0 ? "+" : ""}${tn}${val < vd.min || val > vd.max ? ", OUTSIDE the voice's range" : ""})` : ""}`;
+    }).filter(Boolean).join("\n");
+    const c = chapterInfo(p.chapter);
+    const prompt = `You rewrite ONE paragraph of a novel to new voice settings (the paragraph-review skill's hand-tuning). The settings are the chapter's: the whole chapter is being brought to the same target profile, paragraph by paragraph. You have no files; everything you need is below.
 
 HOW TO REWRITE
 ${skill.brief}
 
 PARAGRAPH: ${pid} in chapter "${titleOf(c, langs()[0].key)}". Languages: ${langs().map((l) => l.code).join(", ")}.
-Reason the author gave for this tuning: ${p.reason || "(none given)"}
+Reason the author gave for this chapter's tuning: ${(onChapterVoice(p) && cv.reason) || "(none given)"}
 
-TARGET PROFILE (voice ${v.id} v${v.version}; base + tuning)
+TARGET PROFILE (voice ${v.id} v${v.version}; base + the chapter's tuning)
 ${targets}
 
 THE CHAPTER (the paragraph to rewrite and its neighbours are marked)
@@ -870,26 +946,42 @@ ${book.continuity || "(none recorded yet)"}
 
 Reply with only this JSON:
 {"text":{${langs().map((l) => `"${l.key}":"the rewritten paragraph in ${l.code}"`).join(",")}},"summary":"what changed and which targets drove it","perLanguage":{${langs().map((l) => `"${l.key}":"short note"`).join(",")}},"issues":["what the author should check; [] if none"]}`;
-      S.applying.msg = `Rewriting ${pid} in ${langs().map((l) => l.code).join(" and ")}… this can take a minute.`; renderPanel();
-      const res = await S.sample.json(prompt, { signal: ctl.signal, modelTier: "default", cache: false, onText: () => { if (S.applying) { S.applying.msg = `Writing the new version of ${pid}…`; } } });
-      const nt = {}; let ok = true;
-      for (const l of langs()) { const x = res?.text?.[l.key]; if (typeof x !== "string" || !x.trim()) ok = false; else nt[l.key] = x.trim(); }
-      if (!ok) throw { code: "invalid_json" };
-      const cur = S.paras.get(pid);
-      save(pid, {
-        text: nt, appliedTuning: sortObj(cur.tuning || {}),
-        lastApply: { at: Date.now(), summary: String(res.summary || ""), perLanguage: res.perLanguage || {}, issues: (res.issues || []).map(String), previous: { ...cur.text }, previousTuning: cur.appliedTuning || {} },
-      });
-      toast(`Paragraph ${pid} rewritten. Undo is in the panel.`);
+    const res = await S.sample.json(prompt, { signal: ctl.signal, modelTier: "default", cache: false, onText: () => setMsg(`Writing the new version of ${pid}…`) });
+    const nt = {}; let ok = true;
+    for (const l of langs()) { const x = res?.text?.[l.key]; if (typeof x !== "string" || !x.trim()) ok = false; else nt[l.key] = x.trim(); }
+    if (!ok) throw { code: "invalid_json" };
+    const cur = S.paras.get(pid);
+    save(pid, {
+      text: nt, appliedTuning: sortObj(tuning),
+      lastApply: { at: Date.now(), summary: String(res.summary || ""), perLanguage: res.perLanguage || {}, issues: (res.issues || []).map(String), previous: { ...cur.text }, previousTuning: cur.appliedTuning || {} },
+    }, { keepPanel: true });
+  }
+  function setApplyMsg(m) { if (!S.applying) return; S.applying.msg = m; const b = document.querySelector("#pBody .apply-box p"); if (b) b.textContent = m; }
+  async function applyTuning(pid) {
+    if (!S.sample || S.applying) return;
+    const ctl = new AbortController();
+    S.applying = { pid, ctl, msg: `Rewriting ${pid} in ${langs().map((l) => l.code).join(" and ")}… this can take a minute.` }; renderPanel();
+    try { await rewriteOne(pid, ctl, setApplyMsg); toast(`Paragraph ${pid} rewritten. Undo is in its Details.`); }
+    catch (e) { toast(APPLY_ERR[e?.code] || "The rewrite failed. Try again in a moment."); }
+    finally { S.applying = null; refreshText(pid); renderPanel(); }
+  }
+  async function applyChapter() {
+    if (!S.sample || S.applying) return;
+    const cid = S.chapter; const list = chapterParas(cid).filter((p) => !p.removed && tuningStale(p));
+    if (!list.length) return;
+    const ctl = new AbortController(); let done = 0;
+    S.applying = { pid: null, ctl, msg: "" };
+    try {
+      for (const [i, p] of list.entries()) {
+        if (ctl.signal.aborted) throw { code: "cancelled" };
+        S.applying.pid = p.pid; S.applying.msg = `Rewriting ${p.pid} (${i + 1} of ${list.length})… Stop keeps what is done.`; renderPanel();
+        await rewriteOne(p.pid, ctl, (m) => setApplyMsg(`${m} (${i + 1} of ${list.length})`));
+        refreshText(p.pid); done++;
+      }
+      toast(`${done} paragraph${done > 1 ? "s" : ""} rewritten to the chapter's settings. Undo is in each paragraph's Details.`);
     } catch (e) {
-      const msg = { cancelled: "Rewrite stopped.", not_granted: "Rewriting needs your permission to use Claude.", rate_limited: "Claude is busy or your usage limit is reached. Try again later.", invalid_json: "Claude's answer could not be read. Try again.", no_context: "The book's context is not loaded in the editor yet. Ask Claude to load it.", prompt_too_large: "Too much context for one request." }[e?.code] || "The rewrite failed. Try again in a moment.";
-      toast(msg);
-    } finally {
-      S.applying = null;
-      const ta = document.querySelector(`.cell[data-pid="${CSS.escape(pid)}"]`); const cur = S.paras.get(pid);
-      if (cur && ta) { for (const col of ta.querySelectorAll(".lang-col")) { const x = col.querySelector("textarea"); if (x && document.activeElement !== x) { x.value = cur.text?.[col.dataset.lang] || ""; autosize(x); paintHighlight(cur, col); } } }
-      renderPanel();
-    }
+      toast((APPLY_ERR[e?.code] || "A rewrite failed.") + (done ? ` ${done} of ${list.length} paragraphs were rewritten.` : ""));
+    } finally { S.applying = null; renderPanel(); chapterParas(cid).forEach(updateCell); }
   }
 
   // ---------- curve ----------
@@ -1058,6 +1150,7 @@ Reply with only this JSON, one entry per sentence id above, in order:
   }
   const planSaver = makeSaver((id) => `books/${S.slug}/plan/${id}`, (id) => S.plan.get(id));
   const headSaver = makeSaver((cid) => `books/${S.slug}/planChapters/${cid}`, (cid) => S.planCh.get(cid), "set");
+  const cvSaver = makeSaver((cid) => `books/${S.slug}/chapterVoice/${cid}`, (cid) => S.chVoice.get(cid), "set");
 
   function subscribePlan(base) {
     let first = true;
@@ -1469,10 +1562,18 @@ Reply with only this JSON, one entry per sentence id above, in order:
   $("bookSel").addEventListener("change", (e) => openBook(e.target.value));
   $("prevCh").onclick = () => step(-1); $("nextCh").onclick = () => step(1);
   function step(d) { const cs = S.book?.chapters || []; const i = cs.findIndex((c) => c.id === S.chapter); const n = cs[i + d]; if (n) goChapter(n.id); }
-  function goChapter(id) { for (const pid of [...S.pending.keys()]) flush(pid); planSaver.flushAll(); headSaver.flushAll(); S.chapter = id; S.selected = null; pref.set("chap:" + S.slug, id); $("chapSel").value = id; renderMain(); window.scrollTo({ top: 0 }); }
+  function goChapter(id) { for (const pid of [...S.pending.keys()]) flush(pid); planSaver.flushAll(); headSaver.flushAll(); cvSaver.flushAll(); S.chapter = id; S.selected = null; pref.set("chap:" + S.slug, id); $("chapSel").value = id; renderMain(); window.scrollTo({ top: 0 }); }
   $("runHeat").onclick = runHeatmap;
   S.chartOpen = pref.get("chart") !== "closed";
   $("chartToggle").onclick = () => { S.chartOpen = !S.chartOpen; pref.set("chart", S.chartOpen ? "open" : "closed"); renderCurve(); };
+  S.panelOpen = pref.get("panel") !== "closed";
+  function applyPanelState() {
+    $("desk").classList.toggle("pc", !S.panelOpen);
+    const b = $("pToggle"); b.textContent = S.panelOpen ? "«" : "»";
+    b.setAttribute("aria-expanded", String(S.panelOpen)); b.setAttribute("aria-label", S.panelOpen ? "Collapse side panel" : "Expand side panel");
+  }
+  $("pToggle").onclick = () => { S.panelOpen = !S.panelOpen; pref.set("panel", S.panelOpen ? "open" : "closed"); applyPanelState(); };
+  applyPanelState();
   const m0 = pref.get("metric"); if (m0) setMetric(m0);
   setTab(TABS.includes(pref.get("tab")) ? pref.get("tab") : "plan");
 

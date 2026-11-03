@@ -11,6 +11,8 @@ Updates, in the book folder:
   - every manuscript file listed in BOOK.md: paragraph text, order and IDs
     (removed paragraphs are dropped; chapters with none get the placeholder)
   - config/paragraph-parameters.csv: one row per paragraph
+  - config/chapter-voices.csv: one row per chapter (voice, tuning, reason), when
+    the dump holds .../chapterVoice/*.json
   - config/engagement.csv: the latest heatmap scores of the first language
   - the Chapters file (outline/chapters.md), when the dump holds the Chapters tab's
     documents (.../plan/*.json and .../planChapters/*.json): each chapter entry is
@@ -81,6 +83,7 @@ def main(book_dir, dump):
     slug = os.path.basename(os.path.normpath(book_dir))
     base = os.path.join(dump, "books", slug)
     sync_plan(book_dir, base)
+    chv = sync_chapter_voices(book_dir, base)
     paras = list(load_docs(os.path.join(base, "paragraphs")).values())
     if not paras:
         return
@@ -116,10 +119,9 @@ def main(book_dir, dump):
                 k = next((lk for c, lk, _ in langs if c.split("-")[0] == m.group(1).split("-")[0]), None)
                 if k:
                     r[col] = words(p.get("text", {}).get(k, ""))
-        r["Voice ID"] = p.get("voice", "")
-        r["Voice version"] = voices.get(p.get("voice", ""), {}).get("version", "") if p.get("voice") else ""
-        r["Tuning"] = "; ".join(f"{dim_name[n]} {'+' if v > 0 else ''}{v}" for n, v in sorted(p.get("tuning", {}).items(), key=lambda kv: int(kv[0])) if v)
-        r["Reason for tuning"] = p.get("reason", "")
+        vid = p.get("voice") or chv.get(p["chapter"], {}).get("voice", "") or r.get("Voice ID", "")
+        r["Voice ID"] = vid  # the paragraph's own voice, or the chapter's
+        r["Voice version"] = voices.get(vid, {}).get("version", "") if vid else ""
         r["Review status"] = "removed" if p.get("removed") else p.get("status", "")
         r["Open issues"] = p.get("notes", "")
         if p.get("updatedAt"):
@@ -155,6 +157,36 @@ def main(book_dir, dump):
     with open(en_path, "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=eh); w.writeheader(); w.writerows(keep + new)
     print("updated config/engagement.csv:", len(new), "scored sentences from", sorted(scored_ch) or "no chapters")
+
+
+def sync_chapter_voices(book_dir, base):
+    """Write config/chapter-voices.csv from the store's chapterVoice documents; return {chapter: doc}."""
+    docs = load_docs(os.path.join(base, "chapterVoice"))
+    if not docs:
+        return {}
+    dim_name = {str(n): name for _, n, name, *_ in DIMS}
+    path = os.path.join(book_dir, "config/chapter-voices.csv")
+    header = ["Chapter", "Voice ID", "Tuning", "Reason for tuning"]
+    old = {}
+    if os.path.exists(path):
+        rows = list(csv.DictReader(open(path, encoding="utf-8")))
+        header = next(csv.reader(open(path, encoding="utf-8")))
+        old = {r["Chapter"]: r for r in rows}
+    out = []
+    order = list(old) + [c for c in docs if c not in old]
+    for cid in order:
+        r = dict.fromkeys(header, ""); r.update(old.get(cid, {}))
+        d = docs.get(cid)
+        if d:
+            r["Chapter"] = cid
+            r["Voice ID"] = d.get("voice", "")
+            r["Tuning"] = "; ".join(f"{dim_name[n]} {'+' if v > 0 else ''}{v}" for n, v in sorted((d.get("tuning") or {}).items(), key=lambda kv: int(kv[0])) if v)
+            r["Reason for tuning"] = d.get("reason", "")
+        out.append(r)
+    with open(path, "w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=header); w.writeheader(); w.writerows(out)
+    print("updated config/chapter-voices.csv:", len(out), "chapters")
+    return {d.get("chapter", c): d for c, d in docs.items()}
 
 
 def sync_plan(book_dir, base):

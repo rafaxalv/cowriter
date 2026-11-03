@@ -6,7 +6,8 @@ Usage: python3 tools/manuscript-editor/export_book.py books/<slug> <out_dir>
 Writes one JSON file per document under <out_dir>, mirroring the editor's
 store paths (see README.md):
   books/<slug>.json                      the book: title, languages, chapters, dimensions
-  books/<slug>/paragraphs/<pid>.json     one per paragraph: text per language, voice, tuning
+  books/<slug>/paragraphs/<pid>.json     one per paragraph: text per language, own voice (if any), status
+  books/<slug>/chapterVoice/<id>.json    one per chapter: voice, tuning, reason (config/chapter-voices.csv)
   books/<slug>/voices/<ID>.json          one per voice with a target-profile table
 Upload them with the ArtifactData tool (batch, file_path).
 """
@@ -33,9 +34,36 @@ DIMS = [
     ("E", 16, "Moral stance", "judges", "no verdicts"),
     ("E", 17, "Violence rendering", "offstage", "explicit"),
     ("E", 18, "Emotional temperature", "cool, ironic", "openly emotional"),
+    ("F", 19, "Event entry", "from the beginning", "in the middle"),
+    ("F", 20, "Event exit", "to the aftermath", "cut at the peak"),
+    ("F", 21, "Peak treatment", "compressed, skipped", "slowed, beat by beat"),
+    ("F", 22, "Action granularity", "outcomes", "every step"),
+    ("F", 23, "Feeling rendering", "named, explained", "never named"),
+    ("F", 24, "Interior access", "seen from outside", "continuous inner life"),
+    ("F", 25, "Reader inference", "spelled out", "much left unsaid"),
+    ("F", 26, "Dialogue subtext", "says what it means", "meaning under the words"),
+    ("G", 27, "Scene length", "many short scenes", "few long scenes"),
+    ("G", 28, "Scene opening", "orientation first", "in the action"),
+    ("G", 29, "Scene ending", "resolved", "cut on an image or line"),
+    ("G", 30, "Transitions", "bridged by summary", "hard cuts, jumps"),
+    ("G", 31, "Scene focus", "one beat", "several threads"),
 ]
 GROUPS = {"A": "Voice and perspective", "B": "Language", "C": "Time and structure",
-          "D": "History and reality", "E": "Emotion and ethics"}
+          "D": "History and reality", "E": "Emotion and ethics",
+          "F": "Narrative technique", "G": "Scene architecture"}
+
+
+def parse_tuning(text):
+    """'Narrative distance -1; Pace +1' -> {"1": -1, "12": 1} (names matched loosely against DIMS)."""
+    tuning = {}
+    for part in filter(None, re.split(r"\s*;\s*", text or "")):
+        mm = re.match(r"(.+?)\s*([+-]\d+)$", part)
+        if mm:
+            name = mm.group(1).strip().lower()
+            for g, n, nm, *_ in DIMS:
+                if nm.lower().startswith(name) or name.startswith(nm.lower().split()[0]):
+                    tuning[str(n)] = int(mm.group(2)); break
+    return tuning
 
 
 def chap_id(title):
@@ -123,6 +151,11 @@ def main(book_dir, out):
     if os.path.exists(pp):
         for r in csv.DictReader(open(pp, encoding="utf-8")):
             params[r["Paragraph ID"]] = r
+    chvoices = {}
+    cvp = os.path.join(book_dir, "config/chapter-voices.csv")
+    if os.path.exists(cvp):
+        for r in csv.DictReader(open(cvp, encoding="utf-8")):
+            chvoices[r["Chapter"]] = r
     mc = re.search(r"^- \*\*In one line\*\*:\s*(.+)$", profile, re.M)
     context = mc.group(1).strip() if mc else ""
     anchors = ""
@@ -149,19 +182,24 @@ def main(book_dir, out):
         return (ch_pos.get(c, 999), int(re.match(r"\d+", r).group()), r)
     for i, pid in enumerate(sorted(texts, key=key)):
         p = params.get(pid, {})
-        tuning = {}
-        for part in filter(None, re.split(r"\s*;\s*", p.get("Tuning", ""))):
-            mm = re.match(r"(.+?)\s*([+-]\d+)$", part)
-            if mm:
-                name = mm.group(1).strip().lower()
-                for g, n, nm, *_ in DIMS:
-                    if nm.lower().startswith(name) or name.startswith(nm.lower().split()[0]):
-                        tuning[str(n)] = int(mm.group(2)); break
+        cid = texts[pid]["chapter"]
+        own = p.get("Voice ID", "")
+        if own == chvoices.get(cid, {}).get("Voice ID", ""):
+            own = ""  # same as the chapter's voice: the paragraph follows the chapter
+        tun = parse_tuning(chvoices.get(cid, {}).get("Tuning", "")) if not own else {}
         write(out, f"books/{slug}/paragraphs/{pid}.json", {
-            "pid": pid, "chapter": texts[pid]["chapter"], "order": (i + 1) * 1000,
-            "text": texts[pid]["text"], "voice": p.get("Voice ID", ""), "tuning": tuning,
-            "reason": p.get("Reason for tuning", ""), "status": p.get("Review status", "") or "draft",
+            "pid": pid, "chapter": cid, "order": (i + 1) * 1000,
+            "text": texts[pid]["text"], "voice": own, "appliedTuning": tun,
+            "status": p.get("Review status", "") or "draft",
             "notes": p.get("Open issues", ""), "updatedAt": None,
+        })
+    # Voice settings are per chapter (config/chapter-voices.csv): one voice and one tuning for the whole chapter.
+    for cid in order_ch:
+        r = chvoices.get(cid, {})
+        tun = parse_tuning(r.get("Tuning", ""))
+        write(out, f"books/{slug}/chapterVoice/{cid}.json", {
+            "chapter": cid, "voice": r.get("Voice ID", ""), "tuning": tun,
+            "reason": r.get("Reason for tuning", ""), "updatedAt": None,
         })
     # Context for one-shot rewrites in the editor, kept small: the chapter text itself is the heavy
     # context (the page has it); these are the short briefs the paragraph-review skill asks for.

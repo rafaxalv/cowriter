@@ -1,6 +1,6 @@
 ---
 name: "chapter-review"
-description: "Use when the author wants a whole chapter of a book in this repo reviewed: voices, paragraph-level tuning, plot and continuity, and coherence with the rest of the book, coordinating the paragraph-review skill."
+description: "Use when the author wants a whole chapter of a book in this repo reviewed: voices, chapter-level tuning, plot and continuity, and coherence with the rest of the book, coordinating the paragraph-review skill."
 ---
 
 # Chapter review
@@ -22,10 +22,10 @@ This skill reads: the **Concept**, **Chapters**, **Scenes** (the chapter's scene
 
 ### Paragraph Parameters
 
-One row per paragraph, with the columns the profile lists (typically: Paragraph ID, Chapter, Opening words per language, Voice ID, Voice version, Tuning, Reason for tuning, Review status, Last reviewed, Open issues).
+One row per paragraph, with the columns the profile lists (typically: Paragraph ID, Chapter, Opening words per language, Voice ID, Voice version, Review status, Last reviewed, Open issues).
 
 - **Paragraph ID**: as the profile defines it (typically chapter.paragraph, for example 03.014). The same ID covers every language version of a paragraph. A paragraph inserted later gets a suffix (03.014a) so the other IDs do not shift. Renumber only when the author asks, and then in every file together.
-- **Tuning**: the changes from the voice's base values for this paragraph only, for example "Violence +1; Pace +1". Must stay inside the voice's allowed ranges.
+- **Tuning is not per paragraph.** It is set per chapter in the book's **Chapter Voices** file (Chapter, Voice ID, Tuning, Reason for tuning): the changes from the voice's base values for the whole chapter, for example "Violence +1; Pace +1", inside the voice's allowed ranges. A paragraph with its own voice (a letter, a document) uses that voice's base values.
 
 ### Continuity record
 
@@ -50,13 +50,13 @@ For each moment, decide which voice applies (the scene map names it), and point 
 - places where the voice should change (for example a letter inside the narration) and whether the transition is clear to the reader;
 - places where the current voice does not fit and a different voice, or an adjustment to the voice, is needed. Voice changes are made with the **book-voices** skill, not here.
 
-Then plan the **tuning curve**: for each paragraph, any tuning inside the voice's ranges that serves the moment (for example more explicit violence at the worst moment, faster pace in an escape, more sensory detail on arrival in a new place). Keep tuning purposeful and sparse; most paragraphs should stay at the base values. Show the map and the planned tuning to the author before going on.
+Then decide the **chapter's tuning**: one set of changes inside the voice's ranges for the whole chapter, when the chapter as a whole needs it (for example more sensory detail for a chapter of arrival, faster pace for a war chapter). Moments inside the chapter are shaped within those settings, by the writing itself; keep tuning purposeful and sparse, and most chapters at the base values. Show the map and the planned tuning to the author before going on.
 
 ### 3. Send each paragraph to paragraph-review
 
 For each paragraph, give paragraph-review a **context packet**:
 
-- the voice ID and version, and the tuning for this paragraph with its reason;
+- the voice ID and version, and the chapter's tuning with its reason;
 - the chapter's goal and the scene this paragraph belongs to, with the scene's beats, motivations, feelings and Reader feeling from the scene map;
 - a summary of what happens just before and just after, plus the previous and next paragraphs in full;
 - the characters present, what each one knows at this point, and where we are in the timeline;
@@ -81,7 +81,7 @@ When the chapter check finds a problem located in specific paragraphs (a contrad
 ### 6. Report
 
 1. Overview: verdict for the chapter and the 3-5 most important issues.
-2. Chapter map: moments, voices, tuning curve, and the comparison with the scene map.
+2. Chapter map: moments, voices, the chapter's tuning, and the comparison with the scene map.
 3. Plot and continuity issues, each with the Paragraph IDs involved and a suggested fix.
 4. Voice coherence findings.
 5. Paragraph results (from paragraph-review), only for paragraphs that need changes.
@@ -89,7 +89,7 @@ When the chapter check finds a problem located in specific paragraphs (a contrad
 
 ### 7. Apply (only after the author approves)
 
-Apply the approved changes to the **manuscript** files and **Paragraph Parameters** in the same pass: every changed, added or removed paragraph gets its row created, updated or marked removed, with voice, version, tuning, reason, status and date. Never update one without the other. Then add the approved facts to the Continuity record. If approved changes alter what happens, update the scene map in Scenes and the Chapters entry too. Keep every language version aligned; if only one was changed, flag the others for update, following the profile on whose wording is the source in each language (when a co-author's text is the source, the other languages are updated to match it). Hand the changes to the **book-repo** skill, which saves them.
+Apply the approved changes to the **manuscript** files and **Paragraph Parameters** in the same pass: every changed, added or removed paragraph gets its row created, updated or marked removed, with voice, version, status and date; a change to the chapter's tuning goes to its row in Chapter Voices in the same pass. Never update one without the other. Then add the approved facts to the Continuity record. If approved changes alter what happens, update the scene map in Scenes and the Chapters entry too. Keep every language version aligned; if only one was changed, flag the others for update, following the profile on whose wording is the source in each language (when a co-author's text is the source, the other languages are updated to match it). Hand the changes to the **book-repo** skill, which saves them.
 
 ## Notes
 
