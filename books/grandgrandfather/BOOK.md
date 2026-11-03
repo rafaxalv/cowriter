@@ -43,6 +43,7 @@ Used at every level: the **Character Bible** (who people are, plus the Continuit
 | Concept | `outline/concept.md` (earlier versions: in the git history) |
 | Chapters (plan of record) | `outline/chapters.md` |
 | Scenes (scene maps) | `outline/scenes.md` |
+| Alternatives (undecided arcs, working notes) | `outline/alternatives/` (e.g. `purchase.md`); Chapters stays the plan of record |
 | Manuscript | `book/manuscript.en.md`, `book/manuscript.pt-br.md` |
 | Drafts (chapters being written) | `drafts/` (create when first needed) |
 | Character Bible | `characters/character-bible.md` |
