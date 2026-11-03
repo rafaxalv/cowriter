@@ -275,10 +275,12 @@ button.librow:hover { color: var(--accent); }
 @media (max-width: 900px) { .desk.pc { grid-template-columns: minmax(0, 1fr); } .desk.pc .panel { padding-block: 8px; } }
 .group > summary { list-style: none; cursor: pointer; }
 .group > summary::-webkit-details-marker { display: none; }
+.group > summary h3 { justify-content: flex-start; gap: 6px; }
 .group > summary h3::before { content: "▾ "; color: var(--ink-3); }
 .group:not([open]) > summary h3::before { content: "▸ "; }
 .p-actions .btn { margin-top: 4px; }
 .cv-status { font-size: 12px; color: var(--ink-3); margin-top: 8px; }
+.p-head.p-sub { margin-top: 22px; padding-top: 14px; border-top: 1px solid var(--rule); }
 </style>
 
 <div class="app">
@@ -723,12 +725,24 @@ button.librow:hover { color: var(--accent); }
   }
   function panelBusy() { return $("panel").contains(document.activeElement) && document.activeElement !== document.body; }
 
-  function renderPanel() {
-    if (S.tab === "plan") { if (S.book) renderPlanPanel(); return; }
+  // In the Chapters and Book tabs the side panel holds the chapter's voice (fixed: it does not follow the selection);
+  // in the Chapters tab the selected item's settings follow below it.
+  function renderPanel(force) {
     if (DOC_TABS.includes(S.tab)) { if (S.book) renderDocPanel(); return; }
+    const pb = $("pBody");
+    let vw = $("pVoice"), iw = $("pItem");
+    if (!vw || !iw || !pb.contains(vw)) { pb.replaceChildren(); vw = el("div"); vw.id = "pVoice"; iw = el("div"); iw.id = "pItem"; pb.append(vw, iw); force = true; }
+    renderVoiceSection(vw, force);
+    if (S.tab === "plan" && S.book) renderPlanPanel(iw); else iw.replaceChildren();
+  }
+  function renderVoiceSection(body, force) {
     $("pTitle").textContent = "Chapter voice";
-    const cid = S.chapter; const body = $("pBody");
+    const cid = S.chapter;
     $("pPid").textContent = cid ? "ch. " + cid : "";
+    const cv0 = chv(cid), v0 = S.voices.get(cv0.voice);
+    const key = [S.book ? 1 : 0, cid, cv0.voice, JSON.stringify(sortObj(cv0.tuning || {})), v0?.version, Object.keys(v0?.dims || {}).length, S.applying ? S.applying.msg : "", S.voices.size].join("|");
+    if (!force && body.dataset.key === key) { updateApplyState(); return; }
+    body.dataset.key = key;
     if (!S.book || !cid) { body.replaceChildren(el("p", "p-empty", "Open a chapter to see and tune its voice.")); return; }
     body.replaceChildren();
     const cv = chv(cid);
@@ -785,6 +799,7 @@ button.librow:hover { color: var(--accent); }
     a1.disabled = !S.sample || !!S.applying || !stale.length;
     a1.textContent = stale.length ? `Apply to chapter (${stale.length} paragraph${stale.length > 1 ? "s" : ""})` : "Apply to chapter";
     a1.title = !S.sample ? "Rewriting needs Claude, which is not available in this view" : !stale.length ? "Every paragraph already matches these settings" : "Rewrite, one by one, every paragraph written before this tuning";
+    a2.hidden = S.tab !== "book";
     a2.textContent = selHere ? `Apply to ${sel.pid}` : "Apply to selected paragraph";
     a2.disabled = !S.sample || !!S.applying || !selHere || !tuningStale(sel);
     a2.title = !selHere ? "Select a paragraph of this chapter first" : !onChapterVoice(sel) ? "This paragraph uses its own voice, untuned" : !tuningStale(sel) ? "This paragraph already matches these settings" : "Rewrite only this paragraph to the chapter's settings";
@@ -1171,8 +1186,12 @@ Reply with only this JSON, one entry per sentence id above, in order:
     S.unsubs.push(S.db.collection(base + "/planChapters").onSnapshot((snap) => {
       for (const d of snap.docs) { const data = { ...d.data() }; const local = headSaver.pending.get(d.id); if (local) Object.assign(data, local); S.planCh.set(d.id, data); }
       renderSyncLine();
-      if (S.tab === "plan") { const w = $("planWhen"); if (w && document.activeElement !== w) w.value = S.planCh.get(S.chapter)?.when || ""; }
+      if (S.tab === "plan") { const w = $("planWhen"); if (w && document.activeElement !== w) w.value = S.planCh.get(S.chapter)?.when || ""; paintReadiness(); }
     }, dbErr));
+  }
+  function paintReadiness() {
+    const rd = $("planReady"); if (!rd) return; const r = S.planCh.get(S.chapter)?.readiness || "";
+    rd.hidden = !r; rd.replaceChildren(el("span", "rlabel", "Readiness"), el("span", null, r));
   }
   function planShape() { return planItems(S.chapter).map((x) => `${x.id}:${x.kind}:${x.order}:${x.removed ? 1 : 0}`).join(); }
 
@@ -1191,10 +1210,8 @@ Reply with only this JSON, one entry per sentence id above, in order:
     wi.oninput = () => { if (!S.planCh.has(cid)) S.planCh.set(cid, { chapter: cid, title: titleOf(info, lk), when: "" }); headSaver.queue(cid, { when: wi.value }); };
     wi.onblur = () => headSaver.flush(cid);
     wf.append(wi); wrap.append(wf);
-    if (head?.readiness) {
-      const rd = el("div", "readiness"); rd.title = "Readiness score: computed in the repo each time the chapter changes (see the co-writer skill). Read-only here.";
-      rd.append(el("span", "rlabel", "Readiness"), el("span", null, head.readiness)); wrap.append(rd);
-    }
+    const rd = el("div", "readiness"); rd.id = "planReady"; rd.title = "Readiness score: computed in the repo each time the chapter changes (see the co-writer skill). Read-only here.";
+    wrap.append(rd);
     const items = planLive(cid);
     const facts = items.filter((x) => x.kind === "fact");
     const meta = el("div", "meta");
@@ -1214,7 +1231,7 @@ Reply with only this JSON, one entry per sentence id above, in order:
       const add = el("button", "btn add", addLabel); add.onclick = () => planAdd(kind); sec.append(add);
       wrap.append(sec);
     }
-    m.append(wrap);
+    m.append(wrap); paintReadiness();
     if (S.selected && !S.plan.has(S.selected)) S.selected = null;
     renderPanel();
   }
@@ -1315,12 +1332,13 @@ Reply with only this JSON, one entry per sentence id above, in order:
     planSaver.now(x.id, { chapter: cid, order: max + 1000, sources: [] }).then(() => { toast(`Moved to ${cleanTitle(S.planCh.get(cid)?.title) || cid}.`); renderMain(); });
   }
 
-  function renderPlanPanel() {
-    const body = $("pBody"); body.replaceChildren();
+  function renderPlanPanel(body) {
+    body.replaceChildren();
     const x = S.plan.get(S.selected);
-    $("pTitle").textContent = x ? KIND_NAME[x.kind] : "Chapter";
     const nums = srcNum(S.chapter);
-    $("pPid").textContent = x?.kind === "source" ? "S" + (nums.get(x.id) || "") : "";
+    const hd = el("div", "p-head p-sub"); hd.append(el("h2", null, x ? KIND_NAME[x.kind] : "This chapter's items"));
+    if (x?.kind === "source") hd.append(el("span", "pid", "S" + (nums.get(x.id) || "")));
+    body.append(hd);
     if (!x) return renderPlanOverview(body);
     const field = (label, ctrl) => { const f = el("label", "field"); f.append(el("span", null, label), ctrl); body.append(f); return ctrl; };
     const ks = el("select"); ks.id = "plan-kind";
@@ -1538,7 +1556,7 @@ Reply with only this JSON, one entry per sentence id above, in order:
     document.querySelectorAll(".chap-only").forEach((n) => (n.hidden = !["plan", "scenes", "book"].includes(tab)));
     $("desk").dataset.tab = tab;
     S.selected = null;
-    renderMain(); renderCurve();
+    renderMain(); renderCurve(); renderPanel(true);
   }
   $("tabs").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) setTab(b.dataset.tab); });
   $("tabs").addEventListener("keydown", (e) => {
