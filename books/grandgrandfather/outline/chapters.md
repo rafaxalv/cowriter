@@ -697,4 +697,4 @@ Group K: Objects that run through the book
 
 K1 Luzia's letters. K2 The Ogum guia. K3 The zouave uniform. K4 The lottery ticket. K5 The hem money. K6 The charcoal beard (São João) and the false beards (Acosta Ñu).
 
-Next step: mark each arc keep, maybe or drop; then check the keeps against the 300-page budget and the four forces.
+Next step: mark each arc keep, maybe or drop; then check the keeps against the 300-page budget and the Concept's central question and pillars.
