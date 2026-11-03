@@ -1,6 +1,6 @@
 # Style study: Fyodor Dostoevsky
 
-Text-based study made with the voice-generator method (October 2026). Shared by every book; the fit to one book belongs in that book's Author Library.
+Text-based study made with the voice-generator method (October 2026; scene architecture, dimensions 27–31, added November 2026). Shared by every book; the fit to one book belongs in that book's Author Library.
 
 ## 1. Text and caveats
 
@@ -49,6 +49,15 @@ The peak is slowed down. The killing is told blow by blow, with every physical d
 
 Most things are explained, often several times over: motives (Luzhin's fear of being "shown up" gets a full paragraph of background), causes and states of mind. The narrator foreshadows openly ("He did not know that the new life would not be given him for nothing") and closes the book by naming its next subject. What is left open is the deepest question: why he really killed. Theory, poverty, pride and illness are all put forward, by him and by others, and none settles it. The gap is filled with too many explanations rather than none. Dialogue usually says what it means, at length; the exceptions are the most menacing characters (Svidrigaïlov's "I am going to America" before he shoots himself; the investigator's games), where subtext rules.
 
+## 5a. How chapters are cut into scenes (lens E, added Nov 3, 2026)
+
+Measured on the whole novel (41 chapters) and read closely in Part I, ch. II and Part IV, ch. V.
+- **Length**: long chapters (median about 5,000 words; 2,800 to 7,600), often a single scene: Marmeladov's confession in the tavern, the interviews with Porfiry, the funeral dinner. Few scenes per chapter, each running for many pages.
+- **Openings**: mixed. 17 of 41 first sentences fix a time ("Razumihin waked up next morning at eight o'clock…"); 8 open on dialogue in the middle of a scene ("'He is well, quite well!' Zossimov cried…"); others open inside a thought ("His mother's letter had been a torture to him…") or pick up exactly where the last chapter stopped.
+- **Endings**: often a cut on suspense or a new turn, the serial cliffhanger ("…a strange incident occurred, something so unexpected…"; "Svidrigaïlov pulled the trigger."; the door slammed shut in the dark); the rest close on a summary or a character's afterthought.
+- **Transitions**: continuity first: a chapter often begins in the same minute the last one ended. Gaps are bridged by narrator summary ("A strange period began for Raskolnikov…"), rarely by an unexplained jump.
+- **Focus**: braided. A scene carries several characters with their own agendas at once (Luzhin, Lebeziatnikov, Sonia and Katerina Ivanovna at the funeral dinner), and Raskolnikov's inner argument runs under all of them.
+
 ## 6. Scores (1–5)
 
 | # | Dimension | Score | Reason |
@@ -79,6 +88,11 @@ Most things are explained, often several times over: motives (Luzhin's fear of b
 | 24 | Interior access | 5 | Continuous inner life in every mode |
 | 25 | Explanation | 2 | Motives and causes spelled out; only the deepest why stays open |
 | 26 | Dialogue subtext | 2 | Characters speak their minds at length; subtext only for the menacing ones |
+| 27 | Scene length | 5 | Few, very long scenes; a 5,000-word chapter is often one scene |
+| 28 | Scene opening | 3 | Mixed: a time and place (17 of 41), straight into dialogue (8 of 41), or inside a thought, often continuing the last chapter |
+| 29 | Scene ending | 4 | Frequently cuts on suspense or a sudden turn (the serial cliffhanger); otherwise a summary or an afterthought |
+| 30 | Transitions | 2 | Continuity: chapters pick up in the same minute; gaps bridged by narrator summary |
+| 31 | Scene focus | 5 | Many agendas braided in one scene, with the inner argument running underneath |
 
 ## 7. Techniques a voice can borrow
 
@@ -89,3 +103,5 @@ Most things are explained, often several times over: motives (Luzhin's fear of b
 5. **The mistaken feeling**: a character feels one thing and the narrative shows it was another ("he had taken the one feeling for the other").
 6. **Cut on the trigger**: once in a book, build an event slowly and cut on the exact instant, with no aftermath.
 7. **"Suddenly"** as the hinge of a scene: rationed, it marks the turn from plan to chaos.
+8. **One long scene, many agendas**: let a single scene run for pages and carry several characters who want different things, with the protagonist's inner argument underneath.
+9. **Cut on the turn**: end a chapter on a sudden turn or an unanswered threat, and pick up the next one in the same minute.

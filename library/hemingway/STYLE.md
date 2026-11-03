@@ -1,6 +1,6 @@
 # Style study: Ernest Hemingway
 
-Text-based study made with the voice-generator method (October 2026). Shared by every book; the fit to one book belongs in that book's Author Library.
+Text-based study made with the voice-generator method (October 2026; scene architecture, dimensions 27–31, added November 2026). Shared by every book; the fit to one book belongs in that book's Author Library.
 
 ## 1. Text and caveats
 
@@ -54,6 +54,15 @@ The exit comes right after the outcome, with no reflection. After the shooting t
 
 Very little is explained. The narrator never says why he shoots the sergeant, whether he regrets it, or what the war means; he reports, and the reader judges. Catherine's dread is never stated by the narrator. Gaps are mostly **permanent**: the book does not come back to explain them. The rare retrospective comment is factual, not moral ("I did not know until later that beds could be made with men in them"). Dialogue is high in subtext: people talk about temperatures, clothes, horses and money while the real subject (death, desertion, love) stays unsaid. Key information is given once.
 
+## 5a. How chapters are cut into scenes (lens E, added Nov 3, 2026)
+
+Measured on the whole novel (41 chapters) and read closely in ch. IV and XXV.
+- **Length**: chapters are short to medium (median about 1,600 words; 600 to 6,400). A chapter holds one to three scenes, usually one day or one stretch of time; most scenes run two to five pages, the long ones are dinners and talks (the mess in ch. XXV, about 2,000 words).
+- **Openings**: no chapter opens with dialogue (0 of 41); 30 of 41 first sentences fix the time ("The next afternoon…", "Now in the fall…", "It was bright sunlight in the room when I woke."). One short line of orientation, then straight into action.
+- **Endings**: 19 of 41 chapters end on a flat line of dialogue, most of the rest on a plain action ("He went off into his office."); almost never on reflection. The cut comes after the event has settled, not at its peak.
+- **Transitions**: inside a chapter, time runs on and scenes are joined by plain movement ("I washed, brushed my hair and we started."); between chapters, time jumps (days, a season) are carried by a single time phrase and not explained.
+- **Focus**: one thread per scene, usually a conversation or a task; the mess dinner is the rare braided scene (the priest-baiting, Rinaldi's illness).
+
 ## 6. Scores (1–5)
 
 | # | Dimension | Score | Reason |
@@ -84,6 +93,11 @@ Very little is explained. The narrator never says why he shoots the sergeant, wh
 | 24 | Interior access | 2 | A few quoted thoughts; no inner monologue |
 | 25 | Explanation | 4 | Motives and meanings left to the reader, usually for good |
 | 26 | Dialogue subtext | 5 | The real subject is never the topic |
+| 27 | Scene length | 3 | One to three scenes of two to five pages per short chapter; dinners and talks run longer |
+| 28 | Scene opening | 2 | A single line fixing time and place (30 of 41 chapters), then action; never opens on dialogue |
+| 29 | Scene ending | 4 | Cuts on a flat line of dialogue or a plain act after the event settles; no reflection |
+| 30 | Transitions | 3 | Continuous time joined by plain movement inside chapters; unexplained jumps between them, carried by one time phrase |
+| 31 | Scene focus | 2 | One thread per scene: a talk or a task; braided scenes are rare |
 
 ## 7. Techniques a voice can borrow
 
@@ -95,3 +109,5 @@ Very little is explained. The narrator never says why he shoots the sergeant, wh
 6. **Talk around it**: in the most charged dialogue, have characters discuss something small and practical.
 7. **Displace the feeling**: an image or anecdote beside the event (the ants on the log) carries what the character cannot say.
 8. **Compress the worst**: tell the most terrible moment in one plain sentence, and spend the words on the minutes after.
+9. **One line, then in**: open each scene with a single sentence that fixes the time (and place), then go straight to action; never open on a line of dialogue.
+10. **Cut on the flat line**: end the scene on an ordinary line of dialogue or a plain act once the event has settled; leave the meaning unsaid.
