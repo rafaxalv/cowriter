@@ -1,9 +1,9 @@
 ---
-name: "chapter-review"
-description: "Use when the author wants a whole chapter of a book in this repo reviewed: voices, chapter-level tuning, plot and continuity, and coherence with the rest of the book, coordinating the paragraph-review skill."
+name: "chapter-prose-review"
+description: "Use when reviewing a written chapter draft or manuscript against its scene map, voices, plot and continuity; coordinates paragraph-level review."
 ---
 
-# Chapter review
+# Chapter prose review (after drafting)
 
 Reviews one chapter of a book as a whole. It checks the text against the chapter's scene map, decides which voice applies where and how each paragraph should be tuned, sends each paragraph to the **paragraph-review** skill with enough context, and checks the plot and the voice across the chapter and the rest of the book.
 

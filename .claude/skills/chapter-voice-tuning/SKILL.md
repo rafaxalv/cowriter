@@ -7,7 +7,7 @@ description: "Use when the author wants to fine-tune the narrative voice of one 
 
 Sets a chapter's **tuning**: the few changes to its narrator voice's 31 parameters that make that voice right for this chapter (for example a war chapter that runs faster and closer to the violence, or a chapter of waiting where time blurs). The voice itself stays the same; only this chapter moves, inside the voice's allowed ranges. The skill reads the Concept and the chapter, proposes a tuning, settles it with the author through a round of questions, and records it in the book's **Chapter Voices** file.
 
-The tuning is used at both levels: **scene-builder** applies it to the voice's narrative technique and scene architecture (19-31) when it decides each scene's shape, and the **co-writer** and the review skills apply all of it to the prose. So the best moment to tune a chapter is after its plan is ready (chapter-revision) and before its scenes are built.
+The tuning is used at both levels: **scene-builder** applies it to the voice's narrative technique and scene architecture (19-31) when it decides each scene's shape, and the **co-writer** and the review skills apply all of it to the prose. So the best moment to tune a chapter is after its plan is ready (chapter-plan-revision) and before its scenes are built.
 
 It tunes the **narration** only. How characters speak in dialogue is the character-voice skill; creating or changing a voice itself (its base values, ranges, rules) is voice-generator and book-voices. It never writes into the manuscript.
 

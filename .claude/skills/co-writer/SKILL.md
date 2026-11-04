@@ -46,11 +46,11 @@ This skill is generic and works for any book in this repo. Everything specific t
 
 - **co-writer** (this skill): coordinates; plans chapters with the author; writes the prose from the scene maps; keeps files in sync.
 - **chapter-voice-tuning**: fine-tunes a chapter's narrator voice (its 31 parameters) through a round of questions; records it in Chapter Voices.
-- **chapter-revision**: revises a chapter's plan before scenes: brainstorm, research, organize, fit in the book, plot holes, readiness.
+- **chapter-plan-revision**: revises a chapter's plan before scenes: brainstorm, research, organize, fit in the book, plot holes, readiness.
 - **scene-builder**: Chapters -> Scenes.
 - **character-voice**: how each character speaks in dialogue (speech voice, set per chapter), saved through book-voices.
 - **book-voices**: owns the voices; **voice-generator** builds or updates a voice with it.
-- **chapter-review**: reviews a written chapter against its scene map, the voices, plot and continuity; sends paragraphs to **paragraph-review**.
+- **chapter-prose-review**: reviews a written chapter against its scene map, the voices, plot and continuity; sends paragraphs to **paragraph-review**.
 - **paragraph-review**: checks and fine-tunes paragraphs against a voice.
 - **engagement-heatmap**: scores pace and engagement.
 
@@ -85,7 +85,7 @@ If the author starts a new book (or no `BOOK.md` exists for it):
 
 ### 1. Plan the chapter (Chapters)
 
-Work with the author until the chapter's events are **well defined**: when and where, ages, the stories in order, the characters present (checked against the Bible and its Continuity record), the history it carries with sources, the key ideas it touches, open items resolved or consciously left open, and a continuity check against the previous and next chapters. Show what is missing. Propose ideas, but the author decides; mark proposals as proposals. The chapter's **Readiness score** (`readiness.md`) shows what is missing: below 80, run **chapter-revision** on it (or at least a short round of questions on the weakest parameters) before building scenes.
+Work with the author until the chapter's events are **well defined**: when and where, ages, the stories in order, the characters present (checked against the Bible and its Continuity record), the history it carries with sources, the key ideas it touches, open items resolved or consciously left open, and a continuity check against the previous and next chapters. Show what is missing. Propose ideas, but the author decides; mark proposals as proposals. The chapter's **Readiness score** (`readiness.md`) shows what is missing: below 80, run **chapter-plan-revision** on it (or at least a short round of questions on the weakest parameters) before building scenes.
 
 ### 2. Choose the voices
 
@@ -107,7 +107,7 @@ Run **scene-builder** on the chapter. It writes the scene map into Scenes and li
 
 ### 5. Review
 
-- Run **chapter-review** on the draft (it checks against the scene map and coordinates **paragraph-review**) for voice, tuning, plot and continuity.
+- Run **chapter-prose-review** on the draft (it checks against the scene map and coordinates **paragraph-review**) for voice, tuning, plot and continuity.
 - Optionally run **engagement-heatmap** for pace and engagement, and compare its emotional curve with the Reader feeling planned for each scene.
 - After approval, move the chapter into the manuscript files (with Paragraph IDs in the format the profile gives), create its rows in Paragraph Parameters in the same pass, add what the text has established to the Continuity record, and delete the draft file.
 
@@ -139,7 +139,7 @@ While planning and writing, keep checking and flag at once:
 - contradictions between Concept, Chapters, Scenes, manuscript and Character Bible (including chapter titles and names);
 - facts that move up a truth level without evidence.
 
-For a full check of a chapter, use chapter-review.
+For a full check of a chapter, use chapter-prose-review.
 
 ## How to work with the author
 

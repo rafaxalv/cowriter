@@ -31,7 +31,7 @@ Each is scored 0–5 by reading the chapter entry (and, for voice, the Voice Ind
 
 - **80–100**: ready for scene-builder.
 - **60–79**: buildable; scene-builder first asks a short round of questions on the weakest parameters.
-- **Below 60**: plan more before building scenes: run the **chapter-revision** skill.
+- **Below 60**: plan more before building scenes: run the **chapter-plan-revision** skill.
 
 Notes:
 - Short chapters are not penalised for being short: a bridge chapter can score 5 on beats with three well-defined beats.

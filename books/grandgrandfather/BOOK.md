@@ -67,11 +67,11 @@ Used at every level: the **Character Bible** (who people are, plus the Continuit
 
 ## Working order for each chapter
 
-1. **Revise the plan** (chapter-revision): brainstorm, research, organize the entry, close plot holes, until the Readiness score is 80 or more (or Rafael is satisfied).
+1. **Revise the plan** (chapter-plan-revision): brainstorm, research, organize the entry, close plot holes, until the Readiness score is 80 or more (or Rafael is satisfied).
 2. **Tune the voice** (chapter-voice-tuning): the chapter's narrator tuning, settled through a round of questions; recorded in Chapter Voices.
 3. **Build the scenes** (scene-builder): the scene map in Scenes, with the chapter's tuning applied to the scene shape and each speaker's speech voice.
 4. **Write** (co-writer): the draft in `drafts/`, in both languages, from the scene map.
-5. **Review** (chapter-review with paragraph-review; engagement-heatmap when useful), then the approved chapter moves into the manuscript.
+5. **Review** (chapter-prose-review with paragraph-review; engagement-heatmap when useful), then the approved chapter moves into the manuscript.
 
 Alongside: **character-voice** for how characters speak; **book-voices** and **voice-generator** for the voices themselves; **library-builder** for reference books; **book-repo** for every commit and push. After every change to the plan, refresh the Manuscript Desk; before changing the manuscript or Paragraph Parameters, sync its edits back first (steps in its README).
 

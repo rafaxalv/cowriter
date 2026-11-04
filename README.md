@@ -31,10 +31,11 @@ tools/
 | Skill | What it does |
 | --- | --- |
 | co-writer | The writing partner: sets up a new book, plans chapters, writes prose from scene maps, keeps every file in sync. Coordinates the others. |
+| chapter-plan-revision | Revises a chapter plan before scenes: beats, arc, continuity, research and readiness. |
 | scene-builder | Turns a chapter's events into an ordered scene map. |
 | book-voices | Owns the narrative voices: creates, lists, compares, adjusts and validates them. |
 | voice-generator | Builds or updates a voice from reference authors, with a fixed 18-dimension style framework. |
-| chapter-review | Reviews a whole chapter: scene map, voices, tuning, plot, continuity. |
+| chapter-prose-review | Reviews a written draft or manuscript against the scene map, voices, plot and continuity. |
 | paragraph-review | Checks and fine-tunes single paragraphs against a voice. |
 | engagement-heatmap | Scores a chapter for engagement, tension, emotion and pace, as a heatmap. |
 | book-repo | Owns commits, pushes, snapshots and repository handoffs. See `.claude/skills/book-repo/SKILL.md`. |

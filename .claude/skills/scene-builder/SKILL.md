@@ -33,7 +33,7 @@ Read the chapter's **Readiness** line (computed with the co-writer's `readiness.
 
 - **80 or more**: build.
 - **60-79**: before building, ask the author one short round of questions (3-4, multiple choice where possible) on the two weakest parameters, for example the beats of a key moment, what it leaves in the point-of-view character, an open option. Write the answers into Chapters (after approval), recalculate the score, then build.
-- **Below 60**: do not build. Say what is missing, parameter by parameter, and offer to run **chapter-revision** on the chapter.
+- **Below 60**: do not build. Say what is missing, parameter by parameter, and offer to run **chapter-plan-revision** on the chapter.
 - If the voice parameter is low because the chapter's voice has no scene architecture scores (27-31), offer to complete them with **voice-generator** first; if the author prefers to go on, build with the defaults below and mark the map "voice profile incomplete".
 
 Never fill a gap by inventing story: a gap becomes a question, or a **[proposal]**.

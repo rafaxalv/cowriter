@@ -69,7 +69,7 @@ Read the chapter from the manuscript (or the draft named); the chapter's plan in
 - **Flat stretches**: 3 or more consecutive paragraphs averaging 2 or less, unless planned.
 - **Numb stretches**: long runs at 5 with no release.
 - **Shape**: compare with the chapter's purpose in Chapters, the Reader feeling planned per scene, and the narrative arc (staging early, rising tension, a peak, release). Note where the chapter ends: on an open question (pulls the reader into the next chapter) or fully resolved.
-- **Suggestions**: for each problem, the Paragraph IDs and a concrete idea (cut, compress into summary, add an open question, move a reveal, switch to scene). These are suggestions, never automatic edits; chapter-review and paragraph-review apply changes.
+- **Suggestions**: for each problem, the Paragraph IDs and a concrete idea (cut, compress into summary, add an open question, move a reveal, switch to scene). These are suggestions, never automatic edits; chapter-prose-review and paragraph-review apply changes.
 
 ### 4. Every language
 

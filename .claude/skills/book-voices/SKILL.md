@@ -5,7 +5,7 @@ description: "Use when the author wants to create, list, adjust, compare or assi
 
 # Book voices (the voice governor)
 
-This skill governs every voice used in a book. A voice is a complete, written definition of how one narrator or one character sounds on the page, in every language of the book. Each voice lives in its own file in the book's **voices folder**. chapter-review, paragraph-review and the co-writer read voices from there; only this skill creates or changes them. The **voice-generator** skill does the creative work of building or updating a voice, always in exchange with this skill (see "Exchange with voice-generator").
+This skill governs every voice used in a book. A voice is a complete, written definition of how one narrator or one character sounds on the page, in every language of the book. Each voice lives in its own file in the book's **voices folder**. chapter-prose-review, paragraph-review and the co-writer read voices from there; only this skill creates or changes them. The **voice-generator** skill does the creative work of building or updating a voice, always in exchange with this skill (see "Exchange with voice-generator").
 
 This skill is generic. Everything specific to one book lives in that book's folder.
 
@@ -30,7 +30,7 @@ One copy of each file only; look before creating anything. If a file is not wher
 
 ## Finding the voices of a scene
 
-Every skill that plans, writes or checks a scene (scene-builder, co-writer, chapter-review, paragraph-review, the Manuscript Desk) finds its voices the same way:
+Every skill that plans, writes or checks a scene (scene-builder, co-writer, chapter-prose-review, paragraph-review, the Manuscript Desk) finds its voices the same way:
 
 1. **Narration**: the chapter's voice from the book's Chapter Voices file (and its tuning), unless a paragraph names its own voice.
 2. **Dialogue**: the scene card's **Characters** field in Scenes lists who is in the scene. For each named character, look up the Voice Index row with Type "Character speech" whose **Whose voice** matches the name (or one of its aliases), open that file, and use its base with the **row for this chapter** from its "Settings per chapter" table (or the last earlier row, if the file says changes persist).
@@ -105,7 +105,7 @@ Every creation or update of a voice goes through this exchange, whether the auth
 - **Technique**: the Narrative technique rules are present and consistent with dimensions 19-26, the Scene architecture rules with dimensions 27-31, and groups F and G have no language offsets.
 - **Complete**: every core field and every field of each language layer is filled.
 
-If something fails, send it back to voice-generator with the problem described. When it passes, show the author the result (for an Update, the before/after and the affected chapters), and after their OK save the voice file, update the Voice Index, raise the version, add the change log line, and hand the change to the **book-repo** skill, which saves it. For an Update, list the chapters that use the voice so the author can decide whether to re-run chapter-review on them.
+If something fails, send it back to voice-generator with the problem described. When it passes, show the author the result (for an Update, the before/after and the affected chapters), and after their OK save the voice file, update the Voice Index, raise the version, add the change log line, and hand the change to the **book-repo** skill, which saves it. For an Update, list the chapters that use the voice so the author can decide whether to re-run chapter-prose-review on them.
 
 ## What this skill does
 

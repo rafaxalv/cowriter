@@ -7,7 +7,7 @@ description: "Use when the author wants to create, update or review how a charac
 
 Builds and maintains a **speech voice** for one character: how they talk whenever they speak in dialogue (and, unless the author says otherwise, in their quoted thoughts). It sets their fluency in the language, how complex their sentences are, the figures of speech they reach for, the words, forms of address and manners that keep coming back, and what they never say. A speech voice can change over the book, so it holds a **base** and a **setting per chapter**.
 
-It works in exchange with **book-voices**, which owns the voices folder and saves the file, and it is read by the **co-writer** and **scene-builder** (when dialogue is planned and written) and by **chapter-review** and **paragraph-review** (when dialogue is checked). It never writes prose and never changes the manuscript.
+It works in exchange with **book-voices**, which owns the voices folder and saves the file, and it is read by the **co-writer** and **scene-builder** (when dialogue is planned and written) and by **chapter-prose-review** and **paragraph-review** (when dialogue is checked). It never writes prose and never changes the manuscript.
 
 This skill is generic. Everything specific to one book lives in that book's folder.
 
@@ -120,5 +120,5 @@ Hand the finished file to **book-voices**, which checks it (ID, neighbours, Shar
 - **Finding it**: every skill finds a scene's speech voices from the scene card's **Characters** field, matched to the Voice Index by name (see "Finding the voices of a scene" in book-voices). The Manuscript Desk does the same when it rewrites a paragraph: the chapter's context carries the speech voices of the characters in its scene map, at that chapter's setting.
 - **scene-builder**: in each scene card, for every character who speaks, note their speech voice and the chapter's setting ("speaks per CHAR-X-SPEECH, ch. 7 row"), and any line the plan already gives them.
 - **co-writer**: when writing dialogue, follow the speaker's speech voice at the chapter's setting; the narration around it stays in the chapter's narrator voice.
-- **paragraph-review** and **chapter-review**: check every line of dialogue against its speaker's speech voice for that chapter (fluency, sentence building, figures, signature words rationed, never-says), in every language, and flag drift between chapters that the per-chapter table does not explain.
+- **paragraph-review** and **chapter-prose-review**: check every line of dialogue against its speaker's speech voice for that chapter (fluency, sentence building, figures, signature words rationed, never-says), in every language, and flag drift between chapters that the per-chapter table does not explain.
 - **Updating**: when the author changes a character's arc in Chapters, or when written dialogue drifts on purpose, run this skill again on that character: show the rows that change and update the file through book-voices.

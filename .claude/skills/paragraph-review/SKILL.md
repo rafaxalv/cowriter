@@ -1,11 +1,11 @@
 ---
 name: "paragraph-review"
-description: "Use when the author wants a single paragraph or a few paragraphs of a book in this repo checked or fine-tuned against a voice, either on its own or as called by the chapter-review skill."
+description: "Use when the author wants a single paragraph or a few paragraphs of a book in this repo checked or fine-tuned against a voice, either on its own or as called by the chapter-prose-review skill."
 ---
 
 # Paragraph review
 
-Checks and fine-tunes paragraphs of a book against a voice from the book's voices folder (managed by the book-voices skill). Usually it is called by **chapter-review**, which provides the context. It can also be used on its own for a quick check or for hand-tuning one paragraph.
+Checks and fine-tunes paragraphs of a book against a voice from the book's voices folder (managed by the book-voices skill). Usually it is called by **chapter-prose-review**, which provides the context. It can also be used on its own for a quick check or for hand-tuning one paragraph.
 
 This skill is generic. Everything specific to one book lives in that book's folder.
 
@@ -19,7 +19,7 @@ This skill is generic. Everything specific to one book lives in that book's fold
 - **The paragraph(s)**, with Paragraph ID if known (for example 03.014), in one or several of the book's languages.
 - **The voice**: read the voice file: the core (tags, literacy profile, target profile with base values and allowed ranges, voice rules, conveying-feeling rules) and the language layer for each language being checked (offsets, vocabulary strategy, phrase-building strategies, address and dialogue, literacy markers, language rules, reference paragraph). Also read the **Shared Rules** and the **Bilingual Lexicon**.
 - **The tuning**: voice tuning is set **per chapter**, never per paragraph: changes from the voice's base values, for example "Violence +1", with the reason, from the book's **Chapter Voices** file (one row per chapter: voice, tuning, reason). It applies to every paragraph of the chapter written in the chapter's voice, in every language. A paragraph given its own voice (a letter, a document) uses that voice's base values, untuned.
-- **The context packet** (from chapter-review): chapter goal, the scene and its Reader feeling, previous and next paragraphs, characters present and what they know, timeline point, relevant Continuity facts.
+- **The context packet** (from chapter-prose-review): chapter goal, the scene and its Reader feeling, previous and next paragraphs, characters present and what they know, timeline point, relevant Continuity facts.
 
 When used on its own, build a context packet sized to the job, not the whole book. The heavy context is the **chapter itself**: the paragraph, the paragraphs before and after it (same-ID neighbours) in every language, and the rest of the chapter's text, because that is what the rewrite must flow with. Everything else comes in as short briefs:
 
@@ -56,7 +56,7 @@ For each language version:
 Then across the language versions:
 
 - **Equivalence**: every version says the same thing (same facts, same events, same people) and produces the same effect, each in its own language's way. Do not flag differences that the language layers explain (a longer sentence in one language, a kept foreign word). Flag differences in meaning, and any version that reads like a word-for-word translation of another.
-- **Connection**: does it follow from the previous paragraph and lead into the next? Does it contradict anything in the context packet (timeline, who knows what, who is present)? Report these to chapter-review as connection issues rather than fixing plot on its own.
+- **Connection**: does it follow from the previous paragraph and lead into the next? Does it contradict anything in the context packet (timeline, who knows what, who is present)? Report these to chapter-prose-review as connection issues rather than fixing plot on its own.
 
 When the profile says a co-author's wording is the source in a language and they wrote this paragraph, keep their wording unless it breaks a rule or contains an error, and say so; fix the other languages to match their meaning.
 
@@ -66,7 +66,7 @@ The author tunes a **chapter**: "more explicit violence in this chapter", "slow 
 
 ## 4. Output and recording
 
-For each paragraph, also produce its **parameter row**: Paragraph ID, voice ID (the chapter's, or its own) and version, review status, date, open issues. A change of tuning goes to the chapter's row in Chapter Voices. When called by chapter-review, return the results and rows to it; chapter-review applies them. When used on its own and the author approves a change, update the paragraph in every affected manuscript file and its row in **Paragraph Parameters** in the same pass (never change one without the other), then hand the change to the **book-repo** skill, which saves it.
+For each paragraph, also produce its **parameter row**: Paragraph ID, voice ID (the chapter's, or its own) and version, review status, date, open issues. A change of tuning goes to the chapter's row in Chapter Voices. When called by chapter-prose-review, return the results and rows to it; chapter-prose-review applies them. When used on its own and the author approves a change, update the paragraph in every affected manuscript file and its row in **Paragraph Parameters** in the same pass (never change one without the other), then hand the change to the **book-repo** skill, which saves it.
 
 ## Notes
 

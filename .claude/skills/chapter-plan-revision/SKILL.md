@@ -1,11 +1,11 @@
 ---
-name: "chapter-revision"
-description: "Use when the author wants a chapter's plan in Chapters revised before it becomes scenes: brainstorm weak moments, research missing facts, organize the entry, check it fits the book and has no plot holes, and raise its readiness score. Works on the plan, not on written prose (that is chapter-review)."
+name: "chapter-plan-revision"
+description: "Use when revising a chapter plan in Chapters before scene-building: strengthen beats, arc, continuity, facts and readiness. Works on the plan, not on written prose."
 ---
 
-# Chapter revision (the plan, before the scenes)
+# Chapter plan revision (before scenes)
 
-Takes one chapter's entry in **Chapters** and makes it ready to become scenes: it brainstorms with the author where the chapter is thin, researches what must be accurate, organizes the entry, checks that the chapter fits the book and has no plot holes, and leaves it in the shape **scene-builder** needs. It works on the plan only: it never writes prose and never changes the manuscript (written chapters are reviewed with **chapter-review**).
+Takes one chapter's entry in **Chapters** and makes it ready to become scenes: it brainstorms with the author where the chapter is thin, researches what must be accurate, organizes the entry, checks that the chapter fits the book and has no plot holes, and leaves it in the shape **scene-builder** needs. It works on the plan only: it never writes prose and never changes the manuscript (written chapters are reviewed with **chapter-prose-review**).
 
 It is usually started by the author ("revise chapter 17"), by the **co-writer** when a chapter is planned, or by **scene-builder** when a chapter's readiness score is too low to build.
 
