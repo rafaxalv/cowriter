@@ -55,7 +55,7 @@ Who each character is, in short bullets: role, personality, motives, relationshi
   - Sees through the Pires, though they can manipulate his wife and sons (ch. 15).
   - Keeps a Spanish *Don Quixote* looted in Asunción, the first thing he owns that he chose; never reads it to the end; Carmen finds Sancho's line in it (ch. 8, 15).
   - Loses every argument out loud to Carmen's quotes; reads in her ledgers that the cattle pay for the culture that despises them, and says nothing (ch. 16, 6).
-  - Never really loved Carmen: liked and admired her; Rosária was the real connection (ch. 10, 13). Suspects his sons' spoiled ways are the white part of their blood, and thinks of Ezequiel (ch. 15).
+  - Never really loved Carmen: liked and admired her; Rosária was the real connection (ch. 10, 13). He chooses a white wife partly to make life easier for his sons, believing lighter children will face fewer closed doors; he tells Bastião, and Carmen understands the motive later (ch. 13, 16). Suspects his sons' spoiled ways are the white part of their blood, and thinks of Ezequiel (ch. 15).
   - Wants to teach his sons the farm, as Inácio taught him, and to sing with them, as Luzia did; they prefer their mother's world. Resents them as spoiled, weak and unaware of how hard the world is, like the worst of Tonico; feels they are not even his friends (ch. 15, 17).
   - In old age his memory fails, never named as a disease (ch. 17).
   - The key to him: innocent of what he is accused of, guilty of what nobody knows (Acosta Ñu, refusing to help Damião; ch. 6, 9).
@@ -249,7 +249,7 @@ Setting: Corumbá and the Jacadigo farms on the Bolivian border. The war freed h
   - Arrives with European racism; being sold teaches her his life, but it does not make things simple (ch. 11, 15).
   - Her dream: a respectable marriage, a husband of her choosing, to be a *señora* with a house (ch. 11). (decided Nov 1, 2026)
   - Counts everything: learned from her mother's lacemaking piecework; men believe in luck, women count (ch. 11). (decided Nov 1, 2026)
-  - Tells him her whole story over many stolen meetings at Albino's, February–July 1877, finishing just before his win; he once gives her a lottery ticket, and she finds it silly (ch. 10, 11). (decided Nov 2, 2026)
+  - Tells him her whole story over many stolen meetings at Albino's, February–May 1877, finishing before the June draw; he once gives her a lottery ticket, and she finds it silly (ch. 10, 11). (revised Nov 4, 2026)
   - Fear of Black men planted by Madame Angélique's warning; afraid of him at first sight, undone by talking, back later (ch. 10, 11, 15). (decided Nov 1, 2026)
   - Saved and bought at once: grateful, then hurt; their marriage has warmth and distance, ups and downs (ch. 13, 14, 15).
   - Once rich: proud of appearances, wants her sons to look like nobility, uneasy that they are partly Black, sides with the white boys; the Pires lure her in: teas at their house, then, after he forbids her to go, at Liberdade, where at least he can watch (ch. 15). In bed she puts a pillow between them, a sign for him not to come close: the fence between the farms becomes the fence between them (ch. 15, 9). They make her feel ignorant; she pretends, then reads, at night, to catch up; and she uses their quotes on Benedito, in front of the sons, to make him feel ignorant in turn (ch. 15). At home she wins every argument with them (Gracián on the boys and the roundup, Seneca on his locks); her own ledgers show that the cattle pay for all of it, and she says nothing (ch. 16, 6).
@@ -259,7 +259,7 @@ Setting: Corumbá and the Jacadigo farms on the Bolivian border. The war freed h
 
   - The most complex relationship in the book. Both were property: "not free" binds them, but means different things (him: not owned, dignity, land; her: choosing a husband, respectability).
   - Before the lottery: a kind, safe companion, never a candidate; brave, polite, strong, skilled, but poor. She admires him, never connects; never understands his songs, not like Rosária (ch. 10).
-  - He probably never loved her: he liked her, she was beautiful, few women around, and she was white (whitening, his view) (ch. 13).
+  - He probably never loved her: he liked her, she was beautiful, few women around, and she was white. He believes lighter children will face fewer barriers; she learns this was part of why he chose her (ch. 13, 16).
   - Her "yes" at the altar: calm, the best of bad options; free in law, not in fact. The bond is debt and gratitude (ch. 13).
   - Warm in the first years, cold later; gratitude wears slowly into resentment, no single breaking point (ch. 14, 15).
   - Learns his life by being sold, then relapses into European racism once rich and courted by the elite (ch. 15).
@@ -271,13 +271,13 @@ Setting: Corumbá and the Jacadigo farms on the Bolivian border. The war freed h
 
 A free European woman could not legally be a slave in Brazil; trafficked women were sold anyway, with no papers and no law that reached them. The family legend of "buying a Spanish girl" is literally true (ch. 13).
 
-  - **Señor Alvarado**, the *gancho*: charming recruiter with letters "from girls who married well" (ch. 11). Real aspect: the ganchos; the *trata de blancas*.
+  - **Señor Alvarado**, the *gancho*: charming recruiter with letters "from girls who married well" (ch. 11); a trafficker known to local police, captured by Benedito and Bastião and able to testify to Albino's role in Carmen's sale (ch. 13). Real aspect: the ganchos; the *trata de blancas*.
   - **Ruchla (Raquel)**: Jewish girl from Austrian Galicia, her closest friend; sold in Buenos Aires; searched for for years (ch. 11, 14). Real aspect: the *polacas* (later the Zwi Migdal).
   - **Capitán Iriarte**: the steamer's captain; bribed, once kind (ch. 11). Real aspect: corrupt ports.
   - **Doña Engracia**: older Galician woman emigrating legally (ch. 11). Real aspect: ordinary emigration beside trafficking.
   - **Madame Angélique**: French madam in Buenos Aires; keeps her untouched to sell her dear (ch. 11). Real aspect: the Buenos Aires brothel economy.
   - **Seu Albino**: Portuguese tavern owner in Corumbá, a trafficker in secret; crude, cruel, a good host; passes her off as his niece; wants one big private sale; always threatens her with the brothel, and it works (ch. 11). After Benedito's first offer he hides her completely and raises the price; at the showdown he haggles, then sells her for two contos, "double what you ever dreamed of" (ch. 13). Real aspect: Portuguese dominance of commerce and trafficking.
-  - **Lucília**: free Black laundress at Albino's; her first friend; teaches her Portuguese, then is kept away from her while Albino hides her (ch. 11, 13); godmother of her first son (ch. 11, 13, 14). Real aspect: free Black women's work and *compadrio*.
+  - **Lucília**: free Black laundress at Albino's; her first friend; teaches her Portuguese, then risks her place to warn her and Benedito; witnesses Carmen's lie and tells Benedito after the rescue (ch. 11, 13); godmother of her first son (ch. 11, 13, 14). Real aspect: free Black women's work and *compadrio*.
 
 ## The sons
 
