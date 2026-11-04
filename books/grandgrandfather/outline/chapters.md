@@ -278,7 +278,7 @@ See the research doc "What a Freed Slave Could and Couldn't Do" for sources.
 ### 10\. Seven years of freedom, poverty and bad luck
 
   - When / where: 1870–1877, age 24–31 · the discharge, the river to Corumbá; Corumbá (The River and The Paper merged Oct 31, 2026; The Ticket merged in, Nov 1, 2026)
-  - Readiness: 60/100 · beats 3 · arc 3 · links 3 · facts 3 · decisions 4 · voice 2 (Nov 2, 2026)
+    - Readiness: 71/100 · beats 4 · arc 4 · links 4 · facts 3 · decisions 4 · voice 2 (Nov 4, 2026)
   - Stories:
       
       - **The Paper (1870–1876).** Discharged without back pay. The boats go downriver to Bahia; he doesn't take one.
@@ -295,7 +295,8 @@ See the research doc "What a Freed Slave Could and Couldn't Do" for sources.
       - **The tickets, a compulsion** (decided Nov 2, 2026). From his first days in Corumbá he buys a lottery ticket for every draw. Never a scene, only one-sentence beats scattered through the chapter: "He left, and on his way bought a lottery ticket. Maybe this time." He buys a ticket instead of food. He walks out of the jail and buys one. It looks silly, a poor man throwing his money away, and it borders on compulsion. Seven years go by and nothing. Bad luck. He becomes friends with Seu Bento, the ticket seller, this way.
       - **The Ticket (c. 1877).** Seu Bento, the ticket seller, an elderly free Black street vendor: he sells him tickets "because you have a winner's face", becomes his most honest friend and keeps telling him to save.
       - He has carried for Albino's tavern since 1871 (above), so he knows the place years before she arrives (decided Nov 1, 2026).
-      - **The first meeting (c. February 1877).** At Albino's he meets the woman from Spain, whom everyone takes for Albino's niece. At first she is afraid of him (her side, ch. 11). Their later meetings, where she tells him her story, are ch. 11. Only when they talk does he learn the truth: she was taken and trafficked, she is not free, and she is being sold; she tells him her price, one conto de réis (1:000$000; plausible, to verify). Albino himself never names it. He likes her, but Albino, more and more protective of her, above all against a Black man, chases him off every time he tries to get near her.
+    - **The first meeting (c. February 1877).** At Albino's place he meets the woman from Spain, whom everyone takes for Albino's niece. She is afraid of him at first; he is a poorly dressed Black porter in a room where she has no control. He notices her youth, whiteness and literacy, and envies the doors he imagines those things open to her, while most are closed to him. He does not yet know she is trafficked or being sold.
+    - **The conversations before the offer (c. February–July 1877).** During Benedito's occasional work for Albino, he and Carmen manage two longer conversations and three or four brief attempts before Albino finds a reason to interrupt and send him away. In the first longer talk, she is guarded and afraid; in the second, they find some common ground in reading and fragments of their pasts. Carmen shares little and hides the trafficking, the sale and the brothel threat. The brief attempts are summarized, showing Albino watching and cutting them off. The conversations give Benedito a glimpse of a life he thinks she can choose; learning the truth will change that envy in her story chapter (ch. 13).
   - Facts:
       
       - [PLAUSIBLE RECONSTRUCTION] A freedman caught without papers could be held as a suspected runaway; captured runaways were advertised and, if unclaimed, sold at auction. (to verify for Mato Grosso in the 1870s)
