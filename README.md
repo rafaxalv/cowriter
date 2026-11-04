@@ -37,9 +37,9 @@ tools/
 | chapter-review | Reviews a whole chapter: scene map, voices, tuning, plot, continuity. |
 | paragraph-review | Checks and fine-tunes single paragraphs against a voice. |
 | engagement-heatmap | Scores a chapter for engagement, tension, emotion and pace, as a heatmap. |
-| book-repo | Connects this repo to a chat and saves every approved change (commit, push, snapshots). Kept as an account-level skill, outside the repo, so it works before the repo is connected. |
+| book-repo | Owns commits, pushes, snapshots and repository handoffs. See `.claude/skills/book-repo/SKILL.md`. |
 
-Every skill starts by finding the book's `BOOK.md` and reading it. To start a new book, ask the co-writer; it creates `books/<slug>/` from `.claude/skills/co-writer/templates/BOOK.md`.
+Every book-writing skill starts by finding the book's `BOOK.md` and reading it. To start a new book, ask the co-writer; it creates `books/<slug>/` from `.claude/skills/co-writer/templates/BOOK.md`.
 
 ## Tools
 
