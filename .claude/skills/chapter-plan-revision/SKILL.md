@@ -33,14 +33,12 @@ Read, for the chapter:
 Write a short diagnosis for the author (a table and a few lines), in five parts:
 
 1. **Readiness**: the current score and each parameter (beats, arc, links, facts, decisions, voice), with what is missing for each.
-2. **Plot holes and continuity**, checked one by one:
-   - **Time and age**: dates, ages, seasons and durations agree with the neighbouring chapters, the Bible and the Continuity record; travel times and distances are possible for the period.
-   - **Cause and effect**: every event has a cause in this chapter or an earlier one; nothing important happens only because the plot needs it (unless the book's theme is chance, and then the chance is visible).
-   - **Who knows what**: no character acts on something they cannot know yet; secrets stay secret until they are revealed.
-   - **Motivation**: each main character's choice follows from who they are in the Bible, or the change is shown.
-   - **Set-ups and payoffs**: what this chapter plants is paid off later, and what it pays off was planted earlier, with cross-references both ways; flag set-ups that go nowhere and payoffs with no set-up.
-   - **Contradictions** with other chapters, the Bible, the Concept or the research.
-   - **Names and roles**: names as in the Bible; no new named character without the author's approval.
+- **Pacing, Tension & Literary Method** (newly added criteria):
+  - **Style & Pacing Intent**: Explicitly ask the author at the start of review what tone/pacing style this chapter targets (e.g. fast-paced suspense, slow-burn psychological tension, deceptive domestic calm, atmospheric buildup).
+  - **Suspense vs. Curiosity (Walton/Pynchon/Todorov principles)**: Ensure the chapter deliberately withholds information from the reader (suspense via impending danger) or poses burning questions (curiosity via enigma) rather than merely dumping exposition.
+  - **Crosses, Double-Crosses & Reversals (Aristotelian Peripeteia)**: Check that key character interactions contain a reversal of fortune or expectation where a character's strategy triggers the exact opposite of what they intended.
+  - **Plant-and-Payoff Architecture (Chekhov's Gun / Delayed Echoes)**: Seed concrete details, objects, phrases, or seemingly minor habits that lie dormant and return later in the book to surprise the reader with retroactive significance.
+  - **Inter-Chapter Resonance**: Review how events in this chapter ripple backward (recontextualizing earlier actions) and forward (setting traps or emotional debts for upcoming chapters). Avoid isolated episodes; every beat must tighten or loosen the book's overarching chains.
 3. **Fit in the book**: what the chapter does that no other chapter does; which of the Concept's pillars it serves; its place in its part (pace, length against its neighbours, the book's balance); repeated beats or ideas that another chapter already carries.
 4. **Facts**: real-world facts the chapter relies on, with their truth labels and sources; what is marked "to verify"; what is missing.
 5. **Scene readiness**: what scene-builder will need and does not have yet (see section 6).
@@ -58,9 +56,14 @@ For each fact that is missing, marked "to verify", or doubtful:
 
 Research only what the chapter needs; a fact that would only be decoration goes to the notes as an option.
 
-## 4. Brainstorm with the author
+## 4. Brainstorm with the author & Style Setup
 
-Ask one round of 3-4 questions (multiple choice where possible, with AskUserQuestion when available), aimed at the weakest parameters and the holes found. Each question gives a **recommended** option first and real alternatives that change the story, not the wording; say what each costs or sets up. Typical questions:
+At the start of brainstorming (or via `ask_user`), always prompt the author with structured questions covering:
+1. **Chapter Style & Pacing**: What rhythm and atmosphere should this chapter have? (e.g., tight thriller urgency, slow-burn psychological tension, deceptive calm, melancholic reflection).
+2. **Mystery & Misdirection**: What does the reader *think* is happening versus what is *actually* at stake? Where can we introduce a surprise or misdirection?
+3. **Planting Future Echoes**: What small, tactile detail, object, or phrase can be planted in this chapter to return with emotional or dramatic impact later in the book?
+
+Then, ask one round of 3-4 targeted questions (multiple choice where possible) aimed at the weakest parameters, plot holes, and twists. Each question gives a **recommended** option first and real alternatives that change the story, not the wording; say what each costs or sets up. Typical questions:
 
 - how a key moment unfolds (its beats), or which of two versions to keep;
 - what a moment leaves in the point-of-view character (the arc);
