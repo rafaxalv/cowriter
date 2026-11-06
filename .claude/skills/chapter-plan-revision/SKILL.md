@@ -26,7 +26,7 @@ Read, for the chapter:
 - the **Character Bible** entries of everyone in it, and the **Continuity** record;
 - the research files its sources point to;
 - the chapter's voice (the book's Chapter Voices file) and the speech voices of its characters (see "Finding the voices of a scene" in book-voices);
-- its scene map in **Scenes**, if one exists, and any written text.
+- its scene map in **Scenes**, if one exists, and any written text. If one exists and the chapter is changed here - the scenes need to be tagged as needs to be updated.
 
 ## 2. Diagnose
 
