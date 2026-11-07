@@ -1,6 +1,7 @@
 # BASE-SPEECH-PLANTER: Planters and their households (Bahian lords)
 
   - **Type**: Base speech
+  - **Character files**: [`characters/coronel-menezes.md`](../characters/coronel-menezes.md), [`characters/dona-mariana.md`](../characters/dona-mariana.md)
   - **Version**: 0.1 (draft) | **Status**: draft | **Created**: 2026-11-03
   - **Built with**: character-voice skill, as a generic speech voice for characters without their own (Rafael, 2026-11-03)
 

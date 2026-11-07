@@ -1,0 +1,6 @@
+# The Pires family
+
+- Speech voice: [`CHAR-CORONEL-PIRES-SPEECH`](../voices/CHAR-CORONEL-PIRES-SPEECH.md) (Coronel Pires), [`CHAR-DONA-PIRES-SPEECH`](../voices/CHAR-DONA-PIRES-SPEECH.md) (Dona Pires)
+- Part of the Character Bible; the index, the stages and the Continuity record are in `characters/character-bible.md`.
+
+  - **The Pires family**: old cattle ranchers next door, there before the war; the patriarch is a colonel of the Guarda Nacional, "Coronel Pires"; rich in land and slaves but short of cash and living on credit (decided Nov 2, 2026); wanted the Barão de Vila Maria's empty lands and were slowly occupying them when Benedito bought them; offer to buy him out with false concern; the pack of Benedito, Firmino and Bastião ends any thought of force (ch. 14). Polite in public, hostile in private; fake nobility; slave owners; Liberdade, which owns no one, keeps up with them only while he and his trusted men work themselves hard (ch. 14). Manipulate the wife and sons, never him; lend to the sons. At the teas they philosophize about what it means to be rich (money is not enough; true wealth is culture, manners, a name), quoting Gracián, Seneca, Horace, Chesterfield, Buffon and Maricá: posh, hypocritical, and a provocation rather than a plan (ch. 15, 6b–6f). Real aspect: exclusion of rich Black men; credit networks (ch. 14, 15, 17, 18).

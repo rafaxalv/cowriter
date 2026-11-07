@@ -1,6 +1,7 @@
 # BASE-SPEECH-OFFICERS: White officers and soldiers of the Empire
 
   - **Type**: Base speech
+  - **Character files**: [`characters/war-comrades-and-enemies.md`](../characters/war-comrades-and-enemies.md), [`characters/corumba.md`](../characters/corumba.md), [`characters/war-real-figures.md`](../characters/war-real-figures.md)
   - **Version**: 0.1 (draft) | **Status**: draft | **Created**: 2026-11-03
   - **Built with**: character-voice skill, as a generic speech voice for characters without their own (Rafael, 2026-11-03)
 

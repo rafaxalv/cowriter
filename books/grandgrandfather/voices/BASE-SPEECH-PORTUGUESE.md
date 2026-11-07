@@ -1,6 +1,7 @@
 # BASE-SPEECH-PORTUGUESE: Portuguese immigrants
 
   - **Type**: Base speech
+  - **Character file**: [`characters/seu-albino.md`](../characters/seu-albino.md)
   - **Version**: 0.1 (draft) | **Status**: draft | **Created**: 2026-11-03
   - **Built with**: character-voice skill, as a generic speech voice for characters without their own (Rafael, 2026-11-03)
 

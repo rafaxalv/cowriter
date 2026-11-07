@@ -1,6 +1,7 @@
 # CHAR-BASTIAO-SPEECH: Bastião's speech
 
   - **Type**: Character speech
+  - **Character file**: [`characters/bastiao.md`](../characters/bastiao.md)
   - **Version**: 0.1 (draft) | **Status**: draft | **Created**: 2026-11-03
   - **Built with**: character-voice skill, from the Character Bible, Chapters and the Concept, with Rafael's answers (2026-11-03)
 

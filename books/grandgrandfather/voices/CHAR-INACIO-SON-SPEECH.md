@@ -1,6 +1,7 @@
 # CHAR-INACIO-SON-SPEECH: Inácio's speech (the second son)
 
   - **Type**: Character speech
+  - **Character file**: [`characters/sons.md`](../characters/sons.md)
   - **Version**: 0.1 (draft) | **Status**: draft | **Created**: 2026-11-03
   - **Built with**: character-voice skill, from the Character Bible, Chapters and the Concept, with Rafael's answers (2026-11-03); starts from BASE-SPEECH-FRONTIER and CHAR-AFONSO-SPEECH
 

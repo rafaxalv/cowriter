@@ -1,6 +1,7 @@
 # BASE-SPEECH-BLACK-SOLDIERS: Black soldiers and freed veterans
 
   - **Type**: Base speech
+  - **Character files**: [`characters/firmino.md`](../characters/firmino.md), [`characters/roque-junior.md`](../characters/roque-junior.md), [`characters/damiao.md`](../characters/damiao.md), [`characters/war-real-figures.md`](../characters/war-real-figures.md), [`characters/war-comrades-and-enemies.md`](../characters/war-comrades-and-enemies.md)
   - **Version**: 0.1 (draft) | **Status**: draft | **Created**: 2026-11-03
   - **Built with**: character-voice skill, as a generic speech voice for characters without their own (Rafael, 2026-11-03)
 

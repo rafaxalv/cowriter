@@ -22,7 +22,7 @@ Changes flow down (concept → chapters → scenes → text); deliberate changes
 | `outline/concept.md` | Key ideas, standing rules, the story in six movements | 00 Book Concept |
 | `outline/chapters.md` and `outline/chapters/` | The plan of record: an index, then one file per chapter with every event and its sources | Chapters |
 | `outline/scenes.md` | Scene maps (chapter 1 in progress) | Scenes |
-| `characters/character-bible.md` | Who everyone is, plus the Continuity section | Character Bible |
+| `characters/character-bible.md` and `characters/*.md` | Who everyone is: an index with the Continuity section, then one file per character (minor ones grouped), each linked to its speech voice | Character Bible |
 | `voices/` | Narrative voices (NARR-MAIN, AUTHOR-MAIN, BASE-LETTERS-DESPERATE), shared rules, author library, voice index | Configuration / Voices |
 | `config/` | Engagement anchors, engagement and paragraph-parameter sheets (CSV) | Configuration |
 | `research/paraguayan-war/` | War research notes, Paraguayan perspective, slavery timeline and compilation | Registros historicos |

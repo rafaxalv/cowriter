@@ -1,6 +1,7 @@
 # BASE-SPEECH-AFRICAN-BORN: African-born, in Brazil
 
   - **Type**: Base speech
+  - **Character file**: [`characters/mae-otilia.md`](../characters/mae-otilia.md)
   - **Version**: 0.1 (draft) | **Status**: draft | **Created**: 2026-11-03
   - **Built with**: character-voice skill, as a generic speech voice for characters without their own (Rafael, 2026-11-03)
 

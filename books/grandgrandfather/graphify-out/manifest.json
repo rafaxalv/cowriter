@@ -1,9 +1,9 @@
 {
   "characters/character-bible.md": {
-    "mtime": 1794022235.6652246,
-    "seen": 1794022697.1497092,
-    "ast_hash": "65bf327e7d1c80f5f06d3c433da83e5e",
-    "semantic_hash": "65bf327e7d1c80f5f06d3c433da83e5e"
+    "mtime": 1794028222.1133013,
+    "seen": 1794028258.791578,
+    "ast_hash": "60c3e5fed09bbbb8b175886b147c31a6",
+    "semantic_hash": "60c3e5fed09bbbb8b175886b147c31a6"
   },
   "research/capoeira/moves.md": {
     "mtime": 1794022235.6666625,
@@ -132,8 +132,8 @@
     "semantic_hash": "1830fb942ad3df638e6b64d0f2320a9c"
   },
   "outline/chapters.md": {
-    "mtime": 1794025343.9066825,
-    "seen": 1794025450.3429196,
+    "mtime": 1794025850.41915,
+    "seen": 1794028191.58271,
     "ast_hash": "572ec696cbb1852e3a8446fc793e2316",
     "semantic_hash": "572ec696cbb1852e3a8446fc793e2316"
   },
@@ -150,135 +150,291 @@
     "semantic_hash": "82e40fbd84a18f5caa3f243e55fd7670"
   },
   "outline/chapters/00-prologue.md": {
-    "mtime": 1794025326.9147341,
-    "seen": 1794025450.342923,
+    "mtime": 1794025850.4324524,
+    "seen": 1794028191.5827122,
     "ast_hash": "1509a009ec7f24020b4e21a6c8cc2435",
     "semantic_hash": "1509a009ec7f24020b4e21a6c8cc2435"
   },
   "outline/chapters/01-good-teeth.md": {
-    "mtime": 1794025326.9147823,
-    "seen": 1794025450.3429248,
+    "mtime": 1794025850.4343767,
+    "seen": 1794028191.5827134,
     "ast_hash": "c31fcd1266478dc8bba04121c34155d0",
     "semantic_hash": "c31fcd1266478dc8bba04121c34155d0"
   },
   "outline/chapters/02-the-engenho.md": {
-    "mtime": 1794025326.9148207,
-    "seen": 1794025450.342926,
+    "mtime": 1794025850.4343767,
+    "seen": 1794028191.582715,
     "ast_hash": "81cb36d838515980c01276f8408a6887",
     "semantic_hash": "81cb36d838515980c01276f8408a6887"
   },
   "outline/chapters/03-the-roda.md": {
-    "mtime": 1794025326.9148657,
-    "seen": 1794025450.3429275,
+    "mtime": 1794025850.4343767,
+    "seen": 1794028191.582717,
     "ast_hash": "288f99674b02d026f5a7937cd9f466c1",
     "semantic_hash": "288f99674b02d026f5a7937cd9f466c1"
   },
   "outline/chapters/04-the-zouaves.md": {
-    "mtime": 1794025326.9148917,
-    "seen": 1794025450.3429286,
+    "mtime": 1794025850.4343767,
+    "seen": 1794028191.5827196,
     "ast_hash": "e1d5d529bf365744aa675bcdb793e7a2",
     "semantic_hash": "e1d5d529bf365744aa675bcdb793e7a2"
   },
   "outline/chapters/05-curuzu.md": {
-    "mtime": 1794025326.9149163,
-    "seen": 1794025450.3429298,
+    "mtime": 1794025850.4343767,
+    "seen": 1794028191.5827208,
     "ast_hash": "89e5db10adb3ddb425a8ae31b316eea6",
     "semantic_hash": "89e5db10adb3ddb425a8ae31b316eea6"
   },
   "outline/chapters/06-cholera.md": {
-    "mtime": 1794025326.9149506,
-    "seen": 1794025450.342931,
+    "mtime": 1794025850.4343767,
+    "seen": 1794028191.5827222,
     "ast_hash": "68f715b50cf7f69b211bb131dd73504a",
     "semantic_hash": "68f715b50cf7f69b211bb131dd73504a"
   },
   "outline/chapters/07-humaita.md": {
-    "mtime": 1794025326.915019,
-    "seen": 1794025450.342932,
+    "mtime": 1794025850.4343767,
+    "seen": 1794028191.5827236,
     "ast_hash": "62948bea5c3384116beea8cefb4f98e3",
     "semantic_hash": "62948bea5c3384116beea8cefb4f98e3"
   },
   "outline/chapters/08-asuncion.md": {
-    "mtime": 1794025326.9150505,
-    "seen": 1794025450.342933,
+    "mtime": 1794025850.4343767,
+    "seen": 1794028191.582725,
     "ast_hash": "c5e46de7d68333185390b563243cbb40",
     "semantic_hash": "c5e46de7d68333185390b563243cbb40"
   },
   "outline/chapters/09-acosta-nu.md": {
-    "mtime": 1794025326.9150734,
-    "seen": 1794025450.3429344,
+    "mtime": 1794025850.4343767,
+    "seen": 1794028191.5827267,
     "ast_hash": "15ea3e7d193812e744e9de4c83351835",
     "semantic_hash": "15ea3e7d193812e744e9de4c83351835"
   },
   "outline/chapters/10-seven-years.md": {
-    "mtime": 1794025825.4286432,
-    "seen": 1794025841.9580142,
+    "mtime": 1794025850.4343767,
+    "seen": 1794028191.5827281,
     "ast_hash": "3ff1d20eec10495bd008a61e24ceafb2",
     "semantic_hash": "3ff1d20eec10495bd008a61e24ceafb2"
   },
   "outline/chapters/11-her-road.md": {
-    "mtime": 1794025326.9151227,
-    "seen": 1794025450.342936,
+    "mtime": 1794025850.4343767,
+    "seen": 1794028191.58273,
     "ast_hash": "dc36af61d1e58fd0e14d7e1fcaef7029",
     "semantic_hash": "dc36af61d1e58fd0e14d7e1fcaef7029"
   },
   "outline/chapters/12-the-lottery.md": {
-    "mtime": 1794025825.4291275,
-    "seen": 1794025841.9580173,
+    "mtime": 1794025850.4343767,
+    "seen": 1794028191.5827315,
     "ast_hash": "4d7ef15123d6827d2b409fca1b1b0568",
     "semantic_hash": "4d7ef15123d6827d2b409fca1b1b0568"
   },
   "outline/chapters/12b-interlude.md": {
-    "mtime": 1794025326.9151704,
-    "seen": 1794025450.342938,
+    "mtime": 1794025850.4343767,
+    "seen": 1794028191.5827332,
     "ast_hash": "6af0e0c6db8165ec6f57e7fc2666e525",
     "semantic_hash": "6af0e0c6db8165ec6f57e7fc2666e525"
   },
   "outline/chapters/13-the-purchase.md": {
-    "mtime": 1794025825.4295049,
-    "seen": 1794025841.9580202,
+    "mtime": 1794025850.4343767,
+    "seen": 1794028191.5827346,
     "ast_hash": "b95ca61da699f376e4108cadedf91f30",
     "semantic_hash": "b95ca61da699f376e4108cadedf91f30"
   },
   "outline/chapters/14-liberdade.md": {
-    "mtime": 1794025326.915224,
-    "seen": 1794025450.3429399,
+    "mtime": 1794025850.4343767,
+    "seen": 1794028191.5827358,
     "ast_hash": "1d937dad54823ee48b72a947c1495254",
     "semantic_hash": "1d937dad54823ee48b72a947c1495254"
   },
   "outline/chapters/15-the-fence.md": {
-    "mtime": 1794025326.9152508,
-    "seen": 1794025450.342941,
+    "mtime": 1794025850.4343767,
+    "seen": 1794028191.5827377,
     "ast_hash": "633cd6ec2ccb7774a1d99f28782992f2",
     "semantic_hash": "633cd6ec2ccb7774a1d99f28782992f2"
   },
   "outline/chapters/16-sao-joao.md": {
-    "mtime": 1794025825.4298525,
-    "seen": 1794025841.9580245,
+    "mtime": 1794025850.4343767,
+    "seen": 1794028191.5827398,
     "ast_hash": "f621b95472ff6ef4d10e883a4e74f802",
     "semantic_hash": "f621b95472ff6ef4d10e883a4e74f802"
   },
   "outline/chapters/17-the-name.md": {
-    "mtime": 1794025326.9153016,
-    "seen": 1794025450.342944,
+    "mtime": 1794025850.4343767,
+    "seen": 1794028191.5827415,
     "ast_hash": "1d9afafd228bc3bf2296528afdf36aea",
     "semantic_hash": "1d9afafd228bc3bf2296528afdf36aea"
   },
   "outline/chapters/18-the-table.md": {
-    "mtime": 1794025326.915323,
-    "seen": 1794025450.3429453,
+    "mtime": 1794025850.4343767,
+    "seen": 1794028191.582743,
     "ast_hash": "9fde78616e2a27a73bb8abba826a3cf4",
     "semantic_hash": "9fde78616e2a27a73bb8abba826a3cf4"
   },
   "outline/chapters/19-epilogue.md": {
-    "mtime": 1794025326.91534,
-    "seen": 1794025450.342946,
+    "mtime": 1794025850.4343767,
+    "seen": 1794028191.5827446,
     "ast_hash": "c2077427028cd4a794eac75edd6206d9",
     "semantic_hash": "c2077427028cd4a794eac75edd6206d9"
   },
   "outline/chapters/arc-brainstorm.md": {
-    "mtime": 1794025326.91536,
-    "seen": 1794025450.342947,
+    "mtime": 1794025850.4343767,
+    "seen": 1794028191.582746,
     "ast_hash": "9c483527008ed6e4cab5ccce93959d16",
     "semantic_hash": "9c483527008ed6e4cab5ccce93959d16"
+  },
+  "characters/afonso.md": {
+    "mtime": 1794028037.9225876,
+    "seen": 1794028191.5826619,
+    "ast_hash": "8722814f7736d0e08808b696defb3034",
+    "semantic_hash": "8722814f7736d0e08808b696defb3034"
+  },
+  "characters/bastiao.md": {
+    "mtime": 1794028037.9197779,
+    "seen": 1794028191.5826693,
+    "ast_hash": "4eff1e8a974889e0988ddee1b213dbb7",
+    "semantic_hash": "4eff1e8a974889e0988ddee1b213dbb7"
+  },
+  "characters/benedito.md": {
+    "mtime": 1794028037.923235,
+    "seen": 1794028191.582672,
+    "ast_hash": "d4d9b58d8c7748b49daeb58ba52526d7",
+    "semantic_hash": "d4d9b58d8c7748b49daeb58ba52526d7"
+  },
+  "characters/carmen.md": {
+    "mtime": 1794028037.920613,
+    "seen": 1794028191.582674,
+    "ast_hash": "7e460adbb31446ea02ee3dd139362955",
+    "semantic_hash": "7e460adbb31446ea02ee3dd139362955"
+  },
+  "characters/coronel-menezes.md": {
+    "mtime": 1794028037.9223795,
+    "seen": 1794028191.582679,
+    "ast_hash": "b381b905e2c784abc5020f755e26f672",
+    "semantic_hash": "b381b905e2c784abc5020f755e26f672"
+  },
+  "characters/corumba.md": {
+    "mtime": 1794028037.9243352,
+    "seen": 1794028191.5826805,
+    "ast_hash": "6ef3254e4837ea714fbd6840cf70767f",
+    "semantic_hash": "6ef3254e4837ea714fbd6840cf70767f"
+  },
+  "characters/damiao.md": {
+    "mtime": 1794028037.9236495,
+    "seen": 1794028191.5826821,
+    "ast_hash": "33d60443823d97cd05f980b4b8505ada",
+    "semantic_hash": "33d60443823d97cd05f980b4b8505ada"
+  },
+  "characters/dona-mariana.md": {
+    "mtime": 1794028037.92086,
+    "seen": 1794028191.582683,
+    "ast_hash": "509f971831e0eaa17ec02d07642d5045",
+    "semantic_hash": "509f971831e0eaa17ec02d07642d5045"
+  },
+  "characters/ezequiel.md": {
+    "mtime": 1794028037.9234748,
+    "seen": 1794028191.582685,
+    "ast_hash": "d93ce899f59d2e5ff48d08ccf091b066",
+    "semantic_hash": "d93ce899f59d2e5ff48d08ccf091b066"
+  },
+  "characters/fact-map.md": {
+    "mtime": 1794028249.000148,
+    "seen": 1794028258.7915864,
+    "ast_hash": "70ab3a602f9a3bd42cb5792565944ad8",
+    "semantic_hash": "70ab3a602f9a3bd42cb5792565944ad8"
+  },
+  "characters/firmino.md": {
+    "mtime": 1794028037.9229646,
+    "seen": 1794028191.5826879,
+    "ast_hash": "1188db6e2a855cc4b869bf9b898a0037",
+    "semantic_hash": "1188db6e2a855cc4b869bf9b898a0037"
+  },
+  "characters/her-road.md": {
+    "mtime": 1794028037.9217296,
+    "seen": 1794028191.582689,
+    "ast_hash": "fd80b4b0aba7491ec1af5fb2400c5892",
+    "semantic_hash": "fd80b4b0aba7491ec1af5fb2400c5892"
+  },
+  "characters/inacio.md": {
+    "mtime": 1794028037.9203277,
+    "seen": 1794028191.5826902,
+    "ast_hash": "7edcdcfb5025ecfa76d3c6ebd52f4fd6",
+    "semantic_hash": "7edcdcfb5025ecfa76d3c6ebd52f4fd6"
+  },
+  "characters/kalunga.md": {
+    "mtime": 1794028037.921889,
+    "seen": 1794028191.5826917,
+    "ast_hash": "0d752b5d95ffd91e65039424e5483006",
+    "semantic_hash": "0d752b5d95ffd91e65039424e5483006"
+  },
+  "characters/lucilia.md": {
+    "mtime": 1794028037.9239173,
+    "seen": 1794028191.582693,
+    "ast_hash": "7f69c925041064e5149c27cb0f68650e",
+    "semantic_hash": "7f69c925041064e5149c27cb0f68650e"
+  },
+  "characters/luzia.md": {
+    "mtime": 1794028037.9214003,
+    "seen": 1794028191.5826943,
+    "ast_hash": "b576aa3ba0b86746e892008583475f50",
+    "semantic_hash": "b576aa3ba0b86746e892008583475f50"
+  },
+  "characters/mae-otilia.md": {
+    "mtime": 1794028037.9220788,
+    "seen": 1794028191.582696,
+    "ast_hash": "34b46101586bea12f60569c9c1971f68",
+    "semantic_hash": "34b46101586bea12f60569c9c1971f68"
+  },
+  "characters/pires-family.md": {
+    "mtime": 1794028037.9237747,
+    "seen": 1794028191.582697,
+    "ast_hash": "993701553b890eb216014780ed5fad15",
+    "semantic_hash": "993701553b890eb216014780ed5fad15"
+  },
+  "characters/roque-junior.md": {
+    "mtime": 1794028037.9222589,
+    "seen": 1794028191.5826986,
+    "ast_hash": "c564eaacf1dc09ac77c58eaca12a1aed",
+    "semantic_hash": "c564eaacf1dc09ac77c58eaca12a1aed"
+  },
+  "characters/rosaria.md": {
+    "mtime": 1794028037.9226875,
+    "seen": 1794028191.5826995,
+    "ast_hash": "865ca59392b5e657e0d32da2d0500ebf",
+    "semantic_hash": "865ca59392b5e657e0d32da2d0500ebf"
+  },
+  "characters/seu-albino.md": {
+    "mtime": 1794028037.922489,
+    "seen": 1794028191.582701,
+    "ast_hash": "beffbe22173824569ac7759a02756898",
+    "semantic_hash": "beffbe22173824569ac7759a02756898"
+  },
+  "characters/sons.md": {
+    "mtime": 1794028037.924031,
+    "seen": 1794028191.5827024,
+    "ast_hash": "d748aeabfed41cf9bc806c3e0accb380",
+    "semantic_hash": "d748aeabfed41cf9bc806c3e0accb380"
+  },
+  "characters/themes.md": {
+    "mtime": 1794028037.9244404,
+    "seen": 1794028191.5827036,
+    "ast_hash": "0246aca8f72cca58201d9a694d22c871",
+    "semantic_hash": "0246aca8f72cca58201d9a694d22c871"
+  },
+  "characters/tonico.md": {
+    "mtime": 1794028037.9233637,
+    "seen": 1794028191.5827048,
+    "ast_hash": "43412ad3d65de6c99d99f865f4067901",
+    "semantic_hash": "43412ad3d65de6c99d99f865f4067901"
+  },
+  "characters/war-comrades-and-enemies.md": {
+    "mtime": 1794028037.9242349,
+    "seen": 1794028191.5827062,
+    "ast_hash": "35f707f69a1b17f377de0f332c6452cf",
+    "semantic_hash": "35f707f69a1b17f377de0f332c6452cf"
+  },
+  "characters/war-real-figures.md": {
+    "mtime": 1794028037.9241314,
+    "seen": 1794028191.5827076,
+    "ast_hash": "49f777cac4150dccc237c2a3a980b72a",
+    "semantic_hash": "49f777cac4150dccc237c2a3a980b72a"
   }
 }

@@ -46,8 +46,8 @@ Used at every level: the **Character Bible** (who people are, plus the Continuit
 | Alternatives (undecided arcs, working notes) | `outline/alternatives/` (e.g. `purchase.md`); Chapters stays the plan of record |
 | Manuscript | `book/manuscript.en.md`, `book/manuscript.pt-br.md` |
 | Drafts (chapters being written) | `drafts/` (create when first needed) |
-| Character Bible | `characters/character-bible.md` |
-| Continuity record | the **Continuity** section at the end of the Character Bible |
+| Character Bible | `characters/character-bible.md` (the index: rules, the cast by stage with links, the Continuity record) and one file per character in `characters/` (minor characters share a file by group; each names its speech voice); read and edit only the characters you need |
+| Continuity record | the **Continuity** section at the end of `characters/character-bible.md` (the Bible's index) |
 | Voices folder | `voices/`: narrators (`NARR-`), the author's voice (`AUTHOR-`), base voices (`BASE-`, including the group speech voices `BASE-SPEECH-`), character voices (`CHAR-<NAME>-<FORM>`, including the speech voices `CHAR-<NAME>-SPEECH`) |
 | Voice Index | `voices/00-voice-index.csv` |
 | Shared Rules | `voices/00-shared-rules.md` |

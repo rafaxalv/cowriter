@@ -1,18 +1,19 @@
 # Node names the graph page always shows (one node id per line; the rest appear on hover, click or search).
+# A character whose node shares a name with its own file in characters/ gets the folder in front (characters_benedito).
 # Read by tools/graphify-page/finish_html.py. Chapter nodes (ch01, prologue...) are always shown.
 
-benedito  # Benedito (the man without a name)
-carmen  # Carmen (the woman from Spain)
-luzia  # Luzia
-inacio_father  # Inácio (Benedito's father)
-coronel_menezes  # Coronel Joaquim Araújo de Menezes
-dona_mariana  # Dona Mariana
-tonico  # Tonico (Antônio de Menezes)
-bastiao  # Bastião
-kalunga  # Velho Kalunga
-rosaria  # Rosária
-ezequiel  # Ezequiel
-mae_otilia  # Mãe Otília
+characters_benedito  # Benedito (the man without a name)
+characters_carmen  # Carmen (the woman from Spain)
+characters_luzia  # Luzia
+characters_inacio_father  # Inácio (Benedito's father)
+characters_coronel_menezes  # Coronel Joaquim Araújo de Menezes
+characters_dona_mariana  # Dona Mariana
+characters_tonico  # Tonico (Antônio de Menezes)
+characters_bastiao  # Bastião
+characters_kalunga  # Velho Kalunga
+characters_rosaria  # Rosária
+characters_ezequiel  # Ezequiel
+characters_mae_otilia  # Mãe Otília
 quirino  # Quirino Antônio do Espírito Santo
 marcolino  # Captain Marcolino
 dom_oba  # Dom Obá II (Cândido da Fonseca Galvão)
@@ -24,10 +25,10 @@ conde_deu  # Count d'Eu
 solano_lopez  # Francisco Solano López
 gregorio  # Gregório 'Doutor'
 ramon_benites  # Ramon Benites
-roque_junior  # Roque Júnior 'Sansão'
+characters_roque_junior  # Roque Júnior 'Sansão'
 padre_felicio  # Padre Felício
 constantino  # Constantino (cadet)
-damiao  # Damião
+characters_damiao  # Damião
 mbarete  # Sargento Mbareté
 ceferina  # Ceferina
 boy_acosta_nu  # The boy at Acosta Ñu
@@ -36,11 +37,11 @@ pata_seca  # Pata Seca
 euclides_bastos  # Euclides Bastos
 seu_bento  # Seu Bento
 dr_teles  # Dr. Aurélio Teles
-pires_family  # The Pires family
+characters_pires_family  # The Pires family
 coronel_pires  # Coronel Pires
 dona_pires  # Dona Pires
 otavio  # Otávio
-firmino  # Firmino
+characters_firmino  # Firmino
 rosa_lousada  # Rosa Lousada
 manuel_lousada  # Manuel Lousada
 xose_lousada  # Xosé Lousada
@@ -50,10 +51,10 @@ ruchla  # Ruchla (Raquel)
 iriarte  # Capitán Iriarte
 dona_engracia  # Doña Engracia
 madame_angelique  # Madame Angélique
-seu_albino  # Seu Albino
-lucilia  # Lucília
-sons  # Benedito's sons
-afonso  # Afonso
+characters_seu_albino  # Seu Albino
+characters_lucilia  # Lucília
+characters_sons  # Benedito's sons
+characters_afonso  # Afonso
 inacio_son  # Inácio (son)
 manuel_son  # Manuel (son)
 jose_son  # José (son)

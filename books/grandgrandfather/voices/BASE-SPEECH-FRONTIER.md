@@ -1,6 +1,7 @@
 # BASE-SPEECH-FRONTIER: Corumbá and the Mato Grosso frontier
 
   - **Type**: Base speech
+  - **Character files**: [`characters/corumba.md`](../characters/corumba.md), [`characters/lucilia.md`](../characters/lucilia.md), [`characters/sons.md`](../characters/sons.md)
   - **Version**: 0.1 (draft) | **Status**: draft | **Created**: 2026-11-03
   - **Built with**: character-voice skill, as a generic speech voice for characters without their own (Rafael, 2026-11-03)
 

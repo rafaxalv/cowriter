@@ -1,6 +1,7 @@
 # BASE-SPEECH-PARAGUAYAN: Paraguayans
 
   - **Type**: Base speech
+  - **Character file**: [`characters/war-comrades-and-enemies.md`](../characters/war-comrades-and-enemies.md)
   - **Version**: 0.1 (draft) | **Status**: draft | **Created**: 2026-11-03
   - **Built with**: character-voice skill, as a generic speech voice for characters without their own (Rafael, 2026-11-03)
 
