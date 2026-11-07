@@ -17,9 +17,10 @@ Updates, in the book folder:
     IDs of voices deleted there (deleted.json), when the dump holds .../voices/*.json;
     the book-voices skill folds them into the voice files after approval
   - config/engagement.csv: the latest heatmap scores of the first language
-  - the Chapters file (outline/chapters.md), when the dump holds the Chapters tab's
-    documents (.../plan/*.json and .../planChapters/*.json): each chapter entry is
-    rewritten as When / where, Stories, Facts, Sources and Notes; removed items dropped
+  - the Chapters plan (outline/chapters/<chapter>.md, or the single outline/chapters.md),
+    when the dump holds the Chapters tab's documents (.../plan/*.json and
+    .../planChapters/*.json): each chapter entry is rewritten, in its own file, as
+    When / where, Stories, Facts, Sources and Notes; removed items dropped
 Everything else in the files (title, intro, part headings) is kept.
 Prints a short summary; review with `git diff` before committing.
 """
@@ -235,14 +236,11 @@ def sync_plan(book_dir, base):
         chapters[h.get("chapter", cid)] = {"title": h.get("title", ""), "when": h.get("when", ""), "items": []}
     for it in sorted(items, key=lambda d: (d["chapter"], d["order"])):
         chapters.setdefault(it["chapter"], {"title": "", "when": "", "items": []})["items"].append(it)
-    path = os.path.join(book_dir, "outline/chapters.md")
-    text = open(path, encoding="utf-8").read()
-    _, present = plan_md.parse(text)
-    missing = set(chapters) - set(present)
+    written = plan_md.write_plan(book_dir, chapters)
+    missing = set(chapters) - written
     if missing:
-        print(f"warning: outline/chapters.md has no heading for chapters {sorted(missing)}; their items were not written")
-    open(path, "w", encoding="utf-8").write(plan_md.rewrite(text, chapters))
-    print("updated outline/chapters.md:", len(items), "items in", len(chapters), "chapters")
+        print(f"warning: no chapter file has a heading for chapters {sorted(missing)}; their items were not written")
+    print("updated the Chapters plan:", len(items), "items in", len(written), "chapters")
 
 
 if __name__ == "__main__":

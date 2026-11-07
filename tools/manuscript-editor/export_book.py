@@ -216,7 +216,8 @@ def main(book_dir, out):
     bible = read("characters/character-bible.md")
     continuity = bible[bible.index("# Continuity"):].strip() if "# Continuity" in bible else ""
     write(out, f"books/{slug}/context/book.json", {"brief": book_brief, "continuity": continuity})
-    plan, scenes = section_by_chapter(read("outline/chapters.md"), r"^#{2,3} "), {}
+    import plan_md
+    plan, scenes = section_by_chapter(plan_md.read_plan(book_dir), r"^#{2,3} "), {}
     for head, body in re.findall(r"^## (Chapter[^\n]*)\n(.*?)(?=^## |\Z)", read("outline/scenes.md"), re.M | re.S):
         m = re.match(r"Chapter (\d+)", head)
         cid = chap_id(m.group(1) + ".") if m else chap_id(head)
@@ -353,10 +354,10 @@ def research_files(book_dir):
 
 def export_plan(book_dir, slug, out):
     import plan_md
-    path = os.path.join(book_dir, "outline/chapters.md")
-    if not os.path.exists(path):
+    text = plan_md.read_plan(book_dir)
+    if not text:
         return
-    chapters, order = plan_md.parse(open(path, encoding="utf-8").read())
+    chapters, order = plan_md.parse(text)
     for cid in order:
         ch = chapters[cid]
         ids = {}

@@ -20,7 +20,7 @@ Changes flow down (concept → chapters → scenes → text); deliberate changes
 | --- | --- | --- |
 | `book/manuscript.en.md`, `book/manuscript.pt-br.md` | The book text, one file per language. Matching paragraphs share an ID (chapter.row; prologue 00, interlude INT, epilogue 99) in a hidden comment, so the two versions stay in step | Book |
 | `outline/concept.md` | Key ideas, standing rules, the story in six movements | 00 Book Concept |
-| `outline/chapters.md` | The plan of record: every event per chapter, with sources | Chapters |
+| `outline/chapters.md` and `outline/chapters/` | The plan of record: an index, then one file per chapter with every event and its sources | Chapters |
 | `outline/scenes.md` | Scene maps (chapter 1 in progress) | Scenes |
 | `characters/character-bible.md` | Who everyone is, plus the Continuity section | Character Bible |
 | `voices/` | Narrative voices (NARR-MAIN, AUTHOR-MAIN, BASE-LETTERS-DESPERATE), shared rules, author library, voice index | Configuration / Voices |
@@ -43,6 +43,6 @@ Portuguese documents stay in Portuguese, so nothing is lost in translation.
 ## Rules that apply everywhere
 
 - Neither he nor the woman from Spain is ever named in the book text. Working names for planning only: Benedito and Carmen.
-- Every story line Rafael gives goes into `outline/chapters.md`; the Character Bible holds personality, backstory and minor details.
+- Every story line Rafael gives goes into its chapter file in `outline/chapters/`; the Character Bible holds personality, backstory and minor details.
 - No new characters, or expanded ones, without Rafael's approval. He writes the funny childhood episodes himself.
 - Never overwrite Rafael's or his mom's text without approval; when his mom wrote the Portuguese, it is the source and the English follows it.

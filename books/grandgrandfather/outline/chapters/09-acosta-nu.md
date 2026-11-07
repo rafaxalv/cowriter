@@ -1,0 +1,21 @@
+### 9\. Acosta Ñu
+
+  - When / where: Aug 1869 – 1870, age 23–24 · Piribebuy, Acosta Ñu, the hunt for López
+  - Readiness: 78/100 · beats 5 · arc 4 · links 5 · facts 4 · decisions 3 · voice 2 (Nov 2, 2026)
+  - Stories:
+      
+      - **Core event 5: Piribebuy and Acosta Ñu, the deepest wound** (expanded into beats (decided Nov 2, 2026)). The wound that comes back at São João (ch. 16) (next items).
+      - **5.1 Piribebuy.** Four days earlier, a Paraguayan village falls (option: Piribebuy, 12 Aug 1869: the temporary capital, defended by poorly armed children among others; the general Mena Barreto is killed and the town's hospital burns, who set the fire is disputed). Damião, enslaved like him, the man who whipped the officer at Curuzu and was flogged for deserting (ch. 5–6), feels freer than ever: he kills, rapes, eats and drinks, doing to others what was done to him. Drunk, he puts everyone in danger. The protagonist arrives after it has begun, sees his mother in the women, fights Damião and stops it. \[Catharsis point.\] He is still accused of rape and killing, simply because he belongs to the Black troop (mirror of ch. 8, where he fails to stop Ramon Benites, a white man). Then, for Damião (decided Nov 1, 2026): he ties him up and leaves him in the burning village, so chance decides whether he lives; he never learns which.
+      - **5.2 Acosta Ñu: in the line** (decided Nov 2, 2026) (16 Aug 1869). He fights in the allied advance across the open field. Slowly he understands what the line in front of them is made of: boys, about 9 to 15, with old men and wounded, some with beards drawn on their faces in charcoal to look older (ch. 16), against more than 20,000 allied soldiers.
+      - **5.3 The boy** (decided Nov 2, 2026). In the smoke a bearded figure comes at him and he strikes before he sees it is a boy of about twelve (he nursed boys like him in Asunción, ch. 8), the beard drawn in charcoal. The boy, never named, looks into his eyes. The memory he never tells anyone, in any chapter.
+      - **5.4 The fire** (decided Nov 2, 2026). Then the fire sweeps the dry grass, over the living and the dead. Who set it he never knows: in camp the rumours blame both sides, and the truth stays open, as it does in history (Taunay blamed the Paraguayans' fires; Chiavenato, the Count d'Eu).
+      - **5.5 After** (decided Nov 2, 2026). Among the dead he finds a boy with a charcoal beard, kneels and scrubs it off with water until the skin is raw: the gesture he will repeat on his own son, Afonso, at São João (ch. 16), never explained. Among the dead boys, Luzia's lament comes back to him: "We look for our father, and cannot find him." A country of boys whose fathers are all dead.
+      - **Camp news** (decided Oct 30, 2026): the Count d'Eu leads the final hunt for López through the north; at Cerro Corá (1 Mar 1870) López is killed by a lance ("Chico Diabo"; his last words, "Muero con mi patria", are attributed). The war is over. Padre Felício's list, the only one with his real name, is lost (see ch. 6).
+  - Facts:
+      
+      - [DOCUMENTED] Acosta Ñu (Campo Grande to Brazilians), 16 Aug 1869: about 3,500 Paraguayans, mostly boys aged 9 to 15 with old men and wounded, against more than 20,000 allied soldiers; many boys wore false beards to look older. Fires swept the field; their cause is disputed (Taunay blamed the Paraguayans' fires; Chiavenato, the Count d'Eu). Paraguay marks 16 August as Children's Day. (Wikipedia, Battle of Acosta Ñu)
+  - Notes:
+      
+      - Damião's danger, options: he turns on a mother and daughter the protagonist is hiding; he shoots at a Brazilian officer, risking reprisals on the whole Black company; or he sets fire to a building with wounded inside.
+      - Damião's end (decided Nov 1, 2026): tied up and left in the burning village; chance decides, and he never learns whether Damião lived (fits the book's luck theme). Joca Cabinda is merged into Damião (decided Nov 2, 2026).
+      - How to write Damião: no graphic description; the violence is seen in its aftermath and in the protagonist's reaction. The reader gets Damião's reasons, never the narrator's approval. White soldiers do the same in the same war (Ramon Benites), so the atrocity belongs to the war, not to a race; otherwise the scene repeats the racist propaganda that called Black soldiers macacos.

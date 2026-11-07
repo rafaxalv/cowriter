@@ -41,7 +41,7 @@ Used at every level: the **Character Bible** (who people are, plus the Continuit
 | Role (name used by the skills) | Path |
 | --- | --- |
 | Concept | `outline/concept.md` (earlier versions: in the git history) |
-| Chapters (plan of record) | `outline/chapters.md` |
+| Chapters (plan of record) | `outline/chapters.md` (the index: notes, parts, links) and `outline/chapters/` (one file per chapter, e.g. `08-asuncion.md`; read and edit only the chapter you need) |
 | Scenes (scene maps) | `outline/scenes.md` |
 | Alternatives (undecided arcs, working notes) | `outline/alternatives/` (e.g. `purchase.md`); Chapters stays the plan of record |
 | Manuscript | `book/manuscript.en.md`, `book/manuscript.pt-br.md` |

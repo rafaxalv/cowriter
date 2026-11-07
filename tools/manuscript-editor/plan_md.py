@@ -26,9 +26,50 @@ Older entries keep everything under "Stories:" (and the interlude uses top-level
 on reading, bullets that start with "Sources" / "Further reading" become sources and bullets
 that start with "IMPORTANT" / "The laws that shape" become facts. Text outside chapter entries
 (the file's introduction, part introductions, the arc brainstorm) is never touched.
+
+Where the plan lives: a book may keep its plan as one file (outline/chapters.md) or split, one
+file per chapter in outline/chapters/ with outline/chapters.md as an index of links. Use
+read_plan() and write_plan() below, which handle both layouts: read_plan() glues the chapter
+files together in file-name order, in memory only (the combined text is never written to disk),
+and write_plan() writes each chapter back into the file that holds its heading.
 """
+import glob
+import os
 import re
 import unicodedata
+
+PLAN_INDEX = "outline/chapters.md"
+PLAN_FOLDER = "outline/chapters"
+
+
+def chapter_files(book_dir):
+    """The files that hold chapter entries: every outline/chapters/*.md in name order, or the single Chapters file."""
+    folder = os.path.join(book_dir, PLAN_FOLDER)
+    if os.path.isdir(folder):
+        return sorted(glob.glob(os.path.join(folder, "*.md")))
+    single = os.path.join(book_dir, PLAN_INDEX)
+    return [single] if os.path.exists(single) else []
+
+
+def read_plan(book_dir):
+    """The whole plan as one text, for reading only. Never write this text to disk."""
+    parts = [open(f, encoding="utf-8").read().rstrip() for f in chapter_files(book_dir)]
+    return "\n\n".join(parts) + "\n" if parts else ""
+
+
+def write_plan(book_dir, chapters):
+    """Write each chapter in `chapters` (by chapter id) back into the file that holds its heading.
+
+    Files holding none of the chapters are left untouched. Returns the set of chapter ids written."""
+    written = set()
+    for f in chapter_files(book_dir):
+        text = open(f, encoding="utf-8").read()
+        _, present = parse(text)
+        hit = set(present) & set(chapters)
+        if hit:
+            open(f, "w", encoding="utf-8").write(rewrite(text, chapters))
+            written |= hit
+    return written
 
 KINDS = {"event": "Stories", "fact": "Facts", "source": "Sources", "note": "Notes"}
 SECTION_KIND = {v.lower(): k for k, v in KINDS.items()}

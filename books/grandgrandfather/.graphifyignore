@@ -1,0 +1,14 @@
+# Graphify scans research/, characters/ and the outline (Chapters, Concept, Scenes) for this book
+book/
+voices/
+config/
+drafts/
+outline/alternatives/
+research/images/
+research/family/images/
+research/sources/borba-garajo-8.pdf
+research/family/memorias-de-familia.md
+graphify-out/
+BOOK.md
+README.md
+research/timelines/how-to-build-a-timeline.md
