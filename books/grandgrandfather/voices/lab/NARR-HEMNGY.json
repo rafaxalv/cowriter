@@ -1,0 +1,203 @@
+{
+ "id": "NARR-HEMNGY",
+ "name": "Narrator Hemingway",
+ "description": "",
+ "authors": [
+  {
+   "id": "ernest-hemingway",
+   "weight": 1
+  }
+ ],
+ "dims": {
+  "1": {
+   "base": 3,
+   "max": 4,
+   "min": 2,
+   "note": ""
+  },
+  "2": {
+   "base": 1,
+   "max": 2,
+   "min": 1,
+   "note": ""
+  },
+  "3": {
+   "base": 1,
+   "max": 2,
+   "min": 1,
+   "note": ""
+  },
+  "4": {
+   "base": 2,
+   "max": 3,
+   "min": 1,
+   "note": ""
+  },
+  "5": {
+   "base": 1,
+   "max": 2,
+   "min": 1,
+   "note": ""
+  },
+  "6": {
+   "base": 1,
+   "max": 2,
+   "min": 1,
+   "note": ""
+  },
+  "7": {
+   "base": 2,
+   "max": 3,
+   "min": 1,
+   "note": ""
+  },
+  "8": {
+   "base": 4,
+   "max": 5,
+   "min": 3,
+   "note": ""
+  },
+  "9": {
+   "base": 2,
+   "max": 3,
+   "min": 1,
+   "note": ""
+  },
+  "10": {
+   "base": 1,
+   "max": 2,
+   "min": 1,
+   "note": ""
+  },
+  "11": {
+   "base": 4,
+   "max": 5,
+   "min": 3,
+   "note": ""
+  },
+  "12": {
+   "base": 3,
+   "max": 4,
+   "min": 2,
+   "note": ""
+  },
+  "13": {
+   "base": 3,
+   "max": 4,
+   "min": 2,
+   "note": ""
+  },
+  "14": {
+   "base": 1,
+   "max": 2,
+   "min": 1,
+   "note": ""
+  },
+  "15": {
+   "base": 4,
+   "max": 5,
+   "min": 3,
+   "note": ""
+  },
+  "16": {
+   "base": 5,
+   "max": 5,
+   "min": 4,
+   "note": ""
+  },
+  "17": {
+   "base": 4,
+   "max": 5,
+   "min": 3,
+   "note": ""
+  },
+  "18": {
+   "base": 1,
+   "max": 2,
+   "min": 1,
+   "note": ""
+  },
+  "19": {
+   "base": 2,
+   "max": 3,
+   "min": 1,
+   "note": ""
+  },
+  "20": {
+   "base": 3,
+   "max": 4,
+   "min": 2,
+   "note": ""
+  },
+  "21": {
+   "base": 2,
+   "max": 3,
+   "min": 1,
+   "note": ""
+  },
+  "22": {
+   "base": 5,
+   "max": 5,
+   "min": 4,
+   "note": ""
+  },
+  "23": {
+   "base": 4,
+   "max": 5,
+   "min": 3,
+   "note": ""
+  },
+  "24": {
+   "base": 2,
+   "max": 5,
+   "min": 1,
+   "note": ""
+  },
+  "25": {
+   "base": 4,
+   "max": 5,
+   "min": 3,
+   "note": ""
+  },
+  "26": {
+   "base": 5,
+   "max": 5,
+   "min": 4,
+   "note": ""
+  },
+  "27": {
+   "base": 3,
+   "max": 4,
+   "min": 2,
+   "note": ""
+  },
+  "28": {
+   "base": 2,
+   "max": 3,
+   "min": 1,
+   "note": ""
+  },
+  "29": {
+   "base": 4,
+   "max": 5,
+   "min": 3,
+   "note": ""
+  },
+  "30": {
+   "base": 3,
+   "max": 4,
+   "min": 2,
+   "note": ""
+  },
+  "31": {
+   "base": 2,
+   "max": 3,
+   "min": 1,
+   "note": ""
+  }
+ },
+ "brief": "",
+ "version": "0.1",
+ "status": "draft",
+ "origin": "lab"
+}

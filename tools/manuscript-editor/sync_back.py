@@ -173,6 +173,10 @@ def sync_voices(book_dir, base):
     files = {}
     for f in os.listdir(vdir):
         if f.endswith(".md") and not f.startswith("00-") and re.match(r"[A-Z]", f):
+            # Speech voices are never loaded into the editor (see export_book.py), so their absence
+            # from the store does not mean they were deleted in the Voice Lab.
+            if re.search(r"\*\*Type\*\*:\s*(Character|Base) speech", open(os.path.join(vdir, f), encoding="utf-8").read()):
+                continue
             files[voice_profile(os.path.join(vdir, f))[0]] = f
     keep = ("id", "name", "description", "authors", "dims", "brief", "version", "status", "origin")
     written = []
