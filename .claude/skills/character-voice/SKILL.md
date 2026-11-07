@@ -26,7 +26,7 @@ When the author asks for voices for the many characters who do not need one of t
 Read, for the character the author names:
 
 - their **Character Bible** entry (who they are, origin, first language, literacy, class and status, relationships, arc) and the **Continuity** record (what the text has already established about how they speak);
-- every chapter in **Chapters** where they appear or speak, in order, noting where their life changes (a move, freedom, money, a loss, ageing, learning to read, a new language), because that is where their speech may change;
+- every chapter in **Chapters** where they appear or speak, in order, noting where their life changes (a move, freedom, money, a loss, ageing, learning to read, a new language), because that is where their speech may change; when the book has a graph, start from `graphify explain "<name>"` to list those chapters, then read them (see "Using the book graph" in the co-writer skill);
 - the **Voice Index**, the **Shared Rules**, the **Bilingual Lexicon** and any voice the character already has (letters, testimony): the speech voice must stay consistent with them, and clearly different from the other characters they talk to most;
 - the research files on their language, region, period or trade, when the chapters cite them;
 - any dialogue already written for them in the manuscript or scene maps.

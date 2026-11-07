@@ -35,7 +35,7 @@ What the manuscript has established: per character (ages stated, physical detail
 
 ### 1. Gather context
 
-Read: the Concept; this chapter's entry and sources in Chapters; its scene map in Scenes; the chapter text in every language; the previous chapter and the next one if it exists (at least a summary of each); the Continuity record; the relevant Character Bible entries; the Voice Index, Shared Rules, Bilingual Lexicon and every voice that might apply; this chapter's existing rows in Paragraph Parameters.
+Read: the Concept; this chapter's entry and sources in Chapters; its scene map in Scenes; the chapter text in every language; the previous chapter and the next one if it exists (at least a summary of each); the Continuity record; the relevant Character Bible entries; the Voice Index, Shared Rules, Bilingual Lexicon and every voice that might apply; this chapter's existing rows in Paragraph Parameters. For continuity across the book (set-ups this chapter must pay off, motifs and lines it must echo, what other chapters say about its characters), ask the book graph first when there is one, and read only the chapters it points to (see "Using the book graph" in the co-writer skill).
 
 ### 2. Map the chapter
 

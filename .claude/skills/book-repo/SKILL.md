@@ -36,6 +36,10 @@ At the start of repository work:
 
 If GitHub authentication fails, check `gh auth status`. For an expired login, start `gh auth login --hostname github.com --git-protocol https --web` and have the author complete authorization in the browser. Never ask the author to share a password, token or one-time code in chat.
 
+## Book graph
+
+When the book has a graph (`books/<slug>/graphify-out/`) and a saved change touched a file it covers (Chapters, the Character Bible, the Concept, Scenes, research; not those in `.graphifyignore`), say in one line that the graph is now behind and offer to refresh it. Do not refresh unasked: each refresh re-reads every changed file, so the author may prefer to batch several changes. A refresh follows the graphify rules in the repo's `CLAUDE.md` and is saved like any other change.
+
 ## Manuscript Desk
 
 After changing the Concept, Chapters, Scenes, Character Bible, a voice file, `BOOK.md`, research or paragraph-review instructions, the Manuscript Desk's context is out of date. Follow its README to refresh only the affected context, docs and voice documents; do not re-upload paragraphs with unsynced edits. If the required ArtifactData tool is unavailable, say the refresh is blocked and do not claim it was done.

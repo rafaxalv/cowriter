@@ -22,7 +22,7 @@ This skill is generic. Everything specific to one book lives in that book's fold
 Read, for the chapter:
 
 - its full entry in **Chapters** (When / where, Readiness, Stories, Facts, Sources, Notes), and the entries of the **previous and next chapters**;
-- every other place in Chapters that refers to this chapter ("ch. N", set-ups and payoffs, the arc brainstorm), and every place this chapter refers to;
+- every other place in Chapters that refers to this chapter ("ch. N", set-ups and payoffs, the arc brainstorm), and every place this chapter refers to; when the book has a graph, find them with `graphify explain "Ch. N: <title>"` and the paths to the motifs and characters it lists, then read only those chapters (see "Using the book graph" in the co-writer skill);
 - the **Character Bible** entries of everyone in it, and the **Continuity** record;
 - the research files its sources point to;
 - the chapter's voice (the book's Chapter Voices file) and the speech voices of its characters (see "Finding the voices of a scene" in book-voices);

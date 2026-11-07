@@ -1,0 +1,66 @@
+# Node names the graph page always shows (one node id per line; the rest appear on hover, click or search).
+# Read by tools/graphify-page/finish_html.py. Chapter nodes (ch01, prologue...) are always shown.
+
+benedito  # Benedito (the man without a name)
+carmen  # Carmen (the woman from Spain)
+luzia  # Luzia
+inacio_father  # Inácio (Benedito's father)
+coronel_menezes  # Coronel Joaquim Araújo de Menezes
+dona_mariana  # Dona Mariana
+tonico  # Tonico (Antônio de Menezes)
+bastiao  # Bastião
+kalunga  # Velho Kalunga
+rosaria  # Rosária
+ezequiel  # Ezequiel
+mae_otilia  # Mãe Otília
+quirino  # Quirino Antônio do Espírito Santo
+marcolino  # Captain Marcolino
+dom_oba  # Dom Obá II (Cândido da Fonseca Galvão)
+reboucas  # André Rebouças
+osorio  # General Osório
+caxias  # Duke of Caxias
+ana_neri  # Ana Néri
+conde_deu  # Count d'Eu
+solano_lopez  # Francisco Solano López
+gregorio  # Gregório 'Doutor'
+ramon_benites  # Ramon Benites
+roque_junior  # Roque Júnior 'Sansão'
+padre_felicio  # Padre Felício
+constantino  # Constantino (cadet)
+damiao  # Damião
+mbarete  # Sargento Mbareté
+ceferina  # Ceferina
+boy_acosta_nu  # The boy at Acosta Ñu
+captain_albuquerque  # Captain Albuquerque
+pata_seca  # Pata Seca
+euclides_bastos  # Euclides Bastos
+seu_bento  # Seu Bento
+dr_teles  # Dr. Aurélio Teles
+pires_family  # The Pires family
+coronel_pires  # Coronel Pires
+dona_pires  # Dona Pires
+otavio  # Otávio
+firmino  # Firmino
+rosa_lousada  # Rosa Lousada
+manuel_lousada  # Manuel Lousada
+xose_lousada  # Xosé Lousada
+don_faustino  # Don Faustino
+alvarado  # Señor Alvarado
+ruchla  # Ruchla (Raquel)
+iriarte  # Capitán Iriarte
+dona_engracia  # Doña Engracia
+madame_angelique  # Madame Angélique
+seu_albino  # Seu Albino
+lucilia  # Lucília
+sons  # Benedito's sons
+afonso  # Afonso
+inacio_son  # Inácio (son)
+manuel_son  # Manuel (son)
+jose_son  # José (son)
+grandma  # Grandma (the narrator's source)
+barao_vila_maria  # Barão de Vila Maria
+lottery_agent  # The lottery agent (Portuguese merchant)
+white_boys  # The white boys (Pires sons and Otávio)
+rivaldo  # Rivaldo (Rafael's grandfather)
+mercedes_toledo  # Mercedes Toledo
+rafael  # Rafael Luis Alves de Oliveira (author)

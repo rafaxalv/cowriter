@@ -42,6 +42,15 @@ This skill is generic and works for any book in this repo. Everything specific t
 
 **Which file wins when they disagree:** for events, Chapters; for how a chapter is staged, Scenes; for what the text actually says, the manuscript and the Continuity record; for who people are, the Character Bible; for rules and key ideas, the profile and the Concept.
 
+## Using the book graph
+
+Some books keep a knowledge graph of their plan and research in `books/<slug>/graphify-out/` (built with the graphify skill; the files it covers are those not listed in the book's `.graphifyignore`). It maps who and what connects to what: characters, places, events, chapters, motifs, research. Every skill that has to find things across many files uses it first, when it exists:
+
+1. **Is it current?** The graph covers the files as they were at the last commit that changed `graphify-out/graph.json`. List what changed since: `git log --format= --name-only <that commit>..HEAD -- books/<slug>` (plus any uncommitted changes). Files changed since are not in the graph: read them directly, and say in one line that the graph is behind and can be refreshed (`/graphify . --update` from the book's folder). Never refresh it unasked: a refresh re-reads every changed file.
+2. **Ask it**, from the book's folder: `graphify explain "<name>"` (everything linked to one character, chapter, event or motif), `graphify path "<A>" "<B>" --undirected` (how two things connect), `graphify query "<question>"` (a wider search). Characters go by the book's working names, and chapter nodes read `Ch. N: Title` (plus the prologue, interlude and epilogue when the book has them).
+3. **Then read only what it points to.** Each node names the file it came from, not the line: open those files (or search inside them) for the actual text. The graph is a map, never a source: quote and decide only from the files.
+4. If the graph does not have what you need, or the question is about wording or detail, read the files as usual.
+
 ## The book skills and who does what
 
 - **co-writer** (this skill): coordinates; plans chapters with the author; writes the prose from the scene maps; keeps files in sync.
